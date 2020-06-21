@@ -1,3 +1,7 @@
+# This fork
+
+This fork adds a function to translate gamma WAVECARs to standard WAVECARs.
+
 # PyVaspwfc
 
 This is a python class for dealing with `VASP` pseudo-wavefunction file `WAVECAR`.
