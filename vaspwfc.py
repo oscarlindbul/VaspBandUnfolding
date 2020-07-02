@@ -980,8 +980,8 @@ class vaspwfc(object):
             new_nplws = 2*(self._nplws[0] - 1) + 1
             plws_rec_size = np.max(new_nplws)*np.dtype(self.setWFPrec()).itemsize
             band_rec_size = np.dtype(np.float64).itemsize*(self._nbands*3+1)
-            new_rec_size = max(plws_rec_size, band_rec_size)
             # record needs to be large enough to contain both plane waves and bands
+            new_rec_size = max(plws_rec_size, band_rec_size)
             nfloat = new_rec_size//8 # number of float64s per record
             # header line
             rec = np.zeros(nfloat, dtype=np.float64)
@@ -993,7 +993,6 @@ class vaspwfc(object):
             rec.tofile(new_wc)
             wave_rec = np.zeros(new_nplws, dtype=self.setWFPrec())
             for spin in range(self._nspin):
-                rec = rec.astype(np.float64)
                 rec[0] = new_nplws
                 rec[1:1+3] = self._kvecs[0]
                 rec[4 : 4+3*self._nbands : 3] = self._bands[spin, 0, :]
@@ -1002,44 +1001,53 @@ class vaspwfc(object):
                 rec.tofile(new_wc)
 
                 ### Expand plane wave coefficients
+                ngrid = self._ngrid.copy() * 2
                 if self._gam_half == "z":
-                    already_set = lambda fx,fy,fz : fz > 0 \
-                        or (fz == 0 and fy > 0) \
-                        or (fz == 0 and fy == 0 and fx >= 0)
-
+                    ordered_grid = ngrid.swapaxes(ngrid, 0, 2)
                 elif self._gam_half == "x":
-                    already_set = lambda fx,fy,fz : fx > 0 \
-                        or (fx == 0 and fy > 0) \
-                        or (fx == 0 and fy == 0 and fz >= 0)
+                    ordered_grid = ngrid
                 else:
                     raise ValueError("Gamma reduction direction must be z or x")
 
-
                 Gvec = self.gvectors(ikpt=1, check_consistency=True)
                 full_Gvec = self.gvectors(ikpt=1, force_Gamma=False, check_consistency=False)
-                ngrid = self._ngrid.copy() * 2
-                rec = rec.astype(self.setWFPrec())
-                rec[:] = 0
-                phi_k = np.zeros(ngrid, dtype=rec.dtype)
+                phi_k = np.zeros(ngrid, dtype=wave_rec.dtype)
                 for band in range(self._nbands):
                     phi_k[Gvec[:, 0], Gvec[:,1], Gvec[:,2]] = self.readBandCoeff(spin+1,1,band+1)
-                    for ii in range(ngrid[0]):
-                        for jj in range(ngrid[1]):
-                            for kk in range(ngrid[2]):
-                                fx = ii if ii < ngrid[0] // 2 + \
-                                    1 else ii - ngrid[0]
-                                fy = jj if jj < ngrid[1] // 2 + \
-                                    1 else jj - ngrid[1]
-                                fz = kk if kk < ngrid[2] // 2 + \
-                                    1 else kk - ngrid[2]
-                                if already_set(fx,fy,fz):
-                                    continue
-                                phi_k[ii,jj,kk] = phi_k[-ii,-jj,-kk].conjugate()
+                    ## Upper sphere
+                    for ii in range(1, ordered_grid[0] // 2 + 1):
+                        for jj in range(ordered_grid[1]):
+                            for kk in range(ordered_grid[2]):
+                                phi_k[-ii,-jj,-kk] = phi_k[ii,jj,kk].conjugate()
+
+                    ## Upper part of x-y-plane
+                    for jj in range(1, ordered_grid[1] // 2 + 1):
+                        for kk in range(ordered_grid[2]):
+                            phi_k[0,-jj,-kk] = phi_k[0,jj,kk].conjugate()
+
+                    ## Upper part of x-axis
+                    for kk in range(1, ordered_grid[2] // 2 + 1):
+                        phi_k[0,0,-kk] = phi_k[0,0,kk].conjugate()
+
+                    # for ii in range(ordered_grid[0]):
+                    #     for jj in range(ordered_grid[1]):
+                    #         for kk in range(ordered_grid[2]):
+                    #             fx = ii if ii < ngrid[0] // 2 + \
+                    #                1 else ii - ngrid[0]
+                    #             fy = jj if jj < ngrid[1] // 2 + \
+                    #                1 else jj - ngrid[1]
+                    #             fz = kk if kk < ngrid[2] // 2 + \
+                    #                1 else kk - ngrid[2]
+                    #             if already_set(fx,fy,fz):
+                    #                continue
+                    #             print(fx,fy,fz)
+                    #             phi_k[ii,jj,kk] = phi_k[-ii,-jj,-kk].conjugate()
+                    # input()
                     phi_k /= np.sqrt(2.)
                     phi_k[0,0,0] *= np.sqrt(2.)
 
-                    rec[:new_nplws] = phi_k[full_Gvec[:, 0], full_Gvec[:, 1], full_Gvec[:, 2]]
-                    rec.tofile(new_wc)
+                    wave_rec[:new_nplws] = phi_k[full_Gvec[:, 0], full_Gvec[:, 1], full_Gvec[:, 2]]
+                    wave_rec.tofile(new_wc)
 
 ############################################################
 
