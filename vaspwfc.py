@@ -8,6 +8,7 @@ from vasp_constant import *
 from multiprocessing import cpu_count
 from scipy.fftpack import fftfreq, fftn, ifftn
 
+
 ############################################################
 
 
@@ -267,7 +268,7 @@ class vaspwfc(object):
 
         return self._kpath, self._kbound
 
-    def gvectors(self, ikpt=1, force_Gamma=False, check_consistency=True):
+    def gvectors(self, ikpt=1, force_Gamma=None, check_consistency=True):
         '''
         Generate the G-vectors that satisfies the following relation
             (G + k)**2 / 2 < ENCUT
@@ -284,8 +285,12 @@ class vaspwfc(object):
         fz = [kk if kk < self._ngrid[2] // 2 + 1 else kk - self._ngrid[2]
               for kk in range(self._ngrid[2])]
 
-        # force_Gamma: consider gamma-only case regardless of the real setting
-        lgam = True if force_Gamma else self._lgam
+        # force_Gamma: consider gamma-only case if true, non-gamma if false,
+        # or native setting if not given
+        if force_Gamma is None:
+            lgam = self._lgam
+        else:
+            lgam = force_Gamma
         if lgam:
             # parallel gamma version of VASP WAVECAR exclude some planewave
             # components, -DwNGZHalf
@@ -641,17 +646,17 @@ class vaspwfc(object):
         <psi_a | r | psi_b> =  -------------- ⋅ <psi_a | p | psi_b>
                                 m⋅(Eb - Ea)
 
-                                      2        ____              
-                                     h          ╲                
+                                      2        ____
+                                     h          ╲
                             =  ------------- ⋅   ╲   Cai⋅Cbi⋅Gi
-                                m⋅(Eb - Ea)      ╱               
-                                                ╱                
-                                               ‾‾‾‾              
-                                                 i               
+                                m⋅(Eb - Ea)      ╱
+                                                ╱
+                                               ‾‾‾‾
+                                                 i
 
         Otherwise, the TDM will be evaluated in real space.
 
-        Note: |psi_a> and |psi_b> should be bloch function with 
+        Note: |psi_a> and |psi_b> should be bloch function with
               the same k vector.
 
         The KS states ks_i (ks_j) is specified by list of index (ispin, ikpt, iband).
@@ -715,7 +720,7 @@ class vaspwfc(object):
         a measure of the localization of Kohn-Sham states. For a particular KS
         state \phi_j, it is defined as
 
-                            \sum_n |\phi_j(n)|^4 
+                            \sum_n |\phi_j(n)|^4
             IPR(\phi_j) = -------------------------
                           |\sum_n |\phi_j(n)|^2||^2
 
@@ -967,6 +972,74 @@ class vaspwfc(object):
             ElectronLocalizationFunction.append(1. / (1. + (D0 / Dh)**2))
 
         return ElectronLocalizationFunction
+
+    def write_std_wavecar(self, out="WAVECAR_std"):
+        assert self._lgam
+
+        with open(out, "w") as new_wc:
+            new_nplws = 2*(self._nplws[0] - 1) + 1
+            plws_rec_size = np.max(new_nplws)*np.dtype(self.setWFPrec()).itemsize
+            band_rec_size = np.dtype(np.float64).itemsize*(self._nbands*3+1)
+            new_rec_size = max(plws_rec_size, band_rec_size)
+            # record needs to be large enough to contain both plane waves and bands
+            nfloat = new_rec_size//8 # number of float64s per record
+            # header line
+            rec = np.zeros(nfloat, dtype=np.float64)
+            rec[0:3] = new_rec_size,self._nspin,self._rtag
+            rec.tofile(new_wc)
+            # header line 2
+            rec[0:3] = self._nkpts,self._nbands,self._encut
+            rec[3:3+9] = self._Acell.reshape((1, -1))
+            rec.tofile(new_wc)
+            wave_rec = np.zeros(new_nplws, dtype=self.setWFPrec())
+            for spin in range(self._nspin):
+                rec = rec.astype(np.float64)
+                rec[0] = new_nplws
+                rec[1:1+3] = self._kvecs[0]
+                rec[4 : 4+3*self._nbands : 3] = self._bands[spin, 0, :]
+                rec[4+1 : 4+3*self._nbands : 3] = 0.0 # so far energies always real?
+                rec[4+2 : 4+3*self._nbands : 3] = self._occs[spin, 0, :]
+                rec.tofile(new_wc)
+
+                ### Expand plane wave coefficients
+                if self._gam_half == "z":
+                    already_set = lambda fx,fy,fz : fz > 0 \
+                        or (fz == 0 and fy > 0) \
+                        or (fz == 0 and fy == 0 and fx >= 0)
+
+                elif self._gam_half == "x":
+                    already_set = lambda fx,fy,fz : fx > 0 \
+                        or (fx == 0 and fy > 0) \
+                        or (fx == 0 and fy == 0 and fz >= 0)
+                else:
+                    raise ValueError("Gamma reduction direction must be z or x")
+
+
+                Gvec = self.gvectors(ikpt=1, check_consistency=True)
+                full_Gvec = self.gvectors(ikpt=1, force_Gamma=False, check_consistency=False)
+                ngrid = self._ngrid.copy() * 2
+                rec = rec.astype(self.setWFPrec())
+                rec[:] = 0
+                phi_k = np.zeros(ngrid, dtype=rec.dtype)
+                for band in range(self._nbands):
+                    phi_k[Gvec[:, 0], Gvec[:,1], Gvec[:,2]] = self.readBandCoeff(spin+1,1,band+1)
+                    for ii in range(ngrid[0]):
+                        for jj in range(ngrid[1]):
+                            for kk in range(ngrid[2]):
+                                fx = ii if ii < ngrid[0] // 2 + \
+                                    1 else ii - ngrid[0]
+                                fy = jj if jj < ngrid[1] // 2 + \
+                                    1 else jj - ngrid[1]
+                                fz = kk if kk < ngrid[2] // 2 + \
+                                    1 else kk - ngrid[2]
+                                if already_set(fx,fy,fz):
+                                    continue
+                                phi_k[ii,jj,kk] = phi_k[-ii,-jj,-kk].conjugate()
+                    phi_k /= np.sqrt(2.)
+                    phi_k[0,0,0] *= np.sqrt(2.)
+
+                    rec[:new_nplws] = phi_k[full_Gvec[:, 0], full_Gvec[:, 1], full_Gvec[:, 2]]
+                    rec.tofile(new_wc)
 
 ############################################################
 
