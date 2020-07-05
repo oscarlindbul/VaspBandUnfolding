@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# cython: profile=True
+
 import os
 import numpy as np
+cimport numpy as cnp
 from math import sqrt
 from vasp_constant import *
 from multiprocessing import cpu_count
 from scipy.fftpack import fftfreq, fftn, ifftn
 
-
+import cython
 ############################################################
 
 
@@ -58,6 +61,49 @@ def save2vesta(phi=None, poscar='POSCAR', prefix='wfc',
 
 ############################################################
 
+ctypedef cnp.int_t int_t
+ctypedef fused wav_array:
+    cnp.ndarray[cnp.complex64_t, ndim=3]
+    cnp.ndarray[cnp.complex128_t, ndim=3]
+
+@cython.wraparound(False)
+@cython.boundscheck(False)
+def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid):
+    cdef int ii,jj,kk, ii_inv, jj_inv, kk_inv
+
+    ## Upper sphere
+    for ii in range(1, grid[0] // 2 + 1):
+        ii_inv = grid[0] - ii
+        phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()
+        for kk in range(1, grid[2]):
+            kk_inv = grid[2] - kk
+            phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()
+        for jj in range(1, grid[1]):
+            jj_inv = grid[1] - jj
+            phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()
+            for kk in range(1, grid[2]):
+                kk_inv = grid[2] - kk
+                phi[ii_inv,jj_inv,kk_inv] = phi[ii,jj,kk].conjugate()
+
+    ## Upper part of x-y-plane
+    for jj in range(1, grid[1] // 2 + 1):
+        jj_inv = grid[1] - jj
+        phi[0, jj_inv, 0] = phi[0, jj, 0].conjugate()
+        for kk in range(1, grid[2]):
+            kk_inv = grid[2] - kk
+            phi[0,jj_inv, kk_inv] = phi[0,jj,kk].conjugate()
+
+    ## Upper part of x-axis
+    for kk in range(1, grid[2] // 2 + 1):
+        kk_inv = grid[2] - kk
+        phi[0,0,kk_inv] = phi[0,0,kk].conjugate()
+
+    phi /= np.sqrt(2.)
+    phi[0,0,0] = phi[0,0,0] * np.sqrt(2)
+
+    return phi
+
+############################################################
 
 class vaspwfc(object):
     '''
@@ -974,6 +1020,8 @@ class vaspwfc(object):
         return ElectronLocalizationFunction
 
     def write_std_wavecar(self, out="WAVECAR_std"):
+        cdef int ii, jj, kk, mm, val
+
         assert self._lgam
 
         with open(out, "w") as new_wc:
@@ -1012,25 +1060,12 @@ class vaspwfc(object):
                 Gvec = self.gvectors(ikpt=1, check_consistency=True)
                 full_Gvec = self.gvectors(ikpt=1, force_Gamma=False, check_consistency=False)
                 phi_k = np.zeros(ngrid, dtype=wave_rec.dtype)
+                phi_size = np.array(phi_k.shape)
+                inv_coord = [0]*3
                 for band in range(self._nbands):
                     phi_k[Gvec[:, 0], Gvec[:,1], Gvec[:,2]] = self.readBandCoeff(spin+1,1,band+1)
-                    ## Upper sphere
-                    for ii in range(1, ordered_grid[0] // 2 + 1):
-                        for jj in range(ordered_grid[1]):
-                            for kk in range(ordered_grid[2]):
-                                phi_k[-ii,-jj,-kk] = phi_k[ii,jj,kk].conjugate()
 
-                    ## Upper part of x-y-plane
-                    for jj in range(1, ordered_grid[1] // 2 + 1):
-                        for kk in range(ordered_grid[2]):
-                            phi_k[0,-jj,-kk] = phi_k[0,jj,kk].conjugate()
-
-                    ## Upper part of x-axis
-                    for kk in range(1, ordered_grid[2] // 2 + 1):
-                        phi_k[0,0,-kk] = phi_k[0,0,kk].conjugate()
-
-                    phi_k /= np.sqrt(2.)
-                    phi_k[0,0,0] *= np.sqrt(2.)
+                    phi_k = expand_wfc(phi_k, ordered_grid)
 
                     wave_rec[:new_nplws] = phi_k[full_Gvec[:, 0], full_Gvec[:, 1], full_Gvec[:, 2]]
                     wave_rec.tofile(new_wc)
