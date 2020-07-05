@@ -319,22 +319,43 @@ class vaspwfc(object):
 
         return self._kpath, self._kbound
 
+    @cython.boundscheck(False)
+    @cython.wraparound(False)
+    @cython.cdivision(True)
     def gvectors(self, ikpt=1, force_Gamma=None, check_consistency=True):
         '''
         Generate the G-vectors that satisfies the following relation
             (G + k)**2 / 2 < ENCUT
         '''
+        cdef int ii, jj, kk, k_ind, n_points
+        cdef cnp.ndarray[cnp.int_t, ndim=1] grid, grid_lim, fx, fy, fz
+        cdef cnp.ndarray[cnp.int_t, ndim=3] f
+        cdef cnp.ndarray[cnp.float64_t, ndim=1] kvec
+        cdef cnp.ndarray[cnp.float64_t, ndim=2] kgrid
+
         assert 1 <= ikpt <= self._nkpts,  'Invalid kpoint index!'
 
         kvec = self._kvecs[ikpt-1]
+        grid = self._ngrid
         # fx, fy, fz = [fftfreq(n) * n for n in self._ngrid]
         # fftfreq in scipy.fftpack is a little different with VASP frequencies
-        fx = [ii if ii < self._ngrid[0] // 2 + 1 else ii - self._ngrid[0]
-              for ii in range(self._ngrid[0])]
-        fy = [jj if jj < self._ngrid[1] // 2 + 1 else jj - self._ngrid[1]
-              for jj in range(self._ngrid[1])]
-        fz = [kk if kk < self._ngrid[2] // 2 + 1 else kk - self._ngrid[2]
-              for kk in range(self._ngrid[2])]
+        fx, fy, fz = np.zeros(grid[0], dtype=np.int), np.zeros(grid[1], dtype=np.int), np.zeros(grid[2], dtype=np.int)
+        grid_lim = grid // 2 + 1
+        for ii in range(grid[0]):
+            if ii < grid_lim[0]:
+                fx[ii] = ii
+            else:
+                fx[ii] = ii - grid[0]
+        for ii in range(grid[1]):
+            if ii < grid_lim[1]:
+                fy[ii] = ii
+            else:
+                fy[ii] = ii - grid[1]
+        for ii in range(grid[2]):
+            if ii < grid_lim[2]:
+                fz[ii] = ii
+            else:
+                fz[ii] = ii - grid[2]
 
         # force_Gamma: consider gamma-only case if true, non-gamma if false,
         # or native setting if not given
@@ -345,28 +366,34 @@ class vaspwfc(object):
         if lgam:
             # parallel gamma version of VASP WAVECAR exclude some planewave
             # components, -DwNGZHalf
+            k_ind = 0
+            n_points = (grid[2] // 2)*(grid[1] * grid[0]) \
+                     + (grid[1] // 2)*grid[0] \
+                     + grid[0] // 2 + 1
             if self._gam_half == 'z':
-                kgrid = np.array([(fx[ii], fy[jj], fz[kk])
-                                  for kk in range(self._ngrid[2])
-                                  for jj in range(self._ngrid[1])
-                                  for ii in range(self._ngrid[0])
-                                  if (
-                                      (fz[kk] > 0) or
-                                      (fz[kk] == 0 and fy[jj] > 0) or
-                                      (fz[kk] == 0 and fy[jj]
-                                       == 0 and fx[ii] >= 0)
-                )], dtype=float)
+                kgrid = np.zeros((n_points, 3), dtype=np.float64)
+                for kk in range(grid[2]):
+                    for jj in range(grid[1]):
+                        for ii in range(grid[0]):
+                            if (fz[kk] > 0) or \
+                                    (fz[kk] == 0 and fy[jj] > 0) or \
+                                    (fz[kk] == 0 and fy[jj] == 0 and fx[ii] >= 0):
+                                kgrid[k_ind, 0] = fx[ii]
+                                kgrid[k_ind, 1] = fy[jj]
+                                kgrid[k_ind, 2] = fz[kk]
+                                k_ind += 1
             else:
-                kgrid = np.array([(fx[ii], fy[jj], fz[kk])
-                                  for kk in range(self._ngrid[2])
-                                  for jj in range(self._ngrid[1])
-                                  for ii in range(self._ngrid[0])
-                                  if (
-                                      (fx[ii] > 0) or
-                                      (fx[ii] == 0 and fy[jj] > 0) or
-                                      (fx[ii] == 0 and fy[jj]
-                                       == 0 and fz[kk] >= 0)
-                )], dtype=float)
+                kgrid = np.zeros((n_points, 3), dtype=np.float64)
+                for kk in range(grid[2]):
+                    for jj in range(grid[1]):
+                        for ii in range(grid[0]):
+                            if fx[ii] > 0 or \
+                                    (fx[ii] == 0 and fy[jj] > 0) or \
+                                    (fx[ii] == 0 and fy[jj] == 0 and fz[kk] >= 0):
+                                kgrid[k_ind, 0] = fx[ii]
+                                kgrid[k_ind, 1] = fy[jj]
+                                kgrid[k_ind, 2] = fz[kk]
+                                k_ind += 1
         else:
             kgrid = np.array([(fx[ii], fy[jj], fz[kk])
                               for kk in range(self._ngrid[2])
@@ -1025,7 +1052,6 @@ class vaspwfc(object):
         return ElectronLocalizationFunction
 
     def write_std_wavecar(self, out="WAVECAR_std"):
-        cdef int ii, jj, kk, mm, val
 
         assert self._lgam
 
@@ -1065,8 +1091,6 @@ class vaspwfc(object):
                 Gvec = self.gvectors(ikpt=1, check_consistency=True)
                 full_Gvec = self.gvectors(ikpt=1, force_Gamma=False, check_consistency=False)
                 phi_k = np.zeros(ngrid, dtype=wave_rec.dtype)
-                phi_size = np.array(phi_k.shape)
-                inv_coord = [0]*3
                 for band in range(self._nbands):
                     phi_k[Gvec[:, 0], Gvec[:,1], Gvec[:,2]] = self.readBandCoeff(spin+1,1,band+1)
 
