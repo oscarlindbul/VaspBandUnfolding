@@ -66,8 +66,10 @@ ctypedef fused wav_array:
     cnp.ndarray[cnp.complex64_t, ndim=3]
     cnp.ndarray[cnp.complex128_t, ndim=3]
 
+from libc.math cimport sqrt
 @cython.wraparound(False)
 @cython.boundscheck(False)
+@cython.cdivision(True)
 def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid):
     cdef int ii,jj,kk, ii_inv, jj_inv, kk_inv
 
@@ -98,8 +100,11 @@ def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid):
         kk_inv = grid[2] - kk
         phi[0,0,kk_inv] = phi[0,0,kk].conjugate()
 
-    phi /= np.sqrt(2.)
-    phi[0,0,0] = phi[0,0,0] * np.sqrt(2)
+    for ii in range(grid[0]):
+        for jj in range(grid[1]):
+            for kk in range(grid[2]):
+                phi[ii,jj,kk] = phi[ii,jj,kk] / sqrt(2.)
+    phi[0,0,0] = phi[0,0,0] * sqrt(2)
 
     return phi
 
