@@ -4,12 +4,12 @@
 {
     "distutils": {
         "depends": [],
-        "name": "VaspBandUnfolding.cythonize.vaspwfc",
+        "name": "vaspwfc",
         "sources": [
             "VaspBandUnfolding/cythonize/vaspwfc.pyx"
         ]
     },
-    "module_name": "VaspBandUnfolding.cythonize.vaspwfc"
+    "module_name": "vaspwfc"
 }
 END: Cython Metadata */
 
@@ -603,8 +603,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__VaspBandUnfolding__cythonize__vaspwfc
-#define __PYX_HAVE_API__VaspBandUnfolding__cythonize__vaspwfc
+#define __PYX_HAVE__vaspwfc
+#define __PYX_HAVE_API__vaspwfc
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -1147,14 +1147,14 @@ typedef npy_double __pyx_t_5numpy_double_t;
  */
 typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":64
+/* "vaspwfc.pyx":64
  * ############################################################
  * 
  * ctypedef cnp.int_t int_t             # <<<<<<<<<<<<<<
  * ctypedef fused wav_array:
  *     cnp.ndarray[cnp.complex64_t, ndim=3]
  */
-typedef __pyx_t_5numpy_int_t __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t;
+typedef __pyx_t_5numpy_int_t __pyx_t_7vaspwfc_int_t;
 /* Declarations.proto */
 #if CYTHON_CCOMPLEX
   #ifdef __cplusplus
@@ -2662,7 +2662,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 
 /* Module declarations from 'libc.math' */
 
-/* Module declarations from 'VaspBandUnfolding.cythonize.vaspwfc' */
+/* Module declarations from 'vaspwfc' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -2708,15 +2708,15 @@ static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo___pyx_t_float_complex = { "float complex", NULL, sizeof(__pyx_t_float_complex), { 0 }, 0, 'C', 0, 0 };
-static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t = { "int_t", NULL, sizeof(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t), 0 };
+static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_7vaspwfc_int_t = { "int_t", NULL, sizeof(__pyx_t_7vaspwfc_int_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_7vaspwfc_int_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_7vaspwfc_int_t), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo___pyx_t_double_complex = { "double complex", NULL, sizeof(__pyx_t_double_complex), { 0 }, 0, 'C', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t = { "float64_t", NULL, sizeof(__pyx_t_5numpy_float64_t), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_int_t = { "int_t", NULL, sizeof(__pyx_t_5numpy_int_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5numpy_int_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5numpy_int_t), 0 };
-#define __Pyx_MODULE_NAME "VaspBandUnfolding.cythonize.vaspwfc"
-extern int __pyx_module_is_main_VaspBandUnfolding__cythonize__vaspwfc;
-int __pyx_module_is_main_VaspBandUnfolding__cythonize__vaspwfc = 0;
+#define __Pyx_MODULE_NAME "vaspwfc"
+extern int __pyx_module_is_main_vaspwfc;
+int __pyx_module_is_main_vaspwfc = 0;
 
-/* Implementation of 'VaspBandUnfolding.cythonize.vaspwfc' */
+/* Implementation of 'vaspwfc' */
 static PyObject *__pyx_builtin_object;
 static PyObject *__pyx_builtin_open;
 static PyObject *__pyx_builtin_IOError;
@@ -2820,6 +2820,7 @@ static const char __pyx_k_rec[] = "rec";
 static const char __pyx_k_rho[] = "rho";
 static const char __pyx_k_row[] = "row";
 static const char __pyx_k_sum[] = "sum";
+static const char __pyx_k_sys[] = "sys";
 static const char __pyx_k_tau[] = "tau";
 static const char __pyx_k_tdm[] = "tdm";
 static const char __pyx_k_tmp[] = "tmp";
@@ -2856,7 +2857,6 @@ static const char __pyx_k_lgam[] = "lgam";
 static const char __pyx_k_line[] = "line";
 static const char __pyx_k_lsoc[] = "_lsoc";
 static const char __pyx_k_main[] = "__main__";
-static const char __pyx_k_math[] = "math";
 static const char __pyx_k_mode[] = "mode";
 static const char __pyx_k_name[] = "name";
 static const char __pyx_k_ncol[] = "ncol";
@@ -3186,7 +3186,6 @@ static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to alloca
 static const char __pyx_k_vaspwfc_inverse_participation_ra[] = "vaspwfc.inverse_participation_ratio";
 static const char __pyx_k_No_of_planewaves_not_consistent_2[] = "No. of planewaves not consistent! %d %d %d";
 static const char __pyx_k_Format_string_allocated_too_shor_2[] = "Format string allocated too short.";
-static const char __pyx_k_VaspBandUnfolding_cythonize_vasp_2[] = "VaspBandUnfolding.cythonize.vaspwfc";
 static PyObject *__pyx_kp_s_16_8E;
 static PyObject *__pyx_kp_s_5d_5d_5d;
 static PyObject *__pyx_n_s_ASCII;
@@ -3282,7 +3281,6 @@ static PyObject *__pyx_n_s_V_q;
 static PyObject *__pyx_n_s_V_r;
 static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_kp_s_VaspBandUnfolding_cythonize_vasp;
-static PyObject *__pyx_n_s_VaspBandUnfolding_cythonize_vasp_2;
 static PyObject *__pyx_n_s_View_MemoryView;
 static PyObject *__pyx_n_s_WAVECAR;
 static PyObject *__pyx_n_s_WAVECAR_std;
@@ -3452,7 +3450,6 @@ static PyObject *__pyx_n_s_lreal;
 static PyObject *__pyx_n_s_lsoc;
 static PyObject *__pyx_n_s_lsorbit;
 static PyObject *__pyx_n_s_main;
-static PyObject *__pyx_n_s_math;
 static PyObject *__pyx_n_s_max;
 static PyObject *__pyx_n_s_memview;
 static PyObject *__pyx_n_s_meshgrid;
@@ -3591,6 +3588,7 @@ static PyObject *__pyx_n_s_strip;
 static PyObject *__pyx_n_s_struct;
 static PyObject *__pyx_n_s_sum;
 static PyObject *__pyx_n_s_swapaxes;
+static PyObject *__pyx_n_s_sys;
 static PyObject *__pyx_n_s_tau;
 static PyObject *__pyx_n_s_tdm;
 static PyObject *__pyx_n_s_tensordot;
@@ -3646,29 +3644,29 @@ static PyObject *__pyx_n_s_x;
 static PyObject *__pyx_n_s_xx;
 static PyObject *__pyx_n_s_z;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_phi, PyObject *__pyx_v_poscar, PyObject *__pyx_v_prefix, PyObject *__pyx_v_lgam, PyObject *__pyx_v_lreal, PyObject *__pyx_v_ncol); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_2expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_phi, PyArrayObject *__pyx_v_grid); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_phi, PyArrayObject *__pyx_v_grid); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fnm, PyObject *__pyx_v_lsorbit, PyObject *__pyx_v_lgamma, PyObject *__pyx_v_gamma_half, PyObject *__pyx_v_omp_num_threads); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_omp_num_threads(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_nproc); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_4isSocWfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_6isGammaWfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8readWFHeader(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10setWFPrec(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12readWFBand(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get_kpath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nkseg); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gvectors(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_force_Gamma, PyObject *__pyx_v_check_consistency); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18save2vesta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_phi, PyObject *__pyx_v_lreal, PyObject *__pyx_v_poscar, PyObject *__pyx_v_prefix, PyObject *__pyx_v_ncol); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc_r(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband, PyObject *__pyx_v_gvec, PyObject *__pyx_v_Cg, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_rescale, PyObject *__pyx_v_norm); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poisson(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_rho, PyObject *__pyx_v_iband, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_norm); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24readBandCoeff(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband, PyObject *__pyx_v_norm); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whereRec(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28checkIndex(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30TransitionDipoleMoment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ks_i, PyObject *__pyx_v_ks_j, PyObject *__pyx_v_norm, PyObject *__pyx_v_realspace); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inverse_participation_ratio(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_norm); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_kptw, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_warn); /* proto */
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36write_std_wavecar(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_out); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_save2vesta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_phi, PyObject *__pyx_v_poscar, PyObject *__pyx_v_prefix, PyObject *__pyx_v_lgam, PyObject *__pyx_v_lreal, PyObject *__pyx_v_ncol); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_2expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_4expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_phi, PyArrayObject *__pyx_v_grid); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_6expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_phi, PyArrayObject *__pyx_v_grid); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fnm, PyObject *__pyx_v_lsorbit, PyObject *__pyx_v_lgamma, PyObject *__pyx_v_gamma_half, PyObject *__pyx_v_omp_num_threads); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_2set_omp_num_threads(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_nproc); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_4isSocWfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_6isGammaWfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_8readWFHeader(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_10setWFPrec(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_12readWFBand(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_14get_kpath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nkseg); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_16gvectors(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_force_Gamma, PyObject *__pyx_v_check_consistency); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_18save2vesta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_phi, PyObject *__pyx_v_lreal, PyObject *__pyx_v_poscar, PyObject *__pyx_v_prefix, PyObject *__pyx_v_ncol); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_20wfc_r(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband, PyObject *__pyx_v_gvec, PyObject *__pyx_v_Cg, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_rescale, PyObject *__pyx_v_norm); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_22poisson(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_rho, PyObject *__pyx_v_iband, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_norm); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_24readBandCoeff(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband, PyObject *__pyx_v_norm); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_26whereRec(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_28checkIndex(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_30TransitionDipoleMoment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ks_i, PyObject *__pyx_v_ks_j, PyObject *__pyx_v_norm, PyObject *__pyx_v_realspace); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_32inverse_participation_ratio(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_norm); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_34elf(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_kptw, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_warn); /* proto */
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_36write_std_wavecar(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_out); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
@@ -3855,7 +3853,7 @@ static PyObject *__pyx_codeobj__73;
 static PyObject *__pyx_codeobj__77;
 /* Late includes */
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":18
+/* "vaspwfc.pyx":18
  * 
  * 
  * def save2vesta(phi=None, poscar='POSCAR', prefix='wfc',             # <<<<<<<<<<<<<<
@@ -3864,10 +3862,10 @@ static PyObject *__pyx_codeobj__77;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_1save2vesta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta[] = "\n    Save the real space pseudo-wavefunction as vesta format.\n    ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_1save2vesta = {"save2vesta", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_1save2vesta, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_1save2vesta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_1save2vesta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_save2vesta[] = "\n    Save the real space pseudo-wavefunction as vesta format.\n    ";
+static PyMethodDef __pyx_mdef_7vaspwfc_1save2vesta = {"save2vesta", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_1save2vesta, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_save2vesta};
+static PyObject *__pyx_pw_7vaspwfc_1save2vesta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_phi = 0;
   PyObject *__pyx_v_poscar = 0;
   PyObject *__pyx_v_prefix = 0;
@@ -3884,7 +3882,7 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_1save2vesta(Py
     values[1] = ((PyObject *)__pyx_n_s_POSCAR);
     values[2] = ((PyObject *)__pyx_n_s_wfc);
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":19
+    /* "vaspwfc.pyx":19
  * 
  * def save2vesta(phi=None, poscar='POSCAR', prefix='wfc',
  *                lgam=False, lreal=False, ncol=10):             # <<<<<<<<<<<<<<
@@ -3983,13 +3981,13 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_1save2vesta(Py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("save2vesta", 0, 0, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 18, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(__pyx_self, __pyx_v_phi, __pyx_v_poscar, __pyx_v_prefix, __pyx_v_lgam, __pyx_v_lreal, __pyx_v_ncol);
+  __pyx_r = __pyx_pf_7vaspwfc_save2vesta(__pyx_self, __pyx_v_phi, __pyx_v_poscar, __pyx_v_prefix, __pyx_v_lgam, __pyx_v_lreal, __pyx_v_ncol);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":18
+  /* "vaspwfc.pyx":18
  * 
  * 
  * def save2vesta(phi=None, poscar='POSCAR', prefix='wfc',             # <<<<<<<<<<<<<<
@@ -4002,7 +4000,7 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_1save2vesta(Py
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_phi, PyObject *__pyx_v_poscar, PyObject *__pyx_v_prefix, PyObject *__pyx_v_lgam, PyObject *__pyx_v_lreal, PyObject *__pyx_v_ncol) {
+static PyObject *__pyx_pf_7vaspwfc_save2vesta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_phi, PyObject *__pyx_v_poscar, PyObject *__pyx_v_prefix, PyObject *__pyx_v_lgam, PyObject *__pyx_v_lreal, PyObject *__pyx_v_ncol) {
   PyObject *__pyx_v_nx = NULL;
   PyObject *__pyx_v_ny = NULL;
   PyObject *__pyx_v_nz = NULL;
@@ -4044,7 +4042,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __Pyx_RefNannySetupContext("save2vesta", 0);
   __Pyx_TraceCall("save2vesta", __pyx_f[0], 18, 0, __PYX_ERR(0, 18, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":23
+  /* "vaspwfc.pyx":23
  *     Save the real space pseudo-wavefunction as vesta format.
  *     '''
  *     nx, ny, nz = phi.shape             # <<<<<<<<<<<<<<
@@ -4113,7 +4111,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __pyx_v_nz = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":24
+  /* "vaspwfc.pyx":24
  *     '''
  *     nx, ny, nz = phi.shape
  *     try:             # <<<<<<<<<<<<<<
@@ -4129,7 +4127,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
     __Pyx_XGOTREF(__pyx_t_9);
     /*try:*/ {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":25
+      /* "vaspwfc.pyx":25
  *     nx, ny, nz = phi.shape
  *     try:
  *         pos = open(poscar, 'r')             # <<<<<<<<<<<<<<
@@ -4150,7 +4148,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
       __pyx_v_pos = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":26
+      /* "vaspwfc.pyx":26
  *     try:
  *         pos = open(poscar, 'r')
  *         head = ''             # <<<<<<<<<<<<<<
@@ -4160,7 +4158,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
       __Pyx_INCREF(__pyx_kp_s__2);
       __pyx_v_head = __pyx_kp_s__2;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":27
+      /* "vaspwfc.pyx":27
  *         pos = open(poscar, 'r')
  *         head = ''
  *         for line in pos:             # <<<<<<<<<<<<<<
@@ -4209,7 +4207,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
         __Pyx_XDECREF_SET(__pyx_v_line, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":28
+        /* "vaspwfc.pyx":28
  *         head = ''
  *         for line in pos:
  *             if line.strip():             # <<<<<<<<<<<<<<
@@ -4237,7 +4235,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         if (__pyx_t_12) {
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":29
+          /* "vaspwfc.pyx":29
  *         for line in pos:
  *             if line.strip():
  *                 head += line             # <<<<<<<<<<<<<<
@@ -4249,7 +4247,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
           __Pyx_DECREF_SET(__pyx_v_head, __pyx_t_1);
           __pyx_t_1 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":28
+          /* "vaspwfc.pyx":28
  *         head = ''
  *         for line in pos:
  *             if line.strip():             # <<<<<<<<<<<<<<
@@ -4259,7 +4257,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
           goto __pyx_L13;
         }
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":31
+        /* "vaspwfc.pyx":31
  *                 head += line
  *             else:
  *                 break             # <<<<<<<<<<<<<<
@@ -4271,7 +4269,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
         }
         __pyx_L13:;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":27
+        /* "vaspwfc.pyx":27
  *         pos = open(poscar, 'r')
  *         head = ''
  *         for line in pos:             # <<<<<<<<<<<<<<
@@ -4282,7 +4280,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
       __pyx_L12_break:;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":32
+      /* "vaspwfc.pyx":32
  *             else:
  *                 break
  *         head += '\n%5d%5d%5d\n' % (nx, ny, nz)             # <<<<<<<<<<<<<<
@@ -4309,7 +4307,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
       __Pyx_DECREF_SET(__pyx_v_head, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":24
+      /* "vaspwfc.pyx":24
  *     '''
  *     nx, ny, nz = phi.shape
  *     try:             # <<<<<<<<<<<<<<
@@ -4328,7 +4326,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":33
+    /* "vaspwfc.pyx":33
  *                 break
  *         head += '\n%5d%5d%5d\n' % (nx, ny, nz)
  *     except:             # <<<<<<<<<<<<<<
@@ -4336,13 +4334,13 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
  * 
  */
     /*except:*/ {
-      __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_1, &__pyx_t_3) < 0) __PYX_ERR(0, 33, __pyx_L7_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GOTREF(__pyx_t_3);
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":34
+      /* "vaspwfc.pyx":34
  *         head += '\n%5d%5d%5d\n' % (nx, ny, nz)
  *     except:
  *         raise IOError('Failed to open %s' % poscar)             # <<<<<<<<<<<<<<
@@ -4360,7 +4358,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
     }
     __pyx_L7_except_error:;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":24
+    /* "vaspwfc.pyx":24
  *     '''
  *     nx, ny, nz = phi.shape
  *     try:             # <<<<<<<<<<<<<<
@@ -4375,7 +4373,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
     __pyx_L10_try_end:;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":37
+  /* "vaspwfc.pyx":37
  * 
  *     # Faster IO
  *     nrow = phi.size // ncol             # <<<<<<<<<<<<<<
@@ -4390,7 +4388,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __pyx_v_nrow = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":38
+  /* "vaspwfc.pyx":38
  *     # Faster IO
  *     nrow = phi.size // ncol
  *     nrem = phi.size % ncol             # <<<<<<<<<<<<<<
@@ -4405,7 +4403,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __pyx_v_nrem = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":39
+  /* "vaspwfc.pyx":39
  *     nrow = phi.size // ncol
  *     nrem = phi.size % ncol
  *     fmt = "%16.8E"             # <<<<<<<<<<<<<<
@@ -4415,7 +4413,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __Pyx_INCREF(__pyx_kp_s_16_8E);
   __pyx_v_fmt = __pyx_kp_s_16_8E;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":41
+  /* "vaspwfc.pyx":41
  *     fmt = "%16.8E"
  * 
  *     psi = phi.copy()             # <<<<<<<<<<<<<<
@@ -4442,7 +4440,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __pyx_v_psi = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":42
+  /* "vaspwfc.pyx":42
  * 
  *     psi = phi.copy()
  *     psi = psi.flatten(order='F')             # <<<<<<<<<<<<<<
@@ -4461,7 +4459,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __Pyx_DECREF_SET(__pyx_v_psi, __pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":43
+  /* "vaspwfc.pyx":43
  *     psi = phi.copy()
  *     psi = psi.flatten(order='F')
  *     psi_h = psi[:nrow * ncol].reshape((nrow, ncol))             # <<<<<<<<<<<<<<
@@ -4503,7 +4501,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __pyx_v_psi_h = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":44
+  /* "vaspwfc.pyx":44
  *     psi = psi.flatten(order='F')
  *     psi_h = psi[:nrow * ncol].reshape((nrow, ncol))
  *     psi_r = psi[nrow * ncol:]             # <<<<<<<<<<<<<<
@@ -4518,7 +4516,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __pyx_v_psi_r = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":46
+  /* "vaspwfc.pyx":46
  *     psi_r = psi[nrow * ncol:]
  * 
  *     with open(prefix + '_r.vasp', 'w') as out:             # <<<<<<<<<<<<<<
@@ -4573,7 +4571,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
           __pyx_v_out = __pyx_t_3;
           __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":47
+          /* "vaspwfc.pyx":47
  * 
  *     with open(prefix + '_r.vasp', 'w') as out:
  *         out.write(head)             # <<<<<<<<<<<<<<
@@ -4599,7 +4597,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":48
+          /* "vaspwfc.pyx":48
  *     with open(prefix + '_r.vasp', 'w') as out:
  *         out.write(head)
  *         out.write(             # <<<<<<<<<<<<<<
@@ -4609,7 +4607,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
           __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_out, __pyx_n_s_write); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L20_error)
           __Pyx_GOTREF(__pyx_t_1);
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":49
+          /* "vaspwfc.pyx":49
  *         out.write(head)
  *         out.write(
  *             '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -4619,7 +4617,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
           __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 49, __pyx_L20_error)
           __Pyx_GOTREF(__pyx_t_4);
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":50
+          /* "vaspwfc.pyx":50
  *         out.write(
  *             '\n'.join([''.join([fmt % xx for xx in row])
  *                        for row in psi_h.real])             # <<<<<<<<<<<<<<
@@ -4671,7 +4669,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
             __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_5);
             __pyx_t_5 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":49
+            /* "vaspwfc.pyx":49
  *         out.write(head)
  *         out.write(
  *             '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -4733,7 +4731,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
             if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 49, __pyx_L20_error)
             __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":50
+            /* "vaspwfc.pyx":50
  *         out.write(
  *             '\n'.join([''.join([fmt % xx for xx in row])
  *                        for row in psi_h.real])             # <<<<<<<<<<<<<<
@@ -4743,7 +4741,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
           }
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":49
+          /* "vaspwfc.pyx":49
  *         out.write(head)
  *         out.write(
  *             '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -4771,7 +4769,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":52
+          /* "vaspwfc.pyx":52
  *                        for row in psi_h.real])
  *         )
  *         out.write("\n" + ''.join([fmt % xx for xx in psi_r.real]))             # <<<<<<<<<<<<<<
@@ -4856,7 +4854,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":46
+          /* "vaspwfc.pyx":46
  *     psi_r = psi[nrow * ncol:]
  * 
  *     with open(prefix + '_r.vasp', 'w') as out:             # <<<<<<<<<<<<<<
@@ -4877,7 +4875,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         /*except:*/ {
-          __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_2) < 0) __PYX_ERR(0, 46, __pyx_L22_except_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_GOTREF(__pyx_t_1);
@@ -4940,7 +4938,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
     __pyx_L35:;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":53
+  /* "vaspwfc.pyx":53
  *         )
  *         out.write("\n" + ''.join([fmt % xx for xx in psi_r.real]))
  *     if not (lgam or lreal):             # <<<<<<<<<<<<<<
@@ -4959,7 +4957,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __pyx_t_12 = ((!__pyx_t_19) != 0);
   if (__pyx_t_12) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":54
+    /* "vaspwfc.pyx":54
  *         out.write("\n" + ''.join([fmt % xx for xx in psi_r.real]))
  *     if not (lgam or lreal):
  *         with open(prefix + '_i.vasp', 'w') as out:             # <<<<<<<<<<<<<<
@@ -5014,7 +5012,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
             __Pyx_XDECREF_SET(__pyx_v_out, __pyx_t_3);
             __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":55
+            /* "vaspwfc.pyx":55
  *     if not (lgam or lreal):
  *         with open(prefix + '_i.vasp', 'w') as out:
  *             out.write(head)             # <<<<<<<<<<<<<<
@@ -5040,7 +5038,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":56
+            /* "vaspwfc.pyx":56
  *         with open(prefix + '_i.vasp', 'w') as out:
  *             out.write(head)
  *             out.write(             # <<<<<<<<<<<<<<
@@ -5050,7 +5048,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
             __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_out, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 56, __pyx_L43_error)
             __Pyx_GOTREF(__pyx_t_2);
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":57
+            /* "vaspwfc.pyx":57
  *             out.write(head)
  *             out.write(
  *                 '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -5060,7 +5058,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
             __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 57, __pyx_L43_error)
             __Pyx_GOTREF(__pyx_t_1);
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":58
+            /* "vaspwfc.pyx":58
  *             out.write(
  *                 '\n'.join([''.join([fmt % xx for xx in row])
  *                            for row in psi_h.imag])             # <<<<<<<<<<<<<<
@@ -5112,7 +5110,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
               __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_14);
               __pyx_t_14 = 0;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":57
+              /* "vaspwfc.pyx":57
  *             out.write(head)
  *             out.write(
  *                 '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -5174,7 +5172,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
               if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 57, __pyx_L43_error)
               __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":58
+              /* "vaspwfc.pyx":58
  *             out.write(
  *                 '\n'.join([''.join([fmt % xx for xx in row])
  *                            for row in psi_h.imag])             # <<<<<<<<<<<<<<
@@ -5184,7 +5182,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
             }
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":57
+            /* "vaspwfc.pyx":57
  *             out.write(head)
  *             out.write(
  *                 '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -5212,7 +5210,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":60
+            /* "vaspwfc.pyx":60
  *                            for row in psi_h.imag])
  *             )
  *             out.write("\n" + ''.join([fmt % xx for xx in psi_r.imag]))             # <<<<<<<<<<<<<<
@@ -5297,7 +5295,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":54
+            /* "vaspwfc.pyx":54
  *         out.write("\n" + ''.join([fmt % xx for xx in psi_r.real]))
  *     if not (lgam or lreal):
  *         with open(prefix + '_i.vasp', 'w') as out:             # <<<<<<<<<<<<<<
@@ -5318,7 +5316,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           /*except:*/ {
-            __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+            __Pyx_AddTraceback("vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
             if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_2, &__pyx_t_4) < 0) __PYX_ERR(0, 54, __pyx_L45_except_error)
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_GOTREF(__pyx_t_2);
@@ -5381,7 +5379,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
       __pyx_L58:;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":53
+    /* "vaspwfc.pyx":53
  *         )
  *         out.write("\n" + ''.join([fmt % xx for xx in psi_r.real]))
  *     if not (lgam or lreal):             # <<<<<<<<<<<<<<
@@ -5390,7 +5388,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":18
+  /* "vaspwfc.pyx":18
  * 
  * 
  * def save2vesta(phi=None, poscar='POSCAR', prefix='wfc',             # <<<<<<<<<<<<<<
@@ -5409,7 +5407,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_17);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_nx);
@@ -5433,7 +5431,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":73
+/* "vaspwfc.pyx":73
  * @cython.boundscheck(False)
  * @cython.cdivision(True)
  * def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid):             # <<<<<<<<<<<<<<
@@ -5442,9 +5440,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_save2vesta(CYT
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_3expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_3expand_wfc = {"expand_wfc", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_3expand_wfc, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_3expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_3expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7vaspwfc_3expand_wfc = {"expand_wfc", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_3expand_wfc, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7vaspwfc_3expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_signatures = 0;
   PyObject *__pyx_v_args = 0;
   PyObject *__pyx_v_kwargs = 0;
@@ -5514,18 +5512,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_3expand_wfc(Py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 73, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_2expand_wfc(__pyx_self, __pyx_v_signatures, __pyx_v_args, __pyx_v_kwargs, __pyx_v_defaults);
+  __pyx_r = __pyx_pf_7vaspwfc_2expand_wfc(__pyx_self, __pyx_v_signatures, __pyx_v_args, __pyx_v_kwargs, __pyx_v_defaults);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_2expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults) {
+static PyObject *__pyx_pf_7vaspwfc_2expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults) {
   PyObject *__pyx_v_dest_sig = NULL;
   Py_ssize_t __pyx_v_i;
   PyTypeObject *__pyx_v_ndarray = 0;
@@ -5949,7 +5947,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_2expand_wfc(CY
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
   __Pyx_XDECREF(__pyx_t_14);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_dest_sig);
@@ -5969,9 +5967,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_2expand_wfc(CY
 }
 
 /* Python wrapper */
-static PyObject *__pyx_fuse_0__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_5expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_0__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_5expand_wfc = {"__pyx_fuse_0expand_wfc", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_0__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_5expand_wfc, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_fuse_0__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_5expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_fuse_0__pyx_pw_7vaspwfc_5expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_0__pyx_mdef_7vaspwfc_5expand_wfc = {"__pyx_fuse_0expand_wfc", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_0__pyx_pw_7vaspwfc_5expand_wfc, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_fuse_0__pyx_pw_7vaspwfc_5expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_phi = 0;
   PyArrayObject *__pyx_v_grid = 0;
   PyObject *__pyx_r = 0;
@@ -6019,13 +6017,13 @@ static PyObject *__pyx_fuse_0__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_5e
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("expand_wfc", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 73, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.expand_wfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.expand_wfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_phi), __pyx_ptype_5numpy_ndarray, 1, "phi", 0))) __PYX_ERR(0, 73, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grid), __pyx_ptype_5numpy_ndarray, 1, "grid", 0))) __PYX_ERR(0, 73, __pyx_L1_error)
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(__pyx_self, __pyx_v_phi, __pyx_v_grid);
+  __pyx_r = __pyx_pf_7vaspwfc_4expand_wfc(__pyx_self, __pyx_v_phi, __pyx_v_grid);
 
   /* function exit code */
   goto __pyx_L0;
@@ -6036,7 +6034,7 @@ static PyObject *__pyx_fuse_0__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_5e
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_phi, PyArrayObject *__pyx_v_grid) {
+static PyObject *__pyx_pf_7vaspwfc_4expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_phi, PyArrayObject *__pyx_v_grid) {
   int __pyx_v_ii;
   int __pyx_v_jj;
   int __pyx_v_kk;
@@ -6051,8 +6049,8 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
   __Pyx_TraceDeclarations
   __Pyx_RefNannyDeclarations
   Py_ssize_t __pyx_t_1;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_2;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_3;
+  __pyx_t_7vaspwfc_int_t __pyx_t_2;
+  __pyx_t_7vaspwfc_int_t __pyx_t_3;
   int __pyx_t_4;
   Py_ssize_t __pyx_t_5;
   Py_ssize_t __pyx_t_6;
@@ -6062,8 +6060,8 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
   Py_ssize_t __pyx_t_10;
   Py_ssize_t __pyx_t_11;
   Py_ssize_t __pyx_t_12;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_13;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_14;
+  __pyx_t_7vaspwfc_int_t __pyx_t_13;
+  __pyx_t_7vaspwfc_int_t __pyx_t_14;
   int __pyx_t_15;
   Py_ssize_t __pyx_t_16;
   Py_ssize_t __pyx_t_17;
@@ -6081,8 +6079,8 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
   Py_ssize_t __pyx_t_29;
   Py_ssize_t __pyx_t_30;
   Py_ssize_t __pyx_t_31;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_32;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_33;
+  __pyx_t_7vaspwfc_int_t __pyx_t_32;
+  __pyx_t_7vaspwfc_int_t __pyx_t_33;
   int __pyx_t_34;
   Py_ssize_t __pyx_t_35;
   Py_ssize_t __pyx_t_36;
@@ -6149,11 +6147,11 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
   __pyx_pybuffernd_phi.diminfo[0].strides = __pyx_pybuffernd_phi.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_phi.diminfo[0].shape = __pyx_pybuffernd_phi.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_phi.diminfo[1].strides = __pyx_pybuffernd_phi.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_phi.diminfo[1].shape = __pyx_pybuffernd_phi.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_phi.diminfo[2].strides = __pyx_pybuffernd_phi.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_phi.diminfo[2].shape = __pyx_pybuffernd_phi.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grid.rcbuffer->pybuffer, (PyObject*)__pyx_v_grid, &__Pyx_TypeInfo_nn___pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 73, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grid.rcbuffer->pybuffer, (PyObject*)__pyx_v_grid, &__Pyx_TypeInfo_nn___pyx_t_7vaspwfc_int_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 73, __pyx_L1_error)
   }
   __pyx_pybuffernd_grid.diminfo[0].strides = __pyx_pybuffernd_grid.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grid.diminfo[0].shape = __pyx_pybuffernd_grid.rcbuffer->pybuffer.shape[0];
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":77
+  /* "vaspwfc.pyx":77
  * 
  *     ## Upper sphere
  *     for ii in range(1, grid[0] // 2 + 1):             # <<<<<<<<<<<<<<
@@ -6161,12 +6159,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *         phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()
  */
   __pyx_t_1 = 0;
-  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
+  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 1; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_ii = __pyx_t_4;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":78
+    /* "vaspwfc.pyx":78
  *     ## Upper sphere
  *     for ii in range(1, grid[0] // 2 + 1):
  *         ii_inv = grid[0] - ii             # <<<<<<<<<<<<<<
@@ -6174,9 +6172,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *         for kk in range(1, grid[2]):
  */
     __pyx_t_5 = 0;
-    __pyx_v_ii_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_ii);
+    __pyx_v_ii_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_ii);
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":79
+    /* "vaspwfc.pyx":79
  *     for ii in range(1, grid[0] // 2 + 1):
  *         ii_inv = grid[0] - ii
  *         phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()             # <<<<<<<<<<<<<<
@@ -6191,7 +6189,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
     __pyx_t_11 = 0;
     *__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_10, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_11, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_conj_float((*__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_7, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_8, __pyx_pybuffernd_phi.diminfo[2].strides)));
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":80
+    /* "vaspwfc.pyx":80
  *         ii_inv = grid[0] - ii
  *         phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()
  *         for kk in range(1, grid[2]):             # <<<<<<<<<<<<<<
@@ -6199,12 +6197,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *             phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()
  */
     __pyx_t_12 = 2;
-    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_grid.diminfo[0].strides));
+    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_grid.diminfo[0].strides));
     __pyx_t_14 = __pyx_t_13;
     for (__pyx_t_15 = 1; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
       __pyx_v_kk = __pyx_t_15;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":81
+      /* "vaspwfc.pyx":81
  *         phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()
  *         for kk in range(1, grid[2]):
  *             kk_inv = grid[2] - kk             # <<<<<<<<<<<<<<
@@ -6212,9 +6210,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *         for jj in range(1, grid[1]):
  */
       __pyx_t_16 = 2;
-      __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
+      __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":82
+      /* "vaspwfc.pyx":82
  *         for kk in range(1, grid[2]):
  *             kk_inv = grid[2] - kk
  *             phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()             # <<<<<<<<<<<<<<
@@ -6230,7 +6228,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
       *__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_21, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_22, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_conj_float((*__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_19, __pyx_pybuffernd_phi.diminfo[2].strides)));
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":83
+    /* "vaspwfc.pyx":83
  *             kk_inv = grid[2] - kk
  *             phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()
  *         for jj in range(1, grid[1]):             # <<<<<<<<<<<<<<
@@ -6238,12 +6236,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *             phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()
  */
     __pyx_t_23 = 1;
-    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_grid.diminfo[0].strides));
+    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_grid.diminfo[0].strides));
     __pyx_t_14 = __pyx_t_13;
     for (__pyx_t_15 = 1; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
       __pyx_v_jj = __pyx_t_15;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":84
+      /* "vaspwfc.pyx":84
  *             phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()
  *         for jj in range(1, grid[1]):
  *             jj_inv = grid[1] - jj             # <<<<<<<<<<<<<<
@@ -6251,9 +6249,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *             for kk in range(1, grid[2]):
  */
       __pyx_t_24 = 1;
-      __pyx_v_jj_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_jj);
+      __pyx_v_jj_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_jj);
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":85
+      /* "vaspwfc.pyx":85
  *         for jj in range(1, grid[1]):
  *             jj_inv = grid[1] - jj
  *             phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()             # <<<<<<<<<<<<<<
@@ -6268,7 +6266,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
       __pyx_t_30 = 0;
       *__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_conj_float((*__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_phi.diminfo[2].strides)));
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":86
+      /* "vaspwfc.pyx":86
  *             jj_inv = grid[1] - jj
  *             phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()
  *             for kk in range(1, grid[2]):             # <<<<<<<<<<<<<<
@@ -6276,12 +6274,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *                 phi[ii_inv,jj_inv,kk_inv] = phi[ii,jj,kk].conjugate()
  */
       __pyx_t_31 = 2;
-      __pyx_t_32 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_grid.diminfo[0].strides));
+      __pyx_t_32 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_grid.diminfo[0].strides));
       __pyx_t_33 = __pyx_t_32;
       for (__pyx_t_34 = 1; __pyx_t_34 < __pyx_t_33; __pyx_t_34+=1) {
         __pyx_v_kk = __pyx_t_34;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":87
+        /* "vaspwfc.pyx":87
  *             phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()
  *             for kk in range(1, grid[2]):
  *                 kk_inv = grid[2] - kk             # <<<<<<<<<<<<<<
@@ -6289,9 +6287,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  * 
  */
         __pyx_t_35 = 2;
-        __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_35, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
+        __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_35, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":88
+        /* "vaspwfc.pyx":88
  *             for kk in range(1, grid[2]):
  *                 kk_inv = grid[2] - kk
  *                 phi[ii_inv,jj_inv,kk_inv] = phi[ii,jj,kk].conjugate()             # <<<<<<<<<<<<<<
@@ -6309,7 +6307,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
     }
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":91
+  /* "vaspwfc.pyx":91
  * 
  *     ## Upper part of x-y-plane
  *     for jj in range(1, grid[1] // 2 + 1):             # <<<<<<<<<<<<<<
@@ -6317,12 +6315,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *         phi[0, jj_inv, 0] = phi[0, jj, 0].conjugate()
  */
   __pyx_t_42 = 1;
-  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_42, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
+  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_42, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 1; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_jj = __pyx_t_4;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":92
+    /* "vaspwfc.pyx":92
  *     ## Upper part of x-y-plane
  *     for jj in range(1, grid[1] // 2 + 1):
  *         jj_inv = grid[1] - jj             # <<<<<<<<<<<<<<
@@ -6330,9 +6328,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *         for kk in range(1, grid[2]):
  */
     __pyx_t_43 = 1;
-    __pyx_v_jj_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_43, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_jj);
+    __pyx_v_jj_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_43, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_jj);
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":93
+    /* "vaspwfc.pyx":93
  *     for jj in range(1, grid[1] // 2 + 1):
  *         jj_inv = grid[1] - jj
  *         phi[0, jj_inv, 0] = phi[0, jj, 0].conjugate()             # <<<<<<<<<<<<<<
@@ -6347,7 +6345,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
     __pyx_t_49 = 0;
     *__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_47, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_48, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_49, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_conj_float((*__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_44, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_45, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_46, __pyx_pybuffernd_phi.diminfo[2].strides)));
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":94
+    /* "vaspwfc.pyx":94
  *         jj_inv = grid[1] - jj
  *         phi[0, jj_inv, 0] = phi[0, jj, 0].conjugate()
  *         for kk in range(1, grid[2]):             # <<<<<<<<<<<<<<
@@ -6355,12 +6353,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *             phi[0,jj_inv, kk_inv] = phi[0,jj,kk].conjugate()
  */
     __pyx_t_50 = 2;
-    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_50, __pyx_pybuffernd_grid.diminfo[0].strides));
+    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_50, __pyx_pybuffernd_grid.diminfo[0].strides));
     __pyx_t_14 = __pyx_t_13;
     for (__pyx_t_15 = 1; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
       __pyx_v_kk = __pyx_t_15;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":95
+      /* "vaspwfc.pyx":95
  *         phi[0, jj_inv, 0] = phi[0, jj, 0].conjugate()
  *         for kk in range(1, grid[2]):
  *             kk_inv = grid[2] - kk             # <<<<<<<<<<<<<<
@@ -6368,9 +6366,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  * 
  */
       __pyx_t_51 = 2;
-      __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_51, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
+      __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_51, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":96
+      /* "vaspwfc.pyx":96
  *         for kk in range(1, grid[2]):
  *             kk_inv = grid[2] - kk
  *             phi[0,jj_inv, kk_inv] = phi[0,jj,kk].conjugate()             # <<<<<<<<<<<<<<
@@ -6387,7 +6385,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
     }
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":99
+  /* "vaspwfc.pyx":99
  * 
  *     ## Upper part of x-axis
  *     for kk in range(1, grid[2] // 2 + 1):             # <<<<<<<<<<<<<<
@@ -6395,12 +6393,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *         phi[0,0,kk_inv] = phi[0,0,kk].conjugate()
  */
   __pyx_t_58 = 2;
-  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_58, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
+  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_58, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 1; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_kk = __pyx_t_4;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":100
+    /* "vaspwfc.pyx":100
  *     ## Upper part of x-axis
  *     for kk in range(1, grid[2] // 2 + 1):
  *         kk_inv = grid[2] - kk             # <<<<<<<<<<<<<<
@@ -6408,9 +6406,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  * 
  */
     __pyx_t_59 = 2;
-    __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_59, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
+    __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_59, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":101
+    /* "vaspwfc.pyx":101
  *     for kk in range(1, grid[2] // 2 + 1):
  *         kk_inv = grid[2] - kk
  *         phi[0,0,kk_inv] = phi[0,0,kk].conjugate()             # <<<<<<<<<<<<<<
@@ -6426,7 +6424,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
     *__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_63, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_64, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_65, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_conj_float((*__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_60, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_61, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_62, __pyx_pybuffernd_phi.diminfo[2].strides)));
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":103
+  /* "vaspwfc.pyx":103
  *         phi[0,0,kk_inv] = phi[0,0,kk].conjugate()
  * 
  *     for ii in range(grid[0]):             # <<<<<<<<<<<<<<
@@ -6434,12 +6432,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *             for kk in range(grid[2]):
  */
   __pyx_t_66 = 0;
-  __pyx_t_2 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_66, __pyx_pybuffernd_grid.diminfo[0].strides));
+  __pyx_t_2 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_66, __pyx_pybuffernd_grid.diminfo[0].strides));
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_ii = __pyx_t_4;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":104
+    /* "vaspwfc.pyx":104
  * 
  *     for ii in range(grid[0]):
  *         for jj in range(grid[1]):             # <<<<<<<<<<<<<<
@@ -6447,12 +6445,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *                 phi[ii,jj,kk] = phi[ii,jj,kk] / sqrt(2.)
  */
     __pyx_t_67 = 1;
-    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_67, __pyx_pybuffernd_grid.diminfo[0].strides));
+    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_67, __pyx_pybuffernd_grid.diminfo[0].strides));
     __pyx_t_14 = __pyx_t_13;
     for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
       __pyx_v_jj = __pyx_t_15;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":105
+      /* "vaspwfc.pyx":105
  *     for ii in range(grid[0]):
  *         for jj in range(grid[1]):
  *             for kk in range(grid[2]):             # <<<<<<<<<<<<<<
@@ -6460,12 +6458,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
  *     phi[0,0,0] = phi[0,0,0] * sqrt(2)
  */
       __pyx_t_68 = 2;
-      __pyx_t_32 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_68, __pyx_pybuffernd_grid.diminfo[0].strides));
+      __pyx_t_32 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_68, __pyx_pybuffernd_grid.diminfo[0].strides));
       __pyx_t_33 = __pyx_t_32;
       for (__pyx_t_34 = 0; __pyx_t_34 < __pyx_t_33; __pyx_t_34+=1) {
         __pyx_v_kk = __pyx_t_34;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":106
+        /* "vaspwfc.pyx":106
  *         for jj in range(grid[1]):
  *             for kk in range(grid[2]):
  *                 phi[ii,jj,kk] = phi[ii,jj,kk] / sqrt(2.)             # <<<<<<<<<<<<<<
@@ -6485,7 +6483,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
     }
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":107
+  /* "vaspwfc.pyx":107
  *             for kk in range(grid[2]):
  *                 phi[ii,jj,kk] = phi[ii,jj,kk] / sqrt(2.)
  *     phi[0,0,0] = phi[0,0,0] * sqrt(2)             # <<<<<<<<<<<<<<
@@ -6502,7 +6500,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
   __pyx_t_82 = 0;
   *__Pyx_BufPtrStrided3d(__pyx_t_float_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_80, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_81, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_82, __pyx_pybuffernd_phi.diminfo[2].strides) = __pyx_t_float_complex_from_parts(__Pyx_CREAL(__pyx_t_73), __Pyx_CIMAG(__pyx_t_73));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":109
+  /* "vaspwfc.pyx":109
  *     phi[0,0,0] = phi[0,0,0] * sqrt(2)
  * 
  *     return phi             # <<<<<<<<<<<<<<
@@ -6514,7 +6512,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
   __pyx_r = ((PyObject *)__pyx_v_phi);
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":73
+  /* "vaspwfc.pyx":73
  * @cython.boundscheck(False)
  * @cython.cdivision(True)
  * def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid):             # <<<<<<<<<<<<<<
@@ -6531,7 +6529,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grid.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_phi.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.expand_wfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.expand_wfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -6545,9 +6543,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_4expand_wfc(CY
 }
 
 /* Python wrapper */
-static PyObject *__pyx_fuse_1__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_1__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7expand_wfc = {"__pyx_fuse_1expand_wfc", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_1__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7expand_wfc, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_fuse_1__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_fuse_1__pyx_pw_7vaspwfc_7expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_1__pyx_mdef_7vaspwfc_7expand_wfc = {"__pyx_fuse_1expand_wfc", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_fuse_1__pyx_pw_7vaspwfc_7expand_wfc, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_fuse_1__pyx_pw_7vaspwfc_7expand_wfc(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_phi = 0;
   PyArrayObject *__pyx_v_grid = 0;
   PyObject *__pyx_r = 0;
@@ -6595,13 +6593,13 @@ static PyObject *__pyx_fuse_1__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7e
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("expand_wfc", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 73, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.expand_wfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.expand_wfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_phi), __pyx_ptype_5numpy_ndarray, 1, "phi", 0))) __PYX_ERR(0, 73, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_grid), __pyx_ptype_5numpy_ndarray, 1, "grid", 0))) __PYX_ERR(0, 73, __pyx_L1_error)
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(__pyx_self, __pyx_v_phi, __pyx_v_grid);
+  __pyx_r = __pyx_pf_7vaspwfc_6expand_wfc(__pyx_self, __pyx_v_phi, __pyx_v_grid);
 
   /* function exit code */
   goto __pyx_L0;
@@ -6612,7 +6610,7 @@ static PyObject *__pyx_fuse_1__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7e
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_phi, PyArrayObject *__pyx_v_grid) {
+static PyObject *__pyx_pf_7vaspwfc_6expand_wfc(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_phi, PyArrayObject *__pyx_v_grid) {
   int __pyx_v_ii;
   int __pyx_v_jj;
   int __pyx_v_kk;
@@ -6627,8 +6625,8 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
   __Pyx_TraceDeclarations
   __Pyx_RefNannyDeclarations
   Py_ssize_t __pyx_t_1;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_2;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_3;
+  __pyx_t_7vaspwfc_int_t __pyx_t_2;
+  __pyx_t_7vaspwfc_int_t __pyx_t_3;
   int __pyx_t_4;
   Py_ssize_t __pyx_t_5;
   Py_ssize_t __pyx_t_6;
@@ -6638,8 +6636,8 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
   Py_ssize_t __pyx_t_10;
   Py_ssize_t __pyx_t_11;
   Py_ssize_t __pyx_t_12;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_13;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_14;
+  __pyx_t_7vaspwfc_int_t __pyx_t_13;
+  __pyx_t_7vaspwfc_int_t __pyx_t_14;
   int __pyx_t_15;
   Py_ssize_t __pyx_t_16;
   Py_ssize_t __pyx_t_17;
@@ -6657,8 +6655,8 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
   Py_ssize_t __pyx_t_29;
   Py_ssize_t __pyx_t_30;
   Py_ssize_t __pyx_t_31;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_32;
-  __pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t __pyx_t_33;
+  __pyx_t_7vaspwfc_int_t __pyx_t_32;
+  __pyx_t_7vaspwfc_int_t __pyx_t_33;
   int __pyx_t_34;
   Py_ssize_t __pyx_t_35;
   Py_ssize_t __pyx_t_36;
@@ -6723,11 +6721,11 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
   __pyx_pybuffernd_phi.diminfo[0].strides = __pyx_pybuffernd_phi.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_phi.diminfo[0].shape = __pyx_pybuffernd_phi.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_phi.diminfo[1].strides = __pyx_pybuffernd_phi.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_phi.diminfo[1].shape = __pyx_pybuffernd_phi.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_phi.diminfo[2].strides = __pyx_pybuffernd_phi.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_phi.diminfo[2].shape = __pyx_pybuffernd_phi.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grid.rcbuffer->pybuffer, (PyObject*)__pyx_v_grid, &__Pyx_TypeInfo_nn___pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 73, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_grid.rcbuffer->pybuffer, (PyObject*)__pyx_v_grid, &__Pyx_TypeInfo_nn___pyx_t_7vaspwfc_int_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 73, __pyx_L1_error)
   }
   __pyx_pybuffernd_grid.diminfo[0].strides = __pyx_pybuffernd_grid.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_grid.diminfo[0].shape = __pyx_pybuffernd_grid.rcbuffer->pybuffer.shape[0];
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":77
+  /* "vaspwfc.pyx":77
  * 
  *     ## Upper sphere
  *     for ii in range(1, grid[0] // 2 + 1):             # <<<<<<<<<<<<<<
@@ -6735,12 +6733,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *         phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()
  */
   __pyx_t_1 = 0;
-  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
+  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_1, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 1; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_ii = __pyx_t_4;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":78
+    /* "vaspwfc.pyx":78
  *     ## Upper sphere
  *     for ii in range(1, grid[0] // 2 + 1):
  *         ii_inv = grid[0] - ii             # <<<<<<<<<<<<<<
@@ -6748,9 +6746,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *         for kk in range(1, grid[2]):
  */
     __pyx_t_5 = 0;
-    __pyx_v_ii_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_ii);
+    __pyx_v_ii_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_ii);
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":79
+    /* "vaspwfc.pyx":79
  *     for ii in range(1, grid[0] // 2 + 1):
  *         ii_inv = grid[0] - ii
  *         phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()             # <<<<<<<<<<<<<<
@@ -6765,7 +6763,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
     __pyx_t_11 = 0;
     *__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_10, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_11, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_conj_double((*__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_7, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_8, __pyx_pybuffernd_phi.diminfo[2].strides)));
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":80
+    /* "vaspwfc.pyx":80
  *         ii_inv = grid[0] - ii
  *         phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()
  *         for kk in range(1, grid[2]):             # <<<<<<<<<<<<<<
@@ -6773,12 +6771,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *             phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()
  */
     __pyx_t_12 = 2;
-    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_grid.diminfo[0].strides));
+    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_grid.diminfo[0].strides));
     __pyx_t_14 = __pyx_t_13;
     for (__pyx_t_15 = 1; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
       __pyx_v_kk = __pyx_t_15;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":81
+      /* "vaspwfc.pyx":81
  *         phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()
  *         for kk in range(1, grid[2]):
  *             kk_inv = grid[2] - kk             # <<<<<<<<<<<<<<
@@ -6786,9 +6784,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *         for jj in range(1, grid[1]):
  */
       __pyx_t_16 = 2;
-      __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
+      __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":82
+      /* "vaspwfc.pyx":82
  *         for kk in range(1, grid[2]):
  *             kk_inv = grid[2] - kk
  *             phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()             # <<<<<<<<<<<<<<
@@ -6804,7 +6802,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
       *__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_21, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_22, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_conj_double((*__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_19, __pyx_pybuffernd_phi.diminfo[2].strides)));
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":83
+    /* "vaspwfc.pyx":83
  *             kk_inv = grid[2] - kk
  *             phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()
  *         for jj in range(1, grid[1]):             # <<<<<<<<<<<<<<
@@ -6812,12 +6810,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *             phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()
  */
     __pyx_t_23 = 1;
-    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_grid.diminfo[0].strides));
+    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_grid.diminfo[0].strides));
     __pyx_t_14 = __pyx_t_13;
     for (__pyx_t_15 = 1; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
       __pyx_v_jj = __pyx_t_15;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":84
+      /* "vaspwfc.pyx":84
  *             phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()
  *         for jj in range(1, grid[1]):
  *             jj_inv = grid[1] - jj             # <<<<<<<<<<<<<<
@@ -6825,9 +6823,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *             for kk in range(1, grid[2]):
  */
       __pyx_t_24 = 1;
-      __pyx_v_jj_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_jj);
+      __pyx_v_jj_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_jj);
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":85
+      /* "vaspwfc.pyx":85
  *         for jj in range(1, grid[1]):
  *             jj_inv = grid[1] - jj
  *             phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()             # <<<<<<<<<<<<<<
@@ -6842,7 +6840,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
       __pyx_t_30 = 0;
       *__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_conj_double((*__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_phi.diminfo[2].strides)));
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":86
+      /* "vaspwfc.pyx":86
  *             jj_inv = grid[1] - jj
  *             phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()
  *             for kk in range(1, grid[2]):             # <<<<<<<<<<<<<<
@@ -6850,12 +6848,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *                 phi[ii_inv,jj_inv,kk_inv] = phi[ii,jj,kk].conjugate()
  */
       __pyx_t_31 = 2;
-      __pyx_t_32 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_grid.diminfo[0].strides));
+      __pyx_t_32 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_grid.diminfo[0].strides));
       __pyx_t_33 = __pyx_t_32;
       for (__pyx_t_34 = 1; __pyx_t_34 < __pyx_t_33; __pyx_t_34+=1) {
         __pyx_v_kk = __pyx_t_34;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":87
+        /* "vaspwfc.pyx":87
  *             phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()
  *             for kk in range(1, grid[2]):
  *                 kk_inv = grid[2] - kk             # <<<<<<<<<<<<<<
@@ -6863,9 +6861,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  * 
  */
         __pyx_t_35 = 2;
-        __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_35, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
+        __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_35, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":88
+        /* "vaspwfc.pyx":88
  *             for kk in range(1, grid[2]):
  *                 kk_inv = grid[2] - kk
  *                 phi[ii_inv,jj_inv,kk_inv] = phi[ii,jj,kk].conjugate()             # <<<<<<<<<<<<<<
@@ -6883,7 +6881,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
     }
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":91
+  /* "vaspwfc.pyx":91
  * 
  *     ## Upper part of x-y-plane
  *     for jj in range(1, grid[1] // 2 + 1):             # <<<<<<<<<<<<<<
@@ -6891,12 +6889,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *         phi[0, jj_inv, 0] = phi[0, jj, 0].conjugate()
  */
   __pyx_t_42 = 1;
-  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_42, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
+  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_42, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 1; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_jj = __pyx_t_4;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":92
+    /* "vaspwfc.pyx":92
  *     ## Upper part of x-y-plane
  *     for jj in range(1, grid[1] // 2 + 1):
  *         jj_inv = grid[1] - jj             # <<<<<<<<<<<<<<
@@ -6904,9 +6902,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *         for kk in range(1, grid[2]):
  */
     __pyx_t_43 = 1;
-    __pyx_v_jj_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_43, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_jj);
+    __pyx_v_jj_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_43, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_jj);
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":93
+    /* "vaspwfc.pyx":93
  *     for jj in range(1, grid[1] // 2 + 1):
  *         jj_inv = grid[1] - jj
  *         phi[0, jj_inv, 0] = phi[0, jj, 0].conjugate()             # <<<<<<<<<<<<<<
@@ -6921,7 +6919,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
     __pyx_t_49 = 0;
     *__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_47, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_48, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_49, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_conj_double((*__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_44, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_45, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_46, __pyx_pybuffernd_phi.diminfo[2].strides)));
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":94
+    /* "vaspwfc.pyx":94
  *         jj_inv = grid[1] - jj
  *         phi[0, jj_inv, 0] = phi[0, jj, 0].conjugate()
  *         for kk in range(1, grid[2]):             # <<<<<<<<<<<<<<
@@ -6929,12 +6927,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *             phi[0,jj_inv, kk_inv] = phi[0,jj,kk].conjugate()
  */
     __pyx_t_50 = 2;
-    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_50, __pyx_pybuffernd_grid.diminfo[0].strides));
+    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_50, __pyx_pybuffernd_grid.diminfo[0].strides));
     __pyx_t_14 = __pyx_t_13;
     for (__pyx_t_15 = 1; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
       __pyx_v_kk = __pyx_t_15;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":95
+      /* "vaspwfc.pyx":95
  *         phi[0, jj_inv, 0] = phi[0, jj, 0].conjugate()
  *         for kk in range(1, grid[2]):
  *             kk_inv = grid[2] - kk             # <<<<<<<<<<<<<<
@@ -6942,9 +6940,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  * 
  */
       __pyx_t_51 = 2;
-      __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_51, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
+      __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_51, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":96
+      /* "vaspwfc.pyx":96
  *         for kk in range(1, grid[2]):
  *             kk_inv = grid[2] - kk
  *             phi[0,jj_inv, kk_inv] = phi[0,jj,kk].conjugate()             # <<<<<<<<<<<<<<
@@ -6961,7 +6959,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
     }
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":99
+  /* "vaspwfc.pyx":99
  * 
  *     ## Upper part of x-axis
  *     for kk in range(1, grid[2] // 2 + 1):             # <<<<<<<<<<<<<<
@@ -6969,12 +6967,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *         phi[0,0,kk_inv] = phi[0,0,kk].conjugate()
  */
   __pyx_t_58 = 2;
-  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_58, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
+  __pyx_t_2 = (((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_58, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) + 1);
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 1; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_kk = __pyx_t_4;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":100
+    /* "vaspwfc.pyx":100
  *     ## Upper part of x-axis
  *     for kk in range(1, grid[2] // 2 + 1):
  *         kk_inv = grid[2] - kk             # <<<<<<<<<<<<<<
@@ -6982,9 +6980,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  * 
  */
     __pyx_t_59 = 2;
-    __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_59, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
+    __pyx_v_kk_inv = ((*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_59, __pyx_pybuffernd_grid.diminfo[0].strides)) - __pyx_v_kk);
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":101
+    /* "vaspwfc.pyx":101
  *     for kk in range(1, grid[2] // 2 + 1):
  *         kk_inv = grid[2] - kk
  *         phi[0,0,kk_inv] = phi[0,0,kk].conjugate()             # <<<<<<<<<<<<<<
@@ -7000,7 +6998,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
     *__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_63, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_64, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_65, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_conj_double((*__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_60, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_61, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_62, __pyx_pybuffernd_phi.diminfo[2].strides)));
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":103
+  /* "vaspwfc.pyx":103
  *         phi[0,0,kk_inv] = phi[0,0,kk].conjugate()
  * 
  *     for ii in range(grid[0]):             # <<<<<<<<<<<<<<
@@ -7008,12 +7006,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *             for kk in range(grid[2]):
  */
   __pyx_t_66 = 0;
-  __pyx_t_2 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_66, __pyx_pybuffernd_grid.diminfo[0].strides));
+  __pyx_t_2 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_66, __pyx_pybuffernd_grid.diminfo[0].strides));
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_ii = __pyx_t_4;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":104
+    /* "vaspwfc.pyx":104
  * 
  *     for ii in range(grid[0]):
  *         for jj in range(grid[1]):             # <<<<<<<<<<<<<<
@@ -7021,12 +7019,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *                 phi[ii,jj,kk] = phi[ii,jj,kk] / sqrt(2.)
  */
     __pyx_t_67 = 1;
-    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_67, __pyx_pybuffernd_grid.diminfo[0].strides));
+    __pyx_t_13 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_67, __pyx_pybuffernd_grid.diminfo[0].strides));
     __pyx_t_14 = __pyx_t_13;
     for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
       __pyx_v_jj = __pyx_t_15;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":105
+      /* "vaspwfc.pyx":105
  *     for ii in range(grid[0]):
  *         for jj in range(grid[1]):
  *             for kk in range(grid[2]):             # <<<<<<<<<<<<<<
@@ -7034,12 +7032,12 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  *     phi[0,0,0] = phi[0,0,0] * sqrt(2)
  */
       __pyx_t_68 = 2;
-      __pyx_t_32 = (*__Pyx_BufPtrStrided1d(__pyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_68, __pyx_pybuffernd_grid.diminfo[0].strides));
+      __pyx_t_32 = (*__Pyx_BufPtrStrided1d(__pyx_t_7vaspwfc_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_68, __pyx_pybuffernd_grid.diminfo[0].strides));
       __pyx_t_33 = __pyx_t_32;
       for (__pyx_t_34 = 0; __pyx_t_34 < __pyx_t_33; __pyx_t_34+=1) {
         __pyx_v_kk = __pyx_t_34;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":106
+        /* "vaspwfc.pyx":106
  *         for jj in range(grid[1]):
  *             for kk in range(grid[2]):
  *                 phi[ii,jj,kk] = phi[ii,jj,kk] / sqrt(2.)             # <<<<<<<<<<<<<<
@@ -7057,7 +7055,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
     }
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":107
+  /* "vaspwfc.pyx":107
  *             for kk in range(grid[2]):
  *                 phi[ii,jj,kk] = phi[ii,jj,kk] / sqrt(2.)
  *     phi[0,0,0] = phi[0,0,0] * sqrt(2)             # <<<<<<<<<<<<<<
@@ -7072,7 +7070,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
   __pyx_t_80 = 0;
   *__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_78, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_79, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_80, __pyx_pybuffernd_phi.diminfo[2].strides) = __Pyx_c_prod_double((*__Pyx_BufPtrStrided3d(__pyx_t_double_complex *, __pyx_pybuffernd_phi.rcbuffer->pybuffer.buf, __pyx_t_75, __pyx_pybuffernd_phi.diminfo[0].strides, __pyx_t_76, __pyx_pybuffernd_phi.diminfo[1].strides, __pyx_t_77, __pyx_pybuffernd_phi.diminfo[2].strides)), __pyx_t_double_complex_from_parts(sqrt(2.0), 0));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":109
+  /* "vaspwfc.pyx":109
  *     phi[0,0,0] = phi[0,0,0] * sqrt(2)
  * 
  *     return phi             # <<<<<<<<<<<<<<
@@ -7084,7 +7082,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
   __pyx_r = ((PyObject *)__pyx_v_phi);
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":73
+  /* "vaspwfc.pyx":73
  * @cython.boundscheck(False)
  * @cython.cdivision(True)
  * def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid):             # <<<<<<<<<<<<<<
@@ -7101,7 +7099,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_grid.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_phi.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.expand_wfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.expand_wfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -7114,7 +7112,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":141
+/* "vaspwfc.pyx":141
  *     '''
  * 
  *     def __init__(self, fnm='WAVECAR', lsorbit=False, lgamma=False,             # <<<<<<<<<<<<<<
@@ -7123,10 +7121,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_6expand_wfc(CY
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___init__[] = "\n        Initialization.\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_1__init__, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___init__};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc___init__[] = "\n        Initialization.\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_1__init__, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc___init__};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_fnm = 0;
   PyObject *__pyx_v_lsorbit = 0;
@@ -7230,18 +7228,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_1__in
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 141, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___init__(__pyx_self, __pyx_v_self, __pyx_v_fnm, __pyx_v_lsorbit, __pyx_v_lgamma, __pyx_v_gamma_half, __pyx_v_omp_num_threads);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc___init__(__pyx_self, __pyx_v_self, __pyx_v_fnm, __pyx_v_lsorbit, __pyx_v_lgamma, __pyx_v_gamma_half, __pyx_v_omp_num_threads);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fnm, PyObject *__pyx_v_lsorbit, PyObject *__pyx_v_lgamma, PyObject *__pyx_v_gamma_half, PyObject *__pyx_v_omp_num_threads) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fnm, PyObject *__pyx_v_lsorbit, PyObject *__pyx_v_lgamma, PyObject *__pyx_v_gamma_half, PyObject *__pyx_v_omp_num_threads) {
   PyObject *__pyx_r = NULL;
   __Pyx_TraceDeclarations
   __Pyx_RefNannyDeclarations
@@ -7259,7 +7257,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_TraceCall("__init__", __pyx_f[0], 141, 0, __PYX_ERR(0, 141, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":147
+  /* "vaspwfc.pyx":147
  *         '''
  * 
  *         self._fname = fnm             # <<<<<<<<<<<<<<
@@ -7268,7 +7266,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fname, __pyx_v_fnm) < 0) __PYX_ERR(0, 147, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":149
+  /* "vaspwfc.pyx":149
  *         self._fname = fnm
  *         # the directory containing the input file
  *         self._dname = os.path.dirname(fnm)             # <<<<<<<<<<<<<<
@@ -7301,7 +7299,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dname, __pyx_t_1) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":150
+  /* "vaspwfc.pyx":150
  *         # the directory containing the input file
  *         self._dname = os.path.dirname(fnm)
  *         if self._dname == '':             # <<<<<<<<<<<<<<
@@ -7314,7 +7312,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_4) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":151
+    /* "vaspwfc.pyx":151
  *         self._dname = os.path.dirname(fnm)
  *         if self._dname == '':
  *             self._dname = '.'             # <<<<<<<<<<<<<<
@@ -7323,7 +7321,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dname, __pyx_kp_s__10) < 0) __PYX_ERR(0, 151, __pyx_L1_error)
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":150
+    /* "vaspwfc.pyx":150
  *         # the directory containing the input file
  *         self._dname = os.path.dirname(fnm)
  *         if self._dname == '':             # <<<<<<<<<<<<<<
@@ -7332,7 +7330,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":153
+  /* "vaspwfc.pyx":153
  *             self._dname = '.'
  * 
  *         self._lsoc = lsorbit             # <<<<<<<<<<<<<<
@@ -7341,7 +7339,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lsoc, __pyx_v_lsorbit) < 0) __PYX_ERR(0, 153, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":154
+  /* "vaspwfc.pyx":154
  * 
  *         self._lsoc = lsorbit
  *         self._lgam = lgamma             # <<<<<<<<<<<<<<
@@ -7350,7 +7348,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lgam_2, __pyx_v_lgamma) < 0) __PYX_ERR(0, 154, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":155
+  /* "vaspwfc.pyx":155
  *         self._lsoc = lsorbit
  *         self._lgam = lgamma
  *         self._gam_half = gamma_half.lower()             # <<<<<<<<<<<<<<
@@ -7377,7 +7375,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_gam_half, __pyx_t_1) < 0) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":159
+  /* "vaspwfc.pyx":159
  *         # It seems that some modules in scipy uses OPENMP, it is therefore
  *         # desirable to set the OMP_NUM_THREADS to tune the parallization.
  *         os.environ['OMP_NUM_THREADS'] = str(omp_num_threads)             # <<<<<<<<<<<<<<
@@ -7395,7 +7393,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":161
+  /* "vaspwfc.pyx":161
  *         os.environ['OMP_NUM_THREADS'] = str(omp_num_threads)
  * 
  *         assert not (lsorbit and lgamma), 'The two settings conflict!'             # <<<<<<<<<<<<<<
@@ -7420,7 +7418,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":162
+  /* "vaspwfc.pyx":162
  * 
  *         assert not (lsorbit and lgamma), 'The two settings conflict!'
  *         assert self._gam_half == 'x' or self._gam_half == 'z', \             # <<<<<<<<<<<<<<
@@ -7451,7 +7449,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":165
+  /* "vaspwfc.pyx":165
  *             'Gamma_half must be "x" or "z"'
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -7467,7 +7465,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
     __Pyx_XGOTREF(__pyx_t_8);
     /*try:*/ {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":166
+      /* "vaspwfc.pyx":166
  * 
  *         try:
  *             self._wfc = open(self._fname, 'rb')             # <<<<<<<<<<<<<<
@@ -7490,7 +7488,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_wfc_2, __pyx_t_1) < 0) __PYX_ERR(0, 166, __pyx_L8_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":165
+      /* "vaspwfc.pyx":165
  *             'Gamma_half must be "x" or "z"'
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -7507,7 +7505,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":167
+    /* "vaspwfc.pyx":167
  *         try:
  *             self._wfc = open(self._fname, 'rb')
  *         except:             # <<<<<<<<<<<<<<
@@ -7515,13 +7513,13 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
  * 
  */
     /*except:*/ {
-      __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("vaspwfc.vaspwfc.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_3, &__pyx_t_2) < 0) __PYX_ERR(0, 167, __pyx_L10_except_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_GOTREF(__pyx_t_2);
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":168
+      /* "vaspwfc.pyx":168
  *             self._wfc = open(self._fname, 'rb')
  *         except:
  *             raise IOError('Failed to open %s' % self._fname)             # <<<<<<<<<<<<<<
@@ -7542,7 +7540,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
     }
     __pyx_L10_except_error:;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":165
+    /* "vaspwfc.pyx":165
  *             'Gamma_half must be "x" or "z"'
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -7557,7 +7555,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
     __pyx_L13_try_end:;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":171
+  /* "vaspwfc.pyx":171
  * 
  *         # read the basic information
  *         self.readWFHeader()             # <<<<<<<<<<<<<<
@@ -7583,7 +7581,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":173
+  /* "vaspwfc.pyx":173
  *         self.readWFHeader()
  *         # read the band information
  *         self.readWFBand()             # <<<<<<<<<<<<<<
@@ -7609,7 +7607,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":175
+  /* "vaspwfc.pyx":175
  *         self.readWFBand()
  * 
  *         if self._lsoc:             # <<<<<<<<<<<<<<
@@ -7622,7 +7620,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":176
+    /* "vaspwfc.pyx":176
  * 
  *         if self._lsoc:
  *             assert self._nspin == 1, "NSPIN = 1 for noncollinear version WAVECAR!"             # <<<<<<<<<<<<<<
@@ -7645,7 +7643,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
     }
     #endif
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":175
+    /* "vaspwfc.pyx":175
  *         self.readWFBand()
  * 
  *         if self._lsoc:             # <<<<<<<<<<<<<<
@@ -7654,7 +7652,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":141
+  /* "vaspwfc.pyx":141
  *     '''
  * 
  *     def __init__(self, fnm='WAVECAR', lsorbit=False, lgamma=False,             # <<<<<<<<<<<<<<
@@ -7671,7 +7669,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7680,7 +7678,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":178
+/* "vaspwfc.pyx":178
  *             assert self._nspin == 1, "NSPIN = 1 for noncollinear version WAVECAR!"
  * 
  *     def set_omp_num_threads(self, nproc):             # <<<<<<<<<<<<<<
@@ -7689,10 +7687,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc___ini
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_3set_omp_num_threads(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_omp_num_threads[] = "\n        Set the OMP_NUM_THREADS envrionment variable\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_3set_omp_num_threads = {"set_omp_num_threads", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_3set_omp_num_threads, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_omp_num_threads};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_3set_omp_num_threads(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_3set_omp_num_threads(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_2set_omp_num_threads[] = "\n        Set the OMP_NUM_THREADS envrionment variable\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_3set_omp_num_threads = {"set_omp_num_threads", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_3set_omp_num_threads, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_2set_omp_num_threads};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_3set_omp_num_threads(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_nproc = 0;
   PyObject *__pyx_r = 0;
@@ -7740,18 +7738,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_3set_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("set_omp_num_threads", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 178, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.set_omp_num_threads", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.set_omp_num_threads", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_omp_num_threads(__pyx_self, __pyx_v_self, __pyx_v_nproc);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_2set_omp_num_threads(__pyx_self, __pyx_v_self, __pyx_v_nproc);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_omp_num_threads(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_nproc) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_2set_omp_num_threads(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_nproc) {
   PyObject *__pyx_r = NULL;
   __Pyx_TraceDeclarations
   __Pyx_RefNannyDeclarations
@@ -7764,7 +7762,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_
   __Pyx_RefNannySetupContext("set_omp_num_threads", 0);
   __Pyx_TraceCall("set_omp_num_threads", __pyx_f[0], 178, 0, __PYX_ERR(0, 178, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":182
+  /* "vaspwfc.pyx":182
  *         Set the OMP_NUM_THREADS envrionment variable
  *         '''
  *         assert 1 <= nproc <= cpu_count()             # <<<<<<<<<<<<<<
@@ -7805,7 +7803,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":184
+  /* "vaspwfc.pyx":184
  *         assert 1 <= nproc <= cpu_count()
  * 
  *         os.envrion['OMP_NUM_THREADS'] = str(nproc)             # <<<<<<<<<<<<<<
@@ -7823,7 +7821,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":178
+  /* "vaspwfc.pyx":178
  *             assert self._nspin == 1, "NSPIN = 1 for noncollinear version WAVECAR!"
  * 
  *     def set_omp_num_threads(self, nproc):             # <<<<<<<<<<<<<<
@@ -7839,7 +7837,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.set_omp_num_threads", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.set_omp_num_threads", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7848,7 +7846,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":186
+/* "vaspwfc.pyx":186
  *         os.envrion['OMP_NUM_THREADS'] = str(nproc)
  * 
  *     def isSocWfc(self):             # <<<<<<<<<<<<<<
@@ -7857,21 +7855,21 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_2set_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_5isSocWfc(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_4isSocWfc[] = "\n        Is the WAVECAR from an SOC calculation?\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_5isSocWfc = {"isSocWfc", (PyCFunction)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_5isSocWfc, METH_O, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_4isSocWfc};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_5isSocWfc(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_5isSocWfc(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_4isSocWfc[] = "\n        Is the WAVECAR from an SOC calculation?\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_5isSocWfc = {"isSocWfc", (PyCFunction)__pyx_pw_7vaspwfc_7vaspwfc_5isSocWfc, METH_O, __pyx_doc_7vaspwfc_7vaspwfc_4isSocWfc};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_5isSocWfc(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("isSocWfc (wrapper)", 0);
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_4isSocWfc(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_4isSocWfc(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_4isSocWfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_4isSocWfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_TraceDeclarations
   __Pyx_RefNannyDeclarations
@@ -7882,7 +7880,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_4isSo
   __Pyx_RefNannySetupContext("isSocWfc", 0);
   __Pyx_TraceCall("isSocWfc", __pyx_f[0], 186, 0, __PYX_ERR(0, 186, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":190
+  /* "vaspwfc.pyx":190
  *         Is the WAVECAR from an SOC calculation?
  *         """
  *         return True if self._lsoc else False             # <<<<<<<<<<<<<<
@@ -7905,7 +7903,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_4isSo
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":186
+  /* "vaspwfc.pyx":186
  *         os.envrion['OMP_NUM_THREADS'] = str(nproc)
  * 
  *     def isSocWfc(self):             # <<<<<<<<<<<<<<
@@ -7917,7 +7915,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_4isSo
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.isSocWfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.isSocWfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7926,7 +7924,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_4isSo
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":192
+/* "vaspwfc.pyx":192
  *         return True if self._lsoc else False
  * 
  *     def isGammaWfc(self):             # <<<<<<<<<<<<<<
@@ -7935,21 +7933,21 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_4isSo
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_7isGammaWfc(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_6isGammaWfc[] = "\n        Is the WAVECAR from an SOC calculation?\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_7isGammaWfc = {"isGammaWfc", (PyCFunction)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_7isGammaWfc, METH_O, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_6isGammaWfc};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_7isGammaWfc(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_7isGammaWfc(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_6isGammaWfc[] = "\n        Is the WAVECAR from an SOC calculation?\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_7isGammaWfc = {"isGammaWfc", (PyCFunction)__pyx_pw_7vaspwfc_7vaspwfc_7isGammaWfc, METH_O, __pyx_doc_7vaspwfc_7vaspwfc_6isGammaWfc};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_7isGammaWfc(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("isGammaWfc (wrapper)", 0);
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_6isGammaWfc(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_6isGammaWfc(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_6isGammaWfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_6isGammaWfc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_TraceDeclarations
   __Pyx_RefNannyDeclarations
@@ -7960,7 +7958,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_6isGa
   __Pyx_RefNannySetupContext("isGammaWfc", 0);
   __Pyx_TraceCall("isGammaWfc", __pyx_f[0], 192, 0, __PYX_ERR(0, 192, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":196
+  /* "vaspwfc.pyx":196
  *         Is the WAVECAR from an SOC calculation?
  *         """
  *         return True if self._lgam else False             # <<<<<<<<<<<<<<
@@ -7983,7 +7981,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_6isGa
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":192
+  /* "vaspwfc.pyx":192
  *         return True if self._lsoc else False
  * 
  *     def isGammaWfc(self):             # <<<<<<<<<<<<<<
@@ -7995,7 +7993,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_6isGa
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.isGammaWfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.isGammaWfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -8004,7 +8002,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_6isGa
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":198
+/* "vaspwfc.pyx":198
  *         return True if self._lgam else False
  * 
  *     def readWFHeader(self):             # <<<<<<<<<<<<<<
@@ -8013,21 +8011,21 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_6isGa
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_9readWFHeader(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8readWFHeader[] = "\n        Read the system information from WAVECAR, which is written in the first\n        two record.\n\n        rec1: recl, nspin, rtag\n        rec2: nkpts, nbands, encut, ((cell(i,j) i=1, 3), j=1, 3)\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_9readWFHeader = {"readWFHeader", (PyCFunction)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_9readWFHeader, METH_O, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8readWFHeader};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_9readWFHeader(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_9readWFHeader(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_8readWFHeader[] = "\n        Read the system information from WAVECAR, which is written in the first\n        two record.\n\n        rec1: recl, nspin, rtag\n        rec2: nkpts, nbands, encut, ((cell(i,j) i=1, 3), j=1, 3)\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_9readWFHeader = {"readWFHeader", (PyCFunction)__pyx_pw_7vaspwfc_7vaspwfc_9readWFHeader, METH_O, __pyx_doc_7vaspwfc_7vaspwfc_8readWFHeader};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_9readWFHeader(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("readWFHeader (wrapper)", 0);
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8readWFHeader(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_8readWFHeader(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8readWFHeader(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_8readWFHeader(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_dump = NULL;
   PyObject *__pyx_v_Anorm = NULL;
   PyObject *__pyx_v_CUTOF = NULL;
@@ -8046,7 +8044,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   __Pyx_RefNannySetupContext("readWFHeader", 0);
   __Pyx_TraceCall("readWFHeader", __pyx_f[0], 198, 0, __PYX_ERR(0, 198, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":208
+  /* "vaspwfc.pyx":208
  * 
  *         # goto the start of the file and read the first record
  *         self._wfc.seek(0)             # <<<<<<<<<<<<<<
@@ -8075,7 +8073,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":209
+  /* "vaspwfc.pyx":209
  *         # goto the start of the file and read the first record
  *         self._wfc.seek(0)
  *         self._recl, self._nspin, self._rtag = np.array(             # <<<<<<<<<<<<<<
@@ -8088,7 +8086,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":210
+  /* "vaspwfc.pyx":210
  *         self._wfc.seek(0)
  *         self._recl, self._nspin, self._rtag = np.array(
  *             np.fromfile(self._wfc, dtype=np.float, count=3),             # <<<<<<<<<<<<<<
@@ -8123,7 +8121,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":209
+  /* "vaspwfc.pyx":209
  *         # goto the start of the file and read the first record
  *         self._wfc.seek(0)
  *         self._recl, self._nspin, self._rtag = np.array(             # <<<<<<<<<<<<<<
@@ -8136,7 +8134,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":211
+  /* "vaspwfc.pyx":211
  *         self._recl, self._nspin, self._rtag = np.array(
  *             np.fromfile(self._wfc, dtype=np.float, count=3),
  *             dtype=np.int64             # <<<<<<<<<<<<<<
@@ -8153,7 +8151,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":209
+  /* "vaspwfc.pyx":209
  *         # goto the start of the file and read the first record
  *         self._wfc.seek(0)
  *         self._recl, self._nspin, self._rtag = np.array(             # <<<<<<<<<<<<<<
@@ -8225,7 +8223,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rtag, __pyx_t_3) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":213
+  /* "vaspwfc.pyx":213
  *             dtype=np.int64
  *         )
  *         self._WFPrec = self.setWFPrec()             # <<<<<<<<<<<<<<
@@ -8252,7 +8250,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_WFPrec, __pyx_t_2) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":215
+  /* "vaspwfc.pyx":215
  *         self._WFPrec = self.setWFPrec()
  *         # the second record
  *         self._wfc.seek(self._recl)             # <<<<<<<<<<<<<<
@@ -8284,7 +8282,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":216
+  /* "vaspwfc.pyx":216
  *         # the second record
  *         self._wfc.seek(self._recl)
  *         dump = np.fromfile(self._wfc, dtype=np.float, count=12)             # <<<<<<<<<<<<<<
@@ -8321,7 +8319,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   __pyx_v_dump = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":218
+  /* "vaspwfc.pyx":218
  *         dump = np.fromfile(self._wfc, dtype=np.float, count=12)
  * 
  *         self._nkpts = int(dump[0])                     # No. of k-points             # <<<<<<<<<<<<<<
@@ -8336,7 +8334,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_nkpts, __pyx_t_2) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":219
+  /* "vaspwfc.pyx":219
  * 
  *         self._nkpts = int(dump[0])                     # No. of k-points
  *         self._nbands = int(dump[1])                     # No. of bands             # <<<<<<<<<<<<<<
@@ -8351,7 +8349,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_nbands, __pyx_t_4) < 0) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":220
+  /* "vaspwfc.pyx":220
  *         self._nkpts = int(dump[0])                     # No. of k-points
  *         self._nbands = int(dump[1])                     # No. of bands
  *         self._encut = dump[2]                          # Energy cutoff             # <<<<<<<<<<<<<<
@@ -8363,7 +8361,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_encut, __pyx_t_4) < 0) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":222
+  /* "vaspwfc.pyx":222
  *         self._encut = dump[2]                          # Energy cutoff
  *         # real space supercell basis
  *         self._Acell = dump[3:].reshape((3, 3))             # <<<<<<<<<<<<<<
@@ -8393,7 +8391,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Acell, __pyx_t_4) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":224
+  /* "vaspwfc.pyx":224
  *         self._Acell = dump[3:].reshape((3, 3))
  *         # real space supercell volume
  *         self._Omega = np.linalg.det(self._Acell)             # <<<<<<<<<<<<<<
@@ -8429,7 +8427,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Omega, __pyx_t_4) < 0) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":226
+  /* "vaspwfc.pyx":226
  *         self._Omega = np.linalg.det(self._Acell)
  *         # reciprocal space supercell volume
  *         self._Bcell = np.linalg.inv(self._Acell).T             # <<<<<<<<<<<<<<
@@ -8468,7 +8466,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Bcell, __pyx_t_3) < 0) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":229
+  /* "vaspwfc.pyx":229
  * 
  *         # Minimum FFT grid size
  *         Anorm = np.linalg.norm(self._Acell, axis=1)             # <<<<<<<<<<<<<<
@@ -8501,7 +8499,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   __pyx_v_Anorm = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":230
+  /* "vaspwfc.pyx":230
  *         # Minimum FFT grid size
  *         Anorm = np.linalg.norm(self._Acell, axis=1)
  *         CUTOF = np.ceil(             # <<<<<<<<<<<<<<
@@ -8514,7 +8512,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":231
+  /* "vaspwfc.pyx":231
  *         Anorm = np.linalg.norm(self._Acell, axis=1)
  *         CUTOF = np.ceil(
  *             sqrt(self._encut / RYTOEV) / (TPI / (Anorm / AUTOA))             # <<<<<<<<<<<<<<
@@ -8567,7 +8565,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   __pyx_v_CUTOF = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":233
+  /* "vaspwfc.pyx":233
  *             sqrt(self._encut / RYTOEV) / (TPI / (Anorm / AUTOA))
  *         )
  *         self._ngrid = np.array(2 * CUTOF + 1, dtype=int)             # <<<<<<<<<<<<<<
@@ -8600,7 +8598,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ngrid, __pyx_t_4) < 0) __PYX_ERR(0, 233, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":198
+  /* "vaspwfc.pyx":198
  *         return True if self._lgam else False
  * 
  *     def readWFHeader(self):             # <<<<<<<<<<<<<<
@@ -8618,7 +8616,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.readWFHeader", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.readWFHeader", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_dump);
@@ -8630,7 +8628,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":235
+/* "vaspwfc.pyx":235
  *         self._ngrid = np.array(2 * CUTOF + 1, dtype=int)
  * 
  *     def setWFPrec(self):             # <<<<<<<<<<<<<<
@@ -8639,21 +8637,21 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_8read
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_11setWFPrec(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10setWFPrec[] = "\n        Set wavefunction coefficients precision:\n            TAG = 45200: single precision complex, np.complex64, or complex(qs)\n            TAG = 45210: double precision complex, np.complex128, or complex(q)\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_11setWFPrec = {"setWFPrec", (PyCFunction)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_11setWFPrec, METH_O, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10setWFPrec};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_11setWFPrec(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_11setWFPrec(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_10setWFPrec[] = "\n        Set wavefunction coefficients precision:\n            TAG = 45200: single precision complex, np.complex64, or complex(qs)\n            TAG = 45210: double precision complex, np.complex128, or complex(q)\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_11setWFPrec = {"setWFPrec", (PyCFunction)__pyx_pw_7vaspwfc_7vaspwfc_11setWFPrec, METH_O, __pyx_doc_7vaspwfc_7vaspwfc_10setWFPrec};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_11setWFPrec(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setWFPrec (wrapper)", 0);
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10setWFPrec(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_10setWFPrec(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10setWFPrec(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_10setWFPrec(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_TraceDeclarations
   __Pyx_RefNannyDeclarations
@@ -8666,7 +8664,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
   __Pyx_RefNannySetupContext("setWFPrec", 0);
   __Pyx_TraceCall("setWFPrec", __pyx_f[0], 235, 0, __PYX_ERR(0, 235, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":241
+  /* "vaspwfc.pyx":241
  *             TAG = 45210: double precision complex, np.complex128, or complex(q)
  *         '''
  *         if self._rtag == 45200:             # <<<<<<<<<<<<<<
@@ -8682,7 +8680,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_3) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":242
+    /* "vaspwfc.pyx":242
  *         '''
  *         if self._rtag == 45200:
  *             return np.complex64             # <<<<<<<<<<<<<<
@@ -8699,7 +8697,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":241
+    /* "vaspwfc.pyx":241
  *             TAG = 45210: double precision complex, np.complex128, or complex(q)
  *         '''
  *         if self._rtag == 45200:             # <<<<<<<<<<<<<<
@@ -8708,7 +8706,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":243
+  /* "vaspwfc.pyx":243
  *         if self._rtag == 45200:
  *             return np.complex64
  *         elif self._rtag == 45210:             # <<<<<<<<<<<<<<
@@ -8724,7 +8722,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_3) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":244
+    /* "vaspwfc.pyx":244
  *             return np.complex64
  *         elif self._rtag == 45210:
  *             return np.complex128             # <<<<<<<<<<<<<<
@@ -8741,7 +8739,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":243
+    /* "vaspwfc.pyx":243
  *         if self._rtag == 45200:
  *             return np.complex64
  *         elif self._rtag == 45210:             # <<<<<<<<<<<<<<
@@ -8750,7 +8748,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":245
+  /* "vaspwfc.pyx":245
  *         elif self._rtag == 45210:
  *             return np.complex128
  *         elif self._rtag == 53300:             # <<<<<<<<<<<<<<
@@ -8766,7 +8764,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (unlikely(__pyx_t_3)) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":246
+    /* "vaspwfc.pyx":246
  *             return np.complex128
  *         elif self._rtag == 53300:
  *             raise ValueError("VASP5 WAVECAR format, not implemented yet")             # <<<<<<<<<<<<<<
@@ -8779,7 +8777,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 246, __pyx_L1_error)
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":245
+    /* "vaspwfc.pyx":245
  *         elif self._rtag == 45210:
  *             return np.complex128
  *         elif self._rtag == 53300:             # <<<<<<<<<<<<<<
@@ -8788,7 +8786,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":247
+  /* "vaspwfc.pyx":247
  *         elif self._rtag == 53300:
  *             raise ValueError("VASP5 WAVECAR format, not implemented yet")
  *         elif self._rtag == 53310:             # <<<<<<<<<<<<<<
@@ -8804,7 +8802,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_t_3)) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":249
+    /* "vaspwfc.pyx":249
  *         elif self._rtag == 53310:
  *             raise ValueError("VASP5 WAVECAR format with double precision "
  *                              + "coefficients, not implemented yet")             # <<<<<<<<<<<<<<
@@ -8814,7 +8812,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
     __pyx_t_1 = PyNumber_Add(__pyx_kp_s_VASP5_WAVECAR_format_with_double, __pyx_kp_s_coefficients_not_implemented_yet); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 249, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":248
+    /* "vaspwfc.pyx":248
  *             raise ValueError("VASP5 WAVECAR format, not implemented yet")
  *         elif self._rtag == 53310:
  *             raise ValueError("VASP5 WAVECAR format with double precision "             # <<<<<<<<<<<<<<
@@ -8828,7 +8826,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 248, __pyx_L1_error)
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":247
+    /* "vaspwfc.pyx":247
  *         elif self._rtag == 53300:
  *             raise ValueError("VASP5 WAVECAR format, not implemented yet")
  *         elif self._rtag == 53310:             # <<<<<<<<<<<<<<
@@ -8837,7 +8835,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":251
+  /* "vaspwfc.pyx":251
  *                              + "coefficients, not implemented yet")
  *         else:
  *             raise ValueError("Invalid TAG values: {}".format(self._rtag))             # <<<<<<<<<<<<<<
@@ -8873,7 +8871,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
     __PYX_ERR(0, 251, __pyx_L1_error)
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":235
+  /* "vaspwfc.pyx":235
  *         self._ngrid = np.array(2 * CUTOF + 1, dtype=int)
  * 
  *     def setWFPrec(self):             # <<<<<<<<<<<<<<
@@ -8887,7 +8885,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.setWFPrec", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.setWFPrec", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -8896,7 +8894,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":253
+/* "vaspwfc.pyx":253
  *             raise ValueError("Invalid TAG values: {}".format(self._rtag))
  * 
  *     def readWFBand(self):             # <<<<<<<<<<<<<<
@@ -8905,21 +8903,21 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_10set
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_13readWFBand(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12readWFBand[] = "\n        Extract KS energies and Fermi occupations from WAVECAR.\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_13readWFBand = {"readWFBand", (PyCFunction)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_13readWFBand, METH_O, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12readWFBand};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_13readWFBand(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_13readWFBand(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_12readWFBand[] = "\n        Extract KS energies and Fermi occupations from WAVECAR.\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_13readWFBand = {"readWFBand", (PyCFunction)__pyx_pw_7vaspwfc_7vaspwfc_13readWFBand, METH_O, __pyx_doc_7vaspwfc_7vaspwfc_12readWFBand};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_13readWFBand(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("readWFBand (wrapper)", 0);
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12readWFBand(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_12readWFBand(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12readWFBand(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_12readWFBand(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_ii = NULL;
   PyObject *__pyx_v_jj = NULL;
   PyObject *__pyx_v_rec = NULL;
@@ -8946,7 +8944,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   __Pyx_RefNannySetupContext("readWFBand", 0);
   __Pyx_TraceCall("readWFBand", __pyx_f[0], 253, 0, __PYX_ERR(0, 253, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":258
+  /* "vaspwfc.pyx":258
  *         '''
  * 
  *         self._nplws = np.zeros(self._nkpts, dtype=int)             # <<<<<<<<<<<<<<
@@ -8976,7 +8974,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_nplws, __pyx_t_4) < 0) __PYX_ERR(0, 258, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":259
+  /* "vaspwfc.pyx":259
  * 
  *         self._nplws = np.zeros(self._nkpts, dtype=int)
  *         self._kvecs = np.zeros((self._nkpts, 3), dtype=float)             # <<<<<<<<<<<<<<
@@ -9014,7 +9012,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_kvecs, __pyx_t_2) < 0) __PYX_ERR(0, 259, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":260
+  /* "vaspwfc.pyx":260
  *         self._nplws = np.zeros(self._nkpts, dtype=int)
  *         self._kvecs = np.zeros((self._nkpts, 3), dtype=float)
  *         self._bands = np.zeros(             # <<<<<<<<<<<<<<
@@ -9027,7 +9025,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":261
+  /* "vaspwfc.pyx":261
  *         self._kvecs = np.zeros((self._nkpts, 3), dtype=float)
  *         self._bands = np.zeros(
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)             # <<<<<<<<<<<<<<
@@ -9052,7 +9050,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   __pyx_t_4 = 0;
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":260
+  /* "vaspwfc.pyx":260
  *         self._nplws = np.zeros(self._nkpts, dtype=int)
  *         self._kvecs = np.zeros((self._nkpts, 3), dtype=float)
  *         self._bands = np.zeros(             # <<<<<<<<<<<<<<
@@ -9065,7 +9063,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":261
+  /* "vaspwfc.pyx":261
  *         self._kvecs = np.zeros((self._nkpts, 3), dtype=float)
  *         self._bands = np.zeros(
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)             # <<<<<<<<<<<<<<
@@ -9076,7 +9074,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, ((PyObject *)(&PyFloat_Type))) < 0) __PYX_ERR(0, 261, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":260
+  /* "vaspwfc.pyx":260
  *         self._nplws = np.zeros(self._nkpts, dtype=int)
  *         self._kvecs = np.zeros((self._nkpts, 3), dtype=float)
  *         self._bands = np.zeros(             # <<<<<<<<<<<<<<
@@ -9091,7 +9089,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_bands, __pyx_t_4) < 0) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":262
+  /* "vaspwfc.pyx":262
  *         self._bands = np.zeros(
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)
  *         self._occs = np.zeros(             # <<<<<<<<<<<<<<
@@ -9104,7 +9102,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":263
+  /* "vaspwfc.pyx":263
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)
  *         self._occs = np.zeros(
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)             # <<<<<<<<<<<<<<
@@ -9129,7 +9127,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":262
+  /* "vaspwfc.pyx":262
  *         self._bands = np.zeros(
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)
  *         self._occs = np.zeros(             # <<<<<<<<<<<<<<
@@ -9142,7 +9140,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":263
+  /* "vaspwfc.pyx":263
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)
  *         self._occs = np.zeros(
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)             # <<<<<<<<<<<<<<
@@ -9153,7 +9151,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, ((PyObject *)(&PyFloat_Type))) < 0) __PYX_ERR(0, 263, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":262
+  /* "vaspwfc.pyx":262
  *         self._bands = np.zeros(
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)
  *         self._occs = np.zeros(             # <<<<<<<<<<<<<<
@@ -9168,7 +9166,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_occs, __pyx_t_1) < 0) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":265
+  /* "vaspwfc.pyx":265
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)
  * 
  *         for ii in range(self._nspin):             # <<<<<<<<<<<<<<
@@ -9223,7 +9221,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
     __Pyx_XDECREF_SET(__pyx_v_ii, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":266
+    /* "vaspwfc.pyx":266
  * 
  *         for ii in range(self._nspin):
  *             for jj in range(self._nkpts):             # <<<<<<<<<<<<<<
@@ -9278,7 +9276,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
       __Pyx_XDECREF_SET(__pyx_v_jj, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":267
+      /* "vaspwfc.pyx":267
  *         for ii in range(self._nspin):
  *             for jj in range(self._nkpts):
  *                 rec = self.whereRec(ii+1, jj+1, 1) - 1             # <<<<<<<<<<<<<<
@@ -9349,7 +9347,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
       __Pyx_XDECREF_SET(__pyx_v_rec, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":268
+      /* "vaspwfc.pyx":268
  *             for jj in range(self._nkpts):
  *                 rec = self.whereRec(ii+1, jj+1, 1) - 1
  *                 self._wfc.seek(rec * self._recl)             # <<<<<<<<<<<<<<
@@ -9384,7 +9382,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":269
+      /* "vaspwfc.pyx":269
  *                 rec = self.whereRec(ii+1, jj+1, 1) - 1
  *                 self._wfc.seek(rec * self._recl)
  *                 dump = np.fromfile(self._wfc, dtype=np.float,             # <<<<<<<<<<<<<<
@@ -9413,7 +9411,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
       if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 269, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":270
+      /* "vaspwfc.pyx":270
  *                 self._wfc.seek(rec * self._recl)
  *                 dump = np.fromfile(self._wfc, dtype=np.float,
  *                                    count=4+3*self._nbands)             # <<<<<<<<<<<<<<
@@ -9431,7 +9429,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
       if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_count, __pyx_t_4) < 0) __PYX_ERR(0, 269, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":269
+      /* "vaspwfc.pyx":269
  *                 rec = self.whereRec(ii+1, jj+1, 1) - 1
  *                 self._wfc.seek(rec * self._recl)
  *                 dump = np.fromfile(self._wfc, dtype=np.float,             # <<<<<<<<<<<<<<
@@ -9446,7 +9444,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
       __Pyx_XDECREF_SET(__pyx_v_dump, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":271
+      /* "vaspwfc.pyx":271
  *                 dump = np.fromfile(self._wfc, dtype=np.float,
  *                                    count=4+3*self._nbands)
  *                 if ii == 0:             # <<<<<<<<<<<<<<
@@ -9459,7 +9457,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (__pyx_t_14) {
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":272
+        /* "vaspwfc.pyx":272
  *                                    count=4+3*self._nbands)
  *                 if ii == 0:
  *                     self._nplws[jj] = int(dump[0])             # <<<<<<<<<<<<<<
@@ -9477,7 +9475,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":273
+        /* "vaspwfc.pyx":273
  *                 if ii == 0:
  *                     self._nplws[jj] = int(dump[0])
  *                     self._kvecs[jj] = dump[1:4]             # <<<<<<<<<<<<<<
@@ -9492,7 +9490,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":271
+        /* "vaspwfc.pyx":271
  *                 dump = np.fromfile(self._wfc, dtype=np.float,
  *                                    count=4+3*self._nbands)
  *                 if ii == 0:             # <<<<<<<<<<<<<<
@@ -9501,7 +9499,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
  */
       }
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":274
+      /* "vaspwfc.pyx":274
  *                     self._nplws[jj] = int(dump[0])
  *                     self._kvecs[jj] = dump[1:4]
  *                 dump = dump[4:].reshape((-1, 3))             # <<<<<<<<<<<<<<
@@ -9531,7 +9529,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
       __Pyx_DECREF_SET(__pyx_v_dump, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":275
+      /* "vaspwfc.pyx":275
  *                     self._kvecs[jj] = dump[1:4]
  *                 dump = dump[4:].reshape((-1, 3))
  *                 self._bands[ii, jj, :] = dump[:, 0]             # <<<<<<<<<<<<<<
@@ -9558,7 +9556,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":276
+      /* "vaspwfc.pyx":276
  *                 dump = dump[4:].reshape((-1, 3))
  *                 self._bands[ii, jj, :] = dump[:, 0]
  *                 self._occs[ii, jj, :] = dump[:, 2]             # <<<<<<<<<<<<<<
@@ -9585,7 +9583,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":266
+      /* "vaspwfc.pyx":266
  * 
  *         for ii in range(self._nspin):
  *             for jj in range(self._nkpts):             # <<<<<<<<<<<<<<
@@ -9595,7 +9593,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":265
+    /* "vaspwfc.pyx":265
  *             (self._nspin, self._nkpts, self._nbands), dtype=float)
  * 
  *         for ii in range(self._nspin):             # <<<<<<<<<<<<<<
@@ -9605,7 +9603,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":278
+  /* "vaspwfc.pyx":278
  *                 self._occs[ii, jj, :] = dump[:, 2]
  * 
  *         if self._nkpts > 1:             # <<<<<<<<<<<<<<
@@ -9620,7 +9618,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_14) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":279
+    /* "vaspwfc.pyx":279
  * 
  *         if self._nkpts > 1:
  *             tmp = np.linalg.norm(             # <<<<<<<<<<<<<<
@@ -9636,7 +9634,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":280
+    /* "vaspwfc.pyx":280
  *         if self._nkpts > 1:
  *             tmp = np.linalg.norm(
  *                 np.dot(np.diff(self._kvecs, axis=0), self._Bcell), axis=1)             # <<<<<<<<<<<<<<
@@ -9720,7 +9718,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
     }
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":279
+    /* "vaspwfc.pyx":279
  * 
  *         if self._nkpts > 1:
  *             tmp = np.linalg.norm(             # <<<<<<<<<<<<<<
@@ -9733,7 +9731,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
     PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":280
+    /* "vaspwfc.pyx":280
  *         if self._nkpts > 1:
  *             tmp = np.linalg.norm(
  *                 np.dot(np.diff(self._kvecs, axis=0), self._Bcell), axis=1)             # <<<<<<<<<<<<<<
@@ -9744,7 +9742,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
     __Pyx_GOTREF(__pyx_t_1);
     if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_axis, __pyx_int_1) < 0) __PYX_ERR(0, 280, __pyx_L1_error)
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":279
+    /* "vaspwfc.pyx":279
  * 
  *         if self._nkpts > 1:
  *             tmp = np.linalg.norm(             # <<<<<<<<<<<<<<
@@ -9759,7 +9757,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
     __pyx_v_tmp = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":281
+    /* "vaspwfc.pyx":281
  *             tmp = np.linalg.norm(
  *                 np.dot(np.diff(self._kvecs, axis=0), self._Bcell), axis=1)
  *             self._kpath = np.concatenate(([0, ], np.cumsum(tmp)))             # <<<<<<<<<<<<<<
@@ -9823,7 +9821,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_kpath, __pyx_t_4) < 0) __PYX_ERR(0, 281, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":278
+    /* "vaspwfc.pyx":278
  *                 self._occs[ii, jj, :] = dump[:, 2]
  * 
  *         if self._nkpts > 1:             # <<<<<<<<<<<<<<
@@ -9833,7 +9831,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
     goto __pyx_L8;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":283
+  /* "vaspwfc.pyx":283
  *             self._kpath = np.concatenate(([0, ], np.cumsum(tmp)))
  *         else:
  *             self._kpath = None             # <<<<<<<<<<<<<<
@@ -9845,7 +9843,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   }
   __pyx_L8:;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":284
+  /* "vaspwfc.pyx":284
  *         else:
  *             self._kpath = None
  *         return self._kpath, self._bands             # <<<<<<<<<<<<<<
@@ -9869,7 +9867,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":253
+  /* "vaspwfc.pyx":253
  *             raise ValueError("Invalid TAG values: {}".format(self._rtag))
  * 
  *     def readWFBand(self):             # <<<<<<<<<<<<<<
@@ -9887,7 +9885,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.readWFBand", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.readWFBand", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_ii);
@@ -9901,7 +9899,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":286
+/* "vaspwfc.pyx":286
  *         return self._kpath, self._bands
  * 
  *     def get_kpath(self, nkseg=None):             # <<<<<<<<<<<<<<
@@ -9910,10 +9908,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_12rea
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_15get_kpath(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get_kpath[] = "\n        Construct k-point path, find out the k-path boundary if possible.\n\n        nkseg is the number of k-points in each k-path segments.\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_15get_kpath = {"get_kpath", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_15get_kpath, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get_kpath};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_15get_kpath(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_15get_kpath(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_14get_kpath[] = "\n        Construct k-point path, find out the k-path boundary if possible.\n\n        nkseg is the number of k-points in each k-path segments.\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_15get_kpath = {"get_kpath", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_15get_kpath, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_14get_kpath};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_15get_kpath(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_nkseg = 0;
   PyObject *__pyx_r = 0;
@@ -9965,18 +9963,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_15get
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("get_kpath", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 286, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.get_kpath", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.get_kpath", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get_kpath(__pyx_self, __pyx_v_self, __pyx_v_nkseg);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_14get_kpath(__pyx_self, __pyx_v_self, __pyx_v_nkseg);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get_kpath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nkseg) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_14get_kpath(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nkseg) {
   PyObject *__pyx_v_kfile = NULL;
   PyObject *__pyx_v_nsec = NULL;
   PyObject *__pyx_v_v = NULL;
@@ -10003,7 +10001,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   __Pyx_TraceCall("get_kpath", __pyx_f[0], 286, 0, __PYX_ERR(0, 286, __pyx_L1_error));
   __Pyx_INCREF(__pyx_v_nkseg);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":293
+  /* "vaspwfc.pyx":293
  *         '''
  * 
  *         if nkseg is None:             # <<<<<<<<<<<<<<
@@ -10014,7 +10012,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":294
+    /* "vaspwfc.pyx":294
  * 
  *         if nkseg is None:
  *             if os.path.isfile(self._dname + "/KPOINTS"):             # <<<<<<<<<<<<<<
@@ -10054,7 +10052,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_2) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":295
+      /* "vaspwfc.pyx":295
  *         if nkseg is None:
  *             if os.path.isfile(self._dname + "/KPOINTS"):
  *                 kfile = open(self._dname + "/KPOINTS").readlines()             # <<<<<<<<<<<<<<
@@ -10090,7 +10088,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
       __pyx_v_kfile = __pyx_t_3;
       __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":296
+      /* "vaspwfc.pyx":296
  *             if os.path.isfile(self._dname + "/KPOINTS"):
  *                 kfile = open(self._dname + "/KPOINTS").readlines()
  *                 if kfile[2][0].upper() == 'L':             # <<<<<<<<<<<<<<
@@ -10124,7 +10122,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (likely(__pyx_t_2)) {
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":297
+        /* "vaspwfc.pyx":297
  *                 kfile = open(self._dname + "/KPOINTS").readlines()
  *                 if kfile[2][0].upper() == 'L':
  *                     nkseg = int(kfile[1].split()[0])             # <<<<<<<<<<<<<<
@@ -10160,7 +10158,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
         __Pyx_DECREF_SET(__pyx_v_nkseg, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":296
+        /* "vaspwfc.pyx":296
  *             if os.path.isfile(self._dname + "/KPOINTS"):
  *                 kfile = open(self._dname + "/KPOINTS").readlines()
  *                 if kfile[2][0].upper() == 'L':             # <<<<<<<<<<<<<<
@@ -10170,7 +10168,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
         goto __pyx_L5;
       }
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":299
+      /* "vaspwfc.pyx":299
  *                     nkseg = int(kfile[1].split()[0])
  *                 else:
  *                     raise ValueError(             # <<<<<<<<<<<<<<
@@ -10186,7 +10184,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
       }
       __pyx_L5:;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":294
+      /* "vaspwfc.pyx":294
  * 
  *         if nkseg is None:
  *             if os.path.isfile(self._dname + "/KPOINTS"):             # <<<<<<<<<<<<<<
@@ -10195,7 +10193,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
  */
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":293
+    /* "vaspwfc.pyx":293
  *         '''
  * 
  *         if nkseg is None:             # <<<<<<<<<<<<<<
@@ -10204,7 +10202,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":301
+  /* "vaspwfc.pyx":301
  *                     raise ValueError(
  *                         'Error reading number of k-points from KPOINTS')
  *         assert nkseg > 0             # <<<<<<<<<<<<<<
@@ -10223,7 +10221,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":303
+  /* "vaspwfc.pyx":303
  *         assert nkseg > 0
  * 
  *         nsec = self._nkpts // nkseg             # <<<<<<<<<<<<<<
@@ -10238,7 +10236,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   __pyx_v_nsec = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":305
+  /* "vaspwfc.pyx":305
  *         nsec = self._nkpts // nkseg
  * 
  *         v = self._kvecs.copy()             # <<<<<<<<<<<<<<
@@ -10268,7 +10266,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   __pyx_v_v = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":306
+  /* "vaspwfc.pyx":306
  * 
  *         v = self._kvecs.copy()
  *         for ii in range(nsec):             # <<<<<<<<<<<<<<
@@ -10320,7 +10318,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_XDECREF_SET(__pyx_v_ii, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":307
+    /* "vaspwfc.pyx":307
  *         v = self._kvecs.copy()
  *         for ii in range(nsec):
  *             ki = ii * nkseg             # <<<<<<<<<<<<<<
@@ -10332,7 +10330,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_XDECREF_SET(__pyx_v_ki, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":308
+    /* "vaspwfc.pyx":308
  *         for ii in range(nsec):
  *             ki = ii * nkseg
  *             kj = (ii + 1) * nkseg             # <<<<<<<<<<<<<<
@@ -10347,7 +10345,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_XDECREF_SET(__pyx_v_kj, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":309
+    /* "vaspwfc.pyx":309
  *             ki = ii * nkseg
  *             kj = (ii + 1) * nkseg
  *             v[ki:kj, :] -= v[ki]             # <<<<<<<<<<<<<<
@@ -10376,7 +10374,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":306
+    /* "vaspwfc.pyx":306
  * 
  *         v = self._kvecs.copy()
  *         for ii in range(nsec):             # <<<<<<<<<<<<<<
@@ -10386,7 +10384,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":311
+  /* "vaspwfc.pyx":311
  *             v[ki:kj, :] -= v[ki]
  * 
  *         self._kpath = np.linalg.norm(np.dot(v, self._Bcell), axis=1)             # <<<<<<<<<<<<<<
@@ -10471,7 +10469,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_kpath, __pyx_t_11) < 0) __PYX_ERR(0, 311, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":312
+  /* "vaspwfc.pyx":312
  * 
  *         self._kpath = np.linalg.norm(np.dot(v, self._Bcell), axis=1)
  *         for ii in range(1, nsec):             # <<<<<<<<<<<<<<
@@ -10532,7 +10530,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_XDECREF_SET(__pyx_v_ii, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":313
+    /* "vaspwfc.pyx":313
  *         self._kpath = np.linalg.norm(np.dot(v, self._Bcell), axis=1)
  *         for ii in range(1, nsec):
  *             ki = ii * nkseg             # <<<<<<<<<<<<<<
@@ -10544,7 +10542,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_XDECREF_SET(__pyx_v_ki, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":314
+    /* "vaspwfc.pyx":314
  *         for ii in range(1, nsec):
  *             ki = ii * nkseg
  *             kj = (ii + 1) * nkseg             # <<<<<<<<<<<<<<
@@ -10559,7 +10557,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_XDECREF_SET(__pyx_v_kj, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":315
+    /* "vaspwfc.pyx":315
  *             ki = ii * nkseg
  *             kj = (ii + 1) * nkseg
  *             self._kpath[ki:kj] += self._kpath[ki - 1]             # <<<<<<<<<<<<<<
@@ -10589,7 +10587,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":317
+    /* "vaspwfc.pyx":317
  *             self._kpath[ki:kj] += self._kpath[ki - 1]
  * 
  *             self._kbound = np.concatenate(             # <<<<<<<<<<<<<<
@@ -10602,7 +10600,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":318
+    /* "vaspwfc.pyx":318
  * 
  *             self._kbound = np.concatenate(
  *                 (self._kpath[0::nkseg], [self._kpath[-1], ]))             # <<<<<<<<<<<<<<
@@ -10652,7 +10650,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":317
+    /* "vaspwfc.pyx":317
  *             self._kpath[ki:kj] += self._kpath[ki - 1]
  * 
  *             self._kbound = np.concatenate(             # <<<<<<<<<<<<<<
@@ -10662,7 +10660,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_kbound, __pyx_t_5) < 0) __PYX_ERR(0, 317, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":312
+    /* "vaspwfc.pyx":312
  * 
  *         self._kpath = np.linalg.norm(np.dot(v, self._Bcell), axis=1)
  *         for ii in range(1, nsec):             # <<<<<<<<<<<<<<
@@ -10672,7 +10670,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":320
+  /* "vaspwfc.pyx":320
  *                 (self._kpath[0::nkseg], [self._kpath[-1], ]))
  * 
  *         return self._kpath, self._kbound             # <<<<<<<<<<<<<<
@@ -10696,7 +10694,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":286
+  /* "vaspwfc.pyx":286
  *         return self._kpath, self._bands
  * 
  *     def get_kpath(self, nkseg=None):             # <<<<<<<<<<<<<<
@@ -10713,7 +10711,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.get_kpath", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.get_kpath", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_kfile);
@@ -10729,7 +10727,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":325
+/* "vaspwfc.pyx":325
  *     @cython.wraparound(False)
  *     @cython.cdivision(True)
  *     def gvectors(self, ikpt=1, force_Gamma=None, check_consistency=True):             # <<<<<<<<<<<<<<
@@ -10738,10 +10736,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_14get
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_17gvectors(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gvectors[] = "\n        Generate the G-vectors that satisfies the following relation\n            (G + k)**2 / 2 < ENCUT\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_17gvectors = {"gvectors", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_17gvectors, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gvectors};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_17gvectors(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_17gvectors(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_16gvectors[] = "\n        Generate the G-vectors that satisfies the following relation\n            (G + k)**2 / 2 < ENCUT\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_17gvectors = {"gvectors", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_17gvectors, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_16gvectors};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_17gvectors(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ikpt = 0;
   PyObject *__pyx_v_force_Gamma = 0;
@@ -10819,18 +10817,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_17gve
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("gvectors", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 325, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.gvectors", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.gvectors", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gvectors(__pyx_self, __pyx_v_self, __pyx_v_ikpt, __pyx_v_force_Gamma, __pyx_v_check_consistency);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_16gvectors(__pyx_self, __pyx_v_self, __pyx_v_ikpt, __pyx_v_force_Gamma, __pyx_v_check_consistency);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gvectors(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_force_Gamma, PyObject *__pyx_v_check_consistency) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_16gvectors(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_force_Gamma, PyObject *__pyx_v_check_consistency) {
   int __pyx_v_ii;
   int __pyx_v_jj;
   int __pyx_v_kk;
@@ -10989,7 +10987,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_pybuffernd_kgrid.data = NULL;
   __pyx_pybuffernd_kgrid.rcbuffer = &__pyx_pybuffer_kgrid;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":336
+  /* "vaspwfc.pyx":336
  *         cdef cnp.ndarray[cnp.float64_t, ndim=2] kgrid
  * 
  *         assert 1 <= ikpt <= self._nkpts,  'Invalid kpoint index!'             # <<<<<<<<<<<<<<
@@ -11015,7 +11013,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":338
+  /* "vaspwfc.pyx":338
  *         assert 1 <= ikpt <= self._nkpts,  'Invalid kpoint index!'
  * 
  *         kvec = self._kvecs[ikpt-1]             # <<<<<<<<<<<<<<
@@ -11053,7 +11051,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_v_kvec = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":339
+  /* "vaspwfc.pyx":339
  * 
  *         kvec = self._kvecs[ikpt-1]
  *         grid = self._ngrid             # <<<<<<<<<<<<<<
@@ -11085,7 +11083,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_v_grid = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":342
+  /* "vaspwfc.pyx":342
  *         # fx, fy, fz = [fftfreq(n) * n for n in self._ngrid]
  *         # fftfreq in scipy.fftpack is a little different with VASP frequencies
  *         fx, fy, fz = np.zeros(grid[0], dtype=np.int), np.zeros(grid[1], dtype=np.int), np.zeros(grid[2], dtype=np.int)             # <<<<<<<<<<<<<<
@@ -11240,7 +11238,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_v_fz = ((PyArrayObject *)__pyx_t_17);
   __pyx_t_17 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":343
+  /* "vaspwfc.pyx":343
  *         # fftfreq in scipy.fftpack is a little different with VASP frequencies
  *         fx, fy, fz = np.zeros(grid[0], dtype=np.int), np.zeros(grid[1], dtype=np.int), np.zeros(grid[2], dtype=np.int)
  *         grid_lim = grid // 2 + 1             # <<<<<<<<<<<<<<
@@ -11275,7 +11273,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_v_grid_lim = ((PyArrayObject *)__pyx_t_15);
   __pyx_t_15 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":344
+  /* "vaspwfc.pyx":344
  *         fx, fy, fz = np.zeros(grid[0], dtype=np.int), np.zeros(grid[1], dtype=np.int), np.zeros(grid[2], dtype=np.int)
  *         grid_lim = grid // 2 + 1
  *         for ii in range(grid[0]):             # <<<<<<<<<<<<<<
@@ -11288,7 +11286,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_20; __pyx_t_6+=1) {
     __pyx_v_ii = __pyx_t_6;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":345
+    /* "vaspwfc.pyx":345
  *         grid_lim = grid // 2 + 1
  *         for ii in range(grid[0]):
  *             if ii < grid_lim[0]:             # <<<<<<<<<<<<<<
@@ -11299,7 +11297,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_t_3 = ((__pyx_v_ii < (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_grid_lim.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_grid_lim.diminfo[0].strides))) != 0);
     if (__pyx_t_3) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":346
+      /* "vaspwfc.pyx":346
  *         for ii in range(grid[0]):
  *             if ii < grid_lim[0]:
  *                 fx[ii] = ii             # <<<<<<<<<<<<<<
@@ -11309,7 +11307,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       __pyx_t_22 = __pyx_v_ii;
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_fx.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_fx.diminfo[0].strides) = __pyx_v_ii;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":345
+      /* "vaspwfc.pyx":345
  *         grid_lim = grid // 2 + 1
  *         for ii in range(grid[0]):
  *             if ii < grid_lim[0]:             # <<<<<<<<<<<<<<
@@ -11319,7 +11317,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       goto __pyx_L5;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":348
+    /* "vaspwfc.pyx":348
  *                 fx[ii] = ii
  *             else:
  *                 fx[ii] = ii - grid[0]             # <<<<<<<<<<<<<<
@@ -11334,7 +11332,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_L5:;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":349
+  /* "vaspwfc.pyx":349
  *             else:
  *                 fx[ii] = ii - grid[0]
  *         for ii in range(grid[1]):             # <<<<<<<<<<<<<<
@@ -11347,7 +11345,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_20; __pyx_t_6+=1) {
     __pyx_v_ii = __pyx_t_6;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":350
+    /* "vaspwfc.pyx":350
  *                 fx[ii] = ii - grid[0]
  *         for ii in range(grid[1]):
  *             if ii < grid_lim[1]:             # <<<<<<<<<<<<<<
@@ -11358,7 +11356,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_t_3 = ((__pyx_v_ii < (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_grid_lim.rcbuffer->pybuffer.buf, __pyx_t_26, __pyx_pybuffernd_grid_lim.diminfo[0].strides))) != 0);
     if (__pyx_t_3) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":351
+      /* "vaspwfc.pyx":351
  *         for ii in range(grid[1]):
  *             if ii < grid_lim[1]:
  *                 fy[ii] = ii             # <<<<<<<<<<<<<<
@@ -11368,7 +11366,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       __pyx_t_27 = __pyx_v_ii;
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_fy.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_fy.diminfo[0].strides) = __pyx_v_ii;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":350
+      /* "vaspwfc.pyx":350
  *                 fx[ii] = ii - grid[0]
  *         for ii in range(grid[1]):
  *             if ii < grid_lim[1]:             # <<<<<<<<<<<<<<
@@ -11378,7 +11376,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       goto __pyx_L8;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":353
+    /* "vaspwfc.pyx":353
  *                 fy[ii] = ii
  *             else:
  *                 fy[ii] = ii - grid[1]             # <<<<<<<<<<<<<<
@@ -11393,7 +11391,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_L8:;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":354
+  /* "vaspwfc.pyx":354
  *             else:
  *                 fy[ii] = ii - grid[1]
  *         for ii in range(grid[2]):             # <<<<<<<<<<<<<<
@@ -11406,7 +11404,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_20; __pyx_t_6+=1) {
     __pyx_v_ii = __pyx_t_6;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":355
+    /* "vaspwfc.pyx":355
  *                 fy[ii] = ii - grid[1]
  *         for ii in range(grid[2]):
  *             if ii < grid_lim[2]:             # <<<<<<<<<<<<<<
@@ -11417,7 +11415,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_t_3 = ((__pyx_v_ii < (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_grid_lim.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_grid_lim.diminfo[0].strides))) != 0);
     if (__pyx_t_3) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":356
+      /* "vaspwfc.pyx":356
  *         for ii in range(grid[2]):
  *             if ii < grid_lim[2]:
  *                 fz[ii] = ii             # <<<<<<<<<<<<<<
@@ -11427,7 +11425,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       __pyx_t_32 = __pyx_v_ii;
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_fz.rcbuffer->pybuffer.buf, __pyx_t_32, __pyx_pybuffernd_fz.diminfo[0].strides) = __pyx_v_ii;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":355
+      /* "vaspwfc.pyx":355
  *                 fy[ii] = ii - grid[1]
  *         for ii in range(grid[2]):
  *             if ii < grid_lim[2]:             # <<<<<<<<<<<<<<
@@ -11437,7 +11435,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       goto __pyx_L11;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":358
+    /* "vaspwfc.pyx":358
  *                 fz[ii] = ii
  *             else:
  *                 fz[ii] = ii - grid[2]             # <<<<<<<<<<<<<<
@@ -11452,7 +11450,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_L11:;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":362
+  /* "vaspwfc.pyx":362
  *         # force_Gamma: consider gamma-only case if true, non-gamma if false,
  *         # or native setting if not given
  *         if force_Gamma is None:             # <<<<<<<<<<<<<<
@@ -11463,7 +11461,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_t_35 = (__pyx_t_3 != 0);
   if (__pyx_t_35) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":363
+    /* "vaspwfc.pyx":363
  *         # or native setting if not given
  *         if force_Gamma is None:
  *             lgam = self._lgam             # <<<<<<<<<<<<<<
@@ -11475,7 +11473,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_v_lgam = __pyx_t_15;
     __pyx_t_15 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":362
+    /* "vaspwfc.pyx":362
  *         # force_Gamma: consider gamma-only case if true, non-gamma if false,
  *         # or native setting if not given
  *         if force_Gamma is None:             # <<<<<<<<<<<<<<
@@ -11485,7 +11483,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     goto __pyx_L12;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":365
+  /* "vaspwfc.pyx":365
  *             lgam = self._lgam
  *         else:
  *             lgam = force_Gamma             # <<<<<<<<<<<<<<
@@ -11498,7 +11496,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   }
   __pyx_L12:;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":366
+  /* "vaspwfc.pyx":366
  *         else:
  *             lgam = force_Gamma
  *         if lgam:             # <<<<<<<<<<<<<<
@@ -11508,7 +11506,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_t_35 = __Pyx_PyObject_IsTrue(__pyx_v_lgam); if (unlikely(__pyx_t_35 < 0)) __PYX_ERR(0, 366, __pyx_L1_error)
   if (__pyx_t_35) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":369
+    /* "vaspwfc.pyx":369
  *             # parallel gamma version of VASP WAVECAR exclude some planewave
  *             # components, -DwNGZHalf
  *             k_ind = 0             # <<<<<<<<<<<<<<
@@ -11517,7 +11515,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
  */
     __pyx_v_k_ind = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":370
+    /* "vaspwfc.pyx":370
  *             # components, -DwNGZHalf
  *             k_ind = 0
  *             n_points = (grid[2] // 2)*(grid[1] * grid[0]) \             # <<<<<<<<<<<<<<
@@ -11528,7 +11526,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_t_37 = 1;
     __pyx_t_38 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":371
+    /* "vaspwfc.pyx":371
  *             k_ind = 0
  *             n_points = (grid[2] // 2)*(grid[1] * grid[0]) \
  *                      + (grid[1] // 2)*grid[0] \             # <<<<<<<<<<<<<<
@@ -11538,7 +11536,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_t_39 = 1;
     __pyx_t_40 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":372
+    /* "vaspwfc.pyx":372
  *             n_points = (grid[2] // 2)*(grid[1] * grid[0]) \
  *                      + (grid[1] // 2)*grid[0] \
  *                      + grid[0] // 2 + 1             # <<<<<<<<<<<<<<
@@ -11548,7 +11546,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_t_41 = 0;
     __pyx_v_n_points = ((((((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) * ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_37, __pyx_pybuffernd_grid.diminfo[0].strides)) * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_38, __pyx_pybuffernd_grid.diminfo[0].strides)))) + (((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_39, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2) * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_40, __pyx_pybuffernd_grid.diminfo[0].strides)))) + ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_grid.rcbuffer->pybuffer.buf, __pyx_t_41, __pyx_pybuffernd_grid.diminfo[0].strides)) / 2)) + 1);
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":373
+    /* "vaspwfc.pyx":373
  *                      + (grid[1] // 2)*grid[0] \
  *                      + grid[0] // 2 + 1
  *             if self._gam_half == 'z':             # <<<<<<<<<<<<<<
@@ -11561,7 +11559,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     if (__pyx_t_35) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":374
+      /* "vaspwfc.pyx":374
  *                      + grid[0] // 2 + 1
  *             if self._gam_half == 'z':
  *                 kgrid = np.zeros((n_points, 3), dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -11625,7 +11623,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       __pyx_v_kgrid = ((PyArrayObject *)__pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":375
+      /* "vaspwfc.pyx":375
  *             if self._gam_half == 'z':
  *                 kgrid = np.zeros((n_points, 3), dtype=np.float64)
  *                 for kk in range(grid[2]):             # <<<<<<<<<<<<<<
@@ -11638,7 +11636,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_20; __pyx_t_6+=1) {
         __pyx_v_kk = __pyx_t_6;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":376
+        /* "vaspwfc.pyx":376
  *                 kgrid = np.zeros((n_points, 3), dtype=np.float64)
  *                 for kk in range(grid[2]):
  *                     for jj in range(grid[1]):             # <<<<<<<<<<<<<<
@@ -11651,7 +11649,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
         for (__pyx_t_47 = 0; __pyx_t_47 < __pyx_t_46; __pyx_t_47+=1) {
           __pyx_v_jj = __pyx_t_47;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":377
+          /* "vaspwfc.pyx":377
  *                 for kk in range(grid[2]):
  *                     for jj in range(grid[1]):
  *                         for ii in range(grid[0]):             # <<<<<<<<<<<<<<
@@ -11664,7 +11662,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
           for (__pyx_t_51 = 0; __pyx_t_51 < __pyx_t_50; __pyx_t_51+=1) {
             __pyx_v_ii = __pyx_t_51;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":378
+            /* "vaspwfc.pyx":378
  *                     for jj in range(grid[1]):
  *                         for ii in range(grid[0]):
  *                             if (fz[kk] > 0) or \             # <<<<<<<<<<<<<<
@@ -11679,7 +11677,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
               goto __pyx_L22_bool_binop_done;
             }
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":379
+            /* "vaspwfc.pyx":379
  *                         for ii in range(grid[0]):
  *                             if (fz[kk] > 0) or \
  *                                     (fz[kk] == 0 and fy[jj] > 0) or \             # <<<<<<<<<<<<<<
@@ -11701,7 +11699,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
             }
             __pyx_L24_next_or:;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":380
+            /* "vaspwfc.pyx":380
  *                             if (fz[kk] > 0) or \
  *                                     (fz[kk] == 0 and fy[jj] > 0) or \
  *                                     (fz[kk] == 0 and fy[jj] == 0 and fx[ii] >= 0):             # <<<<<<<<<<<<<<
@@ -11727,7 +11725,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
             __pyx_t_35 = __pyx_t_3;
             __pyx_L22_bool_binop_done:;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":378
+            /* "vaspwfc.pyx":378
  *                     for jj in range(grid[1]):
  *                         for ii in range(grid[0]):
  *                             if (fz[kk] > 0) or \             # <<<<<<<<<<<<<<
@@ -11736,7 +11734,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
  */
             if (__pyx_t_35) {
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":381
+              /* "vaspwfc.pyx":381
  *                                     (fz[kk] == 0 and fy[jj] > 0) or \
  *                                     (fz[kk] == 0 and fy[jj] == 0 and fx[ii] >= 0):
  *                                 kgrid[k_ind, 0] = fx[ii]             # <<<<<<<<<<<<<<
@@ -11748,7 +11746,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
               __pyx_t_60 = 0;
               *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_kgrid.rcbuffer->pybuffer.buf, __pyx_t_59, __pyx_pybuffernd_kgrid.diminfo[0].strides, __pyx_t_60, __pyx_pybuffernd_kgrid.diminfo[1].strides) = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_fx.rcbuffer->pybuffer.buf, __pyx_t_58, __pyx_pybuffernd_fx.diminfo[0].strides));
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":382
+              /* "vaspwfc.pyx":382
  *                                     (fz[kk] == 0 and fy[jj] == 0 and fx[ii] >= 0):
  *                                 kgrid[k_ind, 0] = fx[ii]
  *                                 kgrid[k_ind, 1] = fy[jj]             # <<<<<<<<<<<<<<
@@ -11760,7 +11758,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
               __pyx_t_63 = 1;
               *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_kgrid.rcbuffer->pybuffer.buf, __pyx_t_62, __pyx_pybuffernd_kgrid.diminfo[0].strides, __pyx_t_63, __pyx_pybuffernd_kgrid.diminfo[1].strides) = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_fy.rcbuffer->pybuffer.buf, __pyx_t_61, __pyx_pybuffernd_fy.diminfo[0].strides));
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":383
+              /* "vaspwfc.pyx":383
  *                                 kgrid[k_ind, 0] = fx[ii]
  *                                 kgrid[k_ind, 1] = fy[jj]
  *                                 kgrid[k_ind, 2] = fz[kk]             # <<<<<<<<<<<<<<
@@ -11772,7 +11770,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
               __pyx_t_66 = 2;
               *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_kgrid.rcbuffer->pybuffer.buf, __pyx_t_65, __pyx_pybuffernd_kgrid.diminfo[0].strides, __pyx_t_66, __pyx_pybuffernd_kgrid.diminfo[1].strides) = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_fz.rcbuffer->pybuffer.buf, __pyx_t_64, __pyx_pybuffernd_fz.diminfo[0].strides));
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":384
+              /* "vaspwfc.pyx":384
  *                                 kgrid[k_ind, 1] = fy[jj]
  *                                 kgrid[k_ind, 2] = fz[kk]
  *                                 k_ind += 1             # <<<<<<<<<<<<<<
@@ -11781,7 +11779,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
  */
               __pyx_v_k_ind = (__pyx_v_k_ind + 1);
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":378
+              /* "vaspwfc.pyx":378
  *                     for jj in range(grid[1]):
  *                         for ii in range(grid[0]):
  *                             if (fz[kk] > 0) or \             # <<<<<<<<<<<<<<
@@ -11793,7 +11791,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
         }
       }
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":373
+      /* "vaspwfc.pyx":373
  *                      + (grid[1] // 2)*grid[0] \
  *                      + grid[0] // 2 + 1
  *             if self._gam_half == 'z':             # <<<<<<<<<<<<<<
@@ -11803,7 +11801,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       goto __pyx_L14;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":386
+    /* "vaspwfc.pyx":386
  *                                 k_ind += 1
  *             else:
  *                 kgrid = np.zeros((n_points, 3), dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -11868,7 +11866,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       __pyx_v_kgrid = ((PyArrayObject *)__pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":387
+      /* "vaspwfc.pyx":387
  *             else:
  *                 kgrid = np.zeros((n_points, 3), dtype=np.float64)
  *                 for kk in range(grid[2]):             # <<<<<<<<<<<<<<
@@ -11881,7 +11879,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_20; __pyx_t_6+=1) {
         __pyx_v_kk = __pyx_t_6;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":388
+        /* "vaspwfc.pyx":388
  *                 kgrid = np.zeros((n_points, 3), dtype=np.float64)
  *                 for kk in range(grid[2]):
  *                     for jj in range(grid[1]):             # <<<<<<<<<<<<<<
@@ -11894,7 +11892,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
         for (__pyx_t_47 = 0; __pyx_t_47 < __pyx_t_46; __pyx_t_47+=1) {
           __pyx_v_jj = __pyx_t_47;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":389
+          /* "vaspwfc.pyx":389
  *                 for kk in range(grid[2]):
  *                     for jj in range(grid[1]):
  *                         for ii in range(grid[0]):             # <<<<<<<<<<<<<<
@@ -11907,7 +11905,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
           for (__pyx_t_51 = 0; __pyx_t_51 < __pyx_t_50; __pyx_t_51+=1) {
             __pyx_v_ii = __pyx_t_51;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":390
+            /* "vaspwfc.pyx":390
  *                     for jj in range(grid[1]):
  *                         for ii in range(grid[0]):
  *                             if fx[ii] > 0 or \             # <<<<<<<<<<<<<<
@@ -11922,7 +11920,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
               goto __pyx_L35_bool_binop_done;
             }
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":391
+            /* "vaspwfc.pyx":391
  *                         for ii in range(grid[0]):
  *                             if fx[ii] > 0 or \
  *                                     (fx[ii] == 0 and fy[jj] > 0) or \             # <<<<<<<<<<<<<<
@@ -11944,7 +11942,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
             }
             __pyx_L37_next_or:;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":392
+            /* "vaspwfc.pyx":392
  *                             if fx[ii] > 0 or \
  *                                     (fx[ii] == 0 and fy[jj] > 0) or \
  *                                     (fx[ii] == 0 and fy[jj] == 0 and fz[kk] >= 0):             # <<<<<<<<<<<<<<
@@ -11970,7 +11968,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
             __pyx_t_35 = __pyx_t_3;
             __pyx_L35_bool_binop_done:;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":390
+            /* "vaspwfc.pyx":390
  *                     for jj in range(grid[1]):
  *                         for ii in range(grid[0]):
  *                             if fx[ii] > 0 or \             # <<<<<<<<<<<<<<
@@ -11979,7 +11977,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
  */
             if (__pyx_t_35) {
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":393
+              /* "vaspwfc.pyx":393
  *                                     (fx[ii] == 0 and fy[jj] > 0) or \
  *                                     (fx[ii] == 0 and fy[jj] == 0 and fz[kk] >= 0):
  *                                 kgrid[k_ind, 0] = fx[ii]             # <<<<<<<<<<<<<<
@@ -11991,7 +11989,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
               __pyx_t_78 = 0;
               *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_kgrid.rcbuffer->pybuffer.buf, __pyx_t_77, __pyx_pybuffernd_kgrid.diminfo[0].strides, __pyx_t_78, __pyx_pybuffernd_kgrid.diminfo[1].strides) = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_fx.rcbuffer->pybuffer.buf, __pyx_t_76, __pyx_pybuffernd_fx.diminfo[0].strides));
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":394
+              /* "vaspwfc.pyx":394
  *                                     (fx[ii] == 0 and fy[jj] == 0 and fz[kk] >= 0):
  *                                 kgrid[k_ind, 0] = fx[ii]
  *                                 kgrid[k_ind, 1] = fy[jj]             # <<<<<<<<<<<<<<
@@ -12003,7 +12001,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
               __pyx_t_81 = 1;
               *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_kgrid.rcbuffer->pybuffer.buf, __pyx_t_80, __pyx_pybuffernd_kgrid.diminfo[0].strides, __pyx_t_81, __pyx_pybuffernd_kgrid.diminfo[1].strides) = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_fy.rcbuffer->pybuffer.buf, __pyx_t_79, __pyx_pybuffernd_fy.diminfo[0].strides));
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":395
+              /* "vaspwfc.pyx":395
  *                                 kgrid[k_ind, 0] = fx[ii]
  *                                 kgrid[k_ind, 1] = fy[jj]
  *                                 kgrid[k_ind, 2] = fz[kk]             # <<<<<<<<<<<<<<
@@ -12015,7 +12013,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
               __pyx_t_84 = 2;
               *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_kgrid.rcbuffer->pybuffer.buf, __pyx_t_83, __pyx_pybuffernd_kgrid.diminfo[0].strides, __pyx_t_84, __pyx_pybuffernd_kgrid.diminfo[1].strides) = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int_t *, __pyx_pybuffernd_fz.rcbuffer->pybuffer.buf, __pyx_t_82, __pyx_pybuffernd_fz.diminfo[0].strides));
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":396
+              /* "vaspwfc.pyx":396
  *                                 kgrid[k_ind, 1] = fy[jj]
  *                                 kgrid[k_ind, 2] = fz[kk]
  *                                 k_ind += 1             # <<<<<<<<<<<<<<
@@ -12024,7 +12022,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
  */
               __pyx_v_k_ind = (__pyx_v_k_ind + 1);
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":390
+              /* "vaspwfc.pyx":390
  *                     for jj in range(grid[1]):
  *                         for ii in range(grid[0]):
  *                             if fx[ii] > 0 or \             # <<<<<<<<<<<<<<
@@ -12038,7 +12036,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     }
     __pyx_L14:;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":366
+    /* "vaspwfc.pyx":366
  *         else:
  *             lgam = force_Gamma
  *         if lgam:             # <<<<<<<<<<<<<<
@@ -12048,7 +12046,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     goto __pyx_L13;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":398
+  /* "vaspwfc.pyx":398
  *                                 k_ind += 1
  *         else:
  *             kgrid = np.array([(fx[ii], fy[jj], fz[kk])             # <<<<<<<<<<<<<<
@@ -12064,7 +12062,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 398, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":399
+    /* "vaspwfc.pyx":399
  *         else:
  *             kgrid = np.array([(fx[ii], fy[jj], fz[kk])
  *                               for kk in range(self._ngrid[2])             # <<<<<<<<<<<<<<
@@ -12082,7 +12080,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_86; __pyx_t_6+=1) {
       __pyx_v_kk = __pyx_t_6;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":400
+      /* "vaspwfc.pyx":400
  *             kgrid = np.array([(fx[ii], fy[jj], fz[kk])
  *                               for kk in range(self._ngrid[2])
  *                               for jj in range(self._ngrid[1])             # <<<<<<<<<<<<<<
@@ -12100,7 +12098,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       for (__pyx_t_47 = 0; __pyx_t_47 < __pyx_t_88; __pyx_t_47+=1) {
         __pyx_v_jj = __pyx_t_47;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":401
+        /* "vaspwfc.pyx":401
  *                               for kk in range(self._ngrid[2])
  *                               for jj in range(self._ngrid[1])
  *                               for ii in range(self._ngrid[0])], dtype=float)             # <<<<<<<<<<<<<<
@@ -12118,7 +12116,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
         for (__pyx_t_51 = 0; __pyx_t_51 < __pyx_t_90; __pyx_t_51+=1) {
           __pyx_v_ii = __pyx_t_51;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":398
+          /* "vaspwfc.pyx":398
  *                                 k_ind += 1
  *         else:
  *             kgrid = np.array([(fx[ii], fy[jj], fz[kk])             # <<<<<<<<<<<<<<
@@ -12156,7 +12154,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":401
+    /* "vaspwfc.pyx":401
  *                               for kk in range(self._ngrid[2])
  *                               for jj in range(self._ngrid[1])
  *                               for ii in range(self._ngrid[0])], dtype=float)             # <<<<<<<<<<<<<<
@@ -12167,7 +12165,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __Pyx_GOTREF(__pyx_t_4);
     if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, ((PyObject *)(&PyFloat_Type))) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":398
+    /* "vaspwfc.pyx":398
  *                                 k_ind += 1
  *         else:
  *             kgrid = np.array([(fx[ii], fy[jj], fz[kk])             # <<<<<<<<<<<<<<
@@ -12204,7 +12202,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   }
   __pyx_L13:;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":405
+  /* "vaspwfc.pyx":405
  *         # Kinetic_Energy = (G + k)**2 / 2
  *         # HSQDTM    =  hbar**2/(2*ELECTRON MASS)
  *         KENERGY = HSQDTM * np.linalg.norm(             # <<<<<<<<<<<<<<
@@ -12222,7 +12220,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":406
+  /* "vaspwfc.pyx":406
  *         # HSQDTM    =  hbar**2/(2*ELECTRON MASS)
  *         KENERGY = HSQDTM * np.linalg.norm(
  *             np.dot(kgrid + kvec[np.newaxis, :], TPI*self._Bcell), axis=1             # <<<<<<<<<<<<<<
@@ -12311,7 +12309,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":405
+  /* "vaspwfc.pyx":405
  *         # Kinetic_Energy = (G + k)**2 / 2
  *         # HSQDTM    =  hbar**2/(2*ELECTRON MASS)
  *         KENERGY = HSQDTM * np.linalg.norm(             # <<<<<<<<<<<<<<
@@ -12324,7 +12322,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":406
+  /* "vaspwfc.pyx":406
  *         # HSQDTM    =  hbar**2/(2*ELECTRON MASS)
  *         KENERGY = HSQDTM * np.linalg.norm(
  *             np.dot(kgrid + kvec[np.newaxis, :], TPI*self._Bcell), axis=1             # <<<<<<<<<<<<<<
@@ -12335,7 +12333,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_axis, __pyx_int_1) < 0) __PYX_ERR(0, 406, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":405
+  /* "vaspwfc.pyx":405
  *         # Kinetic_Energy = (G + k)**2 / 2
  *         # HSQDTM    =  hbar**2/(2*ELECTRON MASS)
  *         KENERGY = HSQDTM * np.linalg.norm(             # <<<<<<<<<<<<<<
@@ -12348,7 +12346,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":407
+  /* "vaspwfc.pyx":407
  *         KENERGY = HSQDTM * np.linalg.norm(
  *             np.dot(kgrid + kvec[np.newaxis, :], TPI*self._Bcell), axis=1
  *         )**2             # <<<<<<<<<<<<<<
@@ -12359,7 +12357,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":405
+  /* "vaspwfc.pyx":405
  *         # Kinetic_Energy = (G + k)**2 / 2
  *         # HSQDTM    =  hbar**2/(2*ELECTRON MASS)
  *         KENERGY = HSQDTM * np.linalg.norm(             # <<<<<<<<<<<<<<
@@ -12373,7 +12371,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_v_KENERGY = __pyx_t_13;
   __pyx_t_13 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":409
+  /* "vaspwfc.pyx":409
  *         )**2
  *         # find Gvectors where (G + k)**2 / 2 < ENCUT
  *         Gvec = kgrid[np.where(KENERGY < self._encut)[0]]             # <<<<<<<<<<<<<<
@@ -12414,7 +12412,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_v_Gvec = __pyx_t_13;
   __pyx_t_13 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":413
+  /* "vaspwfc.pyx":413
  *         # Check if the calculated number of planewaves and the one recorded in the
  *         # WAVECAR are equal
  *         if check_consistency:             # <<<<<<<<<<<<<<
@@ -12424,7 +12422,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_t_35 = __Pyx_PyObject_IsTrue(__pyx_v_check_consistency); if (unlikely(__pyx_t_35 < 0)) __PYX_ERR(0, 413, __pyx_L1_error)
   if (__pyx_t_35) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":414
+    /* "vaspwfc.pyx":414
  *         # WAVECAR are equal
  *         if check_consistency:
  *             if self._lsoc:             # <<<<<<<<<<<<<<
@@ -12437,7 +12435,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     if (__pyx_t_35) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":415
+      /* "vaspwfc.pyx":415
  *         if check_consistency:
  *             if self._lsoc:
  *                 assert Gvec.shape[0] == self._nplws[ikpt - 1] // 2, \             # <<<<<<<<<<<<<<
@@ -12469,7 +12467,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         if (unlikely(!__pyx_t_35)) {
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":417
+          /* "vaspwfc.pyx":417
  *                 assert Gvec.shape[0] == self._nplws[ikpt - 1] // 2, \
  *                     'No. of planewaves not consistent for an SOC WAVECAR! %d %d %d' % \
  *                     (Gvec.shape[0], self._nplws[ikpt - 1],             # <<<<<<<<<<<<<<
@@ -12490,7 +12488,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":418
+          /* "vaspwfc.pyx":418
  *                     'No. of planewaves not consistent for an SOC WAVECAR! %d %d %d' % \
  *                     (Gvec.shape[0], self._nplws[ikpt - 1],
  *                      np.prod(self._ngrid))             # <<<<<<<<<<<<<<
@@ -12521,7 +12519,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
           __Pyx_GOTREF(__pyx_t_17);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":417
+          /* "vaspwfc.pyx":417
  *                 assert Gvec.shape[0] == self._nplws[ikpt - 1] // 2, \
  *                     'No. of planewaves not consistent for an SOC WAVECAR! %d %d %d' % \
  *                     (Gvec.shape[0], self._nplws[ikpt - 1],             # <<<<<<<<<<<<<<
@@ -12540,7 +12538,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
           __pyx_t_13 = 0;
           __pyx_t_17 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":416
+          /* "vaspwfc.pyx":416
  *             if self._lsoc:
  *                 assert Gvec.shape[0] == self._nplws[ikpt - 1] // 2, \
  *                     'No. of planewaves not consistent for an SOC WAVECAR! %d %d %d' % \             # <<<<<<<<<<<<<<
@@ -12557,7 +12555,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       }
       #endif
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":414
+      /* "vaspwfc.pyx":414
  *         # WAVECAR are equal
  *         if check_consistency:
  *             if self._lsoc:             # <<<<<<<<<<<<<<
@@ -12567,7 +12565,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
       goto __pyx_L48;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":420
+    /* "vaspwfc.pyx":420
  *                      np.prod(self._ngrid))
  *             else:
  *                 assert Gvec.shape[0] == self._nplws[ikpt - 1], 'No. of planewaves not consistent! %d %d %d' % \             # <<<<<<<<<<<<<<
@@ -12597,7 +12595,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         if (unlikely(!__pyx_t_35)) {
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":421
+          /* "vaspwfc.pyx":421
  *             else:
  *                 assert Gvec.shape[0] == self._nplws[ikpt - 1], 'No. of planewaves not consistent! %d %d %d' % \
  *                     (Gvec.shape[0], self._nplws[ikpt - 1],             # <<<<<<<<<<<<<<
@@ -12618,7 +12616,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":422
+          /* "vaspwfc.pyx":422
  *                 assert Gvec.shape[0] == self._nplws[ikpt - 1], 'No. of planewaves not consistent! %d %d %d' % \
  *                     (Gvec.shape[0], self._nplws[ikpt - 1],
  *                      np.prod(self._ngrid))             # <<<<<<<<<<<<<<
@@ -12649,7 +12647,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":421
+          /* "vaspwfc.pyx":421
  *             else:
  *                 assert Gvec.shape[0] == self._nplws[ikpt - 1], 'No. of planewaves not consistent! %d %d %d' % \
  *                     (Gvec.shape[0], self._nplws[ikpt - 1],             # <<<<<<<<<<<<<<
@@ -12668,7 +12666,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
           __pyx_t_17 = 0;
           __pyx_t_4 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":420
+          /* "vaspwfc.pyx":420
  *                      np.prod(self._ngrid))
  *             else:
  *                 assert Gvec.shape[0] == self._nplws[ikpt - 1], 'No. of planewaves not consistent! %d %d %d' % \             # <<<<<<<<<<<<<<
@@ -12687,7 +12685,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     }
     __pyx_L48:;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":413
+    /* "vaspwfc.pyx":413
  *         # Check if the calculated number of planewaves and the one recorded in the
  *         # WAVECAR are equal
  *         if check_consistency:             # <<<<<<<<<<<<<<
@@ -12696,7 +12694,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":424
+  /* "vaspwfc.pyx":424
  *                      np.prod(self._ngrid))
  * 
  *         return np.asarray(Gvec, dtype=int)             # <<<<<<<<<<<<<<
@@ -12726,7 +12724,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":325
+  /* "vaspwfc.pyx":325
  *     @cython.wraparound(False)
  *     @cython.cdivision(True)
  *     def gvectors(self, ikpt=1, force_Gamma=None, check_consistency=True):             # <<<<<<<<<<<<<<
@@ -12756,7 +12754,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_kgrid.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_kvec.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.gvectors", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.gvectors", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -12784,7 +12782,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":426
+/* "vaspwfc.pyx":426
  *         return np.asarray(Gvec, dtype=int)
  * 
  *     def save2vesta(self, phi=None, lreal=False, poscar='POSCAR', prefix='wfc',             # <<<<<<<<<<<<<<
@@ -12793,10 +12791,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_16gve
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_19save2vesta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18save2vesta[] = "\n        Save the real space pseudo-wavefunction as vesta format.\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_19save2vesta = {"save2vesta", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_19save2vesta, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18save2vesta};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_19save2vesta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_19save2vesta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_18save2vesta[] = "\n        Save the real space pseudo-wavefunction as vesta format.\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_19save2vesta = {"save2vesta", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_19save2vesta, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_18save2vesta};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_19save2vesta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_phi = 0;
   PyObject *__pyx_v_lreal = 0;
@@ -12900,18 +12898,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_19sav
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("save2vesta", 0, 1, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 426, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18save2vesta(__pyx_self, __pyx_v_self, __pyx_v_phi, __pyx_v_lreal, __pyx_v_poscar, __pyx_v_prefix, __pyx_v_ncol);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_18save2vesta(__pyx_self, __pyx_v_self, __pyx_v_phi, __pyx_v_lreal, __pyx_v_poscar, __pyx_v_prefix, __pyx_v_ncol);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18save2vesta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_phi, PyObject *__pyx_v_lreal, PyObject *__pyx_v_poscar, PyObject *__pyx_v_prefix, PyObject *__pyx_v_ncol) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_18save2vesta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_phi, PyObject *__pyx_v_lreal, PyObject *__pyx_v_poscar, PyObject *__pyx_v_prefix, PyObject *__pyx_v_ncol) {
   PyObject *__pyx_v_nx = NULL;
   PyObject *__pyx_v_ny = NULL;
   PyObject *__pyx_v_nz = NULL;
@@ -12953,7 +12951,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __Pyx_RefNannySetupContext("save2vesta", 0);
   __Pyx_TraceCall("save2vesta", __pyx_f[0], 426, 0, __PYX_ERR(0, 426, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":431
+  /* "vaspwfc.pyx":431
  *         Save the real space pseudo-wavefunction as vesta format.
  *         '''
  *         nx, ny, nz = phi.shape             # <<<<<<<<<<<<<<
@@ -13022,7 +13020,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __pyx_v_nz = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":432
+  /* "vaspwfc.pyx":432
  *         '''
  *         nx, ny, nz = phi.shape
  *         try:             # <<<<<<<<<<<<<<
@@ -13038,7 +13036,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
     __Pyx_XGOTREF(__pyx_t_9);
     /*try:*/ {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":433
+      /* "vaspwfc.pyx":433
  *         nx, ny, nz = phi.shape
  *         try:
  *             pos = open(poscar, 'r')             # <<<<<<<<<<<<<<
@@ -13059,7 +13057,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
       __pyx_v_pos = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":434
+      /* "vaspwfc.pyx":434
  *         try:
  *             pos = open(poscar, 'r')
  *             head = ''             # <<<<<<<<<<<<<<
@@ -13069,7 +13067,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
       __Pyx_INCREF(__pyx_kp_s__2);
       __pyx_v_head = __pyx_kp_s__2;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":435
+      /* "vaspwfc.pyx":435
  *             pos = open(poscar, 'r')
  *             head = ''
  *             for line in pos:             # <<<<<<<<<<<<<<
@@ -13118,7 +13116,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
         __Pyx_XDECREF_SET(__pyx_v_line, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":436
+        /* "vaspwfc.pyx":436
  *             head = ''
  *             for line in pos:
  *                 if line.strip():             # <<<<<<<<<<<<<<
@@ -13146,7 +13144,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         if (__pyx_t_12) {
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":437
+          /* "vaspwfc.pyx":437
  *             for line in pos:
  *                 if line.strip():
  *                     head += line             # <<<<<<<<<<<<<<
@@ -13158,7 +13156,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
           __Pyx_DECREF_SET(__pyx_v_head, __pyx_t_1);
           __pyx_t_1 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":436
+          /* "vaspwfc.pyx":436
  *             head = ''
  *             for line in pos:
  *                 if line.strip():             # <<<<<<<<<<<<<<
@@ -13168,7 +13166,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
           goto __pyx_L13;
         }
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":439
+        /* "vaspwfc.pyx":439
  *                     head += line
  *                 else:
  *                     break             # <<<<<<<<<<<<<<
@@ -13180,7 +13178,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
         }
         __pyx_L13:;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":435
+        /* "vaspwfc.pyx":435
  *             pos = open(poscar, 'r')
  *             head = ''
  *             for line in pos:             # <<<<<<<<<<<<<<
@@ -13191,7 +13189,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
       __pyx_L12_break:;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":440
+      /* "vaspwfc.pyx":440
  *                 else:
  *                     break
  *             head += '\n%5d%5d%5d\n' % (nx, ny, nz)             # <<<<<<<<<<<<<<
@@ -13218,7 +13216,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
       __Pyx_DECREF_SET(__pyx_v_head, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":432
+      /* "vaspwfc.pyx":432
  *         '''
  *         nx, ny, nz = phi.shape
  *         try:             # <<<<<<<<<<<<<<
@@ -13237,7 +13235,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":441
+    /* "vaspwfc.pyx":441
  *                     break
  *             head += '\n%5d%5d%5d\n' % (nx, ny, nz)
  *         except:             # <<<<<<<<<<<<<<
@@ -13245,13 +13243,13 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
  * 
  */
     /*except:*/ {
-      __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("vaspwfc.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_1, &__pyx_t_3) < 0) __PYX_ERR(0, 441, __pyx_L7_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GOTREF(__pyx_t_3);
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":442
+      /* "vaspwfc.pyx":442
  *             head += '\n%5d%5d%5d\n' % (nx, ny, nz)
  *         except:
  *             raise IOError('Failed to open %s' % poscar)             # <<<<<<<<<<<<<<
@@ -13269,7 +13267,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
     }
     __pyx_L7_except_error:;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":432
+    /* "vaspwfc.pyx":432
  *         '''
  *         nx, ny, nz = phi.shape
  *         try:             # <<<<<<<<<<<<<<
@@ -13284,7 +13282,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
     __pyx_L10_try_end:;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":445
+  /* "vaspwfc.pyx":445
  * 
  *         # Faster IO
  *         nrow = phi.size // ncol             # <<<<<<<<<<<<<<
@@ -13299,7 +13297,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __pyx_v_nrow = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":446
+  /* "vaspwfc.pyx":446
  *         # Faster IO
  *         nrow = phi.size // ncol
  *         nrem = phi.size % ncol             # <<<<<<<<<<<<<<
@@ -13314,7 +13312,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __pyx_v_nrem = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":447
+  /* "vaspwfc.pyx":447
  *         nrow = phi.size // ncol
  *         nrem = phi.size % ncol
  *         fmt = "%16.8E"             # <<<<<<<<<<<<<<
@@ -13324,7 +13322,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __Pyx_INCREF(__pyx_kp_s_16_8E);
   __pyx_v_fmt = __pyx_kp_s_16_8E;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":449
+  /* "vaspwfc.pyx":449
  *         fmt = "%16.8E"
  * 
  *         psi = phi.copy()             # <<<<<<<<<<<<<<
@@ -13351,7 +13349,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __pyx_v_psi = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":450
+  /* "vaspwfc.pyx":450
  * 
  *         psi = phi.copy()
  *         psi = psi.flatten(order='F')             # <<<<<<<<<<<<<<
@@ -13370,7 +13368,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __Pyx_DECREF_SET(__pyx_v_psi, __pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":451
+  /* "vaspwfc.pyx":451
  *         psi = phi.copy()
  *         psi = psi.flatten(order='F')
  *         psi_h = psi[:nrow * ncol].reshape((nrow, ncol))             # <<<<<<<<<<<<<<
@@ -13412,7 +13410,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __pyx_v_psi_h = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":452
+  /* "vaspwfc.pyx":452
  *         psi = psi.flatten(order='F')
  *         psi_h = psi[:nrow * ncol].reshape((nrow, ncol))
  *         psi_r = psi[nrow * ncol:]             # <<<<<<<<<<<<<<
@@ -13427,7 +13425,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __pyx_v_psi_r = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":454
+  /* "vaspwfc.pyx":454
  *         psi_r = psi[nrow * ncol:]
  * 
  *         with open(prefix + '_r.vasp', 'w') as out:             # <<<<<<<<<<<<<<
@@ -13482,7 +13480,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
           __pyx_v_out = __pyx_t_3;
           __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":455
+          /* "vaspwfc.pyx":455
  * 
  *         with open(prefix + '_r.vasp', 'w') as out:
  *             out.write(head)             # <<<<<<<<<<<<<<
@@ -13508,7 +13506,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":456
+          /* "vaspwfc.pyx":456
  *         with open(prefix + '_r.vasp', 'w') as out:
  *             out.write(head)
  *             out.write(             # <<<<<<<<<<<<<<
@@ -13518,7 +13516,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
           __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_out, __pyx_n_s_write); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 456, __pyx_L20_error)
           __Pyx_GOTREF(__pyx_t_1);
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":457
+          /* "vaspwfc.pyx":457
  *             out.write(head)
  *             out.write(
  *                 '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -13528,7 +13526,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
           __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 457, __pyx_L20_error)
           __Pyx_GOTREF(__pyx_t_4);
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":458
+          /* "vaspwfc.pyx":458
  *             out.write(
  *                 '\n'.join([''.join([fmt % xx for xx in row])
  *                            for row in psi_h.real])             # <<<<<<<<<<<<<<
@@ -13580,7 +13578,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
             __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_5);
             __pyx_t_5 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":457
+            /* "vaspwfc.pyx":457
  *             out.write(head)
  *             out.write(
  *                 '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -13642,7 +13640,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
             if (unlikely(__Pyx_ListComp_Append(__pyx_t_4, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 457, __pyx_L20_error)
             __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":458
+            /* "vaspwfc.pyx":458
  *             out.write(
  *                 '\n'.join([''.join([fmt % xx for xx in row])
  *                            for row in psi_h.real])             # <<<<<<<<<<<<<<
@@ -13652,7 +13650,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
           }
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":457
+          /* "vaspwfc.pyx":457
  *             out.write(head)
  *             out.write(
  *                 '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -13680,7 +13678,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":460
+          /* "vaspwfc.pyx":460
  *                            for row in psi_h.real])
  *             )
  *             out.write("\n" + ''.join([fmt % xx for xx in psi_r.real]))             # <<<<<<<<<<<<<<
@@ -13765,7 +13763,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":454
+          /* "vaspwfc.pyx":454
  *         psi_r = psi[nrow * ncol:]
  * 
  *         with open(prefix + '_r.vasp', 'w') as out:             # <<<<<<<<<<<<<<
@@ -13786,7 +13784,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         /*except:*/ {
-          __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("vaspwfc.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_2) < 0) __PYX_ERR(0, 454, __pyx_L22_except_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_GOTREF(__pyx_t_1);
@@ -13849,7 +13847,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
     __pyx_L35:;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":461
+  /* "vaspwfc.pyx":461
  *             )
  *             out.write("\n" + ''.join([fmt % xx for xx in psi_r.real]))
  *         if not (self._lgam or lreal):             # <<<<<<<<<<<<<<
@@ -13871,7 +13869,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __pyx_t_12 = ((!__pyx_t_19) != 0);
   if (__pyx_t_12) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":462
+    /* "vaspwfc.pyx":462
  *             out.write("\n" + ''.join([fmt % xx for xx in psi_r.real]))
  *         if not (self._lgam or lreal):
  *             with open(prefix + '_i.vasp', 'w') as out:             # <<<<<<<<<<<<<<
@@ -13926,7 +13924,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
             __Pyx_XDECREF_SET(__pyx_v_out, __pyx_t_3);
             __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":463
+            /* "vaspwfc.pyx":463
  *         if not (self._lgam or lreal):
  *             with open(prefix + '_i.vasp', 'w') as out:
  *                 out.write(head)             # <<<<<<<<<<<<<<
@@ -13952,7 +13950,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":464
+            /* "vaspwfc.pyx":464
  *             with open(prefix + '_i.vasp', 'w') as out:
  *                 out.write(head)
  *                 out.write(             # <<<<<<<<<<<<<<
@@ -13962,7 +13960,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
             __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_out, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 464, __pyx_L43_error)
             __Pyx_GOTREF(__pyx_t_2);
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":465
+            /* "vaspwfc.pyx":465
  *                 out.write(head)
  *                 out.write(
  *                     '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -13972,7 +13970,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
             __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 465, __pyx_L43_error)
             __Pyx_GOTREF(__pyx_t_1);
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":466
+            /* "vaspwfc.pyx":466
  *                 out.write(
  *                     '\n'.join([''.join([fmt % xx for xx in row])
  *                                for row in psi_h.imag])             # <<<<<<<<<<<<<<
@@ -14024,7 +14022,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
               __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_14);
               __pyx_t_14 = 0;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":465
+              /* "vaspwfc.pyx":465
  *                 out.write(head)
  *                 out.write(
  *                     '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -14086,7 +14084,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
               if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_5))) __PYX_ERR(0, 465, __pyx_L43_error)
               __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":466
+              /* "vaspwfc.pyx":466
  *                 out.write(
  *                     '\n'.join([''.join([fmt % xx for xx in row])
  *                                for row in psi_h.imag])             # <<<<<<<<<<<<<<
@@ -14096,7 +14094,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
             }
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":465
+            /* "vaspwfc.pyx":465
  *                 out.write(head)
  *                 out.write(
  *                     '\n'.join([''.join([fmt % xx for xx in row])             # <<<<<<<<<<<<<<
@@ -14124,7 +14122,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":468
+            /* "vaspwfc.pyx":468
  *                                for row in psi_h.imag])
  *                 )
  *                 out.write("\n" + ''.join([fmt % xx for xx in psi_r.imag]))             # <<<<<<<<<<<<<<
@@ -14209,7 +14207,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":462
+            /* "vaspwfc.pyx":462
  *             out.write("\n" + ''.join([fmt % xx for xx in psi_r.real]))
  *         if not (self._lgam or lreal):
  *             with open(prefix + '_i.vasp', 'w') as out:             # <<<<<<<<<<<<<<
@@ -14230,7 +14228,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           /*except:*/ {
-            __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+            __Pyx_AddTraceback("vaspwfc.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
             if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_2, &__pyx_t_4) < 0) __PYX_ERR(0, 462, __pyx_L45_except_error)
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_GOTREF(__pyx_t_2);
@@ -14293,7 +14291,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
       __pyx_L58:;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":461
+    /* "vaspwfc.pyx":461
  *             )
  *             out.write("\n" + ''.join([fmt % xx for xx in psi_r.real]))
  *         if not (self._lgam or lreal):             # <<<<<<<<<<<<<<
@@ -14302,7 +14300,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":426
+  /* "vaspwfc.pyx":426
  *         return np.asarray(Gvec, dtype=int)
  * 
  *     def save2vesta(self, phi=None, lreal=False, poscar='POSCAR', prefix='wfc',             # <<<<<<<<<<<<<<
@@ -14321,7 +14319,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_17);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.save2vesta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_nx);
@@ -14345,7 +14343,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":470
+/* "vaspwfc.pyx":470
  *                 out.write("\n" + ''.join([fmt % xx for xx in psi_r.imag]))
  * 
  *     def wfc_r(self, ispin=1, ikpt=1, iband=1,             # <<<<<<<<<<<<<<
@@ -14354,10 +14352,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_18sav
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_21wfc_r(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc_r[] = "\n        Obtain the pseudo-wavefunction of the specified KS states in real space\n        by performing FT transform on the reciprocal space planewave\n        coefficients.  The 3D FT grid size is determined by ngrid, which\n        defaults to self._ngrid if not given.  Gvectors of the KS states is used\n        to put 1D planewave coefficients back to 3D grid.\n\n        Inputs:\n            ispin : spin index of the desired KS states, starting from 1\n            ikpt  : k-point index of the desired KS states, starting from 1\n            iband : band index of the desired KS states, starting from 1\n            gvec  : the G-vectors correspond to the plane-wave coefficients\n            Cg    : the plane-wave coefficients. If None, read from WAVECAR\n            ngrid : the FFT grid size\n            norm  : normalized Cg?\n\n        The return wavefunctions are normalized in a way that\n\n                        \\sum_{ijk} | \\phi_{ijk} | ^ 2 = 1\n\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_21wfc_r = {"wfc_r", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_21wfc_r, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc_r};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_21wfc_r(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_21wfc_r(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_20wfc_r[] = "\n        Obtain the pseudo-wavefunction of the specified KS states in real space\n        by performing FT transform on the reciprocal space planewave\n        coefficients.  The 3D FT grid size is determined by ngrid, which\n        defaults to self._ngrid if not given.  Gvectors of the KS states is used\n        to put 1D planewave coefficients back to 3D grid.\n\n        Inputs:\n            ispin : spin index of the desired KS states, starting from 1\n            ikpt  : k-point index of the desired KS states, starting from 1\n            iband : band index of the desired KS states, starting from 1\n            gvec  : the G-vectors correspond to the plane-wave coefficients\n            Cg    : the plane-wave coefficients. If None, read from WAVECAR\n            ngrid : the FFT grid size\n            norm  : normalized Cg?\n\n        The return wavefunctions are normalized in a way that\n\n                        \\sum_{ijk} | \\phi_{ijk} | ^ 2 = 1\n\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_21wfc_r = {"wfc_r", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_21wfc_r, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_20wfc_r};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_21wfc_r(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ispin = 0;
   PyObject *__pyx_v_ikpt = 0;
@@ -14377,7 +14375,7 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_21wfc
     values[2] = ((PyObject *)((PyObject *)__pyx_int_1));
     values[3] = ((PyObject *)((PyObject *)__pyx_int_1));
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":471
+    /* "vaspwfc.pyx":471
  * 
  *     def wfc_r(self, ispin=1, ikpt=1, iband=1,
  *               gvec=None, Cg=None, ngrid=None,             # <<<<<<<<<<<<<<
@@ -14388,7 +14386,7 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_21wfc
     values[5] = ((PyObject *)((PyObject *)Py_None));
     values[6] = ((PyObject *)((PyObject *)Py_None));
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":472
+    /* "vaspwfc.pyx":472
  *     def wfc_r(self, ispin=1, ikpt=1, iband=1,
  *               gvec=None, Cg=None, ngrid=None,
  *               rescale=None,             # <<<<<<<<<<<<<<
@@ -14397,7 +14395,7 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_21wfc
  */
     values[7] = ((PyObject *)((PyObject *)Py_None));
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":473
+    /* "vaspwfc.pyx":473
  *               gvec=None, Cg=None, ngrid=None,
  *               rescale=None,
  *               norm=True):             # <<<<<<<<<<<<<<
@@ -14524,13 +14522,13 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_21wfc
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("wfc_r", 0, 1, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 470, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.wfc_r", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.wfc_r", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc_r(__pyx_self, __pyx_v_self, __pyx_v_ispin, __pyx_v_ikpt, __pyx_v_iband, __pyx_v_gvec, __pyx_v_Cg, __pyx_v_ngrid, __pyx_v_rescale, __pyx_v_norm);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_20wfc_r(__pyx_self, __pyx_v_self, __pyx_v_ispin, __pyx_v_ikpt, __pyx_v_iband, __pyx_v_gvec, __pyx_v_Cg, __pyx_v_ngrid, __pyx_v_rescale, __pyx_v_norm);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":470
+  /* "vaspwfc.pyx":470
  *                 out.write("\n" + ''.join([fmt % xx for xx in psi_r.imag]))
  * 
  *     def wfc_r(self, ispin=1, ikpt=1, iband=1,             # <<<<<<<<<<<<<<
@@ -14543,7 +14541,7 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_21wfc
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc_r(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband, PyObject *__pyx_v_gvec, PyObject *__pyx_v_Cg, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_rescale, PyObject *__pyx_v_norm) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_20wfc_r(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband, PyObject *__pyx_v_gvec, PyObject *__pyx_v_Cg, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_rescale, PyObject *__pyx_v_norm) {
   PyObject *__pyx_v_normFac = NULL;
   PyObject *__pyx_v_phi_k = NULL;
   PyObject *__pyx_v_wfc_spinor = NULL;
@@ -14581,7 +14579,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   __Pyx_INCREF(__pyx_v_gvec);
   __Pyx_INCREF(__pyx_v_ngrid);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":495
+  /* "vaspwfc.pyx":495
  * 
  *         '''
  *         self.checkIndex(ispin, ikpt, iband)             # <<<<<<<<<<<<<<
@@ -14640,7 +14638,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":497
+  /* "vaspwfc.pyx":497
  *         self.checkIndex(ispin, ikpt, iband)
  * 
  *         if ngrid is None:             # <<<<<<<<<<<<<<
@@ -14651,7 +14649,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   __pyx_t_7 = (__pyx_t_6 != 0);
   if (__pyx_t_7) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":498
+    /* "vaspwfc.pyx":498
  * 
  *         if ngrid is None:
  *             ngrid = self._ngrid.copy() * 2             # <<<<<<<<<<<<<<
@@ -14684,7 +14682,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __Pyx_DECREF_SET(__pyx_v_ngrid, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":497
+    /* "vaspwfc.pyx":497
  *         self.checkIndex(ispin, ikpt, iband)
  * 
  *         if ngrid is None:             # <<<<<<<<<<<<<<
@@ -14694,7 +14692,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     goto __pyx_L3;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":500
+  /* "vaspwfc.pyx":500
  *             ngrid = self._ngrid.copy() * 2
  *         else:
  *             ngrid = np.array(ngrid, dtype=int)             # <<<<<<<<<<<<<<
@@ -14723,7 +14721,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __Pyx_DECREF_SET(__pyx_v_ngrid, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":501
+    /* "vaspwfc.pyx":501
  *         else:
  *             ngrid = np.array(ngrid, dtype=int)
  *             assert ngrid.shape == (3,)             # <<<<<<<<<<<<<<
@@ -14745,7 +14743,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     }
     #endif
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":502
+    /* "vaspwfc.pyx":502
  *             ngrid = np.array(ngrid, dtype=int)
  *             assert ngrid.shape == (3,)
  *             assert np.alltrue(ngrid >= self._ngrid), \             # <<<<<<<<<<<<<<
@@ -14783,7 +14781,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       if (unlikely(!__pyx_t_7)) {
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":504
+        /* "vaspwfc.pyx":504
  *             assert np.alltrue(ngrid >= self._ngrid), \
  *                 "Minium FT grid size: (%d, %d, %d)" % \
  *                 (self._ngrid[0], self._ngrid[1], self._ngrid[2])             # <<<<<<<<<<<<<<
@@ -14817,7 +14815,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __pyx_t_1 = 0;
         __pyx_t_3 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":503
+        /* "vaspwfc.pyx":503
  *             assert ngrid.shape == (3,)
  *             assert np.alltrue(ngrid >= self._ngrid), \
  *                 "Minium FT grid size: (%d, %d, %d)" % \             # <<<<<<<<<<<<<<
@@ -14836,7 +14834,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   }
   __pyx_L3:;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":514
+  /* "vaspwfc.pyx":514
  *         # default normalization factor so that
  *         # \sum_{ijk} | \phi_{ijk} | ^ 2 = 1
  *         normFac = rescale if rescale is not None else np.sqrt(np.prod(ngrid))             # <<<<<<<<<<<<<<
@@ -14895,7 +14893,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   __pyx_v_normFac = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":516
+  /* "vaspwfc.pyx":516
  *         normFac = rescale if rescale is not None else np.sqrt(np.prod(ngrid))
  * 
  *         if gvec is None:             # <<<<<<<<<<<<<<
@@ -14906,7 +14904,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   __pyx_t_6 = (__pyx_t_7 != 0);
   if (__pyx_t_6) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":517
+    /* "vaspwfc.pyx":517
  * 
  *         if gvec is None:
  *             gvec = self.gvectors(ikpt)             # <<<<<<<<<<<<<<
@@ -14933,7 +14931,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __Pyx_DECREF_SET(__pyx_v_gvec, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":516
+    /* "vaspwfc.pyx":516
  *         normFac = rescale if rescale is not None else np.sqrt(np.prod(ngrid))
  * 
  *         if gvec is None:             # <<<<<<<<<<<<<<
@@ -14942,7 +14940,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":519
+  /* "vaspwfc.pyx":519
  *             gvec = self.gvectors(ikpt)
  * 
  *         if self._lgam:             # <<<<<<<<<<<<<<
@@ -14955,7 +14953,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_6) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":520
+    /* "vaspwfc.pyx":520
  * 
  *         if self._lgam:
  *             if self._gam_half == 'z':             # <<<<<<<<<<<<<<
@@ -14968,7 +14966,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_6) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":521
+      /* "vaspwfc.pyx":521
  *         if self._lgam:
  *             if self._gam_half == 'z':
  *                 phi_k = np.zeros(             # <<<<<<<<<<<<<<
@@ -14981,7 +14979,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":522
+      /* "vaspwfc.pyx":522
  *             if self._gam_half == 'z':
  *                 phi_k = np.zeros(
  *                     (ngrid[0], ngrid[1], ngrid[2]//2 + 1), dtype=np.complex128)             # <<<<<<<<<<<<<<
@@ -15012,7 +15010,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       __pyx_t_5 = 0;
       __pyx_t_1 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":521
+      /* "vaspwfc.pyx":521
  *         if self._lgam:
  *             if self._gam_half == 'z':
  *                 phi_k = np.zeros(             # <<<<<<<<<<<<<<
@@ -15025,7 +15023,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_9);
       __pyx_t_9 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":522
+      /* "vaspwfc.pyx":522
  *             if self._gam_half == 'z':
  *                 phi_k = np.zeros(
  *                     (ngrid[0], ngrid[1], ngrid[2]//2 + 1), dtype=np.complex128)             # <<<<<<<<<<<<<<
@@ -15042,7 +15040,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 522, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":521
+      /* "vaspwfc.pyx":521
  *         if self._lgam:
  *             if self._gam_half == 'z':
  *                 phi_k = np.zeros(             # <<<<<<<<<<<<<<
@@ -15057,7 +15055,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       __pyx_v_phi_k = __pyx_t_3;
       __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":520
+      /* "vaspwfc.pyx":520
  * 
  *         if self._lgam:
  *             if self._gam_half == 'z':             # <<<<<<<<<<<<<<
@@ -15067,7 +15065,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       goto __pyx_L6;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":524
+    /* "vaspwfc.pyx":524
  *                     (ngrid[0], ngrid[1], ngrid[2]//2 + 1), dtype=np.complex128)
  *             else:
  *                 phi_k = np.zeros(             # <<<<<<<<<<<<<<
@@ -15081,7 +15079,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":525
+      /* "vaspwfc.pyx":525
  *             else:
  *                 phi_k = np.zeros(
  *                     (ngrid[0]//2 + 1, ngrid[1], ngrid[2]), dtype=np.complex128)             # <<<<<<<<<<<<<<
@@ -15112,7 +15110,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       __pyx_t_1 = 0;
       __pyx_t_2 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":524
+      /* "vaspwfc.pyx":524
  *                     (ngrid[0], ngrid[1], ngrid[2]//2 + 1), dtype=np.complex128)
  *             else:
  *                 phi_k = np.zeros(             # <<<<<<<<<<<<<<
@@ -15125,7 +15123,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":525
+      /* "vaspwfc.pyx":525
  *             else:
  *                 phi_k = np.zeros(
  *                     (ngrid[0]//2 + 1, ngrid[1], ngrid[2]), dtype=np.complex128)             # <<<<<<<<<<<<<<
@@ -15142,7 +15140,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 525, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":524
+      /* "vaspwfc.pyx":524
  *                     (ngrid[0], ngrid[1], ngrid[2]//2 + 1), dtype=np.complex128)
  *             else:
  *                 phi_k = np.zeros(             # <<<<<<<<<<<<<<
@@ -15159,7 +15157,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     }
     __pyx_L6:;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":519
+    /* "vaspwfc.pyx":519
  *             gvec = self.gvectors(ikpt)
  * 
  *         if self._lgam:             # <<<<<<<<<<<<<<
@@ -15169,7 +15167,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     goto __pyx_L5;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":527
+  /* "vaspwfc.pyx":527
  *                     (ngrid[0]//2 + 1, ngrid[1], ngrid[2]), dtype=np.complex128)
  *         else:
  *             phi_k = np.zeros(ngrid, dtype=np.complex128)             # <<<<<<<<<<<<<<
@@ -15206,7 +15204,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   }
   __pyx_L5:;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":529
+  /* "vaspwfc.pyx":529
  *             phi_k = np.zeros(ngrid, dtype=np.complex128)
  * 
  *         gvec %= ngrid[np.newaxis, :]             # <<<<<<<<<<<<<<
@@ -15235,7 +15233,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   __Pyx_DECREF_SET(__pyx_v_gvec, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":531
+  /* "vaspwfc.pyx":531
  *         gvec %= ngrid[np.newaxis, :]
  * 
  *         if self._lsoc:             # <<<<<<<<<<<<<<
@@ -15248,7 +15246,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_6) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":532
+    /* "vaspwfc.pyx":532
  * 
  *         if self._lsoc:
  *             wfc_spinor = []             # <<<<<<<<<<<<<<
@@ -15260,7 +15258,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __pyx_v_wfc_spinor = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":533
+    /* "vaspwfc.pyx":533
  *         if self._lsoc:
  *             wfc_spinor = []
  *             if Cg:             # <<<<<<<<<<<<<<
@@ -15270,7 +15268,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_v_Cg); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 533, __pyx_L1_error)
     if (__pyx_t_6) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":534
+      /* "vaspwfc.pyx":534
  *             wfc_spinor = []
  *             if Cg:
  *                 dump = Cg             # <<<<<<<<<<<<<<
@@ -15280,7 +15278,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       __Pyx_INCREF(__pyx_v_Cg);
       __pyx_v_dump = __pyx_v_Cg;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":533
+      /* "vaspwfc.pyx":533
  *         if self._lsoc:
  *             wfc_spinor = []
  *             if Cg:             # <<<<<<<<<<<<<<
@@ -15290,7 +15288,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       goto __pyx_L8;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":536
+    /* "vaspwfc.pyx":536
  *                 dump = Cg
  *             else:
  *                 dump = self.readBandCoeff(ispin, ikpt, iband, norm)             # <<<<<<<<<<<<<<
@@ -15356,7 +15354,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     }
     __pyx_L8:;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":537
+    /* "vaspwfc.pyx":537
  *             else:
  *                 dump = self.readBandCoeff(ispin, ikpt, iband, norm)
  *             nplw = dump.shape[0] // 2             # <<<<<<<<<<<<<<
@@ -15374,7 +15372,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __pyx_v_nplw = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":540
+    /* "vaspwfc.pyx":540
  * 
  *             # spinor up
  *             phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]] = dump[:nplw]             # <<<<<<<<<<<<<<
@@ -15404,7 +15402,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":541
+    /* "vaspwfc.pyx":541
  *             # spinor up
  *             phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]] = dump[:nplw]
  *             wfc_spinor.append(ifftn(phi_k) * normFac)             # <<<<<<<<<<<<<<
@@ -15434,7 +15432,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __pyx_t_10 = __Pyx_PyList_Append(__pyx_v_wfc_spinor, __pyx_t_9); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 541, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":543
+    /* "vaspwfc.pyx":543
  *             wfc_spinor.append(ifftn(phi_k) * normFac)
  *             # spinor down
  *             phi_k[:, :, :] = 0.0j             # <<<<<<<<<<<<<<
@@ -15446,7 +15444,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     if (unlikely(PyObject_SetItem(__pyx_v_phi_k, __pyx_tuple__33, __pyx_t_9) < 0)) __PYX_ERR(0, 543, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":544
+    /* "vaspwfc.pyx":544
  *             # spinor down
  *             phi_k[:, :, :] = 0.0j
  *             phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]] = dump[nplw:]             # <<<<<<<<<<<<<<
@@ -15476,7 +15474,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":545
+    /* "vaspwfc.pyx":545
  *             phi_k[:, :, :] = 0.0j
  *             phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]] = dump[nplw:]
  *             wfc_spinor.append(ifftn(phi_k) * normFac)             # <<<<<<<<<<<<<<
@@ -15506,7 +15504,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __pyx_t_10 = __Pyx_PyList_Append(__pyx_v_wfc_spinor, __pyx_t_2); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 545, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":547
+    /* "vaspwfc.pyx":547
  *             wfc_spinor.append(ifftn(phi_k) * normFac)
  * 
  *             del dump             # <<<<<<<<<<<<<<
@@ -15516,7 +15514,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __Pyx_DECREF(__pyx_v_dump);
     __pyx_v_dump = NULL;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":548
+    /* "vaspwfc.pyx":548
  * 
  *             del dump
  *             return wfc_spinor             # <<<<<<<<<<<<<<
@@ -15528,7 +15526,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __pyx_r = __pyx_v_wfc_spinor;
     goto __pyx_L0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":531
+    /* "vaspwfc.pyx":531
  *         gvec %= ngrid[np.newaxis, :]
  * 
  *         if self._lsoc:             # <<<<<<<<<<<<<<
@@ -15537,7 +15535,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":551
+  /* "vaspwfc.pyx":551
  * 
  *         else:
  *             if Cg is not None:             # <<<<<<<<<<<<<<
@@ -15549,7 +15547,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __pyx_t_7 = (__pyx_t_6 != 0);
     if (__pyx_t_7) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":552
+      /* "vaspwfc.pyx":552
  *         else:
  *             if Cg is not None:
  *                 phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]] = Cg             # <<<<<<<<<<<<<<
@@ -15576,7 +15574,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       if (unlikely(PyObject_SetItem(__pyx_v_phi_k, __pyx_t_3, __pyx_v_Cg) < 0)) __PYX_ERR(0, 552, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":551
+      /* "vaspwfc.pyx":551
  * 
  *         else:
  *             if Cg is not None:             # <<<<<<<<<<<<<<
@@ -15586,7 +15584,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       goto __pyx_L9;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":555
+    /* "vaspwfc.pyx":555
  *             else:
  *                 phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]
  *                       ] = self.readBandCoeff(ispin, ikpt, iband, norm)             # <<<<<<<<<<<<<<
@@ -15648,7 +15646,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":554
+      /* "vaspwfc.pyx":554
  *                 phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]] = Cg
  *             else:
  *                 phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]             # <<<<<<<<<<<<<<
@@ -15678,7 +15676,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     }
     __pyx_L9:;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":557
+    /* "vaspwfc.pyx":557
  *                       ] = self.readBandCoeff(ispin, ikpt, iband, norm)
  * 
  *             if self._lgam:             # <<<<<<<<<<<<<<
@@ -15691,7 +15689,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_7) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":559
+      /* "vaspwfc.pyx":559
  *             if self._lgam:
  *                 # add some components that are excluded and perform c2r FFT
  *                 if self._gam_half == 'z':             # <<<<<<<<<<<<<<
@@ -15704,7 +15702,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_7) {
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":560
+        /* "vaspwfc.pyx":560
  *                 # add some components that are excluded and perform c2r FFT
  *                 if self._gam_half == 'z':
  *                     for ii in range(ngrid[0]):             # <<<<<<<<<<<<<<
@@ -15759,7 +15757,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
           __Pyx_XDECREF_SET(__pyx_v_ii, __pyx_t_1);
           __pyx_t_1 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":561
+          /* "vaspwfc.pyx":561
  *                 if self._gam_half == 'z':
  *                     for ii in range(ngrid[0]):
  *                         for jj in range(ngrid[1]):             # <<<<<<<<<<<<<<
@@ -15814,7 +15812,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
             __Pyx_XDECREF_SET(__pyx_v_jj, __pyx_t_9);
             __pyx_t_9 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":562
+            /* "vaspwfc.pyx":562
  *                     for ii in range(ngrid[0]):
  *                         for jj in range(ngrid[1]):
  *                             fx = ii if ii < ngrid[0] // 2 + \             # <<<<<<<<<<<<<<
@@ -15838,7 +15836,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
               __pyx_t_9 = __pyx_v_ii;
             } else {
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":563
+              /* "vaspwfc.pyx":563
  *                         for jj in range(ngrid[1]):
  *                             fx = ii if ii < ngrid[0] // 2 + \
  *                                 1 else ii - ngrid[0]             # <<<<<<<<<<<<<<
@@ -15856,7 +15854,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
             __Pyx_XDECREF_SET(__pyx_v_fx, __pyx_t_9);
             __pyx_t_9 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":564
+            /* "vaspwfc.pyx":564
  *                             fx = ii if ii < ngrid[0] // 2 + \
  *                                 1 else ii - ngrid[0]
  *                             fy = jj if jj < ngrid[1] // 2 + \             # <<<<<<<<<<<<<<
@@ -15880,7 +15878,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
               __pyx_t_9 = __pyx_v_jj;
             } else {
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":565
+              /* "vaspwfc.pyx":565
  *                                 1 else ii - ngrid[0]
  *                             fy = jj if jj < ngrid[1] // 2 + \
  *                                 1 else jj - ngrid[1]             # <<<<<<<<<<<<<<
@@ -15898,7 +15896,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
             __Pyx_XDECREF_SET(__pyx_v_fy, __pyx_t_9);
             __pyx_t_9 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":566
+            /* "vaspwfc.pyx":566
  *                             fy = jj if jj < ngrid[1] // 2 + \
  *                                 1 else jj - ngrid[1]
  *                             if (fy > 0) or (fy == 0 and fx >= 0):             # <<<<<<<<<<<<<<
@@ -15929,7 +15927,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
             __pyx_L17_bool_binop_done:;
             if (__pyx_t_7) {
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":567
+              /* "vaspwfc.pyx":567
  *                                 1 else jj - ngrid[1]
  *                             if (fy > 0) or (fy == 0 and fx >= 0):
  *                                 continue             # <<<<<<<<<<<<<<
@@ -15938,7 +15936,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
  */
               goto __pyx_L14_continue;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":566
+              /* "vaspwfc.pyx":566
  *                             fy = jj if jj < ngrid[1] // 2 + \
  *                                 1 else jj - ngrid[1]
  *                             if (fy > 0) or (fy == 0 and fx >= 0):             # <<<<<<<<<<<<<<
@@ -15947,7 +15945,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
  */
             }
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":568
+            /* "vaspwfc.pyx":568
  *                             if (fy > 0) or (fy == 0 and fx >= 0):
  *                                 continue
  *                             phi_k[ii, jj, 0] = phi_k[-ii, -jj, 0].conjugate()             # <<<<<<<<<<<<<<
@@ -16005,7 +16003,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":561
+            /* "vaspwfc.pyx":561
  *                 if self._gam_half == 'z':
  *                     for ii in range(ngrid[0]):
  *                         for jj in range(ngrid[1]):             # <<<<<<<<<<<<<<
@@ -16016,7 +16014,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":560
+          /* "vaspwfc.pyx":560
  *                 # add some components that are excluded and perform c2r FFT
  *                 if self._gam_half == 'z':
  *                     for ii in range(ngrid[0]):             # <<<<<<<<<<<<<<
@@ -16026,7 +16024,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         }
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":570
+        /* "vaspwfc.pyx":570
  *                             phi_k[ii, jj, 0] = phi_k[-ii, -jj, 0].conjugate()
  * 
  *                     phi_k /= np.sqrt(2.)             # <<<<<<<<<<<<<<
@@ -16059,7 +16057,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __Pyx_DECREF_SET(__pyx_v_phi_k, __pyx_t_9);
         __pyx_t_9 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":571
+        /* "vaspwfc.pyx":571
  * 
  *                     phi_k /= np.sqrt(2.)
  *                     phi_k[0, 0, 0] *= np.sqrt(2.)             # <<<<<<<<<<<<<<
@@ -16098,7 +16096,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":572
+        /* "vaspwfc.pyx":572
  *                     phi_k /= np.sqrt(2.)
  *                     phi_k[0, 0, 0] *= np.sqrt(2.)
  *                     return np.fft.irfftn(phi_k, s=ngrid) * normFac             # <<<<<<<<<<<<<<
@@ -16134,7 +16132,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __pyx_t_9 = 0;
         goto __pyx_L0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":559
+        /* "vaspwfc.pyx":559
  *             if self._lgam:
  *                 # add some components that are excluded and perform c2r FFT
  *                 if self._gam_half == 'z':             # <<<<<<<<<<<<<<
@@ -16143,7 +16141,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
  */
       }
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":573
+      /* "vaspwfc.pyx":573
  *                     phi_k[0, 0, 0] *= np.sqrt(2.)
  *                     return np.fft.irfftn(phi_k, s=ngrid) * normFac
  *                 elif self._gam_half == 'x':             # <<<<<<<<<<<<<<
@@ -16156,7 +16154,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       if (__pyx_t_7) {
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":574
+        /* "vaspwfc.pyx":574
  *                     return np.fft.irfftn(phi_k, s=ngrid) * normFac
  *                 elif self._gam_half == 'x':
  *                     for jj in range(ngrid[1]):             # <<<<<<<<<<<<<<
@@ -16211,7 +16209,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
           __Pyx_XDECREF_SET(__pyx_v_jj, __pyx_t_1);
           __pyx_t_1 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":575
+          /* "vaspwfc.pyx":575
  *                 elif self._gam_half == 'x':
  *                     for jj in range(ngrid[1]):
  *                         for kk in range(ngrid[2]):             # <<<<<<<<<<<<<<
@@ -16266,7 +16264,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
             __Pyx_XDECREF_SET(__pyx_v_kk, __pyx_t_3);
             __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":576
+            /* "vaspwfc.pyx":576
  *                     for jj in range(ngrid[1]):
  *                         for kk in range(ngrid[2]):
  *                             fy = jj if jj < ngrid[1] // 2 + \             # <<<<<<<<<<<<<<
@@ -16290,7 +16288,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
               __pyx_t_3 = __pyx_v_jj;
             } else {
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":577
+              /* "vaspwfc.pyx":577
  *                         for kk in range(ngrid[2]):
  *                             fy = jj if jj < ngrid[1] // 2 + \
  *                                 1 else jj - ngrid[1]             # <<<<<<<<<<<<<<
@@ -16308,7 +16306,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
             __Pyx_XDECREF_SET(__pyx_v_fy, __pyx_t_3);
             __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":578
+            /* "vaspwfc.pyx":578
  *                             fy = jj if jj < ngrid[1] // 2 + \
  *                                 1 else jj - ngrid[1]
  *                             fz = kk if kk < ngrid[2] // 2 + \             # <<<<<<<<<<<<<<
@@ -16332,7 +16330,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
               __pyx_t_3 = __pyx_v_kk;
             } else {
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":579
+              /* "vaspwfc.pyx":579
  *                                 1 else jj - ngrid[1]
  *                             fz = kk if kk < ngrid[2] // 2 + \
  *                                 1 else kk - ngrid[2]             # <<<<<<<<<<<<<<
@@ -16350,7 +16348,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
             __Pyx_XDECREF_SET(__pyx_v_fz, __pyx_t_3);
             __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":580
+            /* "vaspwfc.pyx":580
  *                             fz = kk if kk < ngrid[2] // 2 + \
  *                                 1 else kk - ngrid[2]
  *                             if (fy > 0) or (fy == 0 and fz >= 0):             # <<<<<<<<<<<<<<
@@ -16381,7 +16379,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
             __pyx_L25_bool_binop_done:;
             if (__pyx_t_7) {
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":581
+              /* "vaspwfc.pyx":581
  *                                 1 else kk - ngrid[2]
  *                             if (fy > 0) or (fy == 0 and fz >= 0):
  *                                 continue             # <<<<<<<<<<<<<<
@@ -16390,7 +16388,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
  */
               goto __pyx_L22_continue;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":580
+              /* "vaspwfc.pyx":580
  *                             fz = kk if kk < ngrid[2] // 2 + \
  *                                 1 else kk - ngrid[2]
  *                             if (fy > 0) or (fy == 0 and fz >= 0):             # <<<<<<<<<<<<<<
@@ -16399,7 +16397,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
  */
             }
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":582
+            /* "vaspwfc.pyx":582
  *                             if (fy > 0) or (fy == 0 and fz >= 0):
  *                                 continue
  *                             phi_k[0, jj, kk] = phi_k[0, -jj, -kk].conjugate()             # <<<<<<<<<<<<<<
@@ -16457,7 +16455,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":575
+            /* "vaspwfc.pyx":575
  *                 elif self._gam_half == 'x':
  *                     for jj in range(ngrid[1]):
  *                         for kk in range(ngrid[2]):             # <<<<<<<<<<<<<<
@@ -16468,7 +16466,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":574
+          /* "vaspwfc.pyx":574
  *                     return np.fft.irfftn(phi_k, s=ngrid) * normFac
  *                 elif self._gam_half == 'x':
  *                     for jj in range(ngrid[1]):             # <<<<<<<<<<<<<<
@@ -16478,7 +16476,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         }
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":584
+        /* "vaspwfc.pyx":584
  *                             phi_k[0, jj, kk] = phi_k[0, -jj, -kk].conjugate()
  * 
  *                     phi_k /= np.sqrt(2.)             # <<<<<<<<<<<<<<
@@ -16511,7 +16509,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __Pyx_DECREF_SET(__pyx_v_phi_k, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":585
+        /* "vaspwfc.pyx":585
  * 
  *                     phi_k /= np.sqrt(2.)
  *                     phi_k[0, 0, 0] *= np.sqrt(2.)             # <<<<<<<<<<<<<<
@@ -16550,7 +16548,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":586
+        /* "vaspwfc.pyx":586
  *                     phi_k /= np.sqrt(2.)
  *                     phi_k[0, 0, 0] *= np.sqrt(2.)
  *                     phi_k = np.swapaxes(phi_k, 0, 2)             # <<<<<<<<<<<<<<
@@ -16613,7 +16611,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __Pyx_DECREF_SET(__pyx_v_phi_k, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":587
+        /* "vaspwfc.pyx":587
  *                     phi_k[0, 0, 0] *= np.sqrt(2.)
  *                     phi_k = np.swapaxes(phi_k, 0, 2)
  *                     tmp = np.fft.irfftn(             # <<<<<<<<<<<<<<
@@ -16629,7 +16627,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":588
+        /* "vaspwfc.pyx":588
  *                     phi_k = np.swapaxes(phi_k, 0, 2)
  *                     tmp = np.fft.irfftn(
  *                         phi_k, s=(ngrid[2], ngrid[1], ngrid[0])) * normFac             # <<<<<<<<<<<<<<
@@ -16663,7 +16661,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_s, __pyx_t_16) < 0) __PYX_ERR(0, 588, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":587
+        /* "vaspwfc.pyx":587
  *                     phi_k[0, 0, 0] *= np.sqrt(2.)
  *                     phi_k = np.swapaxes(phi_k, 0, 2)
  *                     tmp = np.fft.irfftn(             # <<<<<<<<<<<<<<
@@ -16676,7 +16674,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":588
+        /* "vaspwfc.pyx":588
  *                     phi_k = np.swapaxes(phi_k, 0, 2)
  *                     tmp = np.fft.irfftn(
  *                         phi_k, s=(ngrid[2], ngrid[1], ngrid[0])) * normFac             # <<<<<<<<<<<<<<
@@ -16689,7 +16687,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __pyx_v_tmp = __pyx_t_1;
         __pyx_t_1 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":589
+        /* "vaspwfc.pyx":589
  *                     tmp = np.fft.irfftn(
  *                         phi_k, s=(ngrid[2], ngrid[1], ngrid[0])) * normFac
  *                     return np.swapaxes(tmp, 0, 2)             # <<<<<<<<<<<<<<
@@ -16754,7 +16752,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
         __pyx_t_1 = 0;
         goto __pyx_L0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":573
+        /* "vaspwfc.pyx":573
  *                     phi_k[0, 0, 0] *= np.sqrt(2.)
  *                     return np.fft.irfftn(phi_k, s=ngrid) * normFac
  *                 elif self._gam_half == 'x':             # <<<<<<<<<<<<<<
@@ -16763,7 +16761,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
  */
       }
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":557
+      /* "vaspwfc.pyx":557
  *                       ] = self.readBandCoeff(ispin, ikpt, iband, norm)
  * 
  *             if self._lgam:             # <<<<<<<<<<<<<<
@@ -16773,7 +16771,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
       goto __pyx_L10;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":592
+    /* "vaspwfc.pyx":592
  *             else:
  *                 # perform complex2complex FFT
  *                 return ifftn(phi_k * normFac)             # <<<<<<<<<<<<<<
@@ -16809,7 +16807,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
     __pyx_L10:;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":470
+  /* "vaspwfc.pyx":470
  *                 out.write("\n" + ''.join([fmt % xx for xx in psi_r.imag]))
  * 
  *     def wfc_r(self, ispin=1, ikpt=1, iband=1,             # <<<<<<<<<<<<<<
@@ -16829,7 +16827,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.wfc_r", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.wfc_r", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_normFac);
@@ -16852,7 +16850,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":594
+/* "vaspwfc.pyx":594
  *                 return ifftn(phi_k * normFac)
  * 
  *     def poisson(self, rho=None, iband=1, ikpt=1, ispin=1, ngrid=None, norm=False):             # <<<<<<<<<<<<<<
@@ -16861,10 +16859,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_20wfc
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_23poisson(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poisson[] = "\n        Given a charge density \"rho\", solve the Poisson equation with periodic\n        boundary condition to find out the corresponding electric potential and\n        field.\n\n        When \"rho\" is None, construct the charge density from a chosen Kohn-Sham\n        state, i.e. rho(r) = phi_n(r).conj() * phi_n(r).\n\n        In SI units, the real space Poisson equation:\n\n                    \nabla^2 V = - \rho / \013arepsilon_0\n                             E = - \nabla V\n\n        the reciprocal space Poisson equation:\n\n                    G**2 * V_q = - rho_q / \013arepsilon_0\n                           E_q = -1j * G * V_q\n\n        Note that the G=(0,0,0) entry is set to 1.0 instead of 0 to avoid\n        divergence.\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_23poisson = {"poisson", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_23poisson, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poisson};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_23poisson(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_23poisson(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_22poisson[] = "\n        Given a charge density \"rho\", solve the Poisson equation with periodic\n        boundary condition to find out the corresponding electric potential and\n        field.\n\n        When \"rho\" is None, construct the charge density from a chosen Kohn-Sham\n        state, i.e. rho(r) = phi_n(r).conj() * phi_n(r).\n\n        In SI units, the real space Poisson equation:\n\n                    \nabla^2 V = - \rho / \013arepsilon_0\n                             E = - \nabla V\n\n        the reciprocal space Poisson equation:\n\n                    G**2 * V_q = - rho_q / \013arepsilon_0\n                           E_q = -1j * G * V_q\n\n        Note that the G=(0,0,0) entry is set to 1.0 instead of 0 to avoid\n        divergence.\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_23poisson = {"poisson", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_23poisson, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_22poisson};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_23poisson(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_rho = 0;
   PyObject *__pyx_v_iband = 0;
@@ -16981,18 +16979,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_23poi
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("poisson", 0, 1, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 594, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.poisson", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.poisson", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poisson(__pyx_self, __pyx_v_self, __pyx_v_rho, __pyx_v_iband, __pyx_v_ikpt, __pyx_v_ispin, __pyx_v_ngrid, __pyx_v_norm);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_22poisson(__pyx_self, __pyx_v_self, __pyx_v_rho, __pyx_v_iband, __pyx_v_ikpt, __pyx_v_ispin, __pyx_v_ngrid, __pyx_v_norm);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poisson(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_rho, PyObject *__pyx_v_iband, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_norm) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_22poisson(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_rho, PyObject *__pyx_v_iband, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_norm) {
   PyObject *__pyx_v_normFac = NULL;
   PyObject *__pyx_v_phi_spinor = NULL;
   PyObject *__pyx_v_phi = NULL;
@@ -17037,7 +17035,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __Pyx_INCREF(__pyx_v_rho);
   __Pyx_INCREF(__pyx_v_ngrid);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":617
+  /* "vaspwfc.pyx":617
  *         """
  * 
  *         if rho is not None:             # <<<<<<<<<<<<<<
@@ -17048,7 +17046,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":618
+    /* "vaspwfc.pyx":618
  * 
  *         if rho is not None:
  *             rho = np.asarray(rho)             # <<<<<<<<<<<<<<
@@ -17078,7 +17076,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     __Pyx_DECREF_SET(__pyx_v_rho, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":619
+    /* "vaspwfc.pyx":619
  *         if rho is not None:
  *             rho = np.asarray(rho)
  *             ngrid = np.array(rho.shape, dtype=int)             # <<<<<<<<<<<<<<
@@ -17108,7 +17106,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     __Pyx_DECREF_SET(__pyx_v_ngrid, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":620
+    /* "vaspwfc.pyx":620
  *             rho = np.asarray(rho)
  *             ngrid = np.array(rho.shape, dtype=int)
  *             assert ngrid.shape == (3,)             # <<<<<<<<<<<<<<
@@ -17130,7 +17128,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     }
     #endif
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":617
+    /* "vaspwfc.pyx":617
  *         """
  * 
  *         if rho is not None:             # <<<<<<<<<<<<<<
@@ -17140,7 +17138,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     goto __pyx_L3;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":622
+  /* "vaspwfc.pyx":622
  *             assert ngrid.shape == (3,)
  *         else:
  *             ngrid = self._ngrid * 2             # <<<<<<<<<<<<<<
@@ -17156,7 +17154,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     __Pyx_DECREF_SET(__pyx_v_ngrid, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":625
+    /* "vaspwfc.pyx":625
  *             # normalization factor so that
  *             # \sum_{ijk} | \phi_{ijk} | ^ 2 * volume / Ngrid = 1
  *             normFac = np.prod(ngrid) / self._Omega             # <<<<<<<<<<<<<<
@@ -17192,7 +17190,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     __pyx_v_normFac = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":626
+    /* "vaspwfc.pyx":626
  *             # \sum_{ijk} | \phi_{ijk} | ^ 2 * volume / Ngrid = 1
  *             normFac = np.prod(ngrid) / self._Omega
  *             if self._lsoc:             # <<<<<<<<<<<<<<
@@ -17205,7 +17203,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_2) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":627
+      /* "vaspwfc.pyx":627
  *             normFac = np.prod(ngrid) / self._Omega
  *             if self._lsoc:
  *                 rho = np.zeros(ngrid, dtype=float)             # <<<<<<<<<<<<<<
@@ -17233,7 +17231,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
       __Pyx_DECREF_SET(__pyx_v_rho, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":628
+      /* "vaspwfc.pyx":628
  *             if self._lsoc:
  *                 rho = np.zeros(ngrid, dtype=float)
  *                 phi_spinor = self.wfc_r(iband=iband, ikpt=ikpt, ispin=ispin,             # <<<<<<<<<<<<<<
@@ -17248,7 +17246,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
       if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_ikpt, __pyx_v_ikpt) < 0) __PYX_ERR(0, 628, __pyx_L1_error)
       if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_ispin, __pyx_v_ispin) < 0) __PYX_ERR(0, 628, __pyx_L1_error)
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":629
+      /* "vaspwfc.pyx":629
  *                 rho = np.zeros(ngrid, dtype=float)
  *                 phi_spinor = self.wfc_r(iband=iband, ikpt=ikpt, ispin=ispin,
  *                                         ngrid=ngrid, norm=norm)             # <<<<<<<<<<<<<<
@@ -17258,7 +17256,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
       if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_ngrid_2, __pyx_v_ngrid) < 0) __PYX_ERR(0, 628, __pyx_L1_error)
       if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_norm, __pyx_v_norm) < 0) __PYX_ERR(0, 628, __pyx_L1_error)
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":628
+      /* "vaspwfc.pyx":628
  *             if self._lsoc:
  *                 rho = np.zeros(ngrid, dtype=float)
  *                 phi_spinor = self.wfc_r(iband=iband, ikpt=ikpt, ispin=ispin,             # <<<<<<<<<<<<<<
@@ -17272,7 +17270,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
       __pyx_v_phi_spinor = __pyx_t_3;
       __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":631
+      /* "vaspwfc.pyx":631
  *                                         ngrid=ngrid, norm=norm)
  *                 # negative charges, hence the minus sign
  *                 for phi in phi_spinor:             # <<<<<<<<<<<<<<
@@ -17321,7 +17319,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
         __Pyx_XDECREF_SET(__pyx_v_phi, __pyx_t_6);
         __pyx_t_6 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":632
+        /* "vaspwfc.pyx":632
  *                 # negative charges, hence the minus sign
  *                 for phi in phi_spinor:
  *                     rho += -(phi.conj() * phi).real * normFac             # <<<<<<<<<<<<<<
@@ -17363,7 +17361,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
         __Pyx_DECREF_SET(__pyx_v_rho, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":631
+        /* "vaspwfc.pyx":631
  *                                         ngrid=ngrid, norm=norm)
  *                 # negative charges, hence the minus sign
  *                 for phi in phi_spinor:             # <<<<<<<<<<<<<<
@@ -17373,7 +17371,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
       }
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":626
+      /* "vaspwfc.pyx":626
  *             # \sum_{ijk} | \phi_{ijk} | ^ 2 * volume / Ngrid = 1
  *             normFac = np.prod(ngrid) / self._Omega
  *             if self._lsoc:             # <<<<<<<<<<<<<<
@@ -17383,7 +17381,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
       goto __pyx_L4;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":634
+    /* "vaspwfc.pyx":634
  *                     rho += -(phi.conj() * phi).real * normFac
  *             else:
  *                 phi = self.wfc_r(iband=iband, ikpt=ikpt, ispin=ispin,             # <<<<<<<<<<<<<<
@@ -17399,7 +17397,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
       if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_ikpt, __pyx_v_ikpt) < 0) __PYX_ERR(0, 634, __pyx_L1_error)
       if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_ispin, __pyx_v_ispin) < 0) __PYX_ERR(0, 634, __pyx_L1_error)
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":635
+      /* "vaspwfc.pyx":635
  *             else:
  *                 phi = self.wfc_r(iband=iband, ikpt=ikpt, ispin=ispin,
  *                                  ngrid=ngrid, norm=norm)             # <<<<<<<<<<<<<<
@@ -17409,7 +17407,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
       if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_ngrid_2, __pyx_v_ngrid) < 0) __PYX_ERR(0, 634, __pyx_L1_error)
       if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_norm, __pyx_v_norm) < 0) __PYX_ERR(0, 634, __pyx_L1_error)
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":634
+      /* "vaspwfc.pyx":634
  *                     rho += -(phi.conj() * phi).real * normFac
  *             else:
  *                 phi = self.wfc_r(iband=iband, ikpt=ikpt, ispin=ispin,             # <<<<<<<<<<<<<<
@@ -17423,7 +17421,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
       __pyx_v_phi = __pyx_t_6;
       __pyx_t_6 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":637
+      /* "vaspwfc.pyx":637
  *                                  ngrid=ngrid, norm=norm)
  *                 # negative charges, hence the minus sign
  *                 rho = -(phi.conj() * phi).real * normFac             # <<<<<<<<<<<<<<
@@ -17466,7 +17464,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   }
   __pyx_L3:;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":639
+  /* "vaspwfc.pyx":639
  *                 rho = -(phi.conj() * phi).real * normFac
  * 
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]             # <<<<<<<<<<<<<<
@@ -17476,7 +17474,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 639, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":640
+  /* "vaspwfc.pyx":640
  * 
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]
  *               for ii in range(ngrid[0])]             # <<<<<<<<<<<<<<
@@ -17531,7 +17529,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     __Pyx_XDECREF_SET(__pyx_v_ii, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":639
+    /* "vaspwfc.pyx":639
  *                 rho = -(phi.conj() * phi).real * normFac
  * 
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]             # <<<<<<<<<<<<<<
@@ -17565,7 +17563,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     if (unlikely(__Pyx_ListComp_Append(__pyx_t_6, (PyObject*)__pyx_t_3))) __PYX_ERR(0, 639, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":640
+    /* "vaspwfc.pyx":640
  * 
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]
  *               for ii in range(ngrid[0])]             # <<<<<<<<<<<<<<
@@ -17577,7 +17575,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_fx = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":641
+  /* "vaspwfc.pyx":641
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]
  *               for ii in range(ngrid[0])]
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]             # <<<<<<<<<<<<<<
@@ -17587,7 +17585,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 641, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":642
+  /* "vaspwfc.pyx":642
  *               for ii in range(ngrid[0])]
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]
  *               for jj in range(ngrid[1])]             # <<<<<<<<<<<<<<
@@ -17642,7 +17640,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     __Pyx_XDECREF_SET(__pyx_v_jj, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":641
+    /* "vaspwfc.pyx":641
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]
  *               for ii in range(ngrid[0])]
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]             # <<<<<<<<<<<<<<
@@ -17676,7 +17674,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     if (unlikely(__Pyx_ListComp_Append(__pyx_t_6, (PyObject*)__pyx_t_3))) __PYX_ERR(0, 641, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":642
+    /* "vaspwfc.pyx":642
  *               for ii in range(ngrid[0])]
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]
  *               for jj in range(ngrid[1])]             # <<<<<<<<<<<<<<
@@ -17688,7 +17686,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_fy = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":643
+  /* "vaspwfc.pyx":643
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]
  *               for jj in range(ngrid[1])]
  *         fz = [kk if kk < ngrid[2] // 2 + 1 else kk - ngrid[2]             # <<<<<<<<<<<<<<
@@ -17698,7 +17696,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 643, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":644
+  /* "vaspwfc.pyx":644
  *               for jj in range(ngrid[1])]
  *         fz = [kk if kk < ngrid[2] // 2 + 1 else kk - ngrid[2]
  *               for kk in range(ngrid[2])]             # <<<<<<<<<<<<<<
@@ -17753,7 +17751,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     __Pyx_XDECREF_SET(__pyx_v_kk, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":643
+    /* "vaspwfc.pyx":643
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]
  *               for jj in range(ngrid[1])]
  *         fz = [kk if kk < ngrid[2] // 2 + 1 else kk - ngrid[2]             # <<<<<<<<<<<<<<
@@ -17787,7 +17785,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
     if (unlikely(__Pyx_ListComp_Append(__pyx_t_6, (PyObject*)__pyx_t_3))) __PYX_ERR(0, 643, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":644
+    /* "vaspwfc.pyx":644
  *               for jj in range(ngrid[1])]
  *         fz = [kk if kk < ngrid[2] // 2 + 1 else kk - ngrid[2]
  *               for kk in range(ngrid[2])]             # <<<<<<<<<<<<<<
@@ -17799,7 +17797,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_fz = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":648
+  /* "vaspwfc.pyx":648
  *         # plane-waves: Reciprocal coordinate
  *         # indexing = 'ij' so that outputs are of shape (ngrid[0], ngrid[1], ngrid[2])
  *         Dx, Dy, Dz = np.meshgrid(fx, fy, fz, indexing='ij')             # <<<<<<<<<<<<<<
@@ -17890,7 +17888,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_Dz = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":650
+  /* "vaspwfc.pyx":650
  *         Dx, Dy, Dz = np.meshgrid(fx, fy, fz, indexing='ij')
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(             # <<<<<<<<<<<<<<
@@ -17903,7 +17901,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":651
+  /* "vaspwfc.pyx":651
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(
  *             self._Bcell * np.pi * 2, [Dx, Dy, Dz], axes=(0, 0))             # <<<<<<<<<<<<<<
@@ -17936,7 +17934,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __Pyx_GIVEREF(__pyx_v_Dz);
   PyList_SET_ITEM(__pyx_t_6, 2, __pyx_v_Dz);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":650
+  /* "vaspwfc.pyx":650
  *         Dx, Dy, Dz = np.meshgrid(fx, fy, fz, indexing='ij')
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(             # <<<<<<<<<<<<<<
@@ -17952,7 +17950,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_t_3 = 0;
   __pyx_t_6 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":651
+  /* "vaspwfc.pyx":651
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(
  *             self._Bcell * np.pi * 2, [Dx, Dy, Dz], axes=(0, 0))             # <<<<<<<<<<<<<<
@@ -17963,7 +17961,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __Pyx_GOTREF(__pyx_t_6);
   if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_axes, __pyx_tuple__36) < 0) __PYX_ERR(0, 651, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":650
+  /* "vaspwfc.pyx":650
  *         Dx, Dy, Dz = np.meshgrid(fx, fy, fz, indexing='ij')
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(             # <<<<<<<<<<<<<<
@@ -18035,7 +18033,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_Gz = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":653
+  /* "vaspwfc.pyx":653
  *             self._Bcell * np.pi * 2, [Dx, Dy, Dz], axes=(0, 0))
  *         # the norm squared of the G-vectors
  *         G2 = Gx**2 + Gy**2 + Gz**2             # <<<<<<<<<<<<<<
@@ -18059,7 +18057,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_G2 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":655
+  /* "vaspwfc.pyx":655
  *         G2 = Gx**2 + Gy**2 + Gz**2
  *         # Note that the G=(0,0,0) entry is set to 1.0 instead of 0.
  *         G2[0, 0, 0] = 1.0             # <<<<<<<<<<<<<<
@@ -18068,7 +18066,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
  */
   if (unlikely(PyObject_SetItem(__pyx_v_G2, __pyx_tuple__34, __pyx_float_1_0) < 0)) __PYX_ERR(0, 655, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":658
+  /* "vaspwfc.pyx":658
  * 
  *         # permittivity of vacuum [F / m]
  *         _eps0 = 8.85418781762039E-12             # <<<<<<<<<<<<<<
@@ -18077,7 +18075,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
  */
   __pyx_v__eps0 = 8.85418781762039E-12;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":660
+  /* "vaspwfc.pyx":660
  *         _eps0 = 8.85418781762039E-12
  *         # charge of one electron, in unit of Coulomb [1F * 1V]
  *         _e = 1.6021766208E-19             # <<<<<<<<<<<<<<
@@ -18086,7 +18084,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
  */
   __pyx_v__e = 1.6021766208E-19;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":663
+  /* "vaspwfc.pyx":663
  * 
  *         # charge density in reciprocal space, rho in unit of [Coulomb / Angstrom**3]
  *         rho_q = np.fft.fftn(1E10 * _e * rho / _eps0, norm='ortho')             # <<<<<<<<<<<<<<
@@ -18128,7 +18126,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_rho_q = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":666
+  /* "vaspwfc.pyx":666
  *         # the electric potential in reciprocal space
  *         # V_q = -rho_q / (-G2)
  *         V_q = rho_q / G2             # <<<<<<<<<<<<<<
@@ -18140,7 +18138,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_V_q = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":668
+  /* "vaspwfc.pyx":668
  *         V_q = rho_q / G2
  *         # the electric potential in real space in unit of 'Volt'
  *         V_r = np.fft.ifftn(V_q, norm='ortho').real             # <<<<<<<<<<<<<<
@@ -18174,7 +18172,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_V_r = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":670
+  /* "vaspwfc.pyx":670
  *         V_r = np.fft.ifftn(V_q, norm='ortho').real
  *         # the electric field in x/y/z in real space in unit of 'Volt / Angstrom'
  *         E_x = np.fft.ifftn(-1j * Gx * V_q, norm='ortho').real             # <<<<<<<<<<<<<<
@@ -18217,7 +18215,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_E_x = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":671
+  /* "vaspwfc.pyx":671
  *         # the electric field in x/y/z in real space in unit of 'Volt / Angstrom'
  *         E_x = np.fft.ifftn(-1j * Gx * V_q, norm='ortho').real
  *         E_y = np.fft.ifftn(-1j * Gy * V_q, norm='ortho').real             # <<<<<<<<<<<<<<
@@ -18260,7 +18258,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_E_y = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":672
+  /* "vaspwfc.pyx":672
  *         E_x = np.fft.ifftn(-1j * Gx * V_q, norm='ortho').real
  *         E_y = np.fft.ifftn(-1j * Gy * V_q, norm='ortho').real
  *         E_z = np.fft.ifftn(-1j * Gz * V_q, norm='ortho').real             # <<<<<<<<<<<<<<
@@ -18303,7 +18301,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_v_E_z = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":674
+  /* "vaspwfc.pyx":674
  *         E_z = np.fft.ifftn(-1j * Gz * V_q, norm='ortho').real
  * 
  *         return rho, V_r, E_x, E_y, E_z             # <<<<<<<<<<<<<<
@@ -18332,7 +18330,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":594
+  /* "vaspwfc.pyx":594
  *                 return ifftn(phi_k * normFac)
  * 
  *     def poisson(self, rho=None, iband=1, ikpt=1, ispin=1, ngrid=None, norm=False):             # <<<<<<<<<<<<<<
@@ -18347,7 +18345,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.poisson", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.poisson", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_normFac);
@@ -18380,7 +18378,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":676
+/* "vaspwfc.pyx":676
  *         return rho, V_r, E_x, E_y, E_z
  * 
  *     def readBandCoeff(self, ispin=1, ikpt=1, iband=1, norm=False):             # <<<<<<<<<<<<<<
@@ -18389,10 +18387,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_22poi
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_25readBandCoeff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24readBandCoeff[] = "\n        Read the planewave coefficients of specified KS states.\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_25readBandCoeff = {"readBandCoeff", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_25readBandCoeff, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24readBandCoeff};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_25readBandCoeff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_25readBandCoeff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_24readBandCoeff[] = "\n        Read the planewave coefficients of specified KS states.\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_25readBandCoeff = {"readBandCoeff", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_25readBandCoeff, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_24readBandCoeff};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_25readBandCoeff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ispin = 0;
   PyObject *__pyx_v_ikpt = 0;
@@ -18483,18 +18481,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_25rea
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("readBandCoeff", 0, 1, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 676, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.readBandCoeff", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.readBandCoeff", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24readBandCoeff(__pyx_self, __pyx_v_self, __pyx_v_ispin, __pyx_v_ikpt, __pyx_v_iband, __pyx_v_norm);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_24readBandCoeff(__pyx_self, __pyx_v_self, __pyx_v_ispin, __pyx_v_ikpt, __pyx_v_iband, __pyx_v_norm);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24readBandCoeff(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband, PyObject *__pyx_v_norm) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_24readBandCoeff(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband, PyObject *__pyx_v_norm) {
   PyObject *__pyx_v_rec = NULL;
   PyObject *__pyx_v_nplw = NULL;
   PyObject *__pyx_v_dump = NULL;
@@ -18513,7 +18511,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   __Pyx_RefNannySetupContext("readBandCoeff", 0);
   __Pyx_TraceCall("readBandCoeff", __pyx_f[0], 676, 0, __PYX_ERR(0, 676, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":681
+  /* "vaspwfc.pyx":681
  *         '''
  * 
  *         self.checkIndex(ispin, ikpt, iband)             # <<<<<<<<<<<<<<
@@ -18572,7 +18570,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":683
+  /* "vaspwfc.pyx":683
  *         self.checkIndex(ispin, ikpt, iband)
  * 
  *         rec = self.whereRec(ispin, ikpt, iband)             # <<<<<<<<<<<<<<
@@ -18632,7 +18630,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   __pyx_v_rec = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":684
+  /* "vaspwfc.pyx":684
  * 
  *         rec = self.whereRec(ispin, ikpt, iband)
  *         self._wfc.seek(rec * self._recl)             # <<<<<<<<<<<<<<
@@ -18667,7 +18665,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":686
+  /* "vaspwfc.pyx":686
  *         self._wfc.seek(rec * self._recl)
  * 
  *         nplw = self._nplws[ikpt - 1]             # <<<<<<<<<<<<<<
@@ -18685,7 +18683,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   __pyx_v_nplw = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":687
+  /* "vaspwfc.pyx":687
  * 
  *         nplw = self._nplws[ikpt - 1]
  *         dump = np.fromfile(self._wfc, dtype=self._WFPrec, count=nplw)             # <<<<<<<<<<<<<<
@@ -18719,7 +18717,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   __pyx_v_dump = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":689
+  /* "vaspwfc.pyx":689
  *         dump = np.fromfile(self._wfc, dtype=self._WFPrec, count=nplw)
  * 
  *         cg = np.asarray(dump, dtype=np.complex128)             # <<<<<<<<<<<<<<
@@ -18753,7 +18751,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   __pyx_v_cg = __pyx_t_6;
   __pyx_t_6 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":690
+  /* "vaspwfc.pyx":690
  * 
  *         cg = np.asarray(dump, dtype=np.complex128)
  *         if norm:             # <<<<<<<<<<<<<<
@@ -18763,7 +18761,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_v_norm); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 690, __pyx_L1_error)
   if (__pyx_t_7) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":691
+    /* "vaspwfc.pyx":691
  *         cg = np.asarray(dump, dtype=np.complex128)
  *         if norm:
  *             cg /= np.linalg.norm(cg)             # <<<<<<<<<<<<<<
@@ -18799,7 +18797,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
     __Pyx_DECREF_SET(__pyx_v_cg, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":690
+    /* "vaspwfc.pyx":690
  * 
  *         cg = np.asarray(dump, dtype=np.complex128)
  *         if norm:             # <<<<<<<<<<<<<<
@@ -18808,7 +18806,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":692
+  /* "vaspwfc.pyx":692
  *         if norm:
  *             cg /= np.linalg.norm(cg)
  *         return cg             # <<<<<<<<<<<<<<
@@ -18820,7 +18818,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   __pyx_r = __pyx_v_cg;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":676
+  /* "vaspwfc.pyx":676
  *         return rho, V_r, E_x, E_y, E_z
  * 
  *     def readBandCoeff(self, ispin=1, ikpt=1, iband=1, norm=False):             # <<<<<<<<<<<<<<
@@ -18835,7 +18833,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.readBandCoeff", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.readBandCoeff", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_rec);
@@ -18848,7 +18846,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":694
+/* "vaspwfc.pyx":694
  *         return cg
  * 
  *     def whereRec(self, ispin=1, ikpt=1, iband=1):             # <<<<<<<<<<<<<<
@@ -18857,10 +18855,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_24rea
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_27whereRec(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whereRec[] = "\n        Return the rec position for specified KS state.\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_27whereRec = {"whereRec", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_27whereRec, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whereRec};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_27whereRec(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_27whereRec(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_26whereRec[] = "\n        Return the rec position for specified KS state.\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_27whereRec = {"whereRec", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_27whereRec, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_26whereRec};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_27whereRec(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ispin = 0;
   PyObject *__pyx_v_ikpt = 0;
@@ -18938,18 +18936,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_27whe
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("whereRec", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 694, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.whereRec", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.whereRec", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whereRec(__pyx_self, __pyx_v_self, __pyx_v_ispin, __pyx_v_ikpt, __pyx_v_iband);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_26whereRec(__pyx_self, __pyx_v_self, __pyx_v_ispin, __pyx_v_ikpt, __pyx_v_iband);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whereRec(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_26whereRec(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband) {
   PyObject *__pyx_v_rec = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_TraceDeclarations
@@ -18963,7 +18961,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whe
   __Pyx_RefNannySetupContext("whereRec", 0);
   __Pyx_TraceCall("whereRec", __pyx_f[0], 694, 0, __PYX_ERR(0, 694, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":699
+  /* "vaspwfc.pyx":699
  *         '''
  * 
  *         self.checkIndex(ispin, ikpt, iband)             # <<<<<<<<<<<<<<
@@ -19022,7 +19020,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whe
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":701
+  /* "vaspwfc.pyx":701
  *         self.checkIndex(ispin, ikpt, iband)
  * 
  *         rec = 2 + (ispin - 1) * self._nkpts * (self._nbands + 1) + \             # <<<<<<<<<<<<<<
@@ -19050,7 +19048,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whe
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":702
+  /* "vaspwfc.pyx":702
  * 
  *         rec = 2 + (ispin - 1) * self._nkpts * (self._nbands + 1) + \
  *                   (ikpt - 1) * (self._nbands + 1) + \             # <<<<<<<<<<<<<<
@@ -19069,7 +19067,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whe
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":701
+  /* "vaspwfc.pyx":701
  *         self.checkIndex(ispin, ikpt, iband)
  * 
  *         rec = 2 + (ispin - 1) * self._nkpts * (self._nbands + 1) + \             # <<<<<<<<<<<<<<
@@ -19081,7 +19079,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whe
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":702
+  /* "vaspwfc.pyx":702
  * 
  *         rec = 2 + (ispin - 1) * self._nkpts * (self._nbands + 1) + \
  *                   (ikpt - 1) * (self._nbands + 1) + \             # <<<<<<<<<<<<<<
@@ -19094,7 +19092,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whe
   __pyx_v_rec = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":704
+  /* "vaspwfc.pyx":704
  *                   (ikpt - 1) * (self._nbands + 1) + \
  *             iband
  *         return rec             # <<<<<<<<<<<<<<
@@ -19106,7 +19104,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whe
   __pyx_r = __pyx_v_rec;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":694
+  /* "vaspwfc.pyx":694
  *         return cg
  * 
  *     def whereRec(self, ispin=1, ikpt=1, iband=1):             # <<<<<<<<<<<<<<
@@ -19120,7 +19118,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whe
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.whereRec", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.whereRec", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_rec);
@@ -19130,7 +19128,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whe
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":706
+/* "vaspwfc.pyx":706
  *         return rec
  * 
  *     def checkIndex(self, ispin, ikpt, iband):             # <<<<<<<<<<<<<<
@@ -19139,10 +19137,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_26whe
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_29checkIndex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28checkIndex[] = "\n        Check if the index is valid!\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_29checkIndex = {"checkIndex", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_29checkIndex, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28checkIndex};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_29checkIndex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_29checkIndex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_28checkIndex[] = "\n        Check if the index is valid!\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_29checkIndex = {"checkIndex", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_29checkIndex, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_28checkIndex};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_29checkIndex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ispin = 0;
   PyObject *__pyx_v_ikpt = 0;
@@ -19212,18 +19210,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_29che
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("checkIndex", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 706, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.checkIndex", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.checkIndex", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28checkIndex(__pyx_self, __pyx_v_self, __pyx_v_ispin, __pyx_v_ikpt, __pyx_v_iband);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_28checkIndex(__pyx_self, __pyx_v_self, __pyx_v_ispin, __pyx_v_ikpt, __pyx_v_iband);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28checkIndex(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_28checkIndex(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ispin, PyObject *__pyx_v_ikpt, PyObject *__pyx_v_iband) {
   PyObject *__pyx_r = NULL;
   __Pyx_TraceDeclarations
   __Pyx_RefNannyDeclarations
@@ -19234,7 +19232,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28che
   __Pyx_RefNannySetupContext("checkIndex", 0);
   __Pyx_TraceCall("checkIndex", __pyx_f[0], 706, 0, __PYX_ERR(0, 706, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":710
+  /* "vaspwfc.pyx":710
  *         Check if the index is valid!
  *         '''
  *         assert 1 <= ispin <= self._nspin,  'Invalid spin index!'             # <<<<<<<<<<<<<<
@@ -19260,7 +19258,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28che
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":711
+  /* "vaspwfc.pyx":711
  *         '''
  *         assert 1 <= ispin <= self._nspin,  'Invalid spin index!'
  *         assert 1 <= ikpt <= self._nkpts,  'Invalid kpoint index!'             # <<<<<<<<<<<<<<
@@ -19286,7 +19284,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28che
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":712
+  /* "vaspwfc.pyx":712
  *         assert 1 <= ispin <= self._nspin,  'Invalid spin index!'
  *         assert 1 <= ikpt <= self._nkpts,  'Invalid kpoint index!'
  *         assert 1 <= iband <= self._nbands, 'Invalid band index!'             # <<<<<<<<<<<<<<
@@ -19312,7 +19310,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28che
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":706
+  /* "vaspwfc.pyx":706
  *         return rec
  * 
  *     def checkIndex(self, ispin, ikpt, iband):             # <<<<<<<<<<<<<<
@@ -19326,7 +19324,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28che
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.checkIndex", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.checkIndex", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -19335,7 +19333,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28che
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":714
+/* "vaspwfc.pyx":714
  *         assert 1 <= iband <= self._nbands, 'Invalid band index!'
  * 
  *     def TransitionDipoleMoment(self, ks_i, ks_j, norm=True,             # <<<<<<<<<<<<<<
@@ -19344,10 +19342,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_28che
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_31TransitionDipoleMoment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30TransitionDipoleMoment[] = "\n        calculate Transition Dipole Moment (TDM) between two KS states.\n\n        If \"realspace = False\", the TDM will be evaluated in momentum space\n        according to the formula in:\n        https://en.wikipedia.org/wiki/Transition_dipole_moment\n\n                                    i\342\213\205h\n        <psi_a | r | psi_b> =  -------------- \342\213\205 <psi_a | p | psi_b>\n                                m\342\213\205(Eb - Ea)\n\n                                      2        ____\n                                     h          \342\225\262\n                            =  ------------- \342\213\205   \342\225\262   Cai\342\213\205Cbi\342\213\205Gi\n                                m\342\213\205(Eb - Ea)      \342\225\261\n                                                \342\225\261\n                                               \342\200\276\342\200\276\342\200\276\342\200\276\n                                                 i\n\n        Otherwise, the TDM will be evaluated in real space.\n\n        Note: |psi_a> and |psi_b> should be bloch function with\n              the same k vector.\n\n        The KS states ks_i (ks_j) is specified by list of index (ispin, ikpt, iband).\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_31TransitionDipoleMoment = {"TransitionDipoleMoment", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_31TransitionDipoleMoment, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30TransitionDipoleMoment};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_31TransitionDipoleMoment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_31TransitionDipoleMoment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_30TransitionDipoleMoment[] = "\n        calculate Transition Dipole Moment (TDM) between two KS states.\n\n        If \"realspace = False\", the TDM will be evaluated in momentum space\n        according to the formula in:\n        https://en.wikipedia.org/wiki/Transition_dipole_moment\n\n                                    i\342\213\205h\n        <psi_a | r | psi_b> =  -------------- \342\213\205 <psi_a | p | psi_b>\n                                m\342\213\205(Eb - Ea)\n\n                                      2        ____\n                                     h          \342\225\262\n                            =  ------------- \342\213\205   \342\225\262   Cai\342\213\205Cbi\342\213\205Gi\n                                m\342\213\205(Eb - Ea)      \342\225\261\n                                                \342\225\261\n                                               \342\200\276\342\200\276\342\200\276\342\200\276\n                                                 i\n\n        Otherwise, the TDM will be evaluated in real space.\n\n        Note: |psi_a> and |psi_b> should be bloch function with\n              the same k vector.\n\n        The KS states ks_i (ks_j) is specified by list of index (ispin, ikpt, iband).\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_31TransitionDipoleMoment = {"TransitionDipoleMoment", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_31TransitionDipoleMoment, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_30TransitionDipoleMoment};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_31TransitionDipoleMoment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ks_i = 0;
   PyObject *__pyx_v_ks_j = 0;
@@ -19361,7 +19359,7 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_31Tra
     PyObject* values[5] = {0,0,0,0,0};
     values[3] = ((PyObject *)((PyObject *)Py_True));
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":715
+    /* "vaspwfc.pyx":715
  * 
  *     def TransitionDipoleMoment(self, ks_i, ks_j, norm=True,
  *                                realspace=False):             # <<<<<<<<<<<<<<
@@ -19442,13 +19440,13 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_31Tra
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("TransitionDipoleMoment", 0, 3, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 714, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.TransitionDipoleMoment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.TransitionDipoleMoment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30TransitionDipoleMoment(__pyx_self, __pyx_v_self, __pyx_v_ks_i, __pyx_v_ks_j, __pyx_v_norm, __pyx_v_realspace);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_30TransitionDipoleMoment(__pyx_self, __pyx_v_self, __pyx_v_ks_i, __pyx_v_ks_j, __pyx_v_norm, __pyx_v_realspace);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":714
+  /* "vaspwfc.pyx":714
  *         assert 1 <= iband <= self._nbands, 'Invalid band index!'
  * 
  *     def TransitionDipoleMoment(self, ks_i, ks_j, norm=True,             # <<<<<<<<<<<<<<
@@ -19461,7 +19459,7 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_31Tra
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30TransitionDipoleMoment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ks_i, PyObject *__pyx_v_ks_j, PyObject *__pyx_v_norm, PyObject *__pyx_v_realspace) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_30TransitionDipoleMoment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ks_i, PyObject *__pyx_v_ks_j, PyObject *__pyx_v_norm, PyObject *__pyx_v_realspace) {
   PyObject *__pyx_v_E1 = NULL;
   PyObject *__pyx_v_E2 = NULL;
   PyObject *__pyx_v_dE = NULL;
@@ -19505,7 +19503,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __Pyx_INCREF(__pyx_v_ks_i);
   __Pyx_INCREF(__pyx_v_ks_j);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":743
+  /* "vaspwfc.pyx":743
  *         '''
  * 
  *         ks_i = list(ks_i)             # <<<<<<<<<<<<<<
@@ -19517,7 +19515,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __Pyx_DECREF_SET(__pyx_v_ks_i, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":744
+  /* "vaspwfc.pyx":744
  * 
  *         ks_i = list(ks_i)
  *         ks_j = list(ks_j)             # <<<<<<<<<<<<<<
@@ -19529,7 +19527,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __Pyx_DECREF_SET(__pyx_v_ks_j, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":745
+  /* "vaspwfc.pyx":745
  *         ks_i = list(ks_i)
  *         ks_j = list(ks_j)
  *         assert len(ks_i) == len(ks_j) == 3, 'Must be three indexes!'             # <<<<<<<<<<<<<<
@@ -19551,7 +19549,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":746
+  /* "vaspwfc.pyx":746
  *         ks_j = list(ks_j)
  *         assert len(ks_i) == len(ks_j) == 3, 'Must be three indexes!'
  *         assert ks_i[1] == ks_j[1], 'k-point of the two states differ!'             # <<<<<<<<<<<<<<
@@ -19576,7 +19574,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":747
+  /* "vaspwfc.pyx":747
  *         assert len(ks_i) == len(ks_j) == 3, 'Must be three indexes!'
  *         assert ks_i[1] == ks_j[1], 'k-point of the two states differ!'
  *         self.checkIndex(*ks_i)             # <<<<<<<<<<<<<<
@@ -19593,7 +19591,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":748
+  /* "vaspwfc.pyx":748
  *         assert ks_i[1] == ks_j[1], 'k-point of the two states differ!'
  *         self.checkIndex(*ks_i)
  *         self.checkIndex(*ks_j)             # <<<<<<<<<<<<<<
@@ -19610,7 +19608,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":751
+  /* "vaspwfc.pyx":751
  * 
  *         # energy differences between the two states
  *         E1 = self._bands[ks_i[0]-1, ks_i[1]-1, ks_i[2]-1]             # <<<<<<<<<<<<<<
@@ -19652,7 +19650,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __pyx_v_E1 = __pyx_t_8;
   __pyx_t_8 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":752
+  /* "vaspwfc.pyx":752
  *         # energy differences between the two states
  *         E1 = self._bands[ks_i[0]-1, ks_i[1]-1, ks_i[2]-1]
  *         E2 = self._bands[ks_j[0]-1, ks_j[1]-1, ks_j[2]-1]             # <<<<<<<<<<<<<<
@@ -19694,7 +19692,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __pyx_v_E2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":753
+  /* "vaspwfc.pyx":753
  *         E1 = self._bands[ks_i[0]-1, ks_i[1]-1, ks_i[2]-1]
  *         E2 = self._bands[ks_j[0]-1, ks_j[1]-1, ks_j[2]-1]
  *         dE = E2 - E1             # <<<<<<<<<<<<<<
@@ -19706,7 +19704,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __pyx_v_dE = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":755
+  /* "vaspwfc.pyx":755
  *         dE = E2 - E1
  * 
  *         if realspace:             # <<<<<<<<<<<<<<
@@ -19716,7 +19714,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_v_realspace); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 755, __pyx_L1_error)
   if (__pyx_t_4) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":756
+    /* "vaspwfc.pyx":756
  * 
  *         if realspace:
  *             fx = np.linspace(0, 1, self._ngrid[0], endpoint=False)             # <<<<<<<<<<<<<<
@@ -19755,7 +19753,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_fx = __pyx_t_7;
     __pyx_t_7 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":757
+    /* "vaspwfc.pyx":757
  *         if realspace:
  *             fx = np.linspace(0, 1, self._ngrid[0], endpoint=False)
  *             fy = np.linspace(0, 1, self._ngrid[1], endpoint=False)             # <<<<<<<<<<<<<<
@@ -19794,7 +19792,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_fy = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":758
+    /* "vaspwfc.pyx":758
  *             fx = np.linspace(0, 1, self._ngrid[0], endpoint=False)
  *             fy = np.linspace(0, 1, self._ngrid[1], endpoint=False)
  *             fz = np.linspace(0, 1, self._ngrid[2], endpoint=False)             # <<<<<<<<<<<<<<
@@ -19833,7 +19831,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_fz = __pyx_t_8;
     __pyx_t_8 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":760
+    /* "vaspwfc.pyx":760
  *             fz = np.linspace(0, 1, self._ngrid[2], endpoint=False)
  * 
  *             Dx, Dy, Dz = np.meshgrid(fx, fy, fz, indexing='ij')             # <<<<<<<<<<<<<<
@@ -19924,7 +19922,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_Dz = __pyx_t_7;
     __pyx_t_7 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":761
+    /* "vaspwfc.pyx":761
  * 
  *             Dx, Dy, Dz = np.meshgrid(fx, fy, fz, indexing='ij')
  *             Rx, Ry, Rz = np.tensordot(self._Acell, [Dx, Dy, Dz], axes=[0, 0])             # <<<<<<<<<<<<<<
@@ -20034,7 +20032,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_Rz = __pyx_t_7;
     __pyx_t_7 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":763
+    /* "vaspwfc.pyx":763
  *             Rx, Ry, Rz = np.tensordot(self._Acell, [Dx, Dy, Dz], axes=[0, 0])
  * 
  *             fac = np.sqrt(np.prod(self._ngrid) / self._Omega)             # <<<<<<<<<<<<<<
@@ -20094,7 +20092,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_fac = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":764
+    /* "vaspwfc.pyx":764
  * 
  *             fac = np.sqrt(np.prod(self._ngrid) / self._Omega)
  *             phi_i = self.wfc_r(*ks_i, norm=True, ngrid=self._ngrid)             # <<<<<<<<<<<<<<
@@ -20120,7 +20118,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_phi_i = __pyx_t_6;
     __pyx_t_6 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":765
+    /* "vaspwfc.pyx":765
  *             fac = np.sqrt(np.prod(self._ngrid) / self._Omega)
  *             phi_i = self.wfc_r(*ks_i, norm=True, ngrid=self._ngrid)
  *             phi_j = self.wfc_r(*ks_j, norm=True, ngrid=self._ngrid)             # <<<<<<<<<<<<<<
@@ -20146,7 +20144,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_phi_j = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":767
+    /* "vaspwfc.pyx":767
  *             phi_j = self.wfc_r(*ks_j, norm=True, ngrid=self._ngrid)
  * 
  *             pij = phi_i.conjugate() * phi_j             # <<<<<<<<<<<<<<
@@ -20176,7 +20174,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_pij = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":768
+    /* "vaspwfc.pyx":768
  * 
  *             pij = phi_i.conjugate() * phi_j
  *             tdm = np.array([             # <<<<<<<<<<<<<<
@@ -20189,7 +20187,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":769
+    /* "vaspwfc.pyx":769
  *             pij = phi_i.conjugate() * phi_j
  *             tdm = np.array([
  *                 np.sum(pij * Rx),             # <<<<<<<<<<<<<<
@@ -20220,7 +20218,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":770
+    /* "vaspwfc.pyx":770
  *             tdm = np.array([
  *                 np.sum(pij * Rx),
  *                 np.sum(pij * Ry),             # <<<<<<<<<<<<<<
@@ -20251,7 +20249,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":771
+    /* "vaspwfc.pyx":771
  *                 np.sum(pij * Rx),
  *                 np.sum(pij * Ry),
  *                 np.sum(pij * Rz)             # <<<<<<<<<<<<<<
@@ -20282,7 +20280,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":768
+    /* "vaspwfc.pyx":768
  * 
  *             pij = phi_i.conjugate() * phi_j
  *             tdm = np.array([             # <<<<<<<<<<<<<<
@@ -20319,7 +20317,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_tdm = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":773
+    /* "vaspwfc.pyx":773
  *                 np.sum(pij * Rz)
  *             ])
  *             ovlap = pij.sum()             # <<<<<<<<<<<<<<
@@ -20346,7 +20344,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_ovlap = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":755
+    /* "vaspwfc.pyx":755
  *         dE = E2 - E1
  * 
  *         if realspace:             # <<<<<<<<<<<<<<
@@ -20356,7 +20354,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     goto __pyx_L3;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":776
+  /* "vaspwfc.pyx":776
  *         else:
  *             # according to the above equation, G = 0 does NOT contribute to TDM.
  *             gvec = np.dot(self.gvectors(ikpt=ks_i[1]), self._Bcell*TPI)             # <<<<<<<<<<<<<<
@@ -20441,7 +20439,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_gvec = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":778
+    /* "vaspwfc.pyx":778
  *             gvec = np.dot(self.gvectors(ikpt=ks_i[1]), self._Bcell*TPI)
  *             # planewave coefficients of the two states
  *             phi_i = self.readBandCoeff(*ks_i, norm=norm)             # <<<<<<<<<<<<<<
@@ -20463,7 +20461,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_phi_i = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":779
+    /* "vaspwfc.pyx":779
  *             # planewave coefficients of the two states
  *             phi_i = self.readBandCoeff(*ks_i, norm=norm)
  *             phi_j = self.readBandCoeff(*ks_j, norm=norm)             # <<<<<<<<<<<<<<
@@ -20485,7 +20483,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_phi_j = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":781
+    /* "vaspwfc.pyx":781
  *             phi_j = self.readBandCoeff(*ks_j, norm=norm)
  * 
  *             tmp1 = phi_i.conjugate() * phi_j             # <<<<<<<<<<<<<<
@@ -20515,7 +20513,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_tmp1 = __pyx_t_11;
     __pyx_t_11 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":782
+    /* "vaspwfc.pyx":782
  * 
  *             tmp1 = phi_i.conjugate() * phi_j
  *             ovlap = np.sum(tmp1)             # <<<<<<<<<<<<<<
@@ -20545,7 +20543,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __pyx_v_ovlap = __pyx_t_11;
     __pyx_t_11 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":783
+    /* "vaspwfc.pyx":783
  *             tmp1 = phi_i.conjugate() * phi_j
  *             ovlap = np.sum(tmp1)
  *             if self._lgam:             # <<<<<<<<<<<<<<
@@ -20558,7 +20556,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     if (__pyx_t_4) {
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":784
+      /* "vaspwfc.pyx":784
  *             ovlap = np.sum(tmp1)
  *             if self._lgam:
  *                 tmp2 = phi_i * phi_j.conjugate()             # <<<<<<<<<<<<<<
@@ -20588,7 +20586,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
       __pyx_v_tmp2 = __pyx_t_10;
       __pyx_t_10 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":786
+      /* "vaspwfc.pyx":786
  *                 tmp2 = phi_i * phi_j.conjugate()
  *                 # according to the above equation, G = 0 does NOT contribute to TDM.
  *                 tdm = (np.sum(tmp1[:, np.newaxis] * gvec, axis=0) -             # <<<<<<<<<<<<<<
@@ -20633,7 +20631,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":787
+      /* "vaspwfc.pyx":787
  *                 # according to the above equation, G = 0 does NOT contribute to TDM.
  *                 tdm = (np.sum(tmp1[:, np.newaxis] * gvec, axis=0) -
  *                        np.sum(tmp2[:, np.newaxis] * gvec, axis=0)) / 2.             # <<<<<<<<<<<<<<
@@ -20678,7 +20676,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":786
+      /* "vaspwfc.pyx":786
  *                 tmp2 = phi_i * phi_j.conjugate()
  *                 # according to the above equation, G = 0 does NOT contribute to TDM.
  *                 tdm = (np.sum(tmp1[:, np.newaxis] * gvec, axis=0) -             # <<<<<<<<<<<<<<
@@ -20690,7 +20688,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":787
+      /* "vaspwfc.pyx":787
  *                 # according to the above equation, G = 0 does NOT contribute to TDM.
  *                 tdm = (np.sum(tmp1[:, np.newaxis] * gvec, axis=0) -
  *                        np.sum(tmp2[:, np.newaxis] * gvec, axis=0)) / 2.             # <<<<<<<<<<<<<<
@@ -20703,7 +20701,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
       __pyx_v_tdm = __pyx_t_7;
       __pyx_t_7 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":783
+      /* "vaspwfc.pyx":783
  *             tmp1 = phi_i.conjugate() * phi_j
  *             ovlap = np.sum(tmp1)
  *             if self._lgam:             # <<<<<<<<<<<<<<
@@ -20713,7 +20711,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
       goto __pyx_L8;
     }
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":789
+    /* "vaspwfc.pyx":789
  *                        np.sum(tmp2[:, np.newaxis] * gvec, axis=0)) / 2.
  *             else:
  *                 tdm = np.sum(tmp1[:, np.newaxis] * gvec, axis=0)             # <<<<<<<<<<<<<<
@@ -20763,7 +20761,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
     }
     __pyx_L8:;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":791
+    /* "vaspwfc.pyx":791
  *                 tdm = np.sum(tmp1[:, np.newaxis] * gvec, axis=0)
  * 
  *             tdm = 1j / (dE / (2*RYTOEV)) * tdm * AUTOA * AUTDEBYE             # <<<<<<<<<<<<<<
@@ -20804,7 +20802,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   }
   __pyx_L3:;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":793
+  /* "vaspwfc.pyx":793
  *             tdm = 1j / (dE / (2*RYTOEV)) * tdm * AUTOA * AUTDEBYE
  * 
  *         return E1, E2, dE, ovlap, tdm             # <<<<<<<<<<<<<<
@@ -20833,7 +20831,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":714
+  /* "vaspwfc.pyx":714
  *         assert 1 <= iband <= self._nbands, 'Invalid band index!'
  * 
  *     def TransitionDipoleMoment(self, ks_i, ks_j, norm=True,             # <<<<<<<<<<<<<<
@@ -20851,7 +20849,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.TransitionDipoleMoment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.TransitionDipoleMoment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_E1);
@@ -20883,7 +20881,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":795
+/* "vaspwfc.pyx":795
  *         return E1, E2, dE, ovlap, tdm
  * 
  *     def inverse_participation_ratio(self, norm=True):             # <<<<<<<<<<<<<<
@@ -20892,10 +20890,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_30Tra
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_33inverse_participation_ratio(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inverse_participation_ratio[] = "\n        Calculate Inverse Paticipation Ratio (IPR) from the wavefunction. IPR is\n        a measure of the localization of Kohn-Sham states. For a particular KS\n        state \\phi_j, it is defined as\n\n                            \\sum_n |\\phi_j(n)|^4\n            IPR(\\phi_j) = -------------------------\n                          |\\sum_n |\\phi_j(n)|^2||^2\n\n        where n iters over the number of grid points.\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_33inverse_participation_ratio = {"inverse_participation_ratio", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_33inverse_participation_ratio, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inverse_participation_ratio};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_33inverse_participation_ratio(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_33inverse_participation_ratio(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_32inverse_participation_ratio[] = "\n        Calculate Inverse Paticipation Ratio (IPR) from the wavefunction. IPR is\n        a measure of the localization of Kohn-Sham states. For a particular KS\n        state \\phi_j, it is defined as\n\n                            \\sum_n |\\phi_j(n)|^4\n            IPR(\\phi_j) = -------------------------\n                          |\\sum_n |\\phi_j(n)|^2||^2\n\n        where n iters over the number of grid points.\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_33inverse_participation_ratio = {"inverse_participation_ratio", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_33inverse_participation_ratio, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_32inverse_participation_ratio};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_33inverse_participation_ratio(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_norm = 0;
   PyObject *__pyx_r = 0;
@@ -20947,18 +20945,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_33inv
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("inverse_participation_ratio", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 795, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.inverse_participation_ratio", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.inverse_participation_ratio", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inverse_participation_ratio(__pyx_self, __pyx_v_self, __pyx_v_norm);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_32inverse_participation_ratio(__pyx_self, __pyx_v_self, __pyx_v_norm);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inverse_participation_ratio(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_norm) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_32inverse_participation_ratio(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_norm) {
   PyObject *__pyx_v_ispin = NULL;
   PyObject *__pyx_v_ikpt = NULL;
   PyObject *__pyx_v_iband = NULL;
@@ -20987,7 +20985,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
   __Pyx_RefNannySetupContext("inverse_participation_ratio", 0);
   __Pyx_TraceCall("inverse_participation_ratio", __pyx_f[0], 795, 0, __PYX_ERR(0, 795, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":808
+  /* "vaspwfc.pyx":808
  *         '''
  * 
  *         self.ipr = np.zeros((self._nspin, self._nkpts, self._nbands, 3))             # <<<<<<<<<<<<<<
@@ -21038,7 +21036,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ipr, __pyx_t_1) < 0) __PYX_ERR(0, 808, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":810
+  /* "vaspwfc.pyx":810
  *         self.ipr = np.zeros((self._nspin, self._nkpts, self._nbands, 3))
  * 
  *         for ispin in range(self._nspin):             # <<<<<<<<<<<<<<
@@ -21093,7 +21091,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
     __Pyx_XDECREF_SET(__pyx_v_ispin, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":811
+    /* "vaspwfc.pyx":811
  * 
  *         for ispin in range(self._nspin):
  *             for ikpt in range(self._nkpts):             # <<<<<<<<<<<<<<
@@ -21148,7 +21146,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
       __Pyx_XDECREF_SET(__pyx_v_ikpt, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":812
+      /* "vaspwfc.pyx":812
  *         for ispin in range(self._nspin):
  *             for ikpt in range(self._nkpts):
  *                 for iband in range(self._nbands):             # <<<<<<<<<<<<<<
@@ -21203,7 +21201,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __Pyx_XDECREF_SET(__pyx_v_iband, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":813
+        /* "vaspwfc.pyx":813
  *             for ikpt in range(self._nkpts):
  *                 for iband in range(self._nbands):
  *                     phi_j = self.wfc_r(ispin+1, ikpt+1, iband+1,             # <<<<<<<<<<<<<<
@@ -21230,7 +21228,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __pyx_t_2 = 0;
         __pyx_t_13 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":814
+        /* "vaspwfc.pyx":814
  *                 for iband in range(self._nbands):
  *                     phi_j = self.wfc_r(ispin+1, ikpt+1, iband+1,
  *                                        norm=norm)             # <<<<<<<<<<<<<<
@@ -21241,7 +21239,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __Pyx_GOTREF(__pyx_t_13);
         if (PyDict_SetItem(__pyx_t_13, __pyx_n_s_norm, __pyx_v_norm) < 0) __PYX_ERR(0, 814, __pyx_L1_error)
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":813
+        /* "vaspwfc.pyx":813
  *             for ikpt in range(self._nkpts):
  *                 for iband in range(self._nbands):
  *                     phi_j = self.wfc_r(ispin+1, ikpt+1, iband+1,             # <<<<<<<<<<<<<<
@@ -21256,7 +21254,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __Pyx_XDECREF_SET(__pyx_v_phi_j, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":815
+        /* "vaspwfc.pyx":815
  *                     phi_j = self.wfc_r(ispin+1, ikpt+1, iband+1,
  *                                        norm=norm)
  *                     phi_j_abs = np.abs(phi_j)             # <<<<<<<<<<<<<<
@@ -21286,7 +21284,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __Pyx_XDECREF_SET(__pyx_v_phi_j_abs, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":818
+        /* "vaspwfc.pyx":818
  * 
  *                     print('Calculating IPR of #spin %4d, #kpt %4d, #band %4d' %
  *                           (ispin+1, ikpt+1, iband+1))             # <<<<<<<<<<<<<<
@@ -21311,7 +21309,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __pyx_t_14 = 0;
         __pyx_t_13 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":817
+        /* "vaspwfc.pyx":817
  *                     phi_j_abs = np.abs(phi_j)
  * 
  *                     print('Calculating IPR of #spin %4d, #kpt %4d, #band %4d' %             # <<<<<<<<<<<<<<
@@ -21324,7 +21322,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         if (__Pyx_PrintOne(0, __pyx_t_13) < 0) __PYX_ERR(0, 817, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":820
+        /* "vaspwfc.pyx":820
  *                           (ispin+1, ikpt+1, iband+1))
  *                     self.ipr[ispin, ikpt, iband,
  *                              0] = self._kpath[ikpt] if self._kpath is not None else 0             # <<<<<<<<<<<<<<
@@ -21348,7 +21346,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
           __pyx_t_13 = __pyx_int_0;
         }
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":819
+        /* "vaspwfc.pyx":819
  *                     print('Calculating IPR of #spin %4d, #kpt %4d, #band %4d' %
  *                           (ispin+1, ikpt+1, iband+1))
  *                     self.ipr[ispin, ikpt, iband,             # <<<<<<<<<<<<<<
@@ -21376,7 +21374,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":822
+        /* "vaspwfc.pyx":822
  *                              0] = self._kpath[ikpt] if self._kpath is not None else 0
  *                     self.ipr[ispin, ikpt, iband,
  *                              1] = self._bands[ispin, ikpt, iband]             # <<<<<<<<<<<<<<
@@ -21401,7 +21399,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":821
+        /* "vaspwfc.pyx":821
  *                     self.ipr[ispin, ikpt, iband,
  *                              0] = self._kpath[ikpt] if self._kpath is not None else 0
  *                     self.ipr[ispin, ikpt, iband,             # <<<<<<<<<<<<<<
@@ -21429,7 +21427,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":823
+        /* "vaspwfc.pyx":823
  *                     self.ipr[ispin, ikpt, iband,
  *                              1] = self._bands[ispin, ikpt, iband]
  *                     self.ipr[ispin, ikpt, iband, 2] = np.sum(             # <<<<<<<<<<<<<<
@@ -21442,7 +21440,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":824
+        /* "vaspwfc.pyx":824
  *                              1] = self._bands[ispin, ikpt, iband]
  *                     self.ipr[ispin, ikpt, iband, 2] = np.sum(
  *                         phi_j_abs**4) / np.sum(phi_j_abs**2)**2             # <<<<<<<<<<<<<<
@@ -21498,7 +21496,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":823
+        /* "vaspwfc.pyx":823
  *                     self.ipr[ispin, ikpt, iband,
  *                              1] = self._bands[ispin, ikpt, iband]
  *                     self.ipr[ispin, ikpt, iband, 2] = np.sum(             # <<<<<<<<<<<<<<
@@ -21526,7 +21524,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":812
+        /* "vaspwfc.pyx":812
  *         for ispin in range(self._nspin):
  *             for ikpt in range(self._nkpts):
  *                 for iband in range(self._nbands):             # <<<<<<<<<<<<<<
@@ -21536,7 +21534,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
       }
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":811
+      /* "vaspwfc.pyx":811
  * 
  *         for ispin in range(self._nspin):
  *             for ikpt in range(self._nkpts):             # <<<<<<<<<<<<<<
@@ -21546,7 +21544,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":810
+    /* "vaspwfc.pyx":810
  *         self.ipr = np.zeros((self._nspin, self._nkpts, self._nbands, 3))
  * 
  *         for ispin in range(self._nspin):             # <<<<<<<<<<<<<<
@@ -21556,7 +21554,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":826
+  /* "vaspwfc.pyx":826
  *                         phi_j_abs**4) / np.sum(phi_j_abs**2)**2
  * 
  *         np.save('ipr.npy', self.ipr)             # <<<<<<<<<<<<<<
@@ -21619,7 +21617,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":827
+  /* "vaspwfc.pyx":827
  * 
  *         np.save('ipr.npy', self.ipr)
  *         return self.ipr             # <<<<<<<<<<<<<<
@@ -21633,7 +21631,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":795
+  /* "vaspwfc.pyx":795
  *         return E1, E2, dE, ovlap, tdm
  * 
  *     def inverse_participation_ratio(self, norm=True):             # <<<<<<<<<<<<<<
@@ -21651,7 +21649,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_13);
   __Pyx_XDECREF(__pyx_t_14);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.inverse_participation_ratio", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.inverse_participation_ratio", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_ispin);
@@ -21665,7 +21663,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":829
+/* "vaspwfc.pyx":829
  *         return self.ipr
  * 
  *     def elf(self, kptw, ngrid=None, warn=True):             # <<<<<<<<<<<<<<
@@ -21674,10 +21672,10 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_32inv
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_35elf(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf[] = "\n        Calculate the electron localization function (ELF) from WAVECAR.\n\n        The following formula was extracted from VASP ELF.F:\n                     _\n                     h^2    *    2      T.........kinetic energy\n          T    =  -2 --- Psi grad Psi   T+TCORR...pos.definite kinetic energy\n                   ^ 2 m                TBOS......T of an ideal Bose-gas\n                   ^\n                   I am not sure if we need to times 2 here, use 1 in this\n                   script.\n\n                   _                                (=infimum of T+TCORR)\n                 1 h^2      2           DH........T of hom.non-interact.e- - gas\n          TCORR= - ---  grad rho                    (acc.to Fermi)\n                 2 2 m                  ELF.......electron-localization-function\n                   _             2\n                 1 h^2 |grad rho|\n          TBOS = - --- ----------       D = T + TCORR - TBOS\n                 4 2 m    rho\n                   _                                \\                1\n                 3 h^2        2/3  5/3          =====>    ELF = ------------\n          DH   = - --- (3 Pi^2)  rho                /                   D   2\n                 5 2 m                                           1 + ( ---- )\n                                                                        DH\n\n        REF:\n            1. Nature, 371, 683-686 (1994)\n            2. Becke and Edgecombe, J. Chem. Phys., 92, 5397(1990)\n            3. M. Kohout and A. Savin, Int. J. Quantum Chem., 60, 875-882(1996)\n            4. http://www2.cpfs.mpg.de/ELF/index.php?content=06interpr.txt\n        ";
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_35elf = {"elf", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_35elf, METH_VARARGS|METH_KEYWORDS, __pyx_doc_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_35elf(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_35elf(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7vaspwfc_7vaspwfc_34elf[] = "\n        Calculate the electron localization function (ELF) from WAVECAR.\n\n        The following formula was extracted from VASP ELF.F:\n                     _\n                     h^2    *    2      T.........kinetic energy\n          T    =  -2 --- Psi grad Psi   T+TCORR...pos.definite kinetic energy\n                   ^ 2 m                TBOS......T of an ideal Bose-gas\n                   ^\n                   I am not sure if we need to times 2 here, use 1 in this\n                   script.\n\n                   _                                (=infimum of T+TCORR)\n                 1 h^2      2           DH........T of hom.non-interact.e- - gas\n          TCORR= - ---  grad rho                    (acc.to Fermi)\n                 2 2 m                  ELF.......electron-localization-function\n                   _             2\n                 1 h^2 |grad rho|\n          TBOS = - --- ----------       D = T + TCORR - TBOS\n                 4 2 m    rho\n                   _                                \\                1\n                 3 h^2        2/3  5/3          =====>    ELF = ------------\n          DH   = - --- (3 Pi^2)  rho                /                   D   2\n                 5 2 m                                           1 + ( ---- )\n                                                                        DH\n\n        REF:\n            1. Nature, 371, 683-686 (1994)\n            2. Becke and Edgecombe, J. Chem. Phys., 92, 5397(1990)\n            3. M. Kohout and A. Savin, Int. J. Quantum Chem., 60, 875-882(1996)\n            4. http://www2.cpfs.mpg.de/ELF/index.php?content=06interpr.txt\n        ";
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_35elf = {"elf", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_35elf, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7vaspwfc_7vaspwfc_34elf};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_35elf(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_kptw = 0;
   PyObject *__pyx_v_ngrid = 0;
@@ -21753,18 +21751,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_35elf
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("elf", 0, 2, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 829, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.elf", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.elf", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf(__pyx_self, __pyx_v_self, __pyx_v_kptw, __pyx_v_ngrid, __pyx_v_warn);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_34elf(__pyx_self, __pyx_v_self, __pyx_v_kptw, __pyx_v_ngrid, __pyx_v_warn);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_kptw, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_warn) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_34elf(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_kptw, PyObject *__pyx_v_ngrid, PyObject *__pyx_v_warn) {
   PyObject *__pyx_v_warning = NULL;
   PyObject *__pyx_v_fx = NULL;
   PyObject *__pyx_v_fy = NULL;
@@ -21842,7 +21840,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __Pyx_INCREF(__pyx_v_kptw);
   __Pyx_INCREF(__pyx_v_ngrid);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":863
+  /* "vaspwfc.pyx":863
  *         '''
  * 
  *         if warn:             # <<<<<<<<<<<<<<
@@ -21852,7 +21850,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_warn); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 863, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":864
+    /* "vaspwfc.pyx":864
  * 
  *         if warn:
  *             warning = """             # <<<<<<<<<<<<<<
@@ -21862,7 +21860,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_INCREF(__pyx_kp_s_If_you_are_using_VESTA_to_view);
     __pyx_v_warning = __pyx_kp_s_If_you_are_using_VESTA_to_view;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":880
+    /* "vaspwfc.pyx":880
  *             ###################################################################
  *             """
  *             print(warning)             # <<<<<<<<<<<<<<
@@ -21871,7 +21869,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
     if (__Pyx_PrintOne(0, __pyx_v_warning) < 0) __PYX_ERR(0, 880, __pyx_L1_error)
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":863
+    /* "vaspwfc.pyx":863
  *         '''
  * 
  *         if warn:             # <<<<<<<<<<<<<<
@@ -21880,7 +21878,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":883
+  /* "vaspwfc.pyx":883
  * 
  *         # the k-point weights
  *         kptw = np.array(kptw, dtype=float)             # <<<<<<<<<<<<<<
@@ -21908,7 +21906,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __Pyx_DECREF_SET(__pyx_v_kptw, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":884
+  /* "vaspwfc.pyx":884
  *         # the k-point weights
  *         kptw = np.array(kptw, dtype=float)
  *         assert kptw.shape == (self._nkpts,), "K-point weights must be provided \             # <<<<<<<<<<<<<<
@@ -21938,7 +21936,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":887
+  /* "vaspwfc.pyx":887
  *                                               to calculate charge density!"
  *         # normalization
  *         kptw /= kptw.sum()             # <<<<<<<<<<<<<<
@@ -21968,7 +21966,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __Pyx_DECREF_SET(__pyx_v_kptw, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":889
+  /* "vaspwfc.pyx":889
  *         kptw /= kptw.sum()
  * 
  *         if ngrid is None:             # <<<<<<<<<<<<<<
@@ -21979,7 +21977,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_t_6 = (__pyx_t_1 != 0);
   if (__pyx_t_6) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":890
+    /* "vaspwfc.pyx":890
  * 
  *         if ngrid is None:
  *             ngrid = self._ngrid * 2             # <<<<<<<<<<<<<<
@@ -21994,7 +21992,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_DECREF_SET(__pyx_v_ngrid, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":889
+    /* "vaspwfc.pyx":889
  *         kptw /= kptw.sum()
  * 
  *         if ngrid is None:             # <<<<<<<<<<<<<<
@@ -22004,7 +22002,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     goto __pyx_L4;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":892
+  /* "vaspwfc.pyx":892
  *             ngrid = self._ngrid * 2
  *         else:
  *             ngrid = np.array(ngrid, dtype=int)             # <<<<<<<<<<<<<<
@@ -22033,7 +22031,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_DECREF_SET(__pyx_v_ngrid, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":893
+    /* "vaspwfc.pyx":893
  *         else:
  *             ngrid = np.array(ngrid, dtype=int)
  *             assert ngrid.shape == (3,)             # <<<<<<<<<<<<<<
@@ -22055,7 +22053,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     }
     #endif
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":894
+    /* "vaspwfc.pyx":894
  *             ngrid = np.array(ngrid, dtype=int)
  *             assert ngrid.shape == (3,)
  *             assert np.alltrue(ngrid >= self._ngrid), \             # <<<<<<<<<<<<<<
@@ -22093,7 +22091,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       if (unlikely(!__pyx_t_6)) {
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":896
+        /* "vaspwfc.pyx":896
  *             assert np.alltrue(ngrid >= self._ngrid), \
  *                 "Minium FT grid size: (%d, %d, %d)" % \
  *                 (self._ngrid[0], self._ngrid[1], self._ngrid[2])             # <<<<<<<<<<<<<<
@@ -22127,7 +22125,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __pyx_t_2 = 0;
         __pyx_t_3 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":895
+        /* "vaspwfc.pyx":895
  *             assert ngrid.shape == (3,)
  *             assert np.alltrue(ngrid >= self._ngrid), \
  *                 "Minium FT grid size: (%d, %d, %d)" % \             # <<<<<<<<<<<<<<
@@ -22146,7 +22144,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   }
   __pyx_L4:;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":898
+  /* "vaspwfc.pyx":898
  *                 (self._ngrid[0], self._ngrid[1], self._ngrid[2])
  * 
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]             # <<<<<<<<<<<<<<
@@ -22156,7 +22154,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 898, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":899
+  /* "vaspwfc.pyx":899
  * 
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]
  *               for ii in range(ngrid[0])]             # <<<<<<<<<<<<<<
@@ -22211,7 +22209,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_ii, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":898
+    /* "vaspwfc.pyx":898
  *                 (self._ngrid[0], self._ngrid[1], self._ngrid[2])
  * 
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]             # <<<<<<<<<<<<<<
@@ -22245,7 +22243,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_t_2))) __PYX_ERR(0, 898, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":899
+    /* "vaspwfc.pyx":899
  * 
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]
  *               for ii in range(ngrid[0])]             # <<<<<<<<<<<<<<
@@ -22257,7 +22255,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_fx = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":900
+  /* "vaspwfc.pyx":900
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]
  *               for ii in range(ngrid[0])]
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]             # <<<<<<<<<<<<<<
@@ -22267,7 +22265,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 900, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":901
+  /* "vaspwfc.pyx":901
  *               for ii in range(ngrid[0])]
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]
  *               for jj in range(ngrid[1])]             # <<<<<<<<<<<<<<
@@ -22322,7 +22320,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_jj, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":900
+    /* "vaspwfc.pyx":900
  *         fx = [ii if ii < ngrid[0] // 2 + 1 else ii - ngrid[0]
  *               for ii in range(ngrid[0])]
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]             # <<<<<<<<<<<<<<
@@ -22356,7 +22354,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_t_2))) __PYX_ERR(0, 900, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":901
+    /* "vaspwfc.pyx":901
  *               for ii in range(ngrid[0])]
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]
  *               for jj in range(ngrid[1])]             # <<<<<<<<<<<<<<
@@ -22368,7 +22366,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_fy = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":902
+  /* "vaspwfc.pyx":902
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]
  *               for jj in range(ngrid[1])]
  *         fz = [kk if kk < ngrid[2] // 2 + 1 else kk - ngrid[2]             # <<<<<<<<<<<<<<
@@ -22378,7 +22376,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 902, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":903
+  /* "vaspwfc.pyx":903
  *               for jj in range(ngrid[1])]
  *         fz = [kk if kk < ngrid[2] // 2 + 1 else kk - ngrid[2]
  *               for kk in range(ngrid[2])]             # <<<<<<<<<<<<<<
@@ -22433,7 +22431,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_kk, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":902
+    /* "vaspwfc.pyx":902
  *         fy = [jj if jj < ngrid[1] // 2 + 1 else jj - ngrid[1]
  *               for jj in range(ngrid[1])]
  *         fz = [kk if kk < ngrid[2] // 2 + 1 else kk - ngrid[2]             # <<<<<<<<<<<<<<
@@ -22467,7 +22465,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     if (unlikely(__Pyx_ListComp_Append(__pyx_t_3, (PyObject*)__pyx_t_2))) __PYX_ERR(0, 902, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":903
+    /* "vaspwfc.pyx":903
  *               for jj in range(ngrid[1])]
  *         fz = [kk if kk < ngrid[2] // 2 + 1 else kk - ngrid[2]
  *               for kk in range(ngrid[2])]             # <<<<<<<<<<<<<<
@@ -22479,7 +22477,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_fz = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":907
+  /* "vaspwfc.pyx":907
  *         # plane-waves: Reciprocal coordinate
  *         # indexing = 'ij' so that outputs are of shape (ngrid[0], ngrid[1], ngrid[2])
  *         Dx, Dy, Dz = np.meshgrid(fx, fy, fz, indexing='ij')             # <<<<<<<<<<<<<<
@@ -22570,7 +22568,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_Dz = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":909
+  /* "vaspwfc.pyx":909
  *         Dx, Dy, Dz = np.meshgrid(fx, fy, fz, indexing='ij')
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(             # <<<<<<<<<<<<<<
@@ -22583,7 +22581,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":910
+  /* "vaspwfc.pyx":910
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(
  *             self._Bcell * np.pi * 2, [Dx, Dy, Dz], axes=(0, 0))             # <<<<<<<<<<<<<<
@@ -22616,7 +22614,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __Pyx_GIVEREF(__pyx_v_Dz);
   PyList_SET_ITEM(__pyx_t_3, 2, __pyx_v_Dz);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":909
+  /* "vaspwfc.pyx":909
  *         Dx, Dy, Dz = np.meshgrid(fx, fy, fz, indexing='ij')
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(             # <<<<<<<<<<<<<<
@@ -22632,7 +22630,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_t_2 = 0;
   __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":910
+  /* "vaspwfc.pyx":910
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(
  *             self._Bcell * np.pi * 2, [Dx, Dy, Dz], axes=(0, 0))             # <<<<<<<<<<<<<<
@@ -22643,7 +22641,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_axes, __pyx_tuple__36) < 0) __PYX_ERR(0, 910, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":909
+  /* "vaspwfc.pyx":909
  *         Dx, Dy, Dz = np.meshgrid(fx, fy, fz, indexing='ij')
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(             # <<<<<<<<<<<<<<
@@ -22715,7 +22713,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_Gz = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":912
+  /* "vaspwfc.pyx":912
  *             self._Bcell * np.pi * 2, [Dx, Dy, Dz], axes=(0, 0))
  *         # the norm squared of the G-vectors
  *         G2 = Gx**2 + Gy**2 + Gz**2             # <<<<<<<<<<<<<<
@@ -22739,7 +22737,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_G2 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":914
+  /* "vaspwfc.pyx":914
  *         G2 = Gx**2 + Gy**2 + Gz**2
  *         # k-points vectors in Cartesian coordinate
  *         vkpts = np.dot(self._kvecs, self._Bcell * 2 * np.pi)             # <<<<<<<<<<<<<<
@@ -22819,7 +22817,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_vkpts = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":918
+  /* "vaspwfc.pyx":918
  *         # normalization factor so that
  *         # \sum_{ijk} | \phi_{ijk} | ^ 2 * volume / Ngrid = 1
  *         normFac = np.sqrt(np.prod(ngrid) / self._Omega)             # <<<<<<<<<<<<<<
@@ -22876,7 +22874,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_normFac = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":921
+  /* "vaspwfc.pyx":921
  * 
  *         # electron localization function
  *         ElectronLocalizationFunction = []             # <<<<<<<<<<<<<<
@@ -22888,7 +22886,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_ElectronLocalizationFunction = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":923
+  /* "vaspwfc.pyx":923
  *         ElectronLocalizationFunction = []
  *         # Charge density
  *         rho = np.zeros(ngrid, dtype=complex)             # <<<<<<<<<<<<<<
@@ -22916,7 +22914,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_rho = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":925
+  /* "vaspwfc.pyx":925
  *         rho = np.zeros(ngrid, dtype=complex)
  *         # Kinetic energy density
  *         tau = np.zeros(ngrid, dtype=complex)             # <<<<<<<<<<<<<<
@@ -22944,7 +22942,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_v_tau = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":927
+  /* "vaspwfc.pyx":927
  *         tau = np.zeros(ngrid, dtype=complex)
  * 
  *         for ispin in range(self._nspin):             # <<<<<<<<<<<<<<
@@ -22999,7 +22997,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_ispin, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":929
+    /* "vaspwfc.pyx":929
  *         for ispin in range(self._nspin):
  *             # initialization
  *             rho[...] = 0.0             # <<<<<<<<<<<<<<
@@ -23008,7 +23006,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
     if (unlikely(PyObject_SetItem(__pyx_v_rho, Py_Ellipsis, __pyx_float_0_0) < 0)) __PYX_ERR(0, 929, __pyx_L1_error)
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":930
+    /* "vaspwfc.pyx":930
  *             # initialization
  *             rho[...] = 0.0
  *             tau[...] = 0.0             # <<<<<<<<<<<<<<
@@ -23017,7 +23015,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
     if (unlikely(PyObject_SetItem(__pyx_v_tau, Py_Ellipsis, __pyx_float_0_0) < 0)) __PYX_ERR(0, 930, __pyx_L1_error)
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":932
+    /* "vaspwfc.pyx":932
  *             tau[...] = 0.0
  * 
  *             for ikpt in range(self._nkpts):             # <<<<<<<<<<<<<<
@@ -23072,7 +23070,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
       __Pyx_XDECREF_SET(__pyx_v_ikpt, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":935
+      /* "vaspwfc.pyx":935
  * 
  *                 # plane-wave G-vectors
  *                 igvec = self.gvectors(ikpt+1)             # <<<<<<<<<<<<<<
@@ -23102,7 +23100,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
       __Pyx_XDECREF_SET(__pyx_v_igvec, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":937
+      /* "vaspwfc.pyx":937
  *                 igvec = self.gvectors(ikpt+1)
  *                 # for gamma-only version, complete the missing -G vectors
  *                 if self._lgam:             # <<<<<<<<<<<<<<
@@ -23115,7 +23113,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       if (__pyx_t_6) {
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":938
+        /* "vaspwfc.pyx":938
  *                 # for gamma-only version, complete the missing -G vectors
  *                 if self._lgam:
  *                     tmp = np.array([-k for k in igvec[1:]], dtype=int)             # <<<<<<<<<<<<<<
@@ -23195,7 +23193,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_XDECREF_SET(__pyx_v_tmp, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":939
+        /* "vaspwfc.pyx":939
  *                 if self._lgam:
  *                     tmp = np.array([-k for k in igvec[1:]], dtype=int)
  *                     igvec = np.vstack([igvec, tmp])             # <<<<<<<<<<<<<<
@@ -23234,7 +23232,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_DECREF_SET(__pyx_v_igvec, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":937
+        /* "vaspwfc.pyx":937
  *                 igvec = self.gvectors(ikpt+1)
  *                 # for gamma-only version, complete the missing -G vectors
  *                 if self._lgam:             # <<<<<<<<<<<<<<
@@ -23243,7 +23241,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
       }
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":941
+      /* "vaspwfc.pyx":941
  *                     igvec = np.vstack([igvec, tmp])
  *                 # plane-wave G-vectors in Cartesian coordinate
  *                 rgvec = np.dot(igvec, self._Bcell * 2 * np.pi)             # <<<<<<<<<<<<<<
@@ -23319,7 +23317,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
       __Pyx_XDECREF_SET(__pyx_v_rgvec, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":943
+      /* "vaspwfc.pyx":943
  *                 rgvec = np.dot(igvec, self._Bcell * 2 * np.pi)
  * 
  *                 k = vkpts[ikpt]                       # k             # <<<<<<<<<<<<<<
@@ -23331,7 +23329,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
       __Pyx_XDECREF_SET(__pyx_v_k, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":944
+      /* "vaspwfc.pyx":944
  * 
  *                 k = vkpts[ikpt]                       # k
  *                 gk = rgvec + k[np.newaxis, :]           # G + k             # <<<<<<<<<<<<<<
@@ -23360,7 +23358,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
       __Pyx_XDECREF_SET(__pyx_v_gk, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":945
+      /* "vaspwfc.pyx":945
  *                 k = vkpts[ikpt]                       # k
  *                 gk = rgvec + k[np.newaxis, :]           # G + k
  *                 gk2 = np.linalg.norm(gk, axis=1)**2     # | G + k |^2             # <<<<<<<<<<<<<<
@@ -23394,7 +23392,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
       __Pyx_XDECREF_SET(__pyx_v_gk2, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":947
+      /* "vaspwfc.pyx":947
  *                 gk2 = np.linalg.norm(gk, axis=1)**2     # | G + k |^2
  * 
  *                 for iband in range(self._nbands):             # <<<<<<<<<<<<<<
@@ -23449,7 +23447,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_XDECREF_SET(__pyx_v_iband, __pyx_t_11);
         __pyx_t_11 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":949
+        /* "vaspwfc.pyx":949
  *                 for iband in range(self._nbands):
  *                     # omit the empty bands
  *                     if self._occs[ispin, ikpt, iband] == 0.0:             # <<<<<<<<<<<<<<
@@ -23480,7 +23478,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         if (__pyx_t_6) {
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":950
+          /* "vaspwfc.pyx":950
  *                     # omit the empty bands
  *                     if self._occs[ispin, ikpt, iband] == 0.0:
  *                         continue             # <<<<<<<<<<<<<<
@@ -23489,7 +23487,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
           goto __pyx_L22_continue;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":949
+          /* "vaspwfc.pyx":949
  *                 for iband in range(self._nbands):
  *                     # omit the empty bands
  *                     if self._occs[ispin, ikpt, iband] == 0.0:             # <<<<<<<<<<<<<<
@@ -23498,7 +23496,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
         }
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":952
+        /* "vaspwfc.pyx":952
  *                         continue
  * 
  *                     rspin = 2.0 if self._nspin == 1 else 1.0             # <<<<<<<<<<<<<<
@@ -23519,7 +23517,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         }
         __pyx_v_rspin = __pyx_t_18;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":953
+        /* "vaspwfc.pyx":953
  * 
  *                     rspin = 2.0 if self._nspin == 1 else 1.0
  *                     weight = rspin * kptw[ikpt] * \             # <<<<<<<<<<<<<<
@@ -23535,7 +23533,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":954
+        /* "vaspwfc.pyx":954
  *                     rspin = 2.0 if self._nspin == 1 else 1.0
  *                     weight = rspin * kptw[ikpt] * \
  *                         self._occs[ispin, ikpt, iband]             # <<<<<<<<<<<<<<
@@ -23560,7 +23558,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":953
+        /* "vaspwfc.pyx":953
  * 
  *                     rspin = 2.0 if self._nspin == 1 else 1.0
  *                     weight = rspin * kptw[ikpt] * \             # <<<<<<<<<<<<<<
@@ -23574,7 +23572,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_XDECREF_SET(__pyx_v_weight, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":979
+        /* "vaspwfc.pyx":979
  *                     # wavefunction in reciprocal space
  *                     # VASP does NOT do normalization in elf.F
  *                     phi_q = self.readBandCoeff(ispin=ispin+1, ikpt=ikpt+1,             # <<<<<<<<<<<<<<
@@ -23594,7 +23592,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         if (PyDict_SetItem(__pyx_t_17, __pyx_n_s_ikpt, __pyx_t_11) < 0) __PYX_ERR(0, 979, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":980
+        /* "vaspwfc.pyx":980
  *                     # VASP does NOT do normalization in elf.F
  *                     phi_q = self.readBandCoeff(ispin=ispin+1, ikpt=ikpt+1,
  *                                                iband=iband+1,             # <<<<<<<<<<<<<<
@@ -23606,7 +23604,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         if (PyDict_SetItem(__pyx_t_17, __pyx_n_s_iband, __pyx_t_11) < 0) __PYX_ERR(0, 979, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":981
+        /* "vaspwfc.pyx":981
  *                     phi_q = self.readBandCoeff(ispin=ispin+1, ikpt=ikpt+1,
  *                                                iband=iband+1,
  *                                                norm=False)             # <<<<<<<<<<<<<<
@@ -23615,7 +23613,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
         if (PyDict_SetItem(__pyx_t_17, __pyx_n_s_norm, Py_False) < 0) __PYX_ERR(0, 979, __pyx_L1_error)
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":979
+        /* "vaspwfc.pyx":979
  *                     # wavefunction in reciprocal space
  *                     # VASP does NOT do normalization in elf.F
  *                     phi_q = self.readBandCoeff(ispin=ispin+1, ikpt=ikpt+1,             # <<<<<<<<<<<<<<
@@ -23629,7 +23627,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_XDECREF_SET(__pyx_v_phi_q, __pyx_t_11);
         __pyx_t_11 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":983
+        /* "vaspwfc.pyx":983
  *                                                norm=False)
  *                     # pad the missing planewave coefficients for -G vectors
  *                     if self._lgam:             # <<<<<<<<<<<<<<
@@ -23642,7 +23640,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
         if (__pyx_t_6) {
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":984
+          /* "vaspwfc.pyx":984
  *                     # pad the missing planewave coefficients for -G vectors
  *                     if self._lgam:
  *                         tmp = [x.conj() for x in phi_q[1:]]             # <<<<<<<<<<<<<<
@@ -23719,7 +23717,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
           __Pyx_XDECREF_SET(__pyx_v_tmp, __pyx_t_11);
           __pyx_t_11 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":985
+          /* "vaspwfc.pyx":985
  *                     if self._lgam:
  *                         tmp = [x.conj() for x in phi_q[1:]]
  *                         phi_q = np.concatenate([phi_q, tmp])             # <<<<<<<<<<<<<<
@@ -23758,7 +23756,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
           __Pyx_DECREF_SET(__pyx_v_phi_q, __pyx_t_11);
           __pyx_t_11 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":988
+          /* "vaspwfc.pyx":988
  *                         # Gamma only, divide a factor of sqrt(2.0) except for
  *                         # G=0
  *                         phi_q /= np.sqrt(2.0)             # <<<<<<<<<<<<<<
@@ -23791,7 +23789,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
           __Pyx_DECREF_SET(__pyx_v_phi_q, __pyx_t_4);
           __pyx_t_4 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":989
+          /* "vaspwfc.pyx":989
  *                         # G=0
  *                         phi_q /= np.sqrt(2.0)
  *                         phi_q[0] *= np.sqrt(2.0)             # <<<<<<<<<<<<<<
@@ -23828,7 +23826,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
           if (unlikely(__Pyx_SetItemInt(__pyx_v_phi_q, __pyx_t_19, __pyx_t_5, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1) < 0)) __PYX_ERR(0, 989, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":983
+          /* "vaspwfc.pyx":983
  *                                                norm=False)
  *                     # pad the missing planewave coefficients for -G vectors
  *                     if self._lgam:             # <<<<<<<<<<<<<<
@@ -23837,7 +23835,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
         }
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":991
+        /* "vaspwfc.pyx":991
  *                         phi_q[0] *= np.sqrt(2.0)
  *                     # wavefunction in real space
  *                     phi_r = self.wfc_r(ispin=ispin+1, ikpt=ikpt+1,             # <<<<<<<<<<<<<<
@@ -23857,7 +23855,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_ikpt, __pyx_t_4) < 0) __PYX_ERR(0, 991, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":992
+        /* "vaspwfc.pyx":992
  *                     # wavefunction in real space
  *                     phi_r = self.wfc_r(ispin=ispin+1, ikpt=ikpt+1,
  *                                        iband=iband+1,             # <<<<<<<<<<<<<<
@@ -23869,7 +23867,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_iband, __pyx_t_4) < 0) __PYX_ERR(0, 991, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":993
+        /* "vaspwfc.pyx":993
  *                     phi_r = self.wfc_r(ispin=ispin+1, ikpt=ikpt+1,
  *                                        iband=iband+1,
  *                                        ngrid=ngrid,             # <<<<<<<<<<<<<<
@@ -23878,7 +23876,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
         if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_ngrid_2, __pyx_v_ngrid) < 0) __PYX_ERR(0, 991, __pyx_L1_error)
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":994
+        /* "vaspwfc.pyx":994
  *                                        iband=iband+1,
  *                                        ngrid=ngrid,
  *                                        gvec=igvec,             # <<<<<<<<<<<<<<
@@ -23887,7 +23885,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
         if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_gvec, __pyx_v_igvec) < 0) __PYX_ERR(0, 991, __pyx_L1_error)
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":995
+        /* "vaspwfc.pyx":995
  *                                        ngrid=ngrid,
  *                                        gvec=igvec,
  *                                        Cg=phi_q) * normFac             # <<<<<<<<<<<<<<
@@ -23896,7 +23894,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
         if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_Cg, __pyx_v_phi_q) < 0) __PYX_ERR(0, 991, __pyx_L1_error)
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":991
+        /* "vaspwfc.pyx":991
  *                         phi_q[0] *= np.sqrt(2.0)
  *                     # wavefunction in real space
  *                     phi_r = self.wfc_r(ispin=ispin+1, ikpt=ikpt+1,             # <<<<<<<<<<<<<<
@@ -23908,7 +23906,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":995
+        /* "vaspwfc.pyx":995
  *                                        ngrid=ngrid,
  *                                        gvec=igvec,
  *                                        Cg=phi_q) * normFac             # <<<<<<<<<<<<<<
@@ -23921,7 +23919,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_XDECREF_SET(__pyx_v_phi_r, __pyx_t_11);
         __pyx_t_11 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":997
+        /* "vaspwfc.pyx":997
  *                                        Cg=phi_q) * normFac
  *                     # grad^2 \phi in reciprocal space
  *                     lap_phi_q = -gk2 * phi_q             # <<<<<<<<<<<<<<
@@ -23936,7 +23934,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_XDECREF_SET(__pyx_v_lap_phi_q, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":999
+        /* "vaspwfc.pyx":999
  *                     lap_phi_q = -gk2 * phi_q
  *                     # grad^2 \phi in real space
  *                     lap_phi_r = self.wfc_r(ispin=ispin+1, ikpt=ikpt+1,             # <<<<<<<<<<<<<<
@@ -23956,7 +23954,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_ikpt, __pyx_t_5) < 0) __PYX_ERR(0, 999, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1000
+        /* "vaspwfc.pyx":1000
  *                     # grad^2 \phi in real space
  *                     lap_phi_r = self.wfc_r(ispin=ispin+1, ikpt=ikpt+1,
  *                                            iband=iband+1,             # <<<<<<<<<<<<<<
@@ -23968,7 +23966,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_iband, __pyx_t_5) < 0) __PYX_ERR(0, 999, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1001
+        /* "vaspwfc.pyx":1001
  *                     lap_phi_r = self.wfc_r(ispin=ispin+1, ikpt=ikpt+1,
  *                                            iband=iband+1,
  *                                            ngrid=ngrid,             # <<<<<<<<<<<<<<
@@ -23977,7 +23975,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
         if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_ngrid_2, __pyx_v_ngrid) < 0) __PYX_ERR(0, 999, __pyx_L1_error)
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1002
+        /* "vaspwfc.pyx":1002
  *                                            iband=iband+1,
  *                                            ngrid=ngrid,
  *                                            gvec=igvec,             # <<<<<<<<<<<<<<
@@ -23986,7 +23984,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
         if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_gvec, __pyx_v_igvec) < 0) __PYX_ERR(0, 999, __pyx_L1_error)
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1003
+        /* "vaspwfc.pyx":1003
  *                                            ngrid=ngrid,
  *                                            gvec=igvec,
  *                                            Cg=lap_phi_q) * normFac             # <<<<<<<<<<<<<<
@@ -23995,7 +23993,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
         if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_Cg, __pyx_v_lap_phi_q) < 0) __PYX_ERR(0, 999, __pyx_L1_error)
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":999
+        /* "vaspwfc.pyx":999
  *                     lap_phi_q = -gk2 * phi_q
  *                     # grad^2 \phi in real space
  *                     lap_phi_r = self.wfc_r(ispin=ispin+1, ikpt=ikpt+1,             # <<<<<<<<<<<<<<
@@ -24007,7 +24005,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1003
+        /* "vaspwfc.pyx":1003
  *                                            ngrid=ngrid,
  *                                            gvec=igvec,
  *                                            Cg=lap_phi_q) * normFac             # <<<<<<<<<<<<<<
@@ -24020,7 +24018,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_XDECREF_SET(__pyx_v_lap_phi_r, __pyx_t_11);
         __pyx_t_11 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1006
+        /* "vaspwfc.pyx":1006
  * 
  *                     # \phi* grad^2 \phi in real space --> kinetic energy density
  *                     tau += -phi_r * lap_phi_r.conj() * weight             # <<<<<<<<<<<<<<
@@ -24059,7 +24057,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_DECREF_SET(__pyx_v_tau, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1009
+        /* "vaspwfc.pyx":1009
  * 
  *                     # charge density in real space
  *                     rho += phi_r.conj() * phi_r * weight             # <<<<<<<<<<<<<<
@@ -24095,7 +24093,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
         __Pyx_DECREF_SET(__pyx_v_rho, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":947
+        /* "vaspwfc.pyx":947
  *                 gk2 = np.linalg.norm(gk, axis=1)**2     # | G + k |^2
  * 
  *                 for iband in range(self._nbands):             # <<<<<<<<<<<<<<
@@ -24106,7 +24104,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
       }
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":932
+      /* "vaspwfc.pyx":932
  *             tau[...] = 0.0
  * 
  *             for ikpt in range(self._nkpts):             # <<<<<<<<<<<<<<
@@ -24116,7 +24114,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1012
+    /* "vaspwfc.pyx":1012
  * 
  *             # charge density in reciprocal space
  *             rho_q = np.fft.fftn(rho, norm='ortho')             # <<<<<<<<<<<<<<
@@ -24147,7 +24145,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_rho_q, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1015
+    /* "vaspwfc.pyx":1015
  * 
  *             # grad^2 rho: laplacian of charge density
  *             lap_rho_q = -G2 * rho_q             # <<<<<<<<<<<<<<
@@ -24162,7 +24160,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_lap_rho_q, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1016
+    /* "vaspwfc.pyx":1016
  *             # grad^2 rho: laplacian of charge density
  *             lap_rho_q = -G2 * rho_q
  *             lap_rho_r = np.fft.ifftn(lap_rho_q, norm='ortho')             # <<<<<<<<<<<<<<
@@ -24193,7 +24191,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_lap_rho_r, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1029
+    /* "vaspwfc.pyx":1029
  *             # correct method for gradient using FFT
  *             ########################################
  *             grad_rho_x = np.fft.ifftn(1j * Gx * rho_q, norm='ortho')             # <<<<<<<<<<<<<<
@@ -24232,7 +24230,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_grad_rho_x, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1030
+    /* "vaspwfc.pyx":1030
  *             ########################################
  *             grad_rho_x = np.fft.ifftn(1j * Gx * rho_q, norm='ortho')
  *             grad_rho_y = np.fft.ifftn(1j * Gy * rho_q, norm='ortho')             # <<<<<<<<<<<<<<
@@ -24271,7 +24269,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_grad_rho_y, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1031
+    /* "vaspwfc.pyx":1031
  *             grad_rho_x = np.fft.ifftn(1j * Gx * rho_q, norm='ortho')
  *             grad_rho_y = np.fft.ifftn(1j * Gy * rho_q, norm='ortho')
  *             grad_rho_z = np.fft.ifftn(1j * Gz * rho_q, norm='ortho')             # <<<<<<<<<<<<<<
@@ -24310,7 +24308,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_grad_rho_z, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1033
+    /* "vaspwfc.pyx":1033
  *             grad_rho_z = np.fft.ifftn(1j * Gz * rho_q, norm='ortho')
  * 
  *             grad_rho_sq = np.abs(grad_rho_x)**2 \             # <<<<<<<<<<<<<<
@@ -24341,7 +24339,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1034
+    /* "vaspwfc.pyx":1034
  * 
  *             grad_rho_sq = np.abs(grad_rho_x)**2 \
  *                 + np.abs(grad_rho_y)**2 \             # <<<<<<<<<<<<<<
@@ -24376,7 +24374,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1035
+    /* "vaspwfc.pyx":1035
  *             grad_rho_sq = np.abs(grad_rho_x)**2 \
  *                 + np.abs(grad_rho_y)**2 \
  *                 + np.abs(grad_rho_z)**2             # <<<<<<<<<<<<<<
@@ -24413,7 +24411,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_grad_rho_sq, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1037
+    /* "vaspwfc.pyx":1037
  *                 + np.abs(grad_rho_z)**2
  * 
  *             rho = rho.real             # <<<<<<<<<<<<<<
@@ -24425,7 +24423,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_DECREF_SET(__pyx_v_rho, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1038
+    /* "vaspwfc.pyx":1038
  * 
  *             rho = rho.real
  *             tau = tau.real             # <<<<<<<<<<<<<<
@@ -24437,7 +24435,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_DECREF_SET(__pyx_v_tau, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1039
+    /* "vaspwfc.pyx":1039
  *             rho = rho.real
  *             tau = tau.real
  *             lap_rho_r = lap_rho_r.real             # <<<<<<<<<<<<<<
@@ -24449,7 +24447,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_DECREF_SET(__pyx_v_lap_rho_r, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1041
+    /* "vaspwfc.pyx":1041
  *             lap_rho_r = lap_rho_r.real
  * 
  *             Cf = 3./5 * (3.0 * np.pi**2)**(2./3)             # <<<<<<<<<<<<<<
@@ -24482,7 +24480,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_Cf, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1042
+    /* "vaspwfc.pyx":1042
  * 
  *             Cf = 3./5 * (3.0 * np.pi**2)**(2./3)
  *             Dh = np.where(rho > 0.0,             # <<<<<<<<<<<<<<
@@ -24496,7 +24494,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = PyObject_RichCompare(__pyx_v_rho, __pyx_float_0_0, Py_GT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1042, __pyx_L1_error)
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1043
+    /* "vaspwfc.pyx":1043
  *             Cf = 3./5 * (3.0 * np.pi**2)**(2./3)
  *             Dh = np.where(rho > 0.0,
  *                           Cf * rho**(5./3),             # <<<<<<<<<<<<<<
@@ -24566,7 +24564,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_Dh, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1045
+    /* "vaspwfc.pyx":1045
  *                           Cf * rho**(5./3),
  *                           0.0)
  *             eps = 1E-8 / HSQDTM             # <<<<<<<<<<<<<<
@@ -24581,7 +24579,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_eps, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1046
+    /* "vaspwfc.pyx":1046
  *                           0.0)
  *             eps = 1E-8 / HSQDTM
  *             Dh[Dh < eps] = eps             # <<<<<<<<<<<<<<
@@ -24592,7 +24590,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     if (unlikely(PyObject_SetItem(__pyx_v_Dh, __pyx_t_2, __pyx_v_eps) < 0)) __PYX_ERR(0, 1046, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1048
+    /* "vaspwfc.pyx":1048
  *             Dh[Dh < eps] = eps
  *             # D0 = T + TCORR - TBOS
  *             D0 = tau + 0.5 * lap_rho_r - 0.25 * grad_rho_sq / rho             # <<<<<<<<<<<<<<
@@ -24616,7 +24614,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __Pyx_XDECREF_SET(__pyx_v_D0, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1050
+    /* "vaspwfc.pyx":1050
  *             D0 = tau + 0.5 * lap_rho_r - 0.25 * grad_rho_sq / rho
  * 
  *             ElectronLocalizationFunction.append(1. / (1. + (D0 / Dh)**2))             # <<<<<<<<<<<<<<
@@ -24637,7 +24635,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
     __pyx_t_22 = __Pyx_PyList_Append(__pyx_v_ElectronLocalizationFunction, __pyx_t_17); if (unlikely(__pyx_t_22 == ((int)-1))) __PYX_ERR(0, 1050, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":927
+    /* "vaspwfc.pyx":927
  *         tau = np.zeros(ngrid, dtype=complex)
  * 
  *         for ispin in range(self._nspin):             # <<<<<<<<<<<<<<
@@ -24647,7 +24645,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   }
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1052
+  /* "vaspwfc.pyx":1052
  *             ElectronLocalizationFunction.append(1. / (1. + (D0 / Dh)**2))
  * 
  *         return ElectronLocalizationFunction             # <<<<<<<<<<<<<<
@@ -24659,7 +24657,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __pyx_r = __pyx_v_ElectronLocalizationFunction;
   goto __pyx_L0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":829
+  /* "vaspwfc.pyx":829
  *         return self.ipr
  * 
  *     def elf(self, kptw, ngrid=None, warn=True):             # <<<<<<<<<<<<<<
@@ -24677,7 +24675,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_17);
   __Pyx_XDECREF(__pyx_t_21);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.elf", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.elf", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_warning);
@@ -24733,7 +24731,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
   return __pyx_r;
 }
 
-/* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1054
+/* "vaspwfc.pyx":1054
  *         return ElectronLocalizationFunction
  * 
  *     def write_std_wavecar(self, out="WAVECAR_std"):             # <<<<<<<<<<<<<<
@@ -24742,9 +24740,9 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_34elf
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_37write_std_wavecar(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_37write_std_wavecar = {"write_std_wavecar", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_37write_std_wavecar, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_37write_std_wavecar(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_37write_std_wavecar(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7vaspwfc_7vaspwfc_37write_std_wavecar = {"write_std_wavecar", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7vaspwfc_7vaspwfc_37write_std_wavecar, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7vaspwfc_7vaspwfc_37write_std_wavecar(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_out = 0;
   PyObject *__pyx_r = 0;
@@ -24796,18 +24794,18 @@ static PyObject *__pyx_pw_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_37wri
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("write_std_wavecar", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1054, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.write_std_wavecar", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.write_std_wavecar", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36write_std_wavecar(__pyx_self, __pyx_v_self, __pyx_v_out);
+  __pyx_r = __pyx_pf_7vaspwfc_7vaspwfc_36write_std_wavecar(__pyx_self, __pyx_v_self, __pyx_v_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36write_std_wavecar(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_out) {
+static PyObject *__pyx_pf_7vaspwfc_7vaspwfc_36write_std_wavecar(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_out) {
   PyObject *__pyx_v_new_wc = NULL;
   PyObject *__pyx_v_new_nplws = NULL;
   PyObject *__pyx_v_plws_rec_size = NULL;
@@ -24850,7 +24848,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
   __Pyx_RefNannySetupContext("write_std_wavecar", 0);
   __Pyx_TraceCall("write_std_wavecar", __pyx_f[0], 1054, 0, __PYX_ERR(0, 1054, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1056
+  /* "vaspwfc.pyx":1056
  *     def write_std_wavecar(self, out="WAVECAR_std"):
  * 
  *         assert self._lgam             # <<<<<<<<<<<<<<
@@ -24870,7 +24868,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
   }
   #endif
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1058
+  /* "vaspwfc.pyx":1058
  *         assert self._lgam
  * 
  *         with open(out, "w") as new_wc:             # <<<<<<<<<<<<<<
@@ -24923,7 +24921,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           __pyx_v_new_wc = __pyx_t_5;
           __pyx_t_5 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1059
+          /* "vaspwfc.pyx":1059
  * 
  *         with open(out, "w") as new_wc:
  *             new_nplws = 2*(self._nplws[0] - 1) + 1             # <<<<<<<<<<<<<<
@@ -24947,7 +24945,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           __pyx_v_new_nplws = __pyx_t_5;
           __pyx_t_5 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1060
+          /* "vaspwfc.pyx":1060
  *         with open(out, "w") as new_wc:
  *             new_nplws = 2*(self._nplws[0] - 1) + 1
  *             plws_rec_size = np.max(new_nplws)*np.dtype(self.setWFPrec()).itemsize             # <<<<<<<<<<<<<<
@@ -25022,7 +25020,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           __pyx_v_plws_rec_size = __pyx_t_1;
           __pyx_t_1 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1061
+          /* "vaspwfc.pyx":1061
  *             new_nplws = 2*(self._nplws[0] - 1) + 1
  *             plws_rec_size = np.max(new_nplws)*np.dtype(self.setWFPrec()).itemsize
  *             band_rec_size = np.dtype(np.float64).itemsize*(self._nbands*3+1)             # <<<<<<<<<<<<<<
@@ -25073,7 +25071,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           __pyx_v_band_rec_size = __pyx_t_3;
           __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1063
+          /* "vaspwfc.pyx":1063
  *             band_rec_size = np.dtype(np.float64).itemsize*(self._nbands*3+1)
  *             # record needs to be large enough to contain both plane waves and bands
  *             new_rec_size = max(plws_rec_size, band_rec_size)             # <<<<<<<<<<<<<<
@@ -25102,7 +25100,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           __pyx_v_new_rec_size = __pyx_t_3;
           __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1064
+          /* "vaspwfc.pyx":1064
  *             # record needs to be large enough to contain both plane waves and bands
  *             new_rec_size = max(plws_rec_size, band_rec_size)
  *             nfloat = new_rec_size//8 # number of float64s per record             # <<<<<<<<<<<<<<
@@ -25114,7 +25112,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           __pyx_v_nfloat = __pyx_t_3;
           __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1066
+          /* "vaspwfc.pyx":1066
  *             nfloat = new_rec_size//8 # number of float64s per record
  *             # header line
  *             rec = np.zeros(nfloat, dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -25148,7 +25146,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           __pyx_v_rec = __pyx_t_10;
           __pyx_t_10 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1067
+          /* "vaspwfc.pyx":1067
  *             # header line
  *             rec = np.zeros(nfloat, dtype=np.float64)
  *             rec[0:3] = new_rec_size,self._nspin,self._rtag             # <<<<<<<<<<<<<<
@@ -25173,7 +25171,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           if (__Pyx_PyObject_SetSlice(__pyx_v_rec, __pyx_t_3, 0, 3, NULL, NULL, &__pyx_slice__45, 1, 1, 1) < 0) __PYX_ERR(0, 1067, __pyx_L7_error)
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1068
+          /* "vaspwfc.pyx":1068
  *             rec = np.zeros(nfloat, dtype=np.float64)
  *             rec[0:3] = new_rec_size,self._nspin,self._rtag
  *             rec.tofile(new_wc)             # <<<<<<<<<<<<<<
@@ -25199,7 +25197,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1070
+          /* "vaspwfc.pyx":1070
  *             rec.tofile(new_wc)
  *             # header line 2
  *             rec[0:3] = self._nkpts,self._nbands,self._encut             # <<<<<<<<<<<<<<
@@ -25226,7 +25224,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           if (__Pyx_PyObject_SetSlice(__pyx_v_rec, __pyx_t_5, 0, 3, NULL, NULL, &__pyx_slice__45, 1, 1, 1) < 0) __PYX_ERR(0, 1070, __pyx_L7_error)
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1071
+          /* "vaspwfc.pyx":1071
  *             # header line 2
  *             rec[0:3] = self._nkpts,self._nbands,self._encut
  *             rec[3:3+9] = self._Acell.reshape((1, -1))             # <<<<<<<<<<<<<<
@@ -25256,7 +25254,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           if (__Pyx_PyObject_SetSlice(__pyx_v_rec, __pyx_t_5, 3, 12, NULL, NULL, &__pyx_slice__47, 1, 1, 1) < 0) __PYX_ERR(0, 1071, __pyx_L7_error)
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1072
+          /* "vaspwfc.pyx":1072
  *             rec[0:3] = self._nkpts,self._nbands,self._encut
  *             rec[3:3+9] = self._Acell.reshape((1, -1))
  *             rec.tofile(new_wc)             # <<<<<<<<<<<<<<
@@ -25282,7 +25280,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1073
+          /* "vaspwfc.pyx":1073
  *             rec[3:3+9] = self._Acell.reshape((1, -1))
  *             rec.tofile(new_wc)
  *             wave_rec = np.zeros(new_nplws, dtype=self.setWFPrec())             # <<<<<<<<<<<<<<
@@ -25328,7 +25326,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           __pyx_v_wave_rec = __pyx_t_3;
           __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1074
+          /* "vaspwfc.pyx":1074
  *             rec.tofile(new_wc)
  *             wave_rec = np.zeros(new_nplws, dtype=self.setWFPrec())
  *             for spin in range(self._nspin):             # <<<<<<<<<<<<<<
@@ -25383,7 +25381,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             __Pyx_XDECREF_SET(__pyx_v_spin, __pyx_t_10);
             __pyx_t_10 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1075
+            /* "vaspwfc.pyx":1075
  *             wave_rec = np.zeros(new_nplws, dtype=self.setWFPrec())
  *             for spin in range(self._nspin):
  *                 rec[0] = new_nplws             # <<<<<<<<<<<<<<
@@ -25392,7 +25390,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
  */
             if (unlikely(__Pyx_SetItemInt(__pyx_v_rec, 0, __pyx_v_new_nplws, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 1075, __pyx_L7_error)
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1076
+            /* "vaspwfc.pyx":1076
  *             for spin in range(self._nspin):
  *                 rec[0] = new_nplws
  *                 rec[1:1+3] = self._kvecs[0]             # <<<<<<<<<<<<<<
@@ -25407,7 +25405,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             if (__Pyx_PyObject_SetSlice(__pyx_v_rec, __pyx_t_5, 1, 4, NULL, NULL, &__pyx_slice__20, 1, 1, 1) < 0) __PYX_ERR(0, 1076, __pyx_L7_error)
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1077
+            /* "vaspwfc.pyx":1077
  *                 rec[0] = new_nplws
  *                 rec[1:1+3] = self._kvecs[0]
  *                 rec[4 : 4+3*self._nbands : 3] = self._bands[spin, 0, :]             # <<<<<<<<<<<<<<
@@ -25446,7 +25444,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1078
+            /* "vaspwfc.pyx":1078
  *                 rec[1:1+3] = self._kvecs[0]
  *                 rec[4 : 4+3*self._nbands : 3] = self._bands[spin, 0, :]
  *                 rec[4+1 : 4+3*self._nbands : 3] = 0.0 # so far energies always real?             # <<<<<<<<<<<<<<
@@ -25467,7 +25465,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             if (unlikely(PyObject_SetItem(__pyx_v_rec, __pyx_t_5, __pyx_float_0_0) < 0)) __PYX_ERR(0, 1078, __pyx_L7_error)
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1079
+            /* "vaspwfc.pyx":1079
  *                 rec[4 : 4+3*self._nbands : 3] = self._bands[spin, 0, :]
  *                 rec[4+1 : 4+3*self._nbands : 3] = 0.0 # so far energies always real?
  *                 rec[4+2 : 4+3*self._nbands : 3] = self._occs[spin, 0, :]             # <<<<<<<<<<<<<<
@@ -25506,7 +25504,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1080
+            /* "vaspwfc.pyx":1080
  *                 rec[4+1 : 4+3*self._nbands : 3] = 0.0 # so far energies always real?
  *                 rec[4+2 : 4+3*self._nbands : 3] = self._occs[spin, 0, :]
  *                 rec.tofile(new_wc)             # <<<<<<<<<<<<<<
@@ -25532,7 +25530,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1083
+            /* "vaspwfc.pyx":1083
  * 
  *                 ### Expand plane wave coefficients
  *                 ngrid = self._ngrid.copy() * 2             # <<<<<<<<<<<<<<
@@ -25565,7 +25563,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             __Pyx_XDECREF_SET(__pyx_v_ngrid, __pyx_t_1);
             __pyx_t_1 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1084
+            /* "vaspwfc.pyx":1084
  *                 ### Expand plane wave coefficients
  *                 ngrid = self._ngrid.copy() * 2
  *                 if self._gam_half == "z":             # <<<<<<<<<<<<<<
@@ -25578,7 +25576,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             if (__pyx_t_2) {
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1085
+              /* "vaspwfc.pyx":1085
  *                 ngrid = self._ngrid.copy() * 2
  *                 if self._gam_half == "z":
  *                     ordered_grid = ngrid.swapaxes(ngrid, 0, 2)             # <<<<<<<<<<<<<<
@@ -25638,7 +25636,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
               __Pyx_XDECREF_SET(__pyx_v_ordered_grid, __pyx_t_1);
               __pyx_t_1 = 0;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1084
+              /* "vaspwfc.pyx":1084
  *                 ### Expand plane wave coefficients
  *                 ngrid = self._ngrid.copy() * 2
  *                 if self._gam_half == "z":             # <<<<<<<<<<<<<<
@@ -25648,7 +25646,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
               goto __pyx_L15;
             }
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1086
+            /* "vaspwfc.pyx":1086
  *                 if self._gam_half == "z":
  *                     ordered_grid = ngrid.swapaxes(ngrid, 0, 2)
  *                 elif self._gam_half == "x":             # <<<<<<<<<<<<<<
@@ -25661,7 +25659,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             if (likely(__pyx_t_2)) {
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1087
+              /* "vaspwfc.pyx":1087
  *                     ordered_grid = ngrid.swapaxes(ngrid, 0, 2)
  *                 elif self._gam_half == "x":
  *                     ordered_grid = ngrid             # <<<<<<<<<<<<<<
@@ -25671,7 +25669,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
               __Pyx_INCREF(__pyx_v_ngrid);
               __Pyx_XDECREF_SET(__pyx_v_ordered_grid, __pyx_v_ngrid);
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1086
+              /* "vaspwfc.pyx":1086
  *                 if self._gam_half == "z":
  *                     ordered_grid = ngrid.swapaxes(ngrid, 0, 2)
  *                 elif self._gam_half == "x":             # <<<<<<<<<<<<<<
@@ -25681,7 +25679,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
               goto __pyx_L15;
             }
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1089
+            /* "vaspwfc.pyx":1089
  *                     ordered_grid = ngrid
  *                 else:
  *                     raise ValueError("Gamma reduction direction must be z or x")             # <<<<<<<<<<<<<<
@@ -25697,7 +25695,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             }
             __pyx_L15:;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1091
+            /* "vaspwfc.pyx":1091
  *                     raise ValueError("Gamma reduction direction must be z or x")
  * 
  *                 Gvec = self.gvectors(ikpt=1, check_consistency=True)             # <<<<<<<<<<<<<<
@@ -25717,7 +25715,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             __Pyx_XDECREF_SET(__pyx_v_Gvec, __pyx_t_6);
             __pyx_t_6 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1092
+            /* "vaspwfc.pyx":1092
  * 
  *                 Gvec = self.gvectors(ikpt=1, check_consistency=True)
  *                 full_Gvec = self.gvectors(ikpt=1, force_Gamma=False, check_consistency=False)             # <<<<<<<<<<<<<<
@@ -25738,7 +25736,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             __Pyx_XDECREF_SET(__pyx_v_full_Gvec, __pyx_t_1);
             __pyx_t_1 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1093
+            /* "vaspwfc.pyx":1093
  *                 Gvec = self.gvectors(ikpt=1, check_consistency=True)
  *                 full_Gvec = self.gvectors(ikpt=1, force_Gamma=False, check_consistency=False)
  *                 phi_k = np.zeros(ngrid, dtype=wave_rec.dtype)             # <<<<<<<<<<<<<<
@@ -25769,7 +25767,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             __Pyx_XDECREF_SET(__pyx_v_phi_k, __pyx_t_5);
             __pyx_t_5 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1094
+            /* "vaspwfc.pyx":1094
  *                 full_Gvec = self.gvectors(ikpt=1, force_Gamma=False, check_consistency=False)
  *                 phi_k = np.zeros(ngrid, dtype=wave_rec.dtype)
  *                 for band in range(self._nbands):             # <<<<<<<<<<<<<<
@@ -25824,7 +25822,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
               __Pyx_XDECREF_SET(__pyx_v_band, __pyx_t_6);
               __pyx_t_6 = 0;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1095
+              /* "vaspwfc.pyx":1095
  *                 phi_k = np.zeros(ngrid, dtype=wave_rec.dtype)
  *                 for band in range(self._nbands):
  *                     phi_k[Gvec[:, 0], Gvec[:,1], Gvec[:,2]] = self.readBandCoeff(spin+1,1,band+1)             # <<<<<<<<<<<<<<
@@ -25910,7 +25908,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
               __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
               __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1097
+              /* "vaspwfc.pyx":1097
  *                     phi_k[Gvec[:, 0], Gvec[:,1], Gvec[:,2]] = self.readBandCoeff(spin+1,1,band+1)
  * 
  *                     phi_k = expand_wfc(phi_k, ordered_grid)             # <<<<<<<<<<<<<<
@@ -25967,7 +25965,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
               __Pyx_DECREF_SET(__pyx_v_phi_k, __pyx_t_6);
               __pyx_t_6 = 0;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1099
+              /* "vaspwfc.pyx":1099
  *                     phi_k = expand_wfc(phi_k, ordered_grid)
  * 
  *                     wave_rec[:new_nplws] = phi_k[full_Gvec[:, 0], full_Gvec[:, 1], full_Gvec[:, 2]]             # <<<<<<<<<<<<<<
@@ -25997,7 +25995,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
               if (__Pyx_PyObject_SetSlice(__pyx_v_wave_rec, __pyx_t_18, 0, 0, NULL, &__pyx_v_new_nplws, NULL, 0, 0, 1) < 0) __PYX_ERR(0, 1099, __pyx_L7_error)
               __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1100
+              /* "vaspwfc.pyx":1100
  * 
  *                     wave_rec[:new_nplws] = phi_k[full_Gvec[:, 0], full_Gvec[:, 1], full_Gvec[:, 2]]
  *                     wave_rec.tofile(new_wc)             # <<<<<<<<<<<<<<
@@ -26023,7 +26021,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
               __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
               __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-              /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1094
+              /* "vaspwfc.pyx":1094
  *                 full_Gvec = self.gvectors(ikpt=1, force_Gamma=False, check_consistency=False)
  *                 phi_k = np.zeros(ngrid, dtype=wave_rec.dtype)
  *                 for band in range(self._nbands):             # <<<<<<<<<<<<<<
@@ -26033,7 +26031,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
             }
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-            /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1074
+            /* "vaspwfc.pyx":1074
  *             rec.tofile(new_wc)
  *             wave_rec = np.zeros(new_nplws, dtype=self.setWFPrec())
  *             for spin in range(self._nspin):             # <<<<<<<<<<<<<<
@@ -26043,7 +26041,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
           }
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1058
+          /* "vaspwfc.pyx":1058
  *         assert self._lgam
  * 
  *         with open(out, "w") as new_wc:             # <<<<<<<<<<<<<<
@@ -26065,7 +26063,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
         /*except:*/ {
-          __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.write_std_wavecar", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("vaspwfc.vaspwfc.write_std_wavecar", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_5, &__pyx_t_18) < 0) __PYX_ERR(0, 1058, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_GOTREF(__pyx_t_5);
@@ -26128,7 +26126,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
     __pyx_L21:;
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1054
+  /* "vaspwfc.pyx":1054
  *         return ElectronLocalizationFunction
  * 
  *     def write_std_wavecar(self, out="WAVECAR_std"):             # <<<<<<<<<<<<<<
@@ -26148,7 +26146,7 @@ static PyObject *__pyx_pf_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_36wri
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_17);
   __Pyx_XDECREF(__pyx_t_18);
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc.vaspwfc.write_std_wavecar", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc.vaspwfc.write_std_wavecar", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_new_wc);
@@ -41916,7 +41914,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "VaspBandUnfolding.cythonize.vaspwfc.array", /*tp_name*/
+  "vaspwfc.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -42027,7 +42025,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "VaspBandUnfolding.cythonize.vaspwfc.Enum", /*tp_name*/
+  "vaspwfc.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -42280,7 +42278,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "VaspBandUnfolding.cythonize.vaspwfc.memoryview", /*tp_name*/
+  "vaspwfc.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -42410,7 +42408,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "VaspBandUnfolding.cythonize.vaspwfc._memoryviewslice", /*tp_name*/
+  "vaspwfc._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -42492,24 +42490,22 @@ static int __pyx_import_star_set(PyObject *o, PyObject* py_name, char *name) {
     "__Pyx_memviewslice",
     "__pyx_atomic_int",
     "__pyx_buffer",
-    "__pyx_ctuple_3d6ab____dunderpyx_t_5numpy_int_t__and___dunderpyx_t_5numpy_int_t__and___dunderpyx_t_5numpy_int_t__etc",
-    "__pyx_ctuple_3d6ab____dunderpyx_t_5numpy_int_t__and___dunderpyx_t_5numpy_int_t__and___dunderpyx_t_5numpy_int_t__etc_struct",
+    "__pyx_ctuple_64672____dunderpyx_t_5numpy_int_t__and___dunderpyx_t_5numpy_int_t__and___dunderpyx_t_5numpy_int_t__etc",
+    "__pyx_ctuple_64672____dunderpyx_t_5numpy_int_t__and___dunderpyx_t_5numpy_int_t__and___dunderpyx_t_5numpy_int_t__etc_struct",
     "__pyx_ctuple_Py_ssize_t",
     "__pyx_ctuple_Py_ssize_t_struct",
     "__pyx_ctuple___dunderpyx_ctuple_int__dunderand_long",
     "__pyx_ctuple___dunderpyx_ctuple_int__dunderand_long_struct",
     "__pyx_ctuple___dunderpyx_ctuple_long__dunderand_long",
     "__pyx_ctuple___dunderpyx_ctuple_long__dunderand_long_struct",
-    "__pyx_ctuple___dunderpyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t",
-    "__pyx_ctuple___dunderpyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t_struct",
     "__pyx_ctuple___dunderpyx_t_5numpy_int_t",
     "__pyx_ctuple___dunderpyx_t_5numpy_int_t_struct",
+    "__pyx_ctuple___dunderpyx_t_7vaspwfc_int_t",
+    "__pyx_ctuple___dunderpyx_t_7vaspwfc_int_t_struct",
     "__pyx_ctuple_char__ptr",
     "__pyx_ctuple_char__ptr_struct",
     "__pyx_ctuple_double",
     "__pyx_ctuple_double_struct",
-    "__pyx_ctuple_ed249__long__and___dunderpyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t__etc",
-    "__pyx_ctuple_ed249__long__and___dunderpyx_t_17VaspBandUnfolding_9cythonize_7vaspwfc_int_t__etc_struct",
     "__pyx_ctuple_int",
     "__pyx_ctuple_int__and_Py_ssize_t",
     "__pyx_ctuple_int__and_Py_ssize_t__and_Py_ssize_t",
@@ -42519,6 +42515,8 @@ static int __pyx_import_star_set(PyObject *o, PyObject* py_name, char *name) {
     "__pyx_ctuple_int__and_long_struct",
     "__pyx_ctuple_int_struct",
     "__pyx_ctuple_long",
+    "__pyx_ctuple_long__and___dunderpyx_t_7vaspwfc_int_t",
+    "__pyx_ctuple_long__and___dunderpyx_t_7vaspwfc_int_t_struct",
     "__pyx_ctuple_long__and_long",
     "__pyx_ctuple_long__and_long__and_long",
     "__pyx_ctuple_long__and_long__and_long_struct",
@@ -42582,7 +42580,7 @@ static int __pyx_import_star_set(PyObject *o, PyObject* py_name, char *name) {
   }
   return 0;
   __pyx_L2_error:;
-  __Pyx_AddTraceback("VaspBandUnfolding.cythonize.vaspwfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vaspwfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   bad:
   return -1;
 }
@@ -42830,7 +42828,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_V_r, __pyx_k_V_r, sizeof(__pyx_k_V_r), 0, 0, 1, 1},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
   {&__pyx_kp_s_VaspBandUnfolding_cythonize_vasp, __pyx_k_VaspBandUnfolding_cythonize_vasp, sizeof(__pyx_k_VaspBandUnfolding_cythonize_vasp), 0, 0, 1, 0},
-  {&__pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_k_VaspBandUnfolding_cythonize_vasp_2, sizeof(__pyx_k_VaspBandUnfolding_cythonize_vasp_2), 0, 0, 1, 1},
   {&__pyx_n_s_View_MemoryView, __pyx_k_View_MemoryView, sizeof(__pyx_k_View_MemoryView), 0, 0, 1, 1},
   {&__pyx_n_s_WAVECAR, __pyx_k_WAVECAR, sizeof(__pyx_k_WAVECAR), 0, 0, 1, 1},
   {&__pyx_n_s_WAVECAR_std, __pyx_k_WAVECAR_std, sizeof(__pyx_k_WAVECAR_std), 0, 0, 1, 1},
@@ -43000,7 +42997,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_lsoc, __pyx_k_lsoc, sizeof(__pyx_k_lsoc), 0, 0, 1, 1},
   {&__pyx_n_s_lsorbit, __pyx_k_lsorbit, sizeof(__pyx_k_lsorbit), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
-  {&__pyx_n_s_math, __pyx_k_math, sizeof(__pyx_k_math), 0, 0, 1, 1},
   {&__pyx_n_s_max, __pyx_k_max, sizeof(__pyx_k_max), 0, 0, 1, 1},
   {&__pyx_n_s_memview, __pyx_k_memview, sizeof(__pyx_k_memview), 0, 0, 1, 1},
   {&__pyx_n_s_meshgrid, __pyx_k_meshgrid, sizeof(__pyx_k_meshgrid), 0, 0, 1, 1},
@@ -43139,6 +43135,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_struct, __pyx_k_struct, sizeof(__pyx_k_struct), 0, 0, 1, 1},
   {&__pyx_n_s_sum, __pyx_k_sum, sizeof(__pyx_k_sum), 0, 0, 1, 1},
   {&__pyx_n_s_swapaxes, __pyx_k_swapaxes, sizeof(__pyx_k_swapaxes), 0, 0, 1, 1},
+  {&__pyx_n_s_sys, __pyx_k_sys, sizeof(__pyx_k_sys), 0, 0, 1, 1},
   {&__pyx_n_s_tau, __pyx_k_tau, sizeof(__pyx_k_tau), 0, 0, 1, 1},
   {&__pyx_n_s_tdm, __pyx_k_tdm, sizeof(__pyx_k_tdm), 0, 0, 1, 1},
   {&__pyx_n_s_tensordot, __pyx_k_tensordot, sizeof(__pyx_k_tensordot), 0, 0, 1, 1},
@@ -43219,7 +43216,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":46
+  /* "vaspwfc.pyx":46
  *     psi_r = psi[nrow * ncol:]
  * 
  *     with open(prefix + '_r.vasp', 'w') as out:             # <<<<<<<<<<<<<<
@@ -43230,7 +43227,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":73
+  /* "vaspwfc.pyx":73
  * @cython.boundscheck(False)
  * @cython.cdivision(True)
  * def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid):             # <<<<<<<<<<<<<<
@@ -43244,7 +43241,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":222
+  /* "vaspwfc.pyx":222
  *         self._encut = dump[2]                          # Energy cutoff
  *         # real space supercell basis
  *         self._Acell = dump[3:].reshape((3, 3))             # <<<<<<<<<<<<<<
@@ -43258,7 +43255,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":246
+  /* "vaspwfc.pyx":246
  *             return np.complex128
  *         elif self._rtag == 53300:
  *             raise ValueError("VASP5 WAVECAR format, not implemented yet")             # <<<<<<<<<<<<<<
@@ -43269,7 +43266,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":273
+  /* "vaspwfc.pyx":273
  *                 if ii == 0:
  *                     self._nplws[jj] = int(dump[0])
  *                     self._kvecs[jj] = dump[1:4]             # <<<<<<<<<<<<<<
@@ -43280,7 +43277,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__20);
   __Pyx_GIVEREF(__pyx_slice__20);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":274
+  /* "vaspwfc.pyx":274
  *                     self._nplws[jj] = int(dump[0])
  *                     self._kvecs[jj] = dump[1:4]
  *                 dump = dump[4:].reshape((-1, 3))             # <<<<<<<<<<<<<<
@@ -43294,7 +43291,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":275
+  /* "vaspwfc.pyx":275
  *                     self._kvecs[jj] = dump[1:4]
  *                 dump = dump[4:].reshape((-1, 3))
  *                 self._bands[ii, jj, :] = dump[:, 0]             # <<<<<<<<<<<<<<
@@ -43308,7 +43305,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":276
+  /* "vaspwfc.pyx":276
  *                 dump = dump[4:].reshape((-1, 3))
  *                 self._bands[ii, jj, :] = dump[:, 0]
  *                 self._occs[ii, jj, :] = dump[:, 2]             # <<<<<<<<<<<<<<
@@ -43319,7 +43316,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":299
+  /* "vaspwfc.pyx":299
  *                     nkseg = int(kfile[1].split()[0])
  *                 else:
  *                     raise ValueError(             # <<<<<<<<<<<<<<
@@ -43330,7 +43327,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":501
+  /* "vaspwfc.pyx":501
  *         else:
  *             ngrid = np.array(ngrid, dtype=int)
  *             assert ngrid.shape == (3,)             # <<<<<<<<<<<<<<
@@ -43341,7 +43338,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":540
+  /* "vaspwfc.pyx":540
  * 
  *             # spinor up
  *             phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]] = dump[:nplw]             # <<<<<<<<<<<<<<
@@ -43352,7 +43349,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":543
+  /* "vaspwfc.pyx":543
  *             wfc_spinor.append(ifftn(phi_k) * normFac)
  *             # spinor down
  *             phi_k[:, :, :] = 0.0j             # <<<<<<<<<<<<<<
@@ -43363,7 +43360,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":571
+  /* "vaspwfc.pyx":571
  * 
  *                     phi_k /= np.sqrt(2.)
  *                     phi_k[0, 0, 0] *= np.sqrt(2.)             # <<<<<<<<<<<<<<
@@ -43374,7 +43371,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__34);
   __Pyx_GIVEREF(__pyx_tuple__34);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":651
+  /* "vaspwfc.pyx":651
  *         # plane-waves: Cartesian coordinate
  *         Gx, Gy, Gz = np.tensordot(
  *             self._Bcell * np.pi * 2, [Dx, Dy, Dz], axes=(0, 0))             # <<<<<<<<<<<<<<
@@ -43385,7 +43382,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":938
+  /* "vaspwfc.pyx":938
  *                 # for gamma-only version, complete the missing -G vectors
  *                 if self._lgam:
  *                     tmp = np.array([-k for k in igvec[1:]], dtype=int)             # <<<<<<<<<<<<<<
@@ -43396,7 +43393,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__43);
   __Pyx_GIVEREF(__pyx_slice__43);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1067
+  /* "vaspwfc.pyx":1067
  *             # header line
  *             rec = np.zeros(nfloat, dtype=np.float64)
  *             rec[0:3] = new_rec_size,self._nspin,self._rtag             # <<<<<<<<<<<<<<
@@ -43407,7 +43404,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__45);
   __Pyx_GIVEREF(__pyx_slice__45);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1071
+  /* "vaspwfc.pyx":1071
  *             # header line 2
  *             rec[0:3] = self._nkpts,self._nbands,self._encut
  *             rec[3:3+9] = self._Acell.reshape((1, -1))             # <<<<<<<<<<<<<<
@@ -43421,7 +43418,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__47);
   __Pyx_GIVEREF(__pyx_slice__47);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1089
+  /* "vaspwfc.pyx":1089
  *                     ordered_grid = ngrid
  *                 else:
  *                     raise ValueError("Gamma reduction direction must be z or x")             # <<<<<<<<<<<<<<
@@ -43690,7 +43687,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__72);
   __Pyx_GIVEREF(__pyx_tuple__72);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":18
+  /* "vaspwfc.pyx":18
  * 
  * 
  * def save2vesta(phi=None, poscar='POSCAR', prefix='wfc',             # <<<<<<<<<<<<<<
@@ -43702,7 +43699,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__75);
   __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(6, 0, 21, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__75, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VaspBandUnfolding_cythonize_vasp, __pyx_n_s_save2vesta, 18, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 18, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":73
+  /* "vaspwfc.pyx":73
  * @cython.boundscheck(False)
  * @cython.cdivision(True)
  * def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid):             # <<<<<<<<<<<<<<
@@ -43714,7 +43711,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__76);
   __pyx_codeobj__77 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__76, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VaspBandUnfolding_cythonize_vasp, __pyx_n_s_expand_wfc, 73, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__77)) __PYX_ERR(0, 73, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":113
+  /* "vaspwfc.pyx":113
  * ############################################################
  * 
  * class vaspwfc(object):             # <<<<<<<<<<<<<<
@@ -43725,7 +43722,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__78);
   __Pyx_GIVEREF(__pyx_tuple__78);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":141
+  /* "vaspwfc.pyx":141
  *     '''
  * 
  *     def __init__(self, fnm='WAVECAR', lsorbit=False, lgamma=False,             # <<<<<<<<<<<<<<
@@ -43740,7 +43737,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__80);
   __Pyx_GIVEREF(__pyx_tuple__80);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":178
+  /* "vaspwfc.pyx":178
  *             assert self._nspin == 1, "NSPIN = 1 for noncollinear version WAVECAR!"
  * 
  *     def set_omp_num_threads(self, nproc):             # <<<<<<<<<<<<<<
@@ -43752,7 +43749,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__81);
   __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__81, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VaspBandUnfolding_cythonize_vasp, __pyx_n_s_set_omp_num_threads, 178, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 178, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":186
+  /* "vaspwfc.pyx":186
  *         os.envrion['OMP_NUM_THREADS'] = str(nproc)
  * 
  *     def isSocWfc(self):             # <<<<<<<<<<<<<<
@@ -43764,7 +43761,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__82);
   __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__82, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VaspBandUnfolding_cythonize_vasp, __pyx_n_s_isSocWfc, 186, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 186, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":192
+  /* "vaspwfc.pyx":192
  *         return True if self._lsoc else False
  * 
  *     def isGammaWfc(self):             # <<<<<<<<<<<<<<
@@ -43776,7 +43773,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__83);
   __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__83, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VaspBandUnfolding_cythonize_vasp, __pyx_n_s_isGammaWfc, 192, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 192, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":198
+  /* "vaspwfc.pyx":198
  *         return True if self._lgam else False
  * 
  *     def readWFHeader(self):             # <<<<<<<<<<<<<<
@@ -43788,7 +43785,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__84);
   __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__84, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VaspBandUnfolding_cythonize_vasp, __pyx_n_s_readWFHeader, 198, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 198, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":235
+  /* "vaspwfc.pyx":235
  *         self._ngrid = np.array(2 * CUTOF + 1, dtype=int)
  * 
  *     def setWFPrec(self):             # <<<<<<<<<<<<<<
@@ -43800,7 +43797,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__85);
   __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__85, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VaspBandUnfolding_cythonize_vasp, __pyx_n_s_setWFPrec, 235, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 235, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":253
+  /* "vaspwfc.pyx":253
  *             raise ValueError("Invalid TAG values: {}".format(self._rtag))
  * 
  *     def readWFBand(self):             # <<<<<<<<<<<<<<
@@ -43812,7 +43809,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__86);
   __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__86, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VaspBandUnfolding_cythonize_vasp, __pyx_n_s_readWFBand, 253, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 253, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":286
+  /* "vaspwfc.pyx":286
  *         return self._kpath, self._bands
  * 
  *     def get_kpath(self, nkseg=None):             # <<<<<<<<<<<<<<
@@ -43827,7 +43824,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__88);
   __Pyx_GIVEREF(__pyx_tuple__88);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":325
+  /* "vaspwfc.pyx":325
  *     @cython.wraparound(False)
  *     @cython.cdivision(True)
  *     def gvectors(self, ikpt=1, force_Gamma=None, check_consistency=True):             # <<<<<<<<<<<<<<
@@ -43842,7 +43839,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__90);
   __Pyx_GIVEREF(__pyx_tuple__90);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":426
+  /* "vaspwfc.pyx":426
  *         return np.asarray(Gvec, dtype=int)
  * 
  *     def save2vesta(self, phi=None, lreal=False, poscar='POSCAR', prefix='wfc',             # <<<<<<<<<<<<<<
@@ -43857,7 +43854,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__92);
   __Pyx_GIVEREF(__pyx_tuple__92);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":470
+  /* "vaspwfc.pyx":470
  *                 out.write("\n" + ''.join([fmt % xx for xx in psi_r.imag]))
  * 
  *     def wfc_r(self, ispin=1, ikpt=1, iband=1,             # <<<<<<<<<<<<<<
@@ -43872,7 +43869,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__94);
   __Pyx_GIVEREF(__pyx_tuple__94);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":594
+  /* "vaspwfc.pyx":594
  *                 return ifftn(phi_k * normFac)
  * 
  *     def poisson(self, rho=None, iband=1, ikpt=1, ispin=1, ngrid=None, norm=False):             # <<<<<<<<<<<<<<
@@ -43887,7 +43884,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__96);
   __Pyx_GIVEREF(__pyx_tuple__96);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":676
+  /* "vaspwfc.pyx":676
  *         return rho, V_r, E_x, E_y, E_z
  * 
  *     def readBandCoeff(self, ispin=1, ikpt=1, iband=1, norm=False):             # <<<<<<<<<<<<<<
@@ -43902,7 +43899,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__98);
   __Pyx_GIVEREF(__pyx_tuple__98);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":694
+  /* "vaspwfc.pyx":694
  *         return cg
  * 
  *     def whereRec(self, ispin=1, ikpt=1, iband=1):             # <<<<<<<<<<<<<<
@@ -43917,7 +43914,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__100);
   __Pyx_GIVEREF(__pyx_tuple__100);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":706
+  /* "vaspwfc.pyx":706
  *         return rec
  * 
  *     def checkIndex(self, ispin, ikpt, iband):             # <<<<<<<<<<<<<<
@@ -43929,7 +43926,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__101);
   __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(4, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__101, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_VaspBandUnfolding_cythonize_vasp, __pyx_n_s_checkIndex, 706, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 706, __pyx_L1_error)
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":714
+  /* "vaspwfc.pyx":714
  *         assert 1 <= iband <= self._nbands, 'Invalid band index!'
  * 
  *     def TransitionDipoleMoment(self, ks_i, ks_j, norm=True,             # <<<<<<<<<<<<<<
@@ -43944,7 +43941,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__103);
   __Pyx_GIVEREF(__pyx_tuple__103);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":795
+  /* "vaspwfc.pyx":795
  *         return E1, E2, dE, ovlap, tdm
  * 
  *     def inverse_participation_ratio(self, norm=True):             # <<<<<<<<<<<<<<
@@ -43959,7 +43956,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__105);
   __Pyx_GIVEREF(__pyx_tuple__105);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":829
+  /* "vaspwfc.pyx":829
  *         return self.ipr
  * 
  *     def elf(self, kptw, ngrid=None, warn=True):             # <<<<<<<<<<<<<<
@@ -43974,7 +43971,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__107);
   __Pyx_GIVEREF(__pyx_tuple__107);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1054
+  /* "vaspwfc.pyx":1054
  *         return ElectronLocalizationFunction
  * 
  *     def write_std_wavecar(self, out="WAVECAR_std"):             # <<<<<<<<<<<<<<
@@ -43989,7 +43986,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__109);
   __Pyx_GIVEREF(__pyx_tuple__109);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1174
+  /* "vaspwfc.pyx":1174
  *     # plt.show()
  * 
  *     wfc = vaspwfc('WAVECAR', lgamma=True, gamma_half='x')             # <<<<<<<<<<<<<<
@@ -44433,14 +44430,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_VaspBandUnfolding__cythonize__vaspwfc) {
+  if (__pyx_module_is_main_vaspwfc) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "VaspBandUnfolding.cythonize.vaspwfc")) {
-      if (unlikely(PyDict_SetItemString(modules, "VaspBandUnfolding.cythonize.vaspwfc", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "vaspwfc")) {
+      if (unlikely(PyDict_SetItemString(modules, "vaspwfc", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -44462,165 +44459,156 @@ if (!__Pyx_RefNanny) {
   #endif
   __Pyx_TraceCall("__Pyx_PyMODINIT_FUNC PyInit_vaspwfc(void)", __pyx_f[0], 1, 0, __PYX_ERR(0, 1, __pyx_L1_error));
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":6
+  /* "vaspwfc.pyx":6
  * # cython: profile=True
  * 
+ * import sys             # <<<<<<<<<<<<<<
+ * import os
+ * import numpy as np
+ */
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_sys, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sys, __pyx_t_1) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "vaspwfc.pyx":7
+ * 
+ * import sys
  * import os             # <<<<<<<<<<<<<<
  * import numpy as np
  * cimport numpy as cnp
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_os, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_os, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_os, __pyx_t_1) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_os, __pyx_t_1) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":7
- * 
+  /* "vaspwfc.pyx":8
+ * import sys
  * import os
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as cnp
- * from math import sqrt
+ * from vasp_constant import *
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":9
+  /* "vaspwfc.pyx":10
  * import numpy as np
  * cimport numpy as cnp
- * from math import sqrt             # <<<<<<<<<<<<<<
- * from vasp_constant import *
- * from multiprocessing import cpu_count
- */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_n_s_sqrt);
-  __Pyx_GIVEREF(__pyx_n_s_sqrt);
-  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_sqrt);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_math, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 9, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sqrt, __pyx_t_1) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":10
- * cimport numpy as cnp
- * from math import sqrt
  * from vasp_constant import *             # <<<<<<<<<<<<<<
  * from multiprocessing import cpu_count
  * from scipy.fftpack import fftfreq, fftn, ifftn
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s__74);
   __Pyx_GIVEREF(__pyx_n_s__74);
-  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s__74);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_vasp_constant, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__pyx_import_star(__pyx_t_1) < 0) __PYX_ERR(0, 10, __pyx_L1_error);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s__74);
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_vasp_constant, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (__pyx_import_star(__pyx_t_2) < 0) __PYX_ERR(0, 10, __pyx_L1_error);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":11
- * from math import sqrt
+  /* "vaspwfc.pyx":11
+ * cimport numpy as cnp
  * from vasp_constant import *
  * from multiprocessing import cpu_count             # <<<<<<<<<<<<<<
  * from scipy.fftpack import fftfreq, fftn, ifftn
  * 
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_cpu_count);
   __Pyx_GIVEREF(__pyx_n_s_cpu_count);
-  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_cpu_count);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_multiprocessing, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_cpu_count); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
+  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_cpu_count);
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_multiprocessing, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_cpu_count, __pyx_t_1) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_cpu_count); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_cpu_count, __pyx_t_2) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":12
+  /* "vaspwfc.pyx":12
  * from vasp_constant import *
  * from multiprocessing import cpu_count
  * from scipy.fftpack import fftfreq, fftn, ifftn             # <<<<<<<<<<<<<<
  * 
  * import cython
  */
-  __pyx_t_2 = PyList_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = PyList_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_fftfreq);
   __Pyx_GIVEREF(__pyx_n_s_fftfreq);
-  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_fftfreq);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_fftfreq);
   __Pyx_INCREF(__pyx_n_s_fftn);
   __Pyx_GIVEREF(__pyx_n_s_fftn);
-  PyList_SET_ITEM(__pyx_t_2, 1, __pyx_n_s_fftn);
+  PyList_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_fftn);
   __Pyx_INCREF(__pyx_n_s_ifftn);
   __Pyx_GIVEREF(__pyx_n_s_ifftn);
-  PyList_SET_ITEM(__pyx_t_2, 2, __pyx_n_s_ifftn);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_scipy_fftpack, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_fftfreq); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
+  PyList_SET_ITEM(__pyx_t_1, 2, __pyx_n_s_ifftn);
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_scipy_fftpack, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fftfreq, __pyx_t_2) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_fftn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fftn, __pyx_t_2) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_ifftn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ifftn, __pyx_t_2) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_fftfreq); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fftfreq, __pyx_t_1) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_fftn); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fftn, __pyx_t_1) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_ifftn); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ifftn, __pyx_t_1) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":18
+  /* "vaspwfc.pyx":18
  * 
  * 
  * def save2vesta(phi=None, poscar='POSCAR', prefix='wfc',             # <<<<<<<<<<<<<<
  *                lgam=False, lreal=False, ncol=10):
  *     '''
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_1save2vesta, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_save2vesta, __pyx_t_1) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7vaspwfc_1save2vesta, NULL, __pyx_n_s_vaspwfc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_save2vesta, __pyx_t_2) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":73
+  /* "vaspwfc.pyx":73
  * @cython.boundscheck(False)
  * @cython.cdivision(True)
  * def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid):             # <<<<<<<<<<<<<<
  *     cdef int ii,jj,kk, ii_inv, jj_inv, kk_inv
  * 
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = __pyx_FusedFunction_NewEx(&__pyx_fuse_0__pyx_mdef_7vaspwfc_5expand_wfc, 0, __pyx_n_s_expand_wfc, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__77)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_FusedFunction_NewEx(&__pyx_fuse_0__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_5expand_wfc, 0, __pyx_n_s_expand_wfc, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__77)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_s_ndarray_float_complex_ndim_3, __pyx_t_2) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_NewEx(&__pyx_fuse_1__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7expand_wfc, 0, __pyx_n_s_expand_wfc, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__77)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_s_ndarray_double_complex_ndim_3, __pyx_t_2) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_3expand_wfc, 0, __pyx_n_s_expand_wfc, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__77)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
-  ((__pyx_FusedFunctionObject *) __pyx_t_2)->__signatures__ = __pyx_t_1;
-  __Pyx_GIVEREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_expand_wfc, __pyx_t_2) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_s_ndarray_float_complex_ndim_3, __pyx_t_1) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __pyx_FusedFunction_NewEx(&__pyx_fuse_1__pyx_mdef_7vaspwfc_7expand_wfc, 0, __pyx_n_s_expand_wfc, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__77)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_s_ndarray_double_complex_ndim_3, __pyx_t_1) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __pyx_FusedFunction_NewEx(&__pyx_mdef_7vaspwfc_3expand_wfc, 0, __pyx_n_s_expand_wfc, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__77)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
+  ((__pyx_FusedFunctionObject *) __pyx_t_1)->__signatures__ = __pyx_t_2;
+  __Pyx_GIVEREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_expand_wfc, __pyx_t_1) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":113
+  /* "vaspwfc.pyx":113
  * ############################################################
  * 
  * class vaspwfc(object):             # <<<<<<<<<<<<<<
@@ -44629,250 +44617,250 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_3 = __Pyx_CalculateMetaclass(NULL, __pyx_tuple__78); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Py3MetaclassPrepare(__pyx_t_3, __pyx_tuple__78, __pyx_n_s_vaspwfc, __pyx_n_s_vaspwfc, (PyObject *) NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_kp_s_Class_for_processing_VASP_Pseud); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3MetaclassPrepare(__pyx_t_3, __pyx_tuple__78, __pyx_n_s_vaspwfc, __pyx_n_s_vaspwfc, (PyObject *) NULL, __pyx_n_s_vaspwfc, __pyx_kp_s_Class_for_processing_VASP_Pseud); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":141
+  /* "vaspwfc.pyx":141
  *     '''
  * 
  *     def __init__(self, fnm='WAVECAR', lsorbit=False, lgamma=False,             # <<<<<<<<<<<<<<
  *                  gamma_half='z', omp_num_threads=1):
  *         '''
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_1__init__, 0, __pyx_n_s_vaspwfc___init, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_1__init__, 0, __pyx_n_s_vaspwfc___init, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__80);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_init, __pyx_t_5) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":178
+  /* "vaspwfc.pyx":178
  *             assert self._nspin == 1, "NSPIN = 1 for noncollinear version WAVECAR!"
  * 
  *     def set_omp_num_threads(self, nproc):             # <<<<<<<<<<<<<<
  *         '''
  *         Set the OMP_NUM_THREADS envrionment variable
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_3set_omp_num_threads, 0, __pyx_n_s_vaspwfc_set_omp_num_threads, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__11)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_3set_omp_num_threads, 0, __pyx_n_s_vaspwfc_set_omp_num_threads, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__11)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_set_omp_num_threads, __pyx_t_5) < 0) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":186
+  /* "vaspwfc.pyx":186
  *         os.envrion['OMP_NUM_THREADS'] = str(nproc)
  * 
  *     def isSocWfc(self):             # <<<<<<<<<<<<<<
  *         """
  *         Is the WAVECAR from an SOC calculation?
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_5isSocWfc, 0, __pyx_n_s_vaspwfc_isSocWfc, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__12)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 186, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_5isSocWfc, 0, __pyx_n_s_vaspwfc_isSocWfc, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__12)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 186, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_isSocWfc, __pyx_t_5) < 0) __PYX_ERR(0, 186, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":192
+  /* "vaspwfc.pyx":192
  *         return True if self._lsoc else False
  * 
  *     def isGammaWfc(self):             # <<<<<<<<<<<<<<
  *         """
  *         Is the WAVECAR from an SOC calculation?
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_7isGammaWfc, 0, __pyx_n_s_vaspwfc_isGammaWfc, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_7isGammaWfc, 0, __pyx_n_s_vaspwfc_isGammaWfc, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_isGammaWfc, __pyx_t_5) < 0) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":198
+  /* "vaspwfc.pyx":198
  *         return True if self._lgam else False
  * 
  *     def readWFHeader(self):             # <<<<<<<<<<<<<<
  *         '''
  *         Read the system information from WAVECAR, which is written in the first
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_9readWFHeader, 0, __pyx_n_s_vaspwfc_readWFHeader, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__14)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_9readWFHeader, 0, __pyx_n_s_vaspwfc_readWFHeader, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__14)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_readWFHeader, __pyx_t_5) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":235
+  /* "vaspwfc.pyx":235
  *         self._ngrid = np.array(2 * CUTOF + 1, dtype=int)
  * 
  *     def setWFPrec(self):             # <<<<<<<<<<<<<<
  *         '''
  *         Set wavefunction coefficients precision:
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_11setWFPrec, 0, __pyx_n_s_vaspwfc_setWFPrec, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_11setWFPrec, 0, __pyx_n_s_vaspwfc_setWFPrec, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_setWFPrec, __pyx_t_5) < 0) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":253
+  /* "vaspwfc.pyx":253
  *             raise ValueError("Invalid TAG values: {}".format(self._rtag))
  * 
  *     def readWFBand(self):             # <<<<<<<<<<<<<<
  *         '''
  *         Extract KS energies and Fermi occupations from WAVECAR.
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_13readWFBand, 0, __pyx_n_s_vaspwfc_readWFBand, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 253, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_13readWFBand, 0, __pyx_n_s_vaspwfc_readWFBand, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 253, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_readWFBand, __pyx_t_5) < 0) __PYX_ERR(0, 253, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":286
+  /* "vaspwfc.pyx":286
  *         return self._kpath, self._bands
  * 
  *     def get_kpath(self, nkseg=None):             # <<<<<<<<<<<<<<
  *         '''
  *         Construct k-point path, find out the k-path boundary if possible.
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_15get_kpath, 0, __pyx_n_s_vaspwfc_get_kpath, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 286, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_15get_kpath, 0, __pyx_n_s_vaspwfc_get_kpath, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__88);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_get_kpath, __pyx_t_5) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":325
+  /* "vaspwfc.pyx":325
  *     @cython.wraparound(False)
  *     @cython.cdivision(True)
  *     def gvectors(self, ikpt=1, force_Gamma=None, check_consistency=True):             # <<<<<<<<<<<<<<
  *         '''
  *         Generate the G-vectors that satisfies the following relation
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_17gvectors, 0, __pyx_n_s_vaspwfc_gvectors, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 325, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_17gvectors, 0, __pyx_n_s_vaspwfc_gvectors, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 325, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__90);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_gvectors, __pyx_t_5) < 0) __PYX_ERR(0, 325, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":426
+  /* "vaspwfc.pyx":426
  *         return np.asarray(Gvec, dtype=int)
  * 
  *     def save2vesta(self, phi=None, lreal=False, poscar='POSCAR', prefix='wfc',             # <<<<<<<<<<<<<<
  *                    ncol=10):
  *         '''
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_19save2vesta, 0, __pyx_n_s_vaspwfc_save2vesta, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 426, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_19save2vesta, 0, __pyx_n_s_vaspwfc_save2vesta, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 426, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__92);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_save2vesta, __pyx_t_5) < 0) __PYX_ERR(0, 426, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":470
+  /* "vaspwfc.pyx":470
  *                 out.write("\n" + ''.join([fmt % xx for xx in psi_r.imag]))
  * 
  *     def wfc_r(self, ispin=1, ikpt=1, iband=1,             # <<<<<<<<<<<<<<
  *               gvec=None, Cg=None, ngrid=None,
  *               rescale=None,
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_21wfc_r, 0, __pyx_n_s_vaspwfc_wfc_r, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_21wfc_r, 0, __pyx_n_s_vaspwfc_wfc_r, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 470, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__94);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_wfc_r, __pyx_t_5) < 0) __PYX_ERR(0, 470, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":594
+  /* "vaspwfc.pyx":594
  *                 return ifftn(phi_k * normFac)
  * 
  *     def poisson(self, rho=None, iband=1, ikpt=1, ispin=1, ngrid=None, norm=False):             # <<<<<<<<<<<<<<
  *         """
  *         Given a charge density "rho", solve the Poisson equation with periodic
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_23poisson, 0, __pyx_n_s_vaspwfc_poisson, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__35)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 594, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_23poisson, 0, __pyx_n_s_vaspwfc_poisson, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__35)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 594, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__96);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_poisson, __pyx_t_5) < 0) __PYX_ERR(0, 594, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":676
+  /* "vaspwfc.pyx":676
  *         return rho, V_r, E_x, E_y, E_z
  * 
  *     def readBandCoeff(self, ispin=1, ikpt=1, iband=1, norm=False):             # <<<<<<<<<<<<<<
  *         '''
  *         Read the planewave coefficients of specified KS states.
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_25readBandCoeff, 0, __pyx_n_s_vaspwfc_readBandCoeff, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__37)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 676, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_25readBandCoeff, 0, __pyx_n_s_vaspwfc_readBandCoeff, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__37)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 676, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__98);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_readBandCoeff, __pyx_t_5) < 0) __PYX_ERR(0, 676, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":694
+  /* "vaspwfc.pyx":694
  *         return cg
  * 
  *     def whereRec(self, ispin=1, ikpt=1, iband=1):             # <<<<<<<<<<<<<<
  *         '''
  *         Return the rec position for specified KS state.
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_27whereRec, 0, __pyx_n_s_vaspwfc_whereRec, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 694, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_27whereRec, 0, __pyx_n_s_vaspwfc_whereRec, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__100);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_whereRec, __pyx_t_5) < 0) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":706
+  /* "vaspwfc.pyx":706
  *         return rec
  * 
  *     def checkIndex(self, ispin, ikpt, iband):             # <<<<<<<<<<<<<<
  *         '''
  *         Check if the index is valid!
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_29checkIndex, 0, __pyx_n_s_vaspwfc_checkIndex, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 706, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_29checkIndex, 0, __pyx_n_s_vaspwfc_checkIndex, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 706, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_checkIndex, __pyx_t_5) < 0) __PYX_ERR(0, 706, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":714
+  /* "vaspwfc.pyx":714
  *         assert 1 <= iband <= self._nbands, 'Invalid band index!'
  * 
  *     def TransitionDipoleMoment(self, ks_i, ks_j, norm=True,             # <<<<<<<<<<<<<<
  *                                realspace=False):
  *         '''
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_31TransitionDipoleMoment, 0, __pyx_n_s_vaspwfc_TransitionDipoleMoment, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 714, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_31TransitionDipoleMoment, 0, __pyx_n_s_vaspwfc_TransitionDipoleMoment, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 714, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__103);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_TransitionDipoleMoment, __pyx_t_5) < 0) __PYX_ERR(0, 714, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":795
+  /* "vaspwfc.pyx":795
  *         return E1, E2, dE, ovlap, tdm
  * 
  *     def inverse_participation_ratio(self, norm=True):             # <<<<<<<<<<<<<<
  *         '''
  *         Calculate Inverse Paticipation Ratio (IPR) from the wavefunction. IPR is
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_33inverse_participation_ratio, 0, __pyx_n_s_vaspwfc_inverse_participation_ra, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 795, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_33inverse_participation_ratio, 0, __pyx_n_s_vaspwfc_inverse_participation_ra, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 795, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__105);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_inverse_participation_ratio, __pyx_t_5) < 0) __PYX_ERR(0, 795, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":829
+  /* "vaspwfc.pyx":829
  *         return self.ipr
  * 
  *     def elf(self, kptw, ngrid=None, warn=True):             # <<<<<<<<<<<<<<
  *         '''
  *         Calculate the electron localization function (ELF) from WAVECAR.
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_35elf, 0, __pyx_n_s_vaspwfc_elf, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 829, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_35elf, 0, __pyx_n_s_vaspwfc_elf, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 829, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__107);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_elf, __pyx_t_5) < 0) __PYX_ERR(0, 829, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1054
+  /* "vaspwfc.pyx":1054
  *         return ElectronLocalizationFunction
  * 
  *     def write_std_wavecar(self, out="WAVECAR_std"):             # <<<<<<<<<<<<<<
  * 
  *         assert self._lgam
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_17VaspBandUnfolding_9cythonize_7vaspwfc_7vaspwfc_37write_std_wavecar, 0, __pyx_n_s_vaspwfc_write_std_wavecar, NULL, __pyx_n_s_VaspBandUnfolding_cythonize_vasp_2, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1054, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_7vaspwfc_7vaspwfc_37write_std_wavecar, 0, __pyx_n_s_vaspwfc_write_std_wavecar, NULL, __pyx_n_s_vaspwfc, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1054, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__109);
   if (__Pyx_SetNameInClass(__pyx_t_4, __pyx_n_s_write_std_wavecar, __pyx_t_5) < 0) __PYX_ERR(0, 1054, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":113
+  /* "vaspwfc.pyx":113
  * ############################################################
  * 
  * class vaspwfc(object):             # <<<<<<<<<<<<<<
@@ -44886,7 +44874,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1105
+  /* "vaspwfc.pyx":1105
  * 
  * 
  * if __name__ == '__main__':             # <<<<<<<<<<<<<<
@@ -44899,7 +44887,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_6) {
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1174
+    /* "vaspwfc.pyx":1174
  *     # plt.show()
  * 
  *     wfc = vaspwfc('WAVECAR', lgamma=True, gamma_half='x')             # <<<<<<<<<<<<<<
@@ -44919,7 +44907,7 @@ if (!__Pyx_RefNanny) {
     if (PyDict_SetItem(__pyx_d, __pyx_n_s_wfc, __pyx_t_5) < 0) __PYX_ERR(0, 1174, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1176
+    /* "vaspwfc.pyx":1176
  *     wfc = vaspwfc('WAVECAR', lgamma=True, gamma_half='x')
  *     # ngrid = [80, 140, 210]
  *     phi = wfc.wfc_r(iband=190)             # <<<<<<<<<<<<<<
@@ -44941,7 +44929,7 @@ if (!__Pyx_RefNanny) {
     if (PyDict_SetItem(__pyx_d, __pyx_n_s_phi, __pyx_t_3) < 0) __PYX_ERR(0, 1176, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1178
+    /* "vaspwfc.pyx":1178
  *     phi = wfc.wfc_r(iband=190)
  * 
  *     rho = np.abs(phi)**2             # <<<<<<<<<<<<<<
@@ -44965,7 +44953,7 @@ if (!__Pyx_RefNanny) {
     if (PyDict_SetItem(__pyx_d, __pyx_n_s_rho, __pyx_t_3) < 0) __PYX_ERR(0, 1178, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1184
+    /* "vaspwfc.pyx":1184
  *     # rho3 = rho - rho2
  * 
  *     wfc.save2vesta(rho, lreal=True)             # <<<<<<<<<<<<<<
@@ -44994,7 +44982,7 @@ if (!__Pyx_RefNanny) {
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1105
+    /* "vaspwfc.pyx":1105
  * 
  * 
  * if __name__ == '__main__':             # <<<<<<<<<<<<<<
@@ -45003,7 +44991,7 @@ if (!__Pyx_RefNanny) {
  */
   }
 
-  /* "VaspBandUnfolding/cythonize/vaspwfc.pyx":1
+  /* "vaspwfc.pyx":1
  * #!/usr/bin/env python             # <<<<<<<<<<<<<<
  * # -*- coding: utf-8 -*-
  * 
@@ -45179,11 +45167,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_7);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init VaspBandUnfolding.cythonize.vaspwfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init vaspwfc", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init VaspBandUnfolding.cythonize.vaspwfc");
+    PyErr_SetString(PyExc_ImportError, "init vaspwfc");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

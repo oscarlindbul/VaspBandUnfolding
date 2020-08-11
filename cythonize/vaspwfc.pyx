@@ -3,10 +3,10 @@
 
 # cython: profile=True
 
+import sys
 import os
 import numpy as np
 cimport numpy as cnp
-from math import sqrt
 from vasp_constant import *
 from multiprocessing import cpu_count
 from scipy.fftpack import fftfreq, fftn, ifftn
