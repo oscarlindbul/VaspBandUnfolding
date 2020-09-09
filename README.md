@@ -2,6 +2,10 @@
 
 This fork adds a function to translate gamma WAVECARs to standard WAVECARs.
 
+## How to build cythonized code
+
+Go into the folder "cythonize" and run the python "build.py" script.
+
 # PyVaspwfc
 
 This is a python class for dealing with `VASP` pseudo-wavefunction file `WAVECAR`.
