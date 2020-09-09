@@ -4,7 +4,7 @@ This fork adds a function to translate gamma WAVECARs to standard WAVECARs.
 
 ## How to build cythonized code
 
-Go into the folder "cythonize" and run the python "build.py" script.
+Go into the folder "cythonize" and run the py_combile script, e.g. cd "./cythonize; bash py_compile".
 
 # PyVaspwfc
 
