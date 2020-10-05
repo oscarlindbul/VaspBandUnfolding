@@ -1,2 +1,2 @@
 cd ../..
-python VaspBandUnfolding/cythonize/setup.py build_ext --inplace
+python VaspBandUnfolding/cythonize/setup.py build_ext --inplace --build-lib VaspBandUnfolding/cythonize
