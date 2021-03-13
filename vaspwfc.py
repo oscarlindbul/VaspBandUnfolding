@@ -88,7 +88,7 @@ class vaspwfc(object):
     '''
 
     def __init__(self, fnm='WAVECAR', lsorbit=False, lgamma=False,
-                 gamma_half='z', omp_num_threads=1):
+                 gamma_half='x', omp_num_threads=1):
         '''
         Initialization.
         '''
@@ -714,7 +714,53 @@ class vaspwfc(object):
 
         return E1, E2, dE, ovlap, tdm
 
-    def inverse_participation_ratio(self, norm=True):
+    def TransitionDipoleMomentBetweenDifferentWAVECAR(self, other, ks_i, ks_j, norm=False):
+        '''
+        calculate Transition Dipole Moment between two KS states.
+        TDM in momentum representation
+                                             ___              
+                                  i⋅h        ╲                
+        <psi_a| r | psi_b> =    --------- ⋅   ╲   Cai⋅Cbi⋅Gi
+                                 Eb - Ea      ╱               
+                                             ╱                
+                                             ‾‾‾              
+                                              i       
+        Note: |psi_a> and |psi_b> should be bloch function with 
+              the same k vector.
+
+        The KS states ks_i (ks_j) is specified by list of index (ispin, ikpt, iband).
+        '''
+        
+        ks_i = list(ks_i); ks_j = list(ks_j)
+        assert len(ks_i) == len(ks_j) == 3, 'Must be there indexes!'
+        assert ks_i[1] == ks_j[1], 'k-point of the two states differ!'
+        self.checkIndex(*ks_i)
+        self.checkIndex(*ks_j)
+
+        # according to the above equation, G = 0 does NOT contribute to TDM.
+        gvec = np.dot(self.gvectors(ikpt=ks_i[1]), self._Bcell*TPI)
+        # planewave coefficients of the two states
+        phi_i = self.readBandCoeff(*ks_i, norm=norm)
+        phi_j = other.readBandCoeff(*ks_j, norm=norm)
+        # energy differences between the two states
+        dE = other._bands[ks_j[0]-1, ks_j[1]-1, ks_j[2]-1] - \
+             self._bands[ks_i[0]-1, ks_i[1]-1, ks_i[2]-1]
+
+        tmp1 = phi_i.conjugate() * phi_j
+        ovlap = np.sum(tmp1)
+        if self._lgam:
+            tmp2 = phi_i * phi_j.conjugate()
+            tdm = (np.sum(tmp1[:,np.newaxis] * gvec, axis=0) -
+                   np.sum(tmp2[:,np.newaxis] * gvec, axis=0)) / 2.
+        else:
+            tdm = np.sum(tmp1[:,np.newaxis] * gvec, axis=0)
+
+        tdm = 1j / (dE / (2*RYTOEV)) * tdm * AUTOA * AUTDEBYE
+
+        return dE, ovlap, tdm
+	
+
+    def inverse_participation_ratio(self, norm=True, bands=None):
         '''
         Calculate Inverse Paticipation Ratio (IPR) from the wavefunction. IPR is
         a measure of the localization of Kohn-Sham states. For a particular KS
@@ -725,13 +771,22 @@ class vaspwfc(object):
                           |\sum_n |\phi_j(n)|^2||^2
 
         where n iters over the number of grid points.
+
+        bands = bands to calculate the IPR for (starting from index 1)
         '''
 
         self.ipr = np.zeros((self._nspin, self._nkpts, self._nbands, 3))
 
+        if bands is None:
+            bands = [i for i in range(self._nbands)]
+        else:
+            bands = [b - 1 for b in bands]
+            assert len(bands) != 0, "Given list of bands must not be empty"
+            assert min(bands) > 0, "Invalid band indices given (index starting from 1)"
+
         for ispin in range(self._nspin):
             for ikpt in range(self._nkpts):
-                for iband in range(self._nbands):
+                for iband in bands:
                     phi_j = self.wfc_r(ispin+1, ikpt+1, iband+1,
                                        norm=norm)
                     phi_j_abs = np.abs(phi_j)
