@@ -13,23 +13,25 @@ parser.add_argument("-occup", dest="occupation", default="occupation.ground", ty
 parser.add_argument("-spin1", dest="spin1", default="gamma.1.ground", type=str)
 parser.add_argument("-spin2", dest="spin2", default="gamma.2.ground", type=str)
 parser.add_argument("-WAV", dest="wav", default="", type=str)
+band_group = parser.add_mutually_exclusive_group()
 parser.add_argument("-range", dest="ipr_range", default=15, type=int)
 parser.add_argument("--gamma", dest="gamma", default=False, action="store_true")
-parser.add_argument("-center", dest="spin_center", default=None, type=int)
+band_group.add_argument("-center", dest="spin_center", default=None, type=int)
+band_group.add_argument("-bands", dest="bands", default=None, type=int, nargs="+", help="Manual specification of bands to calculate IPR")
+
 input = parser.parse_args()
 
-if input.ibzkpt == "":
-    input.ibzkpt = glob.glob("*IBZKPT*")[0]
-if input.outcar == "":
-    input.outcar = glob.glob("*OUTCAR*")[0]
+#if input.ibzkpt == "":
+#    input.ibzkpt = glob.glob("*IBZKPT*")[0]
+#if input.outcar == "":
+#    input.outcar = glob.glob("*OUTCAR*")[0]
 if input.wav == "":
     input.wav = glob.glob("*WAVECAR*")[0]
 
 # read files
-outcar=open(input.outcar,'r')
 wav = vaspwfc(input.wav, lgamma=input.gamma)
 
-if input.spin_center is None:
+if input.spin_center is None and input.bands is None:
 	occupation=open(input.occupation,'r')
 	spin_1=open(input.spin1,'r')
 	spin_2=open(input.spin2,'r')
@@ -55,14 +57,17 @@ if input.spin_center is None:
 			break
 
 	# close files
-	outcar.close()
 	occupation.close()
 	spin_1.close()
 	spin_2.close()
 else:
-	HOB_1 = input.spin_center
-	HOB_2 = input.spin_center
+	if input.spin_center is not None:
+		HOB_1 = input.spin_center
+		HOB_2 = input.spin_center
+		bands = [min(HOB_1,HOB_2) - b for b in range(-input.ipr_range,input.ipr_range+1)]
+	elif input.bands is not None:
+		bands = input.bands
+
 
 # find and save IPR
-bands = [min(HOB_1,HOB_2) - b for b in range(-input.ipr_range,input.ipr_range+1)]
 ipr = wav.inverse_participation_ratio(bands=bands)

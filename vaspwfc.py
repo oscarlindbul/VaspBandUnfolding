@@ -790,7 +790,7 @@ class vaspwfc(object):
         else:
             bands = [b - 1 for b in bands]
             assert len(bands) != 0, "Given list of bands must not be empty"
-            assert min(bands) > 0, "Invalid band indices given (index starting from 1)"
+            assert min(bands) >= 0, "Invalid band indices given (index starting from 1)"
 
         for ispin in range(self._nspin):
             for ikpt in range(self._nkpts):
