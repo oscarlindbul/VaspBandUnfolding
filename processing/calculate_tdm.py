@@ -11,7 +11,7 @@ import numpy as np
 parser = argparse.ArgumentParser("Calculates the tdm data between given WAVECARS and corresponding input files")
 parser.add_argument("from_wav", metavar="from_wav", help="initial state wavecar")
 parser.add_argument("to_wav", metavar="to_wav", help="end state wavecar")
-parser.add_argument("-bands", dest="bands", type=int, nargs="+", default=[1149, 1150, 1151, 1152, 1153, 1154, 1155], help="Bands to consider for transitions")
+parser.add_argument("-bands", dest="bands", type=int, nargs="+", default=None, help="Bands to consider for transitions")
 #parser.add_argument("-IBZ", dest="IBZKPT", default="IBZKPT", help="K-point structure file")
 parser.add_argument("-out", dest="out_name", default="tdm", help="Name of output file")
 parser.add_argument("--gamma", dest="gamma", default=False, action="store_true")
@@ -28,9 +28,6 @@ in_args = parser.parse_args()
 #kpoints=int(ibzkpt.readline())
 #ibzkpt.close()
 
-# get parchial charge bands
-parchg = in_args.bands
-
 # find wavecars
 from_wav_path = in_args.from_wav
 to_wav_path = in_args.to_wav
@@ -38,6 +35,16 @@ to_wav_path = in_args.to_wav
 # from ground to tag step
 from_wav = vaspwfc(from_wav_path, lgamma=in_args.gamma)
 to_wav = vaspwfc(to_wav_path, lgamma=in_args.gamma)
+
+# get parchial charge bands
+if in_args.bands is not None:
+	parchg = in_args.bands
+else:
+	HOB = from_wav.find_HOB()
+	HOB = max(HOB)
+	parchg = np.array([HOB - i for i in range(10, -11, -1)])
+	parchg = parchg[np.logical_and(parchg >= 1, parchg <= from_wav._nbands)]
+	
 
 # make output array to save dE, overlap and tdm
 output=np.empty((2,1,len(parchg),len(parchg),5),dtype=np.complex_)

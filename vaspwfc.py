@@ -144,6 +144,15 @@ class vaspwfc(object):
         """
         return True if self._lgam else False
 
+    def find_HOB(self, kpt=0):
+        HOB = [0]*2
+        for spin in range(2):
+            for i in range(self._nbands):
+                if self._occs[spin,kpt,i] == 0:
+                    HOB[spin] = i+1
+                    break
+        return HOB
+
     def readWFHeader(self):
         '''
         Read the system information from WAVECAR, which is written in the first
@@ -759,7 +768,6 @@ class vaspwfc(object):
 
         return dE, ovlap, tdm
 	
-
     def inverse_participation_ratio(self, norm=True, bands=None):
         '''
         Calculate Inverse Paticipation Ratio (IPR) from the wavefunction. IPR is

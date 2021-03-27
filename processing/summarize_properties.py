@@ -31,7 +31,7 @@ gamma_option = ""
 if args.gamma:
 	gamma_option = "--gamma"
 
-script_path="/afs/pdc.kth.se/home/o/oscarlb/Public/py_tools/VaspBandUnfolding/processing/"
+script_path=os.path.dirname(__file__)#"/afs/pdc.kth.se/home/o/oscarlb/Public/py_tools/VaspBandUnfolding/processing/"
 
 ## Find structural differences
 ground_cont = search_for(ground_path + "/" + "*CONTCAR*")
