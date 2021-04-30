@@ -492,6 +492,13 @@ class vaspwfc(object):
                         \sum_{ijk} | \phi_{ijk} | ^ 2 = 1
 
         '''
+
+        cdef int ii, jj, kk, k_ind, n_points
+        cdef cnp.ndarray[cnp.int_t, ndim=1] grid, grid_lim, fx, fy, fz
+        cdef cnp.ndarray[cnp.int_t, ndim=3] f
+        cdef cnp.ndarray[cnp.float64_t, ndim=1] kvec
+        cdef cnp.ndarray[cnp.float64_t, ndim=2] kgrid
+
         self.checkIndex(ispin, ikpt, iband)
 
         if ngrid is None:
@@ -805,7 +812,13 @@ class vaspwfc(object):
         where n iters over the number of grid points.
         '''
 
-        self.ipr = np.zeros((self._nspin, self._nkpts, self._nbands, 3))
+        cdef int ispin, ikpt, iband, ii, jj, kk, k_ind, n_points
+        cdef cnp.ndarray[cnp.int_t, ndim=1] grid, grid_lim, fx, fy, fz
+        cdef cnp.ndarray[cnp.int_t, ndim=3] f
+        cdef cnp.ndarray[cnp.float64_t, ndim=4] ipr
+        cdef cnp.ndarray[cnp.float64_t, ndim=2] kgrid
+        
+		ipr = np.zeros((self._nspin, self._nkpts, self._nbands, 3))
 
         for ispin in range(self._nspin):
             for ikpt in range(self._nkpts):

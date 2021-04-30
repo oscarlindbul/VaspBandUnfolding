@@ -2,6 +2,7 @@ from VaspBandUnfolding.vaspwfc import vaspwfc
 
 import argparse
 import glob
+from helperfuncs import search_for
 
 parser = argparse.ArgumentParser("Calculates the pseudo-wavefunctions of given bands and saves them in vesta format")
 parser.add_argument("bands", metavar="bands", nargs="+", type=int, help="state bands to extract")
@@ -16,18 +17,18 @@ parser.add_argument("-kp", dest="k_point", default=1, type=int, help="Which k-po
 args = parser.parse_args()
 
 if args.cell is None:
-	cells = glob.glob("*CONTCAR*")
-	if len(cells) == 0:
-		cells = glob.glob("*POSCAR*")
-	if len(cells) == 0:
+	cells = search_for("*CONTCAR*")
+	if cells is None:
+		cells = search_for("*POSCAR*")
+	if cells is None:
 		raise Exception("No valid CONTCAR or POSCAR found! Specify with -cell")
-	args.cell = cells[0]
+	args.cell = cells
 
 if args.wavecar is None:
-	wavs = glob.glob("*WAVECAR*")
-	if len(wavs) == 0:
+	wavs = search_for("*WAVECAR*")
+	if wavs is None:
 		raise Exception("No valid WAVECAR found! Specify with -wavecar")
-	args.wavecar = wavs[0]
+	args.wavecar = wavs
 
 wav = vaspwfc(args.wavecar, lgamma=args.gamma, gamma_half=args.gamma_half)
 for band in args.bands:

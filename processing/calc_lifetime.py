@@ -18,6 +18,8 @@ hbar = constants.hbar
 m_e = constants.m_e
 debye_to_Cm = 3.33564e-30
 n = 2.6473 # SiC infrared refractive index 
+n = 1.65 # hBN c-perp index
+n = 2.10 # hBN c-parallel index
 
 parser = arg.ArgumentParser(description="Calculates the oscillation strength for excited state transitions")
 
@@ -25,8 +27,11 @@ parser.add_argument("tdm_file", metavar="tdm_file", help="Path to tdm data file"
 parser.add_argument("transition_from", metavar="transition_from", nargs=3, help="Ground state identifiers (spin, k-point index, band)")
 parser.add_argument("transition_to", metavar="transition_to", nargs=3, help="Excited state identifiers (spin, k-point index, band)")
 parser.add_argument("zpl_energy", metavar="zpl_energy", help="ZPL energy of the given transition")
+parser.add_argument("-refrac_ind", dest="refrac_ind", help="Refractive index of host material (affects the lifetime), default is n=2.6473 for SiC")
 
 input = parser.parse_args()
+
+n = float(input.refrac_ind)
 
 ## Load data
 with open(input.tdm_file, "r") as data_reader:
