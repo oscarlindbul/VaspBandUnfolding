@@ -17,7 +17,7 @@ parser.add_argument("-out", dest="out_name", default="tdm", help="Name of output
 parser.add_argument("--gamma", dest="gamma", default=False, action="store_true")
 parser.add_argument("--same-wav", dest="same", default=False, action="store_true")
 parser.add_argument("-states", dest="states", nargs=6, help="States to explicitly calculate tdm for, in the format (spin1, k1, band1, spin2, k2, band2)")
-parser.add_argument("-kp", dest="k_points", nargs="+", type=int, default=0, help="K-points to add to dataset")
+parser.add_argument("-kp", dest="k_points", nargs="+", type=int, default=[0], help="K-points to add to dataset")
 in_args = parser.parse_args()
 
 k_points = in_args.k_points
