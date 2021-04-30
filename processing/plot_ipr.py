@@ -22,7 +22,7 @@ if input.plot_all:
 		fig = plt.figure()
 		ax = fig.gca()
 		ax.set_title("k-point: " + str(k))
-		for spin_channel in range(2):
+		for spin_channel in range(ipr_data.shape[0]):
 			ipr_channel = ipr_data[spin_channel, k, :, :]
 			bands = np.arange(ipr_channel.shape[0])+1
 			vals = (-1)**(spin_channel)*ipr_channel[:,2]
@@ -41,7 +41,7 @@ if input.plot_all:
 else:
 	plt.figure()
 	# spins, k-points, bands, (kpath?, band, ipr)
-	for spin_channel in range(2):
+	for spin_channel in range(ipr_data.shape[0]):
 		# take spin channel and average over k-points
 		ipr_channel = ipr_data[spin_channel, 0, :, :]
 		bands = np.arange(ipr_channel.shape[0])+1
