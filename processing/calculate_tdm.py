@@ -56,14 +56,16 @@ for spin in range(2):
 		for i in range(len(parchg)):
 			for j in range(len(parchg)):
 				tdm = [0, 0, (0, 0, 0)]
+				offset = 0
 				if in_args.same and i != j:
 					tdm = from_wav.TransitionDipoleMoment((spin+1, k+1, parchg[i]), (spin+1, k+1, parchg[j]))
+					offset=2
 				elif not in_args.same:
 					tdm = from_wav.TransitionDipoleMomentBetweenDifferentWAVECAR(other=to_wav,ks_i= [spin+1, k+1, parchg[i]], ks_j= [spin+1, k+1, parchg[j]])
-				output[spin,k,i,j,0]=tdm[0] # energy
-				output[spin,k,i,j,1]=tdm[1] # wave func overlap
-				output[spin,k,i,j,2]=tdm[2][0] # mu_x in debye
-				output[spin,k,i,j,3]=tdm[2][1] # mu_y in debye
-				output[spin,k,i,j,4]=tdm[2][2] # mu_z in debye
+				output[spin,k,i,j,0]=tdm[0+offset] # energy
+				output[spin,k,i,j,1]=tdm[1+offset] # wave func overlap
+				output[spin,k,i,j,2]=tdm[2+offset][0] # mu_x in debye
+				output[spin,k,i,j,3]=tdm[2+offset][1] # mu_y in debye
+				output[spin,k,i,j,4]=tdm[2+offset][2] # mu_z in debye
 
 np.savez(in_args.out_name, bands=parchg, tdm=output)

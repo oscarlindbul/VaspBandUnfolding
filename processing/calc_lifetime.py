@@ -27,7 +27,7 @@ parser.add_argument("tdm_file", metavar="tdm_file", help="Path to tdm data file"
 parser.add_argument("transition_from", metavar="transition_from", nargs=3, help="Ground state identifiers (spin, k-point index, band)")
 parser.add_argument("transition_to", metavar="transition_to", nargs=3, help="Excited state identifiers (spin, k-point index, band)")
 parser.add_argument("zpl_energy", metavar="zpl_energy", help="ZPL energy of the given transition")
-parser.add_argument("-refrac_ind", dest="refrac_ind", help="Refractive index of host material (affects the lifetime), default is n=2.6473 for SiC")
+parser.add_argument("-refrac_ind", dest="refrac_ind", default=2.647, help="Refractive index of host material (affects the lifetime), default is n=2.6473 for SiC")
 
 input = parser.parse_args()
 
@@ -75,9 +75,10 @@ ratio_check = einstein_coeff/other_einstein_coeff
 if np.abs(ratio_check - 1) > 1e-6:
     raise Exception("Error!!!!!! Einstein ratio={}".format(ratio_check))
 
-print("TDM calcs for spin channel {}, k-point index {}, from band {} to {}".format(spin_index, k_index, from_band, to_band))
+print("TDM calcs for spin channel {}, k-point index {}, from band {} to {}".format(spin_index+1, k_index+1, from_band, to_band))
+print("ZPL used: {} eV".format(zpl_value))
 print("Lifetime: {} s".format(1/einstein_coeff))
 print("Rate of emission: {} per s".format(einstein_coeff))
 print("Oscillator strength: {}".format(osc_strength))
-print("Dipole Moment: ({},{},{})".format(np.real(tdm_vals_deb[0]), np.real(tdm_vals_deb[1]), np.real(tdm_vals_deb[2])))
+print("Dipole Moment: ({},{},{}) Debye".format(np.real(tdm_vals_deb[0]), np.real(tdm_vals_deb[1]), np.real(tdm_vals_deb[2])))
 print("Pol angle (for z-axis): {}".format(tdm_angle_z))

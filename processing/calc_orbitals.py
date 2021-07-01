@@ -30,6 +30,10 @@ if args.wavecar is None:
 		raise Exception("No valid WAVECAR found! Specify with -wavecar")
 	args.wavecar = wavs
 
+print("Calculating orbitals:")
+print("Structure file: {}".format(args.cell))
+print("Wavefunction file: {}".format(args.wavecar))
+
 wav = vaspwfc(args.wavecar, lgamma=args.gamma, gamma_half=args.gamma_half)
 for band in args.bands:
 	wavefunc = wav.wfc_r(args.spin, args.k_point, band)
