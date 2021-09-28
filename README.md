@@ -68,11 +68,11 @@ structure. For more information, please refer to the following article and the
 
 # Installation
 
-Put `vasp_constant.py` and `vaspwfc.py` in any directory you like and add the
-path of the directory to `PYTHONPATH`
+Put the "VaspBandUnfolding" directory anywhere you like and add the
+path of the directory containing this to `PYTHONPATH`
 
 ```bash
-export PYTHONPATH=/the/path/of/your/dir:${PYTHONPATH}
+export PYTHONPATH=/the/path/to/dir/above/VaspBandUnfolding:${PYTHONPATH}
 ```
 
 requirements
