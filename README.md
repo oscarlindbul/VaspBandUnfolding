@@ -1,6 +1,6 @@
 # This fork
 
-This fork adds a function to translate gamma WAVECARs to standard WAVECARs.
+This fork adds a function to translate gamma WAVECARs to standard WAVECARs and vice versa. Note that the conversion to gamma WAVECAR requires loss of relative phase between orbitals. The conversion may be performed using the "convert_wav.py" script in the "processing" subdirectory.
 
 ## How to build cythonized code
 
@@ -68,11 +68,11 @@ structure. For more information, please refer to the following article and the
 
 # Installation
 
-Put `vasp_constant.py` and `vaspwfc.py` in any directory you like and add the
-path of the directory to `PYTHONPATH`
+Put the "VaspBandUnfolding" directory anywhere you like and add the
+path of the directory containing this to `PYTHONPATH`
 
 ```bash
-export PYTHONPATH=/the/path/of/your/dir:${PYTHONPATH}
+export PYTHONPATH=/the/path/to/dir/above/VaspBandUnfolding:${PYTHONPATH}
 ```
 
 requirements
@@ -105,7 +105,7 @@ for ii in range(2):
     xx.save2vesta(phi, prefix=prefix,
             poscar='examples/wfc_r/poscar_mose2-wse2')
 ```
-
+You may also use the script "calc_orbitals.py" located in the "processing" subdirectory.
 Below are the real (left) and imaginary (right) part of the selected KS orbital:
 
 ![real part](./examples/wfc_r/r_resize.png) | 
