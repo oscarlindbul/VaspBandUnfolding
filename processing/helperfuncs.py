@@ -137,8 +137,10 @@ def search_for(f_name):
 			print("{}) {}".format(i+1, results[i]))
 		prompt = int(input("Which would be preferred?"))
 		return results[prompt-1]
-	else:
+	elif len(results) == 1:
 		return results[0]
+	else:
+		return None
 
 def write_lists_to_csv(name, headers, sep, *lists):
     file = open(name, "w")
