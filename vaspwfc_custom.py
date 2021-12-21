@@ -147,6 +147,8 @@ class vaspwfc(oldwfc):
 		K_range = [self._nkpts] if "K" in file_format else [-1, 0]
 		for I in range(*I_range):
 			for S in range(*S_range):
+				if self._nbands[S] <= 0:
+					continue
 				for K in range(*K_range):
 					B_range = [self._nbands[S]] if "B" in file_format else [-1,0]
 					for B in range(*B_range):
@@ -159,7 +161,10 @@ class vaspwfc(oldwfc):
 							ID.append(K+1)
 						band = 0
 						if B >= 0:
-							band = self._bandnum[S][B]
+							if self._bandnum[S] is None:
+								band = B+1
+							else:
+								band = self._bandnum[S][B]
 							ID.append(band)
 						ID_s = self.get_config_name(I+1,S+1,K+1,band,form=file_format)
 						ID_s = self._dname + "/" + ID_s
@@ -185,6 +190,8 @@ class vaspwfc(oldwfc):
 		self._recpos = np.zeros((self._nspin, self._nkpts),dtype=int)
 		pos = 0
 		for S in range(self._nspin):
+			if self._nbands[S] <= 0:
+				continue
 			if "S" not in file_format:
 				pos = 0
 			if "K" in file_format:
@@ -672,7 +679,10 @@ class vaspwfc(oldwfc):
 
 		rec = self._recpos[ispin-1,ikpt-1]
 		if "B" in self.get_file_format(inverse=True):
-			band_loc = np.where(self._bandnum[ispin-1] == iband)[0][0]
+			if self._bandnum[ispin-1] is None:
+				band_loc = iband
+			else:
+				band_loc = np.where(self._bandnum[ispin-1] == iband)[0][0]
 			rec += band_loc
 		
 		return rec
@@ -684,9 +694,12 @@ class vaspwfc(oldwfc):
 		if ion is None:
 			ion = self._nion
 		assert 1 <= ion <= self._nion,	'Invalid ion step!'
-		assert 1 <= ispin <= self._nspin,  'Invalid spin index!'
+		assert 1 <= ispin <= self._nspin and self._nbands[ispin-1] > 0,  'Invalid spin index!'
 		assert 1 <= ikpt <= self._nkpts,  'Invalid kpoint index!'
-		assert iband in self._bandnum[ispin-1], 'Invalid band index!'
+		if self._bandnum[ispin-1] is None:
+			assert 1 <= iband <= self._nbands[ispin-1]
+		else:
+			assert iband in self._bandnum[ispin-1], 'Invalid band index!'
 
 		file_format = self.get_file_format()
 		ID = []
