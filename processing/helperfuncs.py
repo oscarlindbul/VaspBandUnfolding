@@ -125,22 +125,22 @@ def open_file_with_check(filename, option="r"):
     if ".bz2" in filename:
         return bz2.BZ2File(filename, option)
     elif ".gz" in filename:
-		return gzip.GzipFile(filename, mode=option)	
+        return gzip.GzipFile(filename, mode=option) 
     else:
         return open(filename, option)
 
 def search_for(f_name):
-	results = glob.glob(f_name)
-	if len(results) > 1:
-		print("Found several results:")
-		for i in range(len(results)):
-			print("{}) {}".format(i+1, results[i]))
-		prompt = int(input("Which would be preferred?"))
-		return results[prompt-1]
-	elif len(results) == 1:
-		return results[0]
-	else:
-		return None
+    results = glob.glob(f_name)
+    if len(results) > 1:
+        print("Found several results:")
+        for i in range(len(results)):
+            print("{}) {}".format(i+1, results[i]))
+        prompt = int(input("Which would be preferred?"))
+        return results[prompt-1]
+    elif len(results) == 1:
+        return results[0]
+    else:
+        return None
 
 def write_lists_to_csv(name, headers, sep, *lists):
     file = open(name, "w")

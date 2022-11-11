@@ -18,6 +18,7 @@ parser.add_argument("-range", dest="ipr_range", default=15, type=int)
 parser.add_argument("--gamma", dest="gamma", default=False, action="store_true")
 band_group.add_argument("-center", dest="spin_center", default=None, type=int)
 band_group.add_argument("-bands", dest="bands", default=None, type=int, nargs="+", help="Manual specification of bands to calculate IPR")
+parser.add_argument("-q", dest="quiet", default=False, action="store_true")
 
 input = parser.parse_args()
 
@@ -70,4 +71,5 @@ else:
 
 
 # find and save IPR
-ipr = wav.inverse_participation_ratio(bands=bands)
+ipr = wav.inverse_participation_ratio(bands=bands, quiet=input.quiet)
+numpy.save("ipr.npy", ipr)
