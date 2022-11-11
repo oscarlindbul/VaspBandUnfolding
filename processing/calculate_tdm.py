@@ -39,33 +39,33 @@ to_wav = vaspwfc(to_wav_path, lgamma=in_args.gamma)
 
 # get parchial charge bands
 if in_args.bands is not None:
-	parchg = in_args.bands
+    parchg = in_args.bands
 else:
-	HOB = from_wav.find_HOB()
-	HOB = max(HOB)
-	parchg = np.array([HOB - i for i in range(10, -11, -1)])
-	parchg = parchg[np.logical_and(parchg >= 1, parchg <= from_wav._nbands)]
-	
+    HOB = from_wav.find_HOB()
+    HOB = max(HOB)
+    parchg = np.array([HOB - i for i in range(10, -11, -1)])
+    parchg = parchg[np.logical_and(parchg >= 1, parchg <= from_wav._nbands)]
+    
 
 # make output array to save dE, overlap and tdm
 output=np.empty((2,len(k_points),len(parchg),len(parchg),5),dtype=np.complex_)
 
 for spin in range(2):
-	for k in k_points:
-		print("Calculating k-point {}...".format(k))
-		for i in range(len(parchg)):
-			for j in range(len(parchg)):
-				tdm = [0, 0, (0, 0, 0)]
-				offset = 0
-				if in_args.same and i != j:
-					tdm = from_wav.TransitionDipoleMoment((spin+1, k+1, parchg[i]), (spin+1, k+1, parchg[j]))
-					offset=2
-				elif not in_args.same:
-					tdm = from_wav.TransitionDipoleMomentBetweenDifferentWAVECAR(other=to_wav,ks_i= [spin+1, k+1, parchg[i]], ks_j= [spin+1, k+1, parchg[j]])
-				output[spin,k,i,j,0]=tdm[0+offset] # energy
-				output[spin,k,i,j,1]=tdm[1+offset] # wave func overlap
-				output[spin,k,i,j,2]=tdm[2+offset][0] # mu_x in debye
-				output[spin,k,i,j,3]=tdm[2+offset][1] # mu_y in debye
-				output[spin,k,i,j,4]=tdm[2+offset][2] # mu_z in debye
+    for k in k_points:
+        print("Calculating k-point {}...".format(k))
+        for i in range(len(parchg)):
+            for j in range(len(parchg)):
+                tdm = [0, 0, (0, 0, 0)]
+                offset = 0
+                if in_args.same and i != j:
+                    tdm = from_wav.TransitionDipoleMomentBetweenDifferentWAVECAR(from_wav,(spin+1, k+1, parchg[i]), (spin+1, k+1, parchg[j]))
+                    offset=2
+                elif not in_args.same:
+                    tdm = from_wav.TransitionDipoleMomentBetweenDifferentWAVECAR(to_wav,ks_i= [spin+1, k+1, parchg[i]], ks_j= [spin+1, k+1, parchg[j]])
+                output[spin,k,i,j,0]=tdm[0+offset] # energy
+                output[spin,k,i,j,1]=tdm[1+offset] # wave func overlap
+                output[spin,k,i,j,2]=tdm[2+offset][0] # mu_x in debye
+                output[spin,k,i,j,3]=tdm[2+offset][1] # mu_y in debye
+                output[spin,k,i,j,4]=tdm[2+offset][2] # mu_z in debye
 
 np.savez(in_args.out_name, bands=parchg, tdm=output)
