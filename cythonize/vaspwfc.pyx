@@ -7,11 +7,13 @@ import sys
 import os
 import numpy as np
 cimport numpy as cnp
-from vasp_constant import *
+from VaspBandUnfolding.vasp_constant import *
 from multiprocessing import cpu_count
-from scipy.fftpack import fftfreq, fftn, ifftn
+from scipy.fft import fftn, ifftn, rfftn, irfftn
+import scipy.fft
 
 import cython
+#import pyfftw
 ############################################################
 
 
@@ -67,25 +69,27 @@ ctypedef fused wav_array:
     cnp.ndarray[cnp.complex128_t, ndim=3]
 
 from libc.math cimport sqrt
+from libcpp cimport bool
 @cython.wraparound(False)
 @cython.boundscheck(False)
 @cython.cdivision(True)
-def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid):
+def expand_wfc(wav_array phi, cnp.ndarray[int_t, ndim=1] grid, bool include_x):
     cdef int ii,jj,kk, ii_inv, jj_inv, kk_inv
 
-    ## Upper sphere
-    for ii in range(1, grid[0] // 2 + 1):
-        ii_inv = grid[0] - ii
-        phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()
-        for kk in range(1, grid[2]):
-            kk_inv = grid[2] - kk
-            phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()
-        for jj in range(1, grid[1]):
-            jj_inv = grid[1] - jj
-            phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()
+    if include_x:
+        ## Upper sphere
+        for ii in range(1, grid[0] // 2 + 1):
+            ii_inv = grid[0] - ii
+            phi[ii_inv, 0, 0] = phi[ii,0,0].conjugate()
             for kk in range(1, grid[2]):
                 kk_inv = grid[2] - kk
-                phi[ii_inv,jj_inv,kk_inv] = phi[ii,jj,kk].conjugate()
+                phi[ii_inv, 0, kk_inv] = phi[ii,0,kk].conjugate()
+            for jj in range(1, grid[1]):
+                jj_inv = grid[1] - jj
+                phi[ii_inv, jj_inv, 0] = phi[ii,jj,0].conjugate()
+                for kk in range(1, grid[2]):
+                    kk_inv = grid[2] - kk
+                    phi[ii_inv,jj_inv,kk_inv] = phi[ii,jj,kk].conjugate()
 
     ## Upper part of x-y-plane
     for jj in range(1, grid[1] // 2 + 1):
@@ -157,6 +161,10 @@ class vaspwfc(object):
         # It seems that some modules in scipy uses OPENMP, it is therefore
         # desirable to set the OMP_NUM_THREADS to tune the parallization.
         os.environ['OMP_NUM_THREADS'] = str(omp_num_threads)
+        scipy.fft.set_workers(omp_num_threads)
+        #pyfftw.config.NUM_THREADS = omp_num_threads
+        #pyfftw.interfaces.cache.enable()
+        #pyfftw.interfaces.cache.set_keepalive_time(30)
 
         assert not (lsorbit and lgamma), 'The two settings conflict!'
         assert self._gam_half == 'x' or self._gam_half == 'z', \
@@ -174,6 +182,9 @@ class vaspwfc(object):
 
         if self._lsoc:
             assert self._nspin == 1, "NSPIN = 1 for noncollinear version WAVECAR!"
+
+        self.gvecs = [None for i in range(self._nkpts)]
+        self.gvecs_gam = [None for i in range(self._nkpts)]
 
     def set_omp_num_threads(self, nproc):
         '''
@@ -207,13 +218,13 @@ class vaspwfc(object):
         # goto the start of the file and read the first record
         self._wfc.seek(0)
         self._recl, self._nspin, self._rtag = np.array(
-            np.fromfile(self._wfc, dtype=np.float, count=3),
+            np.fromfile(self._wfc, dtype=np.float64, count=3),
             dtype=np.int64
         )
         self._WFPrec = self.setWFPrec()
         # the second record
         self._wfc.seek(self._recl)
-        dump = np.fromfile(self._wfc, dtype=np.float, count=12)
+        dump = np.fromfile(self._wfc, dtype=np.float64, count=12)
 
         self._nkpts = int(dump[0])                     # No. of k-points
         self._nbands = int(dump[1])                     # No. of bands
@@ -266,7 +277,7 @@ class vaspwfc(object):
             for jj in range(self._nkpts):
                 rec = self.whereRec(ii+1, jj+1, 1) - 1
                 self._wfc.seek(rec * self._recl)
-                dump = np.fromfile(self._wfc, dtype=np.float,
+                dump = np.fromfile(self._wfc, dtype=np.float64,
                                    count=4+3*self._nbands)
                 if ii == 0:
                     self._nplws[jj] = int(dump[0])
@@ -322,7 +333,7 @@ class vaspwfc(object):
     @cython.boundscheck(False)
     @cython.wraparound(False)
     @cython.cdivision(True)
-    def gvectors(self, ikpt=1, force_Gamma=None, check_consistency=True):
+    def gvectors(self, ikpt=1, force_Gamma=None, check_consistency=True, cache=False):
         '''
         Generate the G-vectors that satisfies the following relation
             (G + k)**2 / 2 < ENCUT
@@ -335,11 +346,18 @@ class vaspwfc(object):
 
         assert 1 <= ikpt <= self._nkpts,  'Invalid kpoint index!'
 
+        if cache:
+            if force_Gamma and self.gvecs_gam[ikpt-1] is not None:
+                return self.gvecs_gam[ikpt-1]
+            elif self.gvecs_gam[ikpt-1] is not None:
+                return self.gvecs[ikpt-1]
+            
+
         kvec = self._kvecs[ikpt-1]
         grid = self._ngrid
         # fx, fy, fz = [fftfreq(n) * n for n in self._ngrid]
         # fftfreq in scipy.fftpack is a little different with VASP frequencies
-        fx, fy, fz = np.zeros(grid[0], dtype=np.int), np.zeros(grid[1], dtype=np.int), np.zeros(grid[2], dtype=np.int)
+        fx, fy, fz = np.zeros(grid[0], dtype=np.int64), np.zeros(grid[1], dtype=np.int64), np.zeros(grid[2], dtype=np.int64)
         grid_lim = grid // 2 + 1
         for ii in range(grid[0]):
             if ii < grid_lim[0]:
@@ -420,6 +438,11 @@ class vaspwfc(object):
                 assert Gvec.shape[0] == self._nplws[ikpt - 1], 'No. of planewaves not consistent! %d %d %d' % \
                     (Gvec.shape[0], self._nplws[ikpt - 1],
                      np.prod(self._ngrid))
+        
+        if force_Gamma:
+            self.gvecs_gam[ikpt-1] = np.asarray(Gvec, dtype=int)
+        else:
+            self.gvecs[ikpt-1] = np.asarray(Gvec, dtype=int)
 
         return np.asarray(Gvec, dtype=int)
 
@@ -551,45 +574,27 @@ class vaspwfc(object):
             if Cg is not None:
                 phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]] = Cg
             else:
-                phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]
-                      ] = self.readBandCoeff(ispin, ikpt, iband, norm)
+                phi_k[gvec[:, 0], gvec[:, 1], gvec[:, 2]] = self.readBandCoeff(ispin, ikpt, iband, norm)
 
             if self._lgam:
                 # add some components that are excluded and perform c2r FFT
                 if self._gam_half == 'z':
-                    for ii in range(ngrid[0]):
-                        for jj in range(ngrid[1]):
-                            fx = ii if ii < ngrid[0] // 2 + \
-                                1 else ii - ngrid[0]
-                            fy = jj if jj < ngrid[1] // 2 + \
-                                1 else jj - ngrid[1]
-                            if (fy > 0) or (fy == 0 and fx >= 0):
-                                continue
-                            phi_k[ii, jj, 0] = phi_k[-ii, -jj, 0].conjugate()
-
-                    phi_k /= np.sqrt(2.)
-                    phi_k[0, 0, 0] *= np.sqrt(2.)
-                    return np.fft.irfftn(phi_k, s=ngrid) * normFac
-                elif self._gam_half == 'x':
-                    for jj in range(ngrid[1]):
-                        for kk in range(ngrid[2]):
-                            fy = jj if jj < ngrid[1] // 2 + \
-                                1 else jj - ngrid[1]
-                            fz = kk if kk < ngrid[2] // 2 + \
-                                1 else kk - ngrid[2]
-                            if (fy > 0) or (fy == 0 and fz >= 0):
-                                continue
-                            phi_k[0, jj, kk] = phi_k[0, -jj, -kk].conjugate()
-
-                    phi_k /= np.sqrt(2.)
-                    phi_k[0, 0, 0] *= np.sqrt(2.)
+                    ordered_grid = np.swapaxes(ngrid, 0, 2)
+                    phi_k = expand_wfc(np.swapaxes(phi_k), ordered_grid, False)
                     phi_k = np.swapaxes(phi_k, 0, 2)
-                    tmp = np.fft.irfftn(
-                        phi_k, s=(ngrid[2], ngrid[1], ngrid[0])) * normFac
+                    #irfftn_calc = pyfftw.builders.irfftn(phi_k)
+                    return irfftn(phi_k) * normFac
+                elif self._gam_half == 'x':
+                    ordered_grid = ngrid
+                    phi_k = expand_wfc(phi_k, ordered_grid, False)
+                    phi_k = np.swapaxes(phi_k, 0, 2)
+                    #irfftn_calc = pyfftw.builders.irfftn(phi_k, s=(ngrid[2], ngrid[1], ngrid[0]))
+                    tmp = irfftn(phi_k, s=(ngrid[2], ngrid[1], ngrid[0])) * normFac
                     return np.swapaxes(tmp, 0, 2)
             else:
                 # perform complex2complex FFT
-                return ifftn(phi_k * normFac)
+                #ifftn_calc = pyfftw.builders.ifftn(phi_k*normFac)
+                return ifftn(phi_k*normFac)
 
     def poisson(self, rho=None, iband=1, ikpt=1, ispin=1, ngrid=None, norm=False):
         """
@@ -1094,11 +1099,82 @@ class vaspwfc(object):
                 for band in range(self._nbands):
                     phi_k[Gvec[:, 0], Gvec[:,1], Gvec[:,2]] = self.readBandCoeff(spin+1,1,band+1)
 
-                    phi_k = expand_wfc(phi_k, ordered_grid)
+                    if self._gam_half == "z":
+                        phi_k = expand_wfc(np.swapaxes(phi_k, 0, 2), ordered_grid, True)
+                    else:
+                        phi_k = expand_wfc(phi_k, ordered_grid, True)
 
                     wave_rec[:new_nplws] = phi_k[full_Gvec[:, 0], full_Gvec[:, 1], full_Gvec[:, 2]]
                     wave_rec.tofile(new_wc)
 
+    def write_gamma_wavecar(self, gamma_half="x", out="WAVECAR_gamma"):
+        assert not self._lgam
+
+        # get gvectors for gamma representation
+        gamma_gvec = self.gvectors(force_Gamma=True, check_consistency=False)
+        gvec = self.gvectors()
+
+        # open wavecar file
+        with open(out, "w") as new_wc:
+            # write header details
+            new_nplws = (self._nplws[0] - 1) // 2 + 1
+            plws_rec_size = np.max(new_nplws)*np.dtype(self.setWFPrec()).itemsize
+            band_rec_size = np.dtype(np.float64).itemsize*(self._nbands*3+1)
+            # record needs to be large enough to contain both plane waves and bands
+            new_rec_size = max(plws_rec_size, band_rec_size)
+            nfloat = new_rec_size // 8 # number of float64s per record
+            # header line
+            rec = np.zeros(nfloat, dtype=np.float64)
+            rec[0:3] = new_rec_size, self._nspin, self._rtag
+            rec.tofile(new_wc)
+            # header line 2 (nkpts, nbands, encut)
+            rec[0:3] = 1, self._nbands, self._encut
+            rec[3:3+9] = self._Acell.reshape((1,-1))
+            rec.tofile(new_wc)
+            wave_rec = np.zeros(new_nplws, dtype=self.setWFPrec())
+            for spin in range(self._nspin):
+                rec[0] = new_nplws
+                rec[1:1+3] = self._kvecs[0]
+                rec[4: 4+3*self._nbands : 3] = self._bands[spin, 0, :]
+                rec[4+1 : 4+3*self._nbands : 3] = 0.0 # so far energies always real?
+                rec[4+2 : 4+3*self._nbands : 3] = self._occs[spin, 0, :]
+                rec.tofile(new_wc)
+                
+                ngrid = self._ngrid.copy()*2
+                if gamma_half == "z":
+                    ordered_grid = ngrid
+                elif gamma_half == "x":
+                    ordered_grid = ngrid[[2,1,0]]
+                else:
+                    raise ValueError("Gamma reduction direction must be z or x")
+                
+                for band in range(self._nbands):
+                    # convert band function to real-space
+                    print("Converting band {}".format(band),end="\r")
+                    phi_r = self.wfc_r(spin+1, 1, band+1, gvec=gvec, norm=False)
+                    # if gamma-symmetry is to hold, function should be real and have same (total) density -> make real-space function fully real with the same single-state density
+                    phi_r = np.sqrt(phi_r.real**2 + phi_r.imag**2)*np.sign(phi_r.real)
+
+                    # fourier transform back to reciprocal space
+                    if gamma_half == "z":
+                        #rfftn_calc = pyfftw.builders.rfftn(phi_r, s=ordered_grid)
+                        phi_k = rfftn(phi_r, s=ordered_grid)
+                    else: # if x
+                        phi_r = np.swapaxes(phi_r, 0, 2)
+                        #rfftn_calc = pyfftw.builders.rfftn(phi_r, s=ordered_grid)
+                        tmp = rfftn(phi_r, s=ordered_grid)
+                        phi_k = np.swapaxes(tmp, 0, 2)
+
+                    # format components in correct format
+                    phi_k[0,0,0] /= np.sqrt(2.)
+                    k_coeffs = phi_k[gamma_gvec[:,0], gamma_gvec[:,1], gamma_gvec[:,2]] 
+                    k_coeffs *= np.sqrt(2.)
+                    
+                    # write to wavecar
+                    wave_rec[:new_nplws] = k_coeffs
+
+                    wave_rec.tofile(new_wc)
+                print("")
 ############################################################
 
 
