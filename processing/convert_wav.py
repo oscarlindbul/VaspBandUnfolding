@@ -12,11 +12,17 @@ parser.add_argument("-c", dest="compiled", default=False, action="store_true", h
 args = parser.parse_args()
 
 if args.mode == "std":
-    from VaspBandUnfolding.cythonize.vaspwfc import vaspwfc as vaspwfc_c
-    wfc = vaspwfc_c(args.wav, lgamma=True, gamma_half=args.axis) # efficient
+    if args.compiled:
+        from VaspBandUnfolding.cythonize.vaspwfc import vaspwfc
+    else:
+        from VaspBandUnfolding.vaspwfc import vaspwfc
+    wfc = vaspwfc(args.wav, lgamma=True, gamma_half=args.axis) # efficient
     #wfc = vaspwfc_normal("data/ground_gamma/WAVECAR.G_gamma.ground", lgamma=True, gamma_half="x") #non-compiled
     wfc.write_std_wavecar(out=args.output)
 else:
-    from VaspBandUnfolding.vaspwfc import vaspwfc as vaspwfc_normal
-    wfc = vaspwfc_normal(args.wav, lgamma=False, gamma_half=args.axis)
+    if args.compiled:
+        from vaspBandUnfolding.cythonize.vaspwfc import vaspwfc    
+    else:
+        from VaspBandUnfolding.vaspwfc import vaspwfc
+    wfc = vaspwfc(args.wav, lgamma=False, gamma_half=args.axis)
     wfc.write_gamma_wavecar(out=args.output)
