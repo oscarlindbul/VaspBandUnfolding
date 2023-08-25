@@ -21,6 +21,8 @@ make_parser.add_argument("-plot", dest="plot", default=False, action="store_true
 make_parser.add_argument("-v", dest="verbose", default=False, action="store_true", help="Extra output for debugging purposes")
 make_parser.add_argument("--only-all", dest="only_all", default=False, action="store_true", help="Setting to skip the calculation of the minimum and (if plotting) instead plot all states")
 make_parser.add_argument("-label", dest="label", default="None", help="Header for minimum value column")
+make_parser.add_argument("-FNV", dest="FNV_pos", default=None, nargs=3, type=float, help="Sets the correction to be calculated using the FNV approach, provided relative position of defect")
+make_parser.add_argument("-mu", dest="mu_pots", nargs="+", default=None, help="List of chemical potentials (species, value)")
 
 combine_parser = sub_parsers.add_parser("combine", help="Combine formation energy files into new one")
 combine_parser.add_argument("energy_files", metavar="Energy file list", nargs="+", type=str, help="List of energy files to combine")
@@ -151,10 +153,17 @@ elif args.command == "combine":
 
 my_path = os.path.abspath(os.path.dirname(__file__))
 file_name = os.path.join(my_path, "pot_dict.save.npy")
-if sys.version_info[0] < 3:
-    potential_vals = np.load(file_name, allow_pickle=True).item()
+
+if args.mu_pots is None:
+    if sys.version_info[0] < 3:
+        potential_vals = np.load(file_name, allow_pickle=True).item()
+    else:
+        potential_vals = np.load(file_name).item()
 else:
-    potential_vals = np.load(file_name).item()
+    potential_vals = {}
+    for i in range(0, len(args.mu_pots), 2):
+        species, val = args.mu_pots[i:i+2]
+        potential_vals[species] = float(val)
 
 # outcar patterns
 name_pattern = re.compile("POSCAR = (.*)")
@@ -328,17 +337,21 @@ for outcar_ind,outcar in enumerate(args.outcars):
     pot_E = [potential_vals[element]*change for element,change in component_diffs.items()] # chemical potential energy differences
     pot_E_val = sum(pot_E)
 
-    LZ_correction = LZ_coeff*(charge*e)**2*madelung/(2*4*np.pi*eps_0*epsilon*(effective_L*1e-10)) * (1/e) # J to eV
-    form_E[:,outcar_ind] = energy - ref_energy - pot_E_val + charge*(E_F + VBM) + LZ_correction
+    correction = 0
+    if args.FNV_pos is not None:
+        pass    
+    else:
+        correction = LZ_coeff*(charge*e)**2*madelung/(2*4*np.pi*eps_0*epsilon*(effective_L*1e-10)) * (1/e) # J to eV
+    form_E[:,outcar_ind] = energy - ref_energy - pot_E_val + charge*(E_F + VBM) + correction
     
     if args.verbose:
         print("For system {}:".format(system_names[outcar_ind]))
         print("Charge = {}".format(charge))
         print("L = {}; V = {}".format(effective_L, volume))
         print("Energy = {}; Reference energy = {}".format(energy, ref_energy))
-        print("Total potential energies = {}; Net result = {}".format(zip(pot_E, list(component_diffs.keys())), pot_E_val))
+        print("Total potential energies = {}; Net result = {}".format(zip(pot_E, list(component_diffs.keys())), -pot_E_val))
         print("Estimated bandgap = {}; with VBM = {}".format(bandgap, VBM))
-        print("LZ correction = {}".format(LZ_correction))
+        print("correction = {}".format(correction))
 
 # calculate "hull"
 min_form = np.min(form_E, axis=1)
