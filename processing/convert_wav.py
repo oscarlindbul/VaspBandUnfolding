@@ -21,7 +21,7 @@ if args.mode == "std":
     wfc.write_std_wavecar(out=args.output)
 else:
     if args.compiled:
-        from vaspBandUnfolding.cythonize.vaspwfc import vaspwfc    
+        from VaspBandUnfolding.cythonize.vaspwfc import vaspwfc    
     else:
         from VaspBandUnfolding.vaspwfc import vaspwfc
     wfc = vaspwfc(args.wav, lgamma=False, gamma_half=args.axis)

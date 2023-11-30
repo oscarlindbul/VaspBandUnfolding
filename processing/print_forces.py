@@ -25,6 +25,8 @@ for i in range(atom_pos.shape[0]):
     atom_pos[i] = np.matmul(atom_pos[i,:],cell_basis)
 
 force_tags = root.findall("./calculation/varray[@name='forces']/v")
+for force in force_tags:
+    print(force.text)
 forces = np.array([list(map(float,force.text.split())) for force in force_tags])
 
 with open(args.output, "w") as xsf:

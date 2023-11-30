@@ -61,7 +61,7 @@ else:
             plt.scatter(vals, x_vals, label="spin ch " + str(spin_channel))
             plt.ylabel("Energy")
             plt.xlabel("IPR")
-            max_val = np.max(np.abs(vals))*1.1
+            max_val = np.max(np.abs(vals))*1.5
             plt.xlim([-max_val, max_val])
             # write band labels
             for i,p in enumerate(zip(vals, x_vals)):

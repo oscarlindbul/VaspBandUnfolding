@@ -59,9 +59,10 @@ for spin in range(2):
                 offset = 0
                 if in_args.same and i != j:
                     tdm = from_wav.TransitionDipoleMomentBetweenDifferentWAVECAR(from_wav,(spin+1, k+1, parchg[i]), (spin+1, k+1, parchg[j]))
-                    offset=2
+                    #offset=2
                 elif not in_args.same:
                     tdm = from_wav.TransitionDipoleMomentBetweenDifferentWAVECAR(to_wav,ks_i= [spin+1, k+1, parchg[i]], ks_j= [spin+1, k+1, parchg[j]])
+                print(tdm[0])
                 output[spin,k,i,j,0]=tdm[0+offset] # energy
                 output[spin,k,i,j,1]=tdm[1+offset] # wave func overlap
                 output[spin,k,i,j,2]=tdm[2+offset][0] # mu_x in debye
