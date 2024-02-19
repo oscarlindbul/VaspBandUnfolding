@@ -35,7 +35,7 @@ n = float(input.refrac_ind)
 
 ## Load data
 with open(input.tdm_file, "r") as data_reader:
-	data = np.load(data_reader)
+	data = np.load(input.tdm_file)
 	bands = data["bands"]
 	tdm_data = data["tdm"]
 

@@ -114,6 +114,7 @@ def read_outcar(outcar):
             lattice_frac = np.array(lattice_frac) 
 
         line_ind += 1
+    ion_types = list(ion_n.keys())
     lattice = np.matmul(lattice_frac, A_vecs)
 
     return OutcarInfo(energy, ion_n, ion_m, ion_types, A_vecs, lattice, lattice_frac, lattice_element)
@@ -148,6 +149,7 @@ run_Qs = [0]
 run_Ediff = [0]
 for i, info in enumerate(run_infos):
     try:
+        print(g_outcar.ion_n.items(), info.ion_n.items())
         assert np.all(np.array([ t1 == t2 for t1,t2 in zip(g_outcar.ion_types,info.ion_types)]))
         assert np.all(np.array([ g_outcar.ion_n[e] == info.ion_n[e] for e in g_outcar.ion_types]))
     except AssertionError as e:

@@ -71,5 +71,5 @@ else:
 
 
 # find and save IPR
-ipr = wav.inverse_participation_ratio(bands=bands, quiet=input.quiet)
+ipr = wav.inverse_participation_ratio(bands=bands)
 numpy.save("ipr.npy", ipr)

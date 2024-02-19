@@ -16,8 +16,8 @@ input = parser.parse_args()
 
 ipr_filepath = input.ipr_file
 
-with open_file_with_check(ipr_filepath) as ipr_file:
-    ipr_data = np.load(ipr_file)
+with open_file_with_check(str(ipr_filepath)) as ipr_file:
+    ipr_data = np.load(ipr_filepath)
 
 if input.plot_all:
     for k in range(ipr_data.shape[1]):
@@ -47,6 +47,7 @@ if input.plot_all:
     plt.show()
 else:
     plt.figure()
+    max_val = 0
     # spins, k-points, bands, (kpath?, band, ipr)
     for spin_channel in range(ipr_data.shape[0]):
         # take spin channel and average over k-points
@@ -58,19 +59,19 @@ else:
         x_vals = bands[selection] if not input.versus_E else energies[selection]
         vals = (-1)**(spin_channel)*ipr_channel[:,2][selection]
         if input.versus_E:
-            plt.scatter(vals, x_vals, label="spin ch " + str(spin_channel))
+            plt.scatter(-vals, x_vals, label="spin ch " + str(spin_channel))
             plt.ylabel("Energy")
             plt.xlabel("IPR")
-            max_val = np.max(np.abs(vals))*1.1
+            max_val = max(max_val, np.max(np.abs(vals))*1.1)
             plt.xlim([-max_val, max_val])
             # write band labels
-            for i,p in enumerate(zip(vals, x_vals)):
+            for i,p in enumerate(zip(-vals, x_vals)):
                 plt.annotate(str(band_selection[i]), p)
         else:
             plt.plot(x_vals, vals, "-o", label="spin ch " + str(spin_channel))
             plt.xlabel("Bands")
             plt.ylabel("IPR")
-            max_val = np.max(np.abs(vals))*1.2
+            max_val = max(max_val, np.max(np.abs(vals))*1.2)
             plt.ylim([-max_val, max_val])
     plt.legend()
     if input.title is not None:
