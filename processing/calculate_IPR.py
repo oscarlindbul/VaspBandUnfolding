@@ -19,8 +19,14 @@ parser.add_argument("--gamma", dest="gamma", default=False, action="store_true")
 band_group.add_argument("-center", dest="spin_center", default=None, type=int)
 band_group.add_argument("-bands", dest="bands", default=None, type=int, nargs="+", help="Manual specification of bands to calculate IPR")
 parser.add_argument("-q", dest="quiet", default=False, action="store_true")
+parser.add_argument("-fast", dest="fast", default=False, action="store_true")
 
 input = parser.parse_args()
+
+if input.fast:
+    from VaspBandUnfolding.cythonize.vaspwfc import vaspwfc
+else:
+    from VaspBandUnfolding.vaspwfc import vaspwfc
 
 #if input.ibzkpt == "":
 #    input.ibzkpt = glob.glob("*IBZKPT*")[0]

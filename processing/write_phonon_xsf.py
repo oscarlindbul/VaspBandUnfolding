@@ -14,7 +14,7 @@ species = data["atom_symbols"]
 atoms = data["atoms"]
 eigs = data["eigs"]
 
-weights = {"C" : 12.011, "Si": 28.0855, "Cl": 35.453 }
+weights = {"C" : 12.011, "Si": 28.0855, "Cl": 35.453, "B": 10.811, "N": 14.0067 }
 mass_dist = np.zeros(3)
 #normal_mass_dist = np.zeros(3)
 
@@ -39,7 +39,7 @@ for mode in args.modes:
             mass_dist += mode_eigs[n,:]*np.sqrt(mass)
         #if not (species[n] == "C" or species[n] == "H"):
         #   continue
-        coord_force = list(np.matmul(np.transpose(lattice),np.transpose(atoms[n,:]))) + list(np.transpose(mode_eigs[n,:]*np.sqrt(mass)))
+        coord_force = list(np.matmul(np.transpose(lattice),np.transpose(atoms[n,:]))) + list(np.transpose(mode_eigs[n,:]/np.sqrt(mass)))
         content.append("{} {} {} {} {} {} {}\n".format(species[n], *coord_force))
     print("Mode {}: p = {}, {}, {}".format(mode, *list(mass_dist)))
 

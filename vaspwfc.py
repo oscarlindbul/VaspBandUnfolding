@@ -839,7 +839,7 @@ class vaspwfc(object):
 
         return dE, ovlap, tdm
     
-    def inverse_participation_ratio(self, norm=True, bands=None):
+    def inverse_participation_ratio(self, norm=True, bands=None, quiet=False):
         '''
         Calculate Inverse Paticipation Ratio (IPR) from the wavefunction. IPR is
         a measure of the localization of Kohn-Sham states. For a particular KS
@@ -854,7 +854,7 @@ class vaspwfc(object):
         bands = bands to calculate the IPR for (starting from index 1)
         '''
 
-        self.ipr = np.zeros((self._nspin, self._nkpts, self._nbands, 3))
+        ipr = np.zeros((self._nspin, self._nkpts, self._nbands, 3))
 
         if bands is None:
             bands = [i for i in range(self._nbands)]
@@ -865,22 +865,24 @@ class vaspwfc(object):
 
         for ispin in range(self._nspin):
             for ikpt in range(self._nkpts):
+                gvecs = self.gvectors(ikpt+1)
                 for iband in bands:
                     phi_j = self.wfc_r(ispin+1, ikpt+1, iband+1,
-                                       norm=norm)
+                                       norm=norm, gvec=gvecs)
                     phi_j_abs = np.abs(phi_j)
-
-                    print('Calculating IPR of #spin %4d, #kpt %4d, #band %4d' %
-                          (ispin+1, ikpt+1, iband+1))
-                    self.ipr[ispin, ikpt, iband,
+                    
+                    if not quiet:
+                        print('Calculating IPR of #spin %4d, #kpt %4d, #band %4d' %
+                            (ispin+1, ikpt+1, iband+1))
+                    ipr[ispin, ikpt, iband,
                              0] = self._kpath[ikpt] if self._kpath is not None else 0
-                    self.ipr[ispin, ikpt, iband,
+                    ipr[ispin, ikpt, iband,
                              1] = self._bands[ispin, ikpt, iband]
-                    self.ipr[ispin, ikpt, iband, 2] = np.sum(
+                    ipr[ispin, ikpt, iband, 2] = np.sum(
                         phi_j_abs**4) / np.sum(phi_j_abs**2)**2
 
-        np.save('ipr.npy', self.ipr)
-        return self.ipr
+        #np.save('ipr.npy', self.ipr)
+        return ipr
 
     def elf(self, kptw, ngrid=None, warn=True):
         '''

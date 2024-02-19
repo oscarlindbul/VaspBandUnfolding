@@ -5,9 +5,10 @@ import matplotlib.pyplot as plt
 parser = argparse.ArgumentParser("Calculates the ipr of phonon modes in data file")
 parser.add_argument("data_file", metavar="data_file", help="File containing phonon modes (yaml file)")
 parser.add_argument("-LW", dest="locality_weight_limit", type=float, default=np.infty, help="Threshold for distance to origin in determining phonon locality weight")
+parser.add_argument("-vlimit", dest="locality_threshold", type=float, default=0.1, help="Limit for writing out local modes")
 args = parser.parse_args()
 
-data = np.load(args.data_file)
+data = np.load(args.data_file, allow_pickle=True)
 
 #def meV2cm_inv(mev):
 #	return mev/(4.13567*15.633302)
@@ -44,6 +45,11 @@ for i in range(nphonon):
 			locality_disp += disp
 	mode_iprs[i] = disp_4
 	lw_vals[i] = locality_disp/disp_total
+
+with open("local_modes.txt", "w") as writer:
+    for i,ipr in enumerate(mode_iprs):
+        if ipr >= args.locality_threshold:
+            writer.write("{} {} {}\n".format(i+1,mode_freqs[i], ipr))
 
 fig = plt.figure()
 plt.scatter(mode_freqs, mode_iprs, s=10)
